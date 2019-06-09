@@ -1,4 +1,5 @@
 categories: 分类
+Archives: 归档
 search: 搜索
 tags: 标签
 tagcloud: 标签云
@@ -16,4 +17,5 @@ share: Share
 powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
-tag: Tag
+tag: 标签
+Stats: 网站状态
