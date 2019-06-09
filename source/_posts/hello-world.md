@@ -36,8 +36,3 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)  
-  
-  
-  
-This is My Blog  
-{% githubCard user:Mryan2005 repo:mryan2005.github.io %}
