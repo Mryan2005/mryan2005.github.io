@@ -100,6 +100,7 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  stats: https://stats.mryan.cf || Stats
 
 # Enable/Disable menu icons.
 menu_icons:
