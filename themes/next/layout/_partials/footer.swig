@@ -6,6 +6,11 @@
     <i class="fa fa-{{ theme.footer.icon }}"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
+  |
+  <span class="with-love">
+    <i class="fa fa-server"></i>
+  </span>
+  <span><a href="https://stats.mryan.cf ">服务器状态<a></span>
 
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
