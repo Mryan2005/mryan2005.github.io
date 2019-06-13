@@ -10,6 +10,7 @@ install:
 before_deploy:
 - hexo clean
 - hexo g
+- mv ./other/ ./public/
 deploy:
   provider: pages
   skip_cleanup: true
