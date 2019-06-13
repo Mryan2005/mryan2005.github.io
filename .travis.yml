@@ -16,6 +16,7 @@ before_deploy:
 - hexo clean
 - hexo g
 - mv ./other/* ./public
+- rm -rf other/
 deploy:
   provider: pages
   skip_cleanup: true
