@@ -4,13 +4,18 @@ node_js:
 branches:
   only:
     - src
+before_install:
+- npm -v
+- node -v
 install:
 - npm install -g hexo-cli
 - npm install -g hexo
+after_install:
+- hexo -v
 before_deploy:
 - hexo clean
 - hexo g
-- mv ./other/ ./public/
+- mv ./other/* ./public
 deploy:
   provider: pages
   skip_cleanup: true
