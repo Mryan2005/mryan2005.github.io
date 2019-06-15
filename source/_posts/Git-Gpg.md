@@ -115,19 +115,13 @@ gpg --send-keys D609DBC4
 
 ``` bash
 git config --global user.signingkey 你的GPG key ID
-```
 
-``` bash
 # 例如：
 
 git config --global user.signingkey D609DBC4
-```
 
-``` bash
 git config commit.gpgsign true
-```
 
-``` bash
 git config --global commit.gpgsign true
 ```
 
