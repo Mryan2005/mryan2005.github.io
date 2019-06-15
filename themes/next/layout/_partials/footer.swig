@@ -11,6 +11,8 @@
     <i class="fa fa-server"></i>
   </span>
   <span><a href="https://stats.mryan.cf ">服务器状态<a></span>
+  |
+  <img alt="Travis (.com)" src="https://img.shields.io/travis/com/Mryan2005/mryan2005.github.io.svg?style=flat-square">
 
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
