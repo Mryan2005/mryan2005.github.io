@@ -8,7 +8,7 @@ categories: Git
 ---
 开篇之前，先给大伙看点东西  
 
-![](https://imgchr.com/i/VoM7jS)  
+![GitHub Gpg 认证](https://s2.ax1x.com/2019/06/15/VoM7jS.png)
 
 是不是很想要？你找对地方了!  
 
@@ -16,7 +16,7 @@ categories: Git
 
 ## 在 “开始”菜单 打开Git Bash  
 
-### 输入```gpg --gen-key```  
+### 输入 gpg --gen-key
 
 显示如下
 
@@ -74,7 +74,7 @@ uid                        [ultimate] xxxxx <xxxx@xxxx.com>
 sub  rsa2048 2019-06-01 [E] [expires: 2021-05-31]
 ```  
 
-### 输入  ```gpg --list-keys --keyid-format SHORT```
+### 输入  gpg --list-keys --keyid-format SHORT
 
 ``` bash
 gpg --list-keys --keyid-format SHORT
@@ -90,8 +90,7 @@ uid        [ultimate] xxxxx <xxxx@xxxx.com>
 
 ### 发布密钥
 
-输入 ```gpg --send-key 你的密钥```  
-**就是rsa2048/xxxxxxx中的xxxxxxx**
+输入 gpg --send-key 你的密钥，就是rsa2048/xxxxxxx中的xxxxxxx
 
 ``` bash
 # 例如：
@@ -101,7 +100,7 @@ gpg --send-keys D609DBC4
 
 ## github设置GPG key
 
-1. 拷贝上面得到的公钥到github账号中，注意：格式如：开头：
+### 拷贝上面得到的公钥到github账号中，注意：格式如：开头：
 
 ``` bash
 
@@ -110,11 +109,11 @@ gpg --send-keys D609DBC4
 -----END PGP PUBLIC KEY BLOCK-----
 ```  
 
-请参考把GPG key 加到你的github帐号
+### 请参考把GPG key 加到你的github帐号
 
 ## 配置git
 
-1. 输入 ```git config --global user.signingkey 你的GPG key ID```
+### 输入 ```git config --global user.signingkey 你的GPG key ID```
 
 ``` bash
 # 例如：
