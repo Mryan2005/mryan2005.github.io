@@ -12,12 +12,14 @@ tags:
 是不是很想要？你找对地方了!  
 
 下面是教程：
-# 在 “开始”菜单 打开Git Bash  
-1. 输入```gpg --gen-key```
 
-**显示如下**
+## 在 “开始”菜单 打开Git Bash  
 
-```
+### 输入```gpg --gen-key```  
+
+显示如下
+
+``` bash
 $ gpg --gen-key
 
 gpg (GnuPG) 2.2.13-unknown; Copyright (C) 2019 Free Software Foundation, Inc.
@@ -71,9 +73,9 @@ uid                        [ultimate] xxxxx <xxxx@xxxx.com>
 sub  rsa2048 2019-06-01 [E] [expires: 2021-05-31]
 ```  
 
-2. 输入  ```gpg --list-keys --keyid-format SHORT```
+### 输入  ```gpg --list-keys --keyid-format SHORT```
 
-```
+``` bash
 gpg --list-keys --keyid-format SHORT
 
 # 返回内容如下
@@ -85,34 +87,42 @@ pub  rsa2048/D609DBC4 2019-06-01 [SC] [expires: 2021-05-31]
 uid        [ultimate] xxxxx <xxxx@xxxx.com>
 ```
 
-3. 发布密钥
+### 发布密钥
 
 输入 ```gpg --send-key 你的密钥```  
 **就是rsa2048/xxxxxxx中的xxxxxxx**
 
-```
+``` bash
 # 例如：
 
 gpg --send-keys D609DBC4
 ```
 
-# github设置GPG key
+## github设置GPG key
 
-1. 拷贝上面得到的公钥到github账号中，注意：格式如：开头：```-----BEGIN PGP PUBLIC KEY BLOCK-----，结尾：-----END PGP PUBLIC KEY BLOCK-----```  
+1. 拷贝上面得到的公钥到github账号中，注意：格式如：开头：
+
+``` bash
+
+-----BEGIN PGP PUBLIC KEY BLOCK----- 
+# 结尾：
+-----END PGP PUBLIC KEY BLOCK-----
+```  
+
 请参考把GPG key 加到你的github帐号
 
-# 配置git
+## 配置git
 
 1. 输入 ```git config --global user.signingkey 你的GPG key ID```
 
-```
+``` bash
 # 例如：
 
 git config --global user.signingkey D609DBC4
 ```
 
-2. 输入 ```git config commit.gpgsign true```
+### 输入 ```git config commit.gpgsign true```
 
-3. 输入 ```git config --global commit.gpgsign true```
+### 输入 ```git config --global commit.gpgsign true```
 
-# 配置完成
+## 配置完成
