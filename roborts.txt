@@ -12,4 +12,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://mryan.cf/baidu_urls.txt
+Sitemap: https://mryan.cf/baidusitemap.xml
