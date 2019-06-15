@@ -271,7 +271,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/15/Git-Gpg/" itemprop="url">Git Gpg</a></h2>
+                <a class="post-title-link" href="/2019/06/15/Git-Gpg/" itemprop="url">如何在Git中使用GPG</a></h2>
         
 
         <div class="post-meta">
@@ -323,7 +323,53 @@
       
         
           
-            
+            <p>开篇之前，先给大伙看点东西  </p>
+<p><img src="https://imgchr.com/i/VoM7jS" alt>  </p>
+<p>是不是很想要？你找对地方了!  </p>
+<p>下面是教程：</p>
+<h1 id="在-“开始”菜单-打开Git-Bash"><a href="#在-“开始”菜单-打开Git-Bash" class="headerlink" title="在 “开始”菜单 打开Git Bash"></a>在 “开始”菜单 打开Git Bash</h1><ol>
+<li>输入<figure class="highlight plain"><figcaption><span>--gen-key```  </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**显示如下**</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>$ gpg –gen-key</p>
+<p>gpg (GnuPG) 2.2.13-unknown; Copyright (C) 2019 Free Software Foundation, Inc.</p>
+<p>This is free software: you are free to change and redistribute it.</p>
+<p>There is NO WARRANTY, to the extent permitted by law.</p>
+<p>Note: Use “gpg –full-generate-key” for a full featured key generation dialog.</p>
+<p>GnuPG needs to construct a user ID to identify your key.</p>
+<p>Real name: 这里填GitHub Username</p>
+<p>Email address: 这里填GitHub email address private</p>
+<p>You selected this USER-ID: # 生成部分</p>
+<pre><code>&quot;你的GitHub Username &lt;你的GitHub email address private&gt;&quot;</code></pre><p>Change (N)ame, (E)mail, or (O)kay/(Q)uit? O</p>
+<p>We need to generate a lot of random bytes. It is a good idea to perform</p>
+<p>some other action (type on the keyboard, move the mouse, utilize the</p>
+<p>disks) during the prime generation; this gives the random number</p>
+<p>generator a better chance to gain enough entropy.</p>
+<p>We need to generate a lot of random bytes. It is a good idea to perform</p>
+<p>some other action (type on the keyboard, move the mouse, utilize the</p>
+<p>disks) during the prime generation; this gives the random number</p>
+<p>generator a better chance to gain enough entropy.</p>
+<p>gpg: key 2E728412D609DBC4 marked as ultimately trusted</p>
+<p>gpg: revocation certificate stored as ‘/c/Users/Administrator/.gnupg/openpgp-revocs.d/D511141C8CE2FF942A4DFA542E728412D609DBC4.rev’</p>
+<p>public and secret key created and signed.</p>
+<p>pub  rsa2048 2019-06-01 [SC] [expires: 2021-05-31]</p>
+<pre><code>D511141C8CE2FF942A4DFA542E728412D609DBC4</code></pre><p>uid                        [ultimate] xxxxx <a href="mailto:&#120;&#120;&#120;&#x78;&#64;&#x78;&#120;&#x78;&#x78;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#120;&#120;&#120;&#x78;&#64;&#x78;&#120;&#x78;&#x78;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>sub  rsa2048 2019-06-01 [E] [expires: 2021-05-31]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 输入  ```gpg --list-keys --keyid-format SHORT</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gpg --list-keys --keyid-format SHORT</span><br><span class="line"></span><br><span class="line"># 返回内容如下</span><br><span class="line"></span><br><span class="line">pub  rsa2048/D609DBC4 2019-06-01 [SC] [expires: 2021-05-31]</span><br><span class="line"></span><br><span class="line">      D511141C8CE2FF942A4DFA542E728412D609DBC4</span><br><span class="line"></span><br><span class="line">uid        [ultimate] xxxxx &lt;xxxx@xxxx.com&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>发布密钥<br>输入 <figure class="highlight plain"><figcaption><span>--send-key 你的密钥```  </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**就是rsa2048/xxxxxxx中的xxxxxxx**</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h1><p>gpg –send-keys D609DBC4</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># github设置GPG key</span><br><span class="line">1. 拷贝上面得到的公钥到github账号中，注意：格式如：开头：```-----BEGIN PGP PUBLIC KEY BLOCK-----，结尾：-----END PGP PUBLIC KEY BLOCK-----```  </span><br><span class="line">请参考把GPG key 加到你的github帐号</span><br><span class="line"># 配置git</span><br><span class="line">1. 输入 ```git config --global user.signingkey 你的GPG key ID</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 例如：</span><br><span class="line"></span><br><span class="line">git config --global user.signingkey D609DBC4</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>输入 <figure class="highlight plain"><figcaption><span>config commit.gpgsign true```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 输入 ```git config --global commit.gpgsign true</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="配置完成"><a href="#配置完成" class="headerlink" title="配置完成"></a>配置完成</h1>
           
         
       
@@ -580,7 +626,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
