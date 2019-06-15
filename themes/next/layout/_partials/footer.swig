@@ -12,6 +12,9 @@
   </span>
   <span><a href="https://stats.mryan.cf ">服务器状态<a></span>
   |
+  <span class="with-love">
+    <i class="fas fa-cubes"></i>
+  </span>
   <span><a href="https://www.travis-ci.com/Mryan2005/mryan2005.github.io ">build<a></span>
 
   {% if theme.post_wordcount.totalcount %}
