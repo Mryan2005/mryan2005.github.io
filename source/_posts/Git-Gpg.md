@@ -113,7 +113,9 @@ gpg --send-keys D609DBC4
 
 ## 配置git
 
-### 输入 ```git config --global user.signingkey 你的GPG key ID```
+``` bash
+git config --global user.signingkey 你的GPG key ID
+```
 
 ``` bash
 # 例如：
@@ -121,8 +123,12 @@ gpg --send-keys D609DBC4
 git config --global user.signingkey D609DBC4
 ```
 
-### 输入 ```git config commit.gpgsign true```
+``` bash
+git config commit.gpgsign true
+```
 
-### 输入 ```git config --global commit.gpgsign true```
+``` bash
+git config --global commit.gpgsign true
+```
 
 ## 配置完成
