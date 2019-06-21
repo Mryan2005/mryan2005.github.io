@@ -74,7 +74,7 @@ uid                        [ultimate] xxxxx <xxxx@xxxx.com>
 sub  rsa2048 2019-06-01 [E] [expires: 2021-05-31]
 ```  
 
-### 输入  gpg --list-keys --keyid-format SHORT
+### 输入 ```gpg --list-keys --keyid-format SHORT```
 
 ``` bash
 gpg --list-keys --keyid-format SHORT
@@ -88,9 +88,9 @@ pub  rsa2048/D609DBC4 2019-06-01 [SC] [expires: 2021-05-31]
 uid        [ultimate] xxxxx <xxxx@xxxx.com>
 ```
 
-### 发布密钥
+## 发布密钥
 
-输入 gpg --send-key 你的密钥，就是rsa2048/xxxxxxx中的xxxxxxx
+输入 ```gpg --send-key``` 你的密钥，就是rsa2048/xxxxxxx中的xxxxxxx
 
 ``` bash
 # 例如：
