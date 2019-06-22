@@ -1,6 +1,7 @@
 User-agent: * 
 Allow: /
 Allow: /archives/
+
 Disallow: /vendors/
 Disallow: /js/
 Disallow: /css/
@@ -8,5 +9,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://dadroid.cn/sitemap.xml
-Sitemap: http://dadroid.cn/baidusitemap.xml
+Sitemap: http://mryan.cf/baidusitemap.xml
