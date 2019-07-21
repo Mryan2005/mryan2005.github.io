@@ -74,9 +74,10 @@ uid                        [ultimate] xxxxx <xxxx@xxxx.com>
 sub  rsa2048 2019-06-01 [E] [expires: 2021-05-31]
 ```  
 
-### 输入 ```gpg --list-keys --keyid-format SHORT```
+### 查看密钥
 
 ``` bash
+# 输入 gpg --list-keys --keyid-format SHORT
 gpg --list-keys --keyid-format SHORT
 
 # 返回内容如下
@@ -88,23 +89,21 @@ pub  rsa2048/D609DBC4 2019-06-01 [SC] [expires: 2021-05-31]
 uid        [ultimate] xxxxx <xxxx@xxxx.com>
 ```
 
-## 发布密钥
-
-输入 ```gpg --send-key``` 你的密钥，就是rsa2048/xxxxxxx中的xxxxxxx
+### 发布密钥
 
 ``` bash
-# 例如：
-
-gpg --send-keys D609DBC4
+# 输入
+gpg --send-key 你的密钥
+# 你的密钥就是rsa2048/xxxxxxx中的xxxxxxx
 ```
 
 ## github设置GPG key
 
 ### 拷贝上面得到的公钥到github账号中，注意：格式如：开头：
 
-``` bash
+``` txt
 
------BEGIN PGP PUBLIC KEY BLOCK----- 
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 # 结尾：
 -----END PGP PUBLIC KEY BLOCK-----
 ```  
@@ -115,10 +114,8 @@ gpg --send-keys D609DBC4
 
 ``` bash
 git config --global user.signingkey 你的GPG key ID
-
 # 例如：
-
-git config --global user.signingkey D609DBC4
+# git config --global user.signingkey D609DBC4
 
 git config commit.gpgsign true
 
