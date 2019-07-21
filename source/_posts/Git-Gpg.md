@@ -12,6 +12,8 @@ categories: Git
 
 是不是很想要？你找对地方了!  
 
+---
+
 下面是教程：
 
 ## 在 “开始”菜单 打开Git Bash  
@@ -97,16 +99,25 @@ gpg --send-key 你的密钥
 # 你的密钥就是rsa2048/xxxxxxx中的xxxxxxx
 ```
 
+-----
+
 ## github设置GPG key
 
-### 拷贝上面得到的公钥到github账号中，注意：格式如：开头：
+### 拷贝上面得到的公钥到github账号中，注意：格式如：开头:
 
-``` txt
+``` python
+"""
+开头:
 
 -----BEGIN PGP PUBLIC KEY BLOCK-----
-# 结尾：
+
+结尾：
+
 -----END PGP PUBLIC KEY BLOCK-----
+"""
 ```  
+
+---
 
 ### 请参考把GPG key 加到你的github帐号
 
