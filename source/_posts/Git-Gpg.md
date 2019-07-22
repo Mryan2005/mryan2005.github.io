@@ -22,7 +22,7 @@ categories: Git
 
 显示如下
 
-``` bash
+```bash
 $ gpg --gen-key
 
 gpg (GnuPG) 2.2.13-unknown; Copyright (C) 2019 Free Software Foundation, Inc.
@@ -74,7 +74,9 @@ pub  rsa2048 2019-06-01 [SC] [expires: 2021-05-31]
 uid                        [ultimate] xxxxx <xxxx@xxxx.com>
 
 sub  rsa2048 2019-06-01 [E] [expires: 2021-05-31]
-```  
+```
+
+---
 
 ### 查看密钥
 
@@ -90,6 +92,8 @@ pub  rsa2048/D609DBC4 2019-06-01 [SC] [expires: 2021-05-31]
 
 uid        [ultimate] xxxxx <xxxx@xxxx.com>
 ```
+
+---
 
 ### 发布密钥
 
@@ -113,6 +117,8 @@ gpg --send-key 你的密钥
 > 
 >  -----END PGP PUBLIC KEY BLOCK-----
 
+---
+
 ### 请参考把GPG key 加到你的github帐号
 
 ## 配置git
@@ -126,5 +132,7 @@ git config commit.gpgsign true
 
 git config --global commit.gpgsign true
 ```
+
+---
 
 ## 配置完成
