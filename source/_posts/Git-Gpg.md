@@ -99,25 +99,19 @@ gpg --send-key 你的密钥
 # 你的密钥就是rsa2048/xxxxxxx中的xxxxxxx
 ```
 
------
+---
 
 ## github设置GPG key
 
-### 拷贝上面得到的公钥到github账号中，注意：格式如：开头:
+### 拷贝上面得到的公钥到github账号中，注意：格式如:
 
-``` python
-"""
-开头:
-
------BEGIN PGP PUBLIC KEY BLOCK-----
-
-结尾：
-
------END PGP PUBLIC KEY BLOCK-----
-"""
-```  
-
----
+> 开头:   
+>
+>  -----BEGIN PGP PUBLIC KEY BLOCK-----
+>
+>  结尾: 
+> 
+>  -----END PGP PUBLIC KEY BLOCK-----
 
 ### 请参考把GPG key 加到你的github帐号
 
