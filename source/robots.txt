@@ -9,4 +9,4 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://mryan.cf/baidusitemap.xml
+Sitemap: https://mryan05.coding.me/baidusitemap.xml
