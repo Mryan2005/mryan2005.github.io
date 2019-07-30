@@ -1,6 +1,6 @@
 title: CSS对页面的影响
 date: 2019-07-23
-tags: [CSS Code]
+tags: [CSS,Code]
 categories: [CSS]
 ---
 
@@ -8,15 +8,15 @@ categories: [CSS]
 
 ## 大纲
 
-- [background-color](#background-color)
+- [background-color](https://mryan2005.github.io/2019/07/23/css-page.html#background-color)
 
-- [background-image](#background-image)
+- [background-image](https://mryan2005.github.io/2019/07/23/css-page.html#background-image)
 
-- [background-repeat](#background-repeat)
+- [background-repeat](https://mryan2005.github.io/2019/07/23/css-page.html#background-repeat)
 
-- [background-attachment](#background-attachment)
+- [background-attachment](https://mryan2005.github.io/2019/07/23/css-page.html#background-attachment)
 
-- [background-position](#background-position)
+- [background-position](https://mryan2005.github.io/2019/07/23/css-page.html#background-position)
 
 ### background-color
 
