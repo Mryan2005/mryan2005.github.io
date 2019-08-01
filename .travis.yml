@@ -6,8 +6,6 @@ branches:
   - src
 before_install:
 - openssl aes-256-cbc -K $encrypted_6b5b110e1eb2_key -iv $encrypted_6b5b110e1eb2_iv -in __config.yml.enc -out _config.yml -d
-- npm -v
-- node -v
 install:
 - npm install -g hexo-cli
 - npm install -g hexo
@@ -36,5 +34,4 @@ after_deploy:
 - git add .
 - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
 - git push --force --quiet "https://Mryan05:${Travis_Token}@git.dev.tencent.com/Mryan05/mryan05.coding.me.git" master:master
-after_success:
 - hexo d
