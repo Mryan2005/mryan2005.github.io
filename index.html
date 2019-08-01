@@ -345,17 +345,23 @@
       
         
           
-            <h2 id="一些无聊的话"><a href="#一些无聊的话" class="headerlink" title="一些无聊的话"></a>一些无聊的话</h2><p>对于每一个程序员或运维的人员来说<strong>CI</strong>是必不可少的。今天，我们要说的是<strong>Travis CI</strong><br>Travis CI是一个仅仅只支持GitHub的CI(仅仅支持GitHub的WebHook发来的构建信息)，但Deploy支持特别多的平台的网站</p>
+            <h1 id="一些无聊的话"><a href="#一些无聊的话" class="headerlink" title="一些无聊的话"></a>一些无聊的话</h1><p>对于每一个程序员或运维的人员来说<strong>CI</strong>是必不可少的。今天，我们要说的是<strong>Travis CI</strong><br>Travis CI是一个仅仅只支持GitHub的CI(仅仅支持GitHub的WebHook发来的构建信息)，但Deploy支持特别多的平台的网站</p>
 <hr>
-<h2 id="入坑"><a href="#入坑" class="headerlink" title="入坑"></a>入坑</h2><h3 id="最开始要说的就是程序的语言"><a href="#最开始要说的就是程序的语言" class="headerlink" title="最开始要说的就是程序的语言"></a>最开始要说的就是程序的语言</h3><p>总之，你写的语言主要是什么就选什么</p>
-<h4 id="例如hexo的博客语言是node-js，那么如下所示"><a href="#例如hexo的博客语言是node-js，那么如下所示" class="headerlink" title="例如hexo的博客语言是node js，那么如下所示"></a>例如hexo的博客语言是node js，那么如下所示</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br></pre></td></tr></table></figure>
+<h1 id="入坑"><a href="#入坑" class="headerlink" title="入坑"></a>入坑</h1><h2 id="最开始要说的就是程序的语言"><a href="#最开始要说的就是程序的语言" class="headerlink" title="最开始要说的就是程序的语言"></a>最开始要说的就是程序的语言</h2><p>总之，你写的语言主要是什么就选什么</p>
+<h3 id="例如hexo的博客语言是node-js，那么如下所示"><a href="#例如hexo的博客语言是node-js，那么如下所示" class="headerlink" title="例如hexo的博客语言是node js，那么如下所示"></a>例如hexo的博客语言是node js，那么如下所示</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h4 id="再例如，我比较擅长的程序语言是Python，那么如下所示"><a href="#再例如，我比较擅长的程序语言是Python，那么如下所示" class="headerlink" title="再例如，我比较擅长的程序语言是Python，那么如下所示"></a>再例如，我比较擅长的程序语言是Python，那么如下所示</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br></pre></td></tr></table></figure>
+<h3 id="再例如，我比较擅长的程序语言是Python，那么如下所示"><a href="#再例如，我比较擅长的程序语言是Python，那么如下所示" class="headerlink" title="再例如，我比较擅长的程序语言是Python，那么如下所示"></a>再例如，我比较擅长的程序语言是Python，那么如下所示</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="程序语言的版本的选择"><a href="#程序语言的版本的选择" class="headerlink" title="程序语言的版本的选择"></a>程序语言的版本的选择</h3><h4 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'10'</span></span><br></pre></td></tr></table></figure>
+<h2 id="程序语言的版本的选择"><a href="#程序语言的版本的选择" class="headerlink" title="程序语言的版本的选择"></a>程序语言的版本的选择</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'10'</span></span><br></pre></td></tr></table></figure>
 
+<hr>
+<h2 id="多个版本的选择"><a href="#多个版本的选择" class="headerlink" title="多个版本的选择"></a>多个版本的选择</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'10'</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'9'</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="直观配置"><a href="#直观配置" class="headerlink" title="直观配置"></a>直观配置</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'10'</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'9'</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="一些注意的地方"><a href="#一些注意的地方" class="headerlink" title="一些注意的地方"></a>一些注意的地方</h1><p><code>xxx-dev</code>就是xxx开发版<br><code>nightly</code>就是每日构建版</p>
 
           
         
