@@ -8,7 +8,6 @@
   "dependencies": {
     "hexo": "^3.9.0",
     "hexo-baidu-url-submit": "0.0.6",
-    "hexo-browsersync": "^0.3.0",
     "hexo-fs": "^1.0.2",
     "hexo-generator-archive": "^0.1.5",
     "hexo-generator-baidu-sitemap": "^0.1.6",
