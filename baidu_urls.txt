@@ -1,4 +1,4 @@
-https://mryan05.coding.me/2019/07/30/travis-one.html
-https://mryan05.coding.me/2019/07/23/css-page.html
-https://mryan05.coding.me/2019/06/15/Git-Gpg.html
-https://mryan05.coding.me/2019/06/14/Hew to Create a new post.html
+http://mryan05.coding.me/2019/07/30/travis-one.html
+http://mryan05.coding.me/2019/07/23/css-page.html
+http://mryan05.coding.me/2019/06/15/Git-Gpg.html
+http://mryan05.coding.me/2019/06/14/Hew to Create a new post.html
