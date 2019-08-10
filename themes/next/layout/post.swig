@@ -10,7 +10,7 @@
 
 
 {% block content %}
-  <script type="text/javascript" src="js/src/baidupush.js"></script>
+  
   <div id="posts" class="posts-expand">
     {{ post_template.render(page) }}
 
