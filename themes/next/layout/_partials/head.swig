@@ -26,6 +26,16 @@
   <link rel="stylesheet" media="all" href="{{ Han_uri }}">
 {% endif %}
 
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?01d7af6f06ec1d8f776e6dfde8d0a7f8";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
 
 {# #238, Disable Baidu tranformation #}
 <meta http-equiv="Cache-Control" content="no-transform" />
