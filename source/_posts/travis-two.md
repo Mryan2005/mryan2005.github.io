@@ -15,9 +15,9 @@ tags: [travis,CI,Settings]
 
 ## Limit concurrent jobs
 
-### 主要用于限制多个build的构建的数量
+### 主要用于限制多个build在同一时间内构建的数量
 
 ### 例如
 
-我的博客在build的时候必须一个一个build
+我的博客在build的时候必须一个一个build，否则就怕容易闹冲突
 
