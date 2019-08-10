@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/src/baidupush.js"></script>
+
 <div class="site-brand-wrapper">
   <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
     {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
