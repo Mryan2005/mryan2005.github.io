@@ -11,7 +11,7 @@ install:
 - npm install -g hexo
 after_install:
 - hexo -v
-before_deploy:
+script:
 - hexo clean
 - hexo g
 - mv ./other/* ./public
