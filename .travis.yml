@@ -26,7 +26,7 @@ deploy:
     on:
       branch: src
   - provider: script
-    script: bash scripts/deploy.sh
+    script: bash deploy.sh
     on:
       branch: src
 after_deploy:
