@@ -26,6 +26,7 @@ deploy:
     on:
       branch: src
   - provider: script
+    skip_cleanup: true
     script: bash deploy.sh
     on:
       branch: src
