@@ -1,6 +1,6 @@
 {% if theme.baidu_push %}
 <script>
-(function(){
+  (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];
     if (curProtocol === 'https') {
@@ -11,6 +11,6 @@
     }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
-})();
+  })();
 </script>
 {% endif %}
