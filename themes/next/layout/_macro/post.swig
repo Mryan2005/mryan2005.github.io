@@ -89,7 +89,7 @@
                 {{ date(post.updated, config.date_format) }}
               </time>
             {% endif %}
-            {% if is_post() %}
+            {% if not is_post() %}
             {% else %}
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
