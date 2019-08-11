@@ -93,7 +93,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-edit"></i>
             </span>
-            <span class="post-meta-item-text"><a href="{{ url_for(page.path) }}">更改文章</a></span>
+            <span class="post-meta-item-text"><a href="{{ url_for(page.source) }}">更改文章</a></span>
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
             <span class="post-category" >
             {% if theme.post_meta.created_at or theme.post_meta.updated_at %}
