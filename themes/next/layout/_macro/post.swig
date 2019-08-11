@@ -89,13 +89,13 @@
                 {{ date(post.updated, config.date_format) }}
               </time>
             {% endif %}
-            {% if page.source === '/' %}
+            {% if is_post() %}
             {% else %}
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-edit"></i>
               </span>
-              <span class="post-meta-item-text"><a href="https://github.com/Mryan2005/mryan2005.github.io/blob/src/source/{{ url_for(page.source) }}">更改文章</a></span>
+              <span class="post-meta-item-text"><a href="https://github.com/Mryan2005/mryan2005.github.io/blob/src/source{{ url_for(page.source) }}">更改文章</a></span>
             {% endif %}
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
             <span class="post-category" >
