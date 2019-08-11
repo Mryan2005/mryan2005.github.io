@@ -35,7 +35,7 @@
           <{% if theme.seo %}h2{% else %}h1{% endif %} class="post-title{% if post.direction && post.direction.toLowerCase() === 'rtl' %} rtl{% endif %}" itemprop="name headline">{#
           #}{# Link posts #}{#
           #}{% if post.link %}
-              {% if post.sticky > 0 %}
+              {% if post.sticky > 0 %}      
                 {{ post.sticky }}
                 <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
                   <i class="fa fa-thumb-tack"></i>
@@ -89,8 +89,7 @@
                 {{ date(post.updated, config.date_format) }}
               </time>
             {% endif %}
-            {% if not is_post() %}
-            {% else %}
+            {% if is_post() %}
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-edit"></i>
