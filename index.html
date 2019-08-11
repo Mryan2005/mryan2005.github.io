@@ -327,7 +327,6 @@
 
             
             
-            
           
             <span class="post-category">
             
@@ -380,11 +379,17 @@
       
         
           
-            <h2 id="Build-pushed-branches"><a href="#Build-pushed-branches" class="headerlink" title="Build pushed branches"></a>Build pushed branches</h2><p><strong>在分支被推送时进行构建</strong></p>
-<h2 id="Build-pushed-pull-requests"><a href="#Build-pushed-pull-requests" class="headerlink" title="Build pushed pull requests"></a>Build pushed pull requests</h2><p><strong>在拉取请求被推送（创建）时进行构建</strong></p>
-<h2 id="Limit-concurrent-jobs"><a href="#Limit-concurrent-jobs" class="headerlink" title="Limit concurrent jobs"></a>Limit concurrent jobs</h2><h3 id="主要用于限制多个build在同一时间内构建的数量"><a href="#主要用于限制多个build在同一时间内构建的数量" class="headerlink" title="主要用于限制多个build在同一时间内构建的数量"></a>主要用于限制多个build在同一时间内构建的数量</h3><h3 id="例如"><a href="#例如" class="headerlink" title="例如"></a>例如</h3><p>我的博客在build的时候必须一个一个build，否则就怕容易闹冲突</p>
-
-          
+          Build pushed branches在分支被推送时进行构建
+Build pushed pull requests在拉取请求被推送（创建）时进行构建
+Limit concurrent jobs主要用于限制多个build在同一时间内构建的数量例如我的博客在build的时候必须一个一个build，否
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/10/travis-two.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -471,7 +476,6 @@
 
             
             
-            
           
             <span class="post-category">
             
@@ -524,25 +528,17 @@
       
         
           
-            <h1 id="一些无聊的话"><a href="#一些无聊的话" class="headerlink" title="一些无聊的话"></a>一些无聊的话</h1><p>对于每一个程序员或运维的人员来说<strong>CI</strong>是必不可少的。今天，我们要说的是<strong>Travis CI</strong><br>Travis CI是一个仅仅只支持GitHub的CI(仅仅支持GitHub的WebHook发来的构建信息)，但Deploy支持特别多的平台的网站</p>
-<hr>
-<h1 id="入坑"><a href="#入坑" class="headerlink" title="入坑"></a>入坑</h1><h2 id="最开始要说的就是程序的语言"><a href="#最开始要说的就是程序的语言" class="headerlink" title="最开始要说的就是程序的语言"></a>最开始要说的就是程序的语言</h2><p>总之，你写的语言主要是什么就选什么</p>
-<h3 id="例如hexo的博客语言是node-js，那么如下所示"><a href="#例如hexo的博客语言是node-js，那么如下所示" class="headerlink" title="例如hexo的博客语言是node js，那么如下所示"></a>例如hexo的博客语言是node js，那么如下所示</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br></pre></td></tr></table></figure>
+          一些无聊的话对于每一个程序员或运维的人员来说CI是必不可少的。今天，我们要说的是Travis CITravis CI是一个仅仅只支持GitHub的CI(仅仅支持GitHub的WebHook发来的构建信息)，但Deploy支持特别多的平台的网站
 
-<hr>
-<h3 id="再例如，我比较擅长的程序语言是Python，那么如下所示"><a href="#再例如，我比较擅长的程序语言是Python，那么如下所示" class="headerlink" title="再例如，我比较擅长的程序语言是Python，那么如下所示"></a>再例如，我比较擅长的程序语言是Python，那么如下所示</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="程序语言的版本的选择"><a href="#程序语言的版本的选择" class="headerlink" title="程序语言的版本的选择"></a>程序语言的版本的选择</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'10'</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="多个版本的选择"><a href="#多个版本的选择" class="headerlink" title="多个版本的选择"></a>多个版本的选择</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'10'</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'9'</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="直观配置"><a href="#直观配置" class="headerlink" title="直观配置"></a>直观配置</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">node_js</span></span><br><span class="line"><span class="attr">node_js:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'10'</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">'9'</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="一些注意的地方"><a href="#一些注意的地方" class="headerlink" title="一些注意的地方"></a>一些注意的地方</h1><p><code>xxx-dev</code>就是xxx开发版<br><code>nightly</code>就是每日构建版</p>
-
-          
+入坑最开始要说的就是程序的语言总之，你写的语言主要是什
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/30/travis-one.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -629,7 +625,6 @@
 
             
             
-            
           
             <span class="post-category">
             
@@ -682,32 +677,30 @@
       
         
           
-            <h1 id="页面设置"><a href="#页面设置" class="headerlink" title="页面设置"></a>页面设置</h1><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><ul>
-<li><p><a href="https://mryan2005.github.io/2019/07/23/css-page.html#background-color" target="_blank" rel="noopener">background-color</a></p>
-</li>
-<li><p><a href="https://mryan2005.github.io/2019/07/23/css-page.html#background-image" target="_blank" rel="noopener">background-image</a></p>
-</li>
-<li><p><a href="https://mryan2005.github.io/2019/07/23/css-page.html#background-repeat" target="_blank" rel="noopener">background-repeat</a></p>
-</li>
-<li><p><a href="https://mryan2005.github.io/2019/07/23/css-page.html#background-attachment" target="_blank" rel="noopener">background-attachment</a></p>
-</li>
-<li><p><a href="https://mryan2005.github.io/2019/07/23/css-page.html#background-position" target="_blank" rel="noopener">background-position</a></p>
-</li>
-</ul>
-<h3 id="background-color"><a href="#background-color" class="headerlink" title="background-color"></a>background-color</h3><p><strong>背景颜色</strong>设定</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-color</span>:</span><br></pre></td></tr></table></figure>
+          页面设置大纲
+background-color
 
-<hr>
-<h3 id="color"><a href="#color" class="headerlink" title="color"></a>color</h3><p><strong>颜色</strong>设定</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">color</span>:</span><br></pre></td></tr></table></figure>
+background-image
 
-<hr>
-<h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h2><p><strong>背景图像</strong>设定</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span>:</span><br></pre></td></tr></table></figure>
+background-repeat
 
-<hr>
-<h2 id="background-repeat"><a href="#background-repeat" class="headerlink" title="background-repeat"></a>background-repeat</h2>
-          
+background-attachment
+
+background-position
+
+
+background-color背景颜色设定
+1background-color:
+
+
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/23/css-page.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -794,7 +787,6 @@
 
             
             
-            
           
             <span class="post-category">
             
@@ -847,33 +839,21 @@
       
         
           
-            <p>开篇之前，先给大伙看点东西  </p>
-<p><img src="https://s2.ax1x.com/2019/06/15/VoM7jS.png" alt="GitHub Gpg 认证"></p>
-<p>是不是很想要？你找对地方了!  </p>
-<hr>
-<p>下面是教程：</p>
-<h2 id="在-“开始”菜单-打开Git-Bash"><a href="#在-“开始”菜单-打开Git-Bash" class="headerlink" title="在 “开始”菜单 打开Git Bash"></a>在 “开始”菜单 打开Git Bash</h2><h3 id="输入-gpg-–gen-key"><a href="#输入-gpg-–gen-key" class="headerlink" title="输入 gpg –gen-key"></a>输入 gpg –gen-key</h3><p>显示如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">$ gpg --gen-key</span><br><span class="line"></span><br><span class="line">gpg (GnuPG) 2.2.13-unknown; Copyright (C) 2019 Free Software Foundation, Inc.</span><br><span class="line"></span><br><span class="line">This is free software: you are free to change and redistribute it.</span><br><span class="line"></span><br><span class="line">There is NO WARRANTY, to the extent permitted by law.</span><br><span class="line"></span><br><span class="line">Note: Use <span class="string">"gpg --full-generate-key"</span> <span class="keyword">for</span> a full featured key generation dialog.</span><br><span class="line"></span><br><span class="line">GnuPG needs to construct a user ID to identify your key.</span><br><span class="line"></span><br><span class="line">Real name: 这里填GitHub Username</span><br><span class="line"></span><br><span class="line">Email address: 这里填GitHub email address private</span><br><span class="line"></span><br><span class="line">You selected this USER-ID: <span class="comment"># 生成部分</span></span><br><span class="line"></span><br><span class="line">    <span class="string">"你的GitHub Username &lt;你的GitHub email address private&gt;"</span></span><br><span class="line"></span><br><span class="line">Change (N)ame, (E)mail, or (O)kay/(Q)uit? O</span><br><span class="line"></span><br><span class="line">We need to generate a lot of random bytes. It is a good idea to perform</span><br><span class="line"></span><br><span class="line">some other action (<span class="built_in">type</span> on the keyboard, move the mouse, utilize the</span><br><span class="line"></span><br><span class="line">disks) during the prime generation; this gives the random number</span><br><span class="line"></span><br><span class="line">generator a better chance to gain enough entropy.</span><br><span class="line"></span><br><span class="line">We need to generate a lot of random bytes. It is a good idea to perform</span><br><span class="line"></span><br><span class="line">some other action (<span class="built_in">type</span> on the keyboard, move the mouse, utilize the</span><br><span class="line"></span><br><span class="line">disks) during the prime generation; this gives the random number</span><br><span class="line"></span><br><span class="line">generator a better chance to gain enough entropy.</span><br><span class="line"></span><br><span class="line">gpg: key 2E728412D609DBC4 marked as ultimately trusted</span><br><span class="line"></span><br><span class="line">gpg: revocation certificate stored as <span class="string">'/c/Users/Administrator/.gnupg/openpgp-revocs.d/D511141C8CE2FF942A4DFA542E728412D609DBC4.rev'</span></span><br><span class="line"></span><br><span class="line">public and secret key created and signed.</span><br><span class="line"></span><br><span class="line">pub  rsa2048 2019-06-01 [SC] [expires: 2021-05-31]</span><br><span class="line"></span><br><span class="line">      D511141C8CE2FF942A4DFA542E728412D609DBC4</span><br><span class="line"></span><br><span class="line">uid                        [ultimate] xxxxx &lt;xxxx@xxxx.com&gt;</span><br><span class="line"></span><br><span class="line">sub  rsa2048 2019-06-01 [E] [expires: 2021-05-31]</span><br></pre></td></tr></table></figure>
+          开篇之前，先给大伙看点东西  
 
-<hr>
-<h3 id="查看密钥"><a href="#查看密钥" class="headerlink" title="查看密钥"></a>查看密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入 gpg --list-keys --keyid-format SHORT</span></span><br><span class="line">gpg --list-keys --keyid-format SHORT</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回内容如下</span></span><br><span class="line"></span><br><span class="line">pub  rsa2048/D609DBC4 2019-06-01 [SC] [expires: 2021-05-31]</span><br><span class="line"></span><br><span class="line">      D511141C8CE2FF942A4DFA542E728412D609DBC4</span><br><span class="line"></span><br><span class="line">uid        [ultimate] xxxxx &lt;xxxx@xxxx.com&gt;</span><br></pre></td></tr></table></figure>
+是不是很想要？你找对地方了!  
 
-<hr>
-<h3 id="发布密钥"><a href="#发布密钥" class="headerlink" title="发布密钥"></a>发布密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入</span></span><br><span class="line">gpg --send-key 你的密钥</span><br><span class="line"><span class="comment"># 你的密钥就是rsa2048/xxxxxxx中的xxxxxxx</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="github设置GPG-key"><a href="#github设置GPG-key" class="headerlink" title="github设置GPG key"></a>github设置GPG key</h2><h3 id="拷贝上面得到的公钥到github账号中，注意：格式如"><a href="#拷贝上面得到的公钥到github账号中，注意：格式如" class="headerlink" title="拷贝上面得到的公钥到github账号中，注意：格式如:"></a>拷贝上面得到的公钥到github账号中，注意：格式如:</h3><blockquote>
-<p>开头:   </p>
-<p> —–BEGIN PGP PUBLIC KEY BLOCK—–</p>
-<p> 结尾: </p>
-<p> —–END PGP PUBLIC KEY BLOCK—–</p>
-</blockquote>
-<hr>
-<h3 id="请参考把GPG-key-加到你的github帐号"><a href="#请参考把GPG-key-加到你的github帐号" class="headerlink" title="请参考把GPG key 加到你的github帐号"></a>请参考把GPG key 加到你的github帐号</h3><h2 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.signingkey 你的GPG key ID</span><br><span class="line"><span class="comment"># 例如：</span></span><br><span class="line"><span class="comment"># git config --global user.signingkey D609DBC4</span></span><br><span class="line"></span><br><span class="line">git config commit.gpgsign <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">git config --global commit.gpgsign <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="配置完成"><a href="#配置完成" class="headerlink" title="配置完成"></a>配置完成</h2>
-          
+下面是教程：
+在 “开始”菜单 打开Git Bash输入 gpg –gen-key显示如下
+123456789101112131415161718192021222324252627282930313233343536373839
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/15/Git-Gpg.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -960,7 +940,6 @@
 
             
             
-            
           
             <span class="post-category">
             
@@ -1013,21 +992,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a>  </p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/14/Hew to Create a new post.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
