@@ -89,8 +89,12 @@
                 {{ date(post.updated, config.date_format) }}
               </time>
             {% endif %}
-          </span>
-
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+              <i class="fa fa-edit"></i>
+            </span>
+            <span class="post-meta-item-text">更改文章</span>
+            <span class="post-meta-divider">|</span>
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
             <span class="post-category" >
             {% if theme.post_meta.created_at or theme.post_meta.updated_at %}
@@ -356,7 +360,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" <i class="fa fa-tag"></i> {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
