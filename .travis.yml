@@ -17,17 +17,17 @@ script:
 - mv ./other/* ./public
 - rm -rf other/
 deploy:
+  - provider: script
+    skip_cleanup: true
+    script: bash deploy.sh
+    on:
+      branch: src
   - provider: pages
     skip_cleanup: true
     github_token: "${GITHUB_TOKEN}"
     keep_history: true
     local_dir: "./public/"
     target_branch: master
-    on:
-      branch: src
-  - provider: script
-    skip_cleanup: true
-    script: bash deploy.sh
     on:
       branch: src
 after_deploy:
