@@ -93,7 +93,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-edit"></i>
             </span>
-            <span class="post-meta-item-text">更改文章</span>
+            <span class="post-meta-item-text"><a href="{{ url_for(page.permalink) }}">更改文章</a></span>
             <span class="post-meta-divider">|</span>
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
             <span class="post-category" >
@@ -360,7 +360,7 @@
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" <i class="fa fa-tag"></i> {{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}"  rel="tag"># {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
