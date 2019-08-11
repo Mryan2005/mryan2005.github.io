@@ -89,7 +89,7 @@
                 {{ date(post.updated, config.date_format) }}
               </time>
             {% endif %}
-            {% if page.source == '/' %}
+            {% if page.source === '/' %}
             {% else %}
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
