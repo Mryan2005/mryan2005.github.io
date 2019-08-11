@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://mryan05.coding.me/2019/06/15/Git-Gpg.html</loc>
-    <lastmod>2019-08-11</lastmod>
-  </url>  <url>
     <loc>http://mryan05.coding.me/2019/06/14/Hew%20to%20Create%20a%20new%20post.html</loc>
     <lastmod>2019-08-11</lastmod>
   </url>  <url>
@@ -14,6 +11,9 @@
     <lastmod>2019-08-11</lastmod>
   </url>  <url>
     <loc>http://mryan05.coding.me/2019/08/10/travis-two.html</loc>
+    <lastmod>2019-08-11</lastmod>
+  </url>  <url>
+    <loc>http://mryan05.coding.me/2019/06/15/Git-Gpg.html</loc>
     <lastmod>2019-08-11</lastmod>
   </url>
 </urlset>
