@@ -1,5 +1,5 @@
 ---
-title: sir日常搞事(1) | 代码放错位置了 
+title: sir的日常搞事(1) | 代码放错位置了 
 date: 2019-08-12 21:29:39
 tags: 日常搞事
 categories: 日常搞事
@@ -19,7 +19,7 @@ categories: 日常搞事
 {% endif %}
 ```
 
-后来，将它fix后，输入livere.swig。  
+后来，将它fix后，写入livere.swig。  
 代码如下  
 
 ```swig
@@ -41,4 +41,4 @@ categories: 日常搞事
 {% endif %}
 ```
 
-不得不说，我是够坑了。把自己给坑了。
+还好不是把fix后的给写进去……其实也不会发生什么，因为``page.comments``对于我来说那已经是没有什么关系了
