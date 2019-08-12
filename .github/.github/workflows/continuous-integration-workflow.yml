@@ -11,9 +11,9 @@ jobs:
     - uses: actions/checkout@master
     
     - name: Set Node.js 10.x
-      uses: actions/setup-node@master
+      uses: mryan2005/mryan2005.github.io@master
       with:
-        version: 10.x
+        version: 10.0
 
     - name: npm install
       run: npm install
