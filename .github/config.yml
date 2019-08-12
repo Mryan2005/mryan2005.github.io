@@ -16,6 +16,6 @@ newPRWelcomeComment: >
 
 # Comment to be posted to on pull requests merged by a first time user
 firstPRMergeComment: >
-  Congrats on merging your first pull request! See you again!
+  Good jod! Congrats on merging your first pull request! Welcome to fix bug next time!
 
 # It is recommended to include as many gifs and emojis as possible!
