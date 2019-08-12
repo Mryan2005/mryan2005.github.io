@@ -117,14 +117,14 @@
 <meta name="description" content="今天，我这个糟老头子居然搞错了一个文件上的代码，正确的实现了什么叫“你这个糟老头子坏得很”————把一串代码写入了post.swig结果百测不灵。以下是那串代码这是第一次输错的   1234567&amp;#123;% elseif page.comments %&amp;#125;    &amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;">
 <meta name="keywords" content="日常搞事">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sir日常搞事(1) | 代码放错位置了">
+<meta property="og:title" content="sir的日常搞事(1) | 代码放错位置了">
 <meta property="og:url" content="http://mryan05.coding.me/2019/08/12/gao-xiao-one.html">
 <meta property="og:site_name" content="Mryan&#39;s blog">
 <meta property="og:description" content="今天，我这个糟老头子居然搞错了一个文件上的代码，正确的实现了什么叫“你这个糟老头子坏得很”————把一串代码写入了post.swig结果百测不灵。以下是那串代码这是第一次输错的   1234567&amp;#123;% elseif page.comments %&amp;#125;    &amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-12T13:39:02.475Z">
+<meta property="og:updated_time" content="2019-08-12T13:54:06.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sir日常搞事(1) | 代码放错位置了">
+<meta name="twitter:title" content="sir的日常搞事(1) | 代码放错位置了">
 <meta name="twitter:description" content="今天，我这个糟老头子居然搞错了一个文件上的代码，正确的实现了什么叫“你这个糟老头子坏得很”————把一串代码写入了post.swig结果百测不灵。以下是那串代码这是第一次输错的   1234567&amp;#123;% elseif page.comments %&amp;#125;    &amp;lt;span class=&amp;quot;post-meta-divider&amp;quot;&amp;gt;|&amp;lt;/span&amp;gt;">
 
 
@@ -164,7 +164,7 @@
 
 
 
-  <title>sir日常搞事(1) | 代码放错位置了 | Mryan's blog</title>
+  <title>sir的日常搞事(1) | 代码放错位置了 | Mryan's blog</title>
   
 
 
@@ -308,7 +308,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">sir日常搞事(1) | 代码放错位置了</h2>
+          <h2 class="post-title" itemprop="name headline">sir的日常搞事(1) | 代码放错位置了</h2>
         
 
         <div class="post-meta">
@@ -388,10 +388,10 @@
         <p>今天，我这个糟老头子居然搞错了一个文件上的代码，正确的实现了什么叫“你这个糟老头子坏得很”————把一串代码写入了post.swig结果百测不灵。<br>以下是那串代码<br>这是第一次输错的  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elseif page.comments %&#125;</span><br><span class="line">    &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;post-meta-item-text&quot;&gt;&lt;a href=&quot;https://github.com/Mryan2005/mryan2005.github.io/blob/src/source&#123;&#123; url_for(page.source) &#125;&#125;&quot;&gt;更改文章&lt;/a&gt;&lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 
-<p>后来，将它fix后，输入livere.swig。<br>代码如下  </p>
+<p>后来，将它fix后，写入livere.swig。<br>代码如下  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elseif page.comments %&#125;</span><br><span class="line">  &#123;% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname and not (theme.disqus.enable and theme.disqus.shortname) and not theme.hypercomments_id %&#125;</span><br><span class="line">    &#123;% if page.comments and theme.livere_uid %&#125;</span><br><span class="line">      &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">        (function(d, s) &#123;</span><br><span class="line">          var j, e = d.getElementsByTagName(s)[0];</span><br><span class="line">          if (typeof LivereTower === &apos;function&apos;) &#123; return; &#125;</span><br><span class="line">          j = d.createElement(s);</span><br><span class="line">          j.src = &apos;https://cdn-city.livere.com/js/embed.dist.js&apos;;</span><br><span class="line">          j.async = true;</span><br><span class="line">          e.parentNode.insertBefore(j, e);</span><br><span class="line">        &#125;)(document, &apos;script&apos;);</span><br><span class="line">      &lt;/script&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">  &#123;% endif %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 
-<p>不得不说，我是够坑了。把自己给坑了。</p>
+<p>还好不是把fix后的给写进去……其实也不会发生什么，因为<code>page.comments</code>对于我来说那已经是没有什么关系了</p>
 
       
     </div>
@@ -412,7 +412,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://mryan05.coding.me/2019/08/12/gao-xiao-one.html" title="sir日常搞事(1) | 代码放错位置了">http://mryan05.coding.me/2019/08/12/gao-xiao-one.html</a>
+    <a href="http://mryan05.coding.me/2019/08/12/gao-xiao-one.html" title="sir的日常搞事(1) | 代码放错位置了">http://mryan05.coding.me/2019/08/12/gao-xiao-one.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
