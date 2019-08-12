@@ -94,7 +94,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-edit"></i>
               </span>
-              <span class="post-meta-item-text"><a href="https://github.com/Mryan2005/mryan2005.github.io/blob/src/source{{ url_for(page.source) }}">更改文章</a></span>
+              <span class="post-meta-item-text"><a href="windows.open(https://github.com/Mryan2005/mryan2005.github.io/blob/src/source{{ url_for(page.source) }})">更改文章</a></span>
             {% elif page.comments %}
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
