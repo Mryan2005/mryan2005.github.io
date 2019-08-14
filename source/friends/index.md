@@ -6,7 +6,7 @@ comments: true
 
 欢迎各位前来  
 在这里你可以添加你的网站链接在我的博客上通过博客评论或者本页的[GitHub修改](https://github.com/Mryan2005/mryan2005.github.io/blob/src/source/friends/index.md)</a>  
-前提是为了交朋友，因为我在博客里加入了rel nofollow属性  
+前提是为了交朋友。  
 
 ## 申请格式
 
