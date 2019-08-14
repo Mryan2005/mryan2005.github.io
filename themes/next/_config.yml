@@ -100,7 +100,7 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
-  friends: /friends/ || user-friends
+  friends: /friends/ || users
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -566,14 +566,14 @@ busuanzi_count:
 
 
 # Tencent analytics ID
-# tencent_analytics:
+tencent_analytics: 66463417
 
 # Tencent MTA ID
 # tencent_mta:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: true
+baidu_push: false
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
