@@ -100,6 +100,7 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  friends: /friends/ || user-friends
 
 # Enable/Disable menu icons.
 menu_icons:
