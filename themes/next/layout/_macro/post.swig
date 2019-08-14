@@ -52,7 +52,7 @@
                     <i class="fa fa-thumb-tack"></i>
                   </span>
                 {% endif %}
-                <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">{#
+                <a rel="nofollow" class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">{#
                 #}{{ post.title | default(__('post.untitled'))}}{#
               #}</a>{#
             #}{% else %}{{ post.title }}{% endif %}{#
@@ -94,7 +94,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-edit"></i>
               </span>
-              <span class="post-meta-item-text"><a href="https://github.com/Mryan2005/mryan2005.github.io/blob/src/source{{ url_for(page.source) }}">更改文章</a></span>
+              <span class="post-meta-item-text"><a rel="nofollow" href="https://github.com/Mryan2005/mryan2005.github.io/blob/src/source{{ url_for(page.source) }}">更改文章</a></span>
             {% endif %}
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
             <span class="post-category" >
