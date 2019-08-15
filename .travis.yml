@@ -14,10 +14,9 @@ after_install:
 script:
 - hexo clean
 - hexo g
-after_script:
-- hexo d
 - mv ./other/* ./public
 - rm -rf other/
+- hexo d
 deploy:
   - provider: script
     skip_cleanup: true
