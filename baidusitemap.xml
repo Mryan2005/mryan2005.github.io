@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://mryan05.coding.me/2019/08/15/give_the_post_to_owner_of_minecraft_server.html</loc>
-    <lastmod>2019-08-15</lastmod>
-  </url>  <url>
-    <loc>http://mryan05.coding.me/2019/06/15/Git-Gpg.html</loc>
-    <lastmod>2019-08-15</lastmod>
-  </url>  <url>
-    <loc>http://mryan05.coding.me/2019/08/11/about-hexo-swig-one.html</loc>
-    <lastmod>2019-08-15</lastmod>
-  </url>  <url>
     <loc>http://mryan05.coding.me/2019/07/23/css-page.html</loc>
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
@@ -23,6 +14,15 @@
     <lastmod>2019-08-15</lastmod>
   </url>  <url>
     <loc>http://mryan05.coding.me/2019/08/10/travis-two.html</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>  <url>
+    <loc>http://mryan05.coding.me/2019/06/15/Git-Gpg.html</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>  <url>
+    <loc>http://mryan05.coding.me/2019/08/11/about-hexo-swig-one.html</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>  <url>
+    <loc>http://mryan05.coding.me/2019/08/15/give_the_post_to_owner_of_minecraft_server.html</loc>
     <lastmod>2019-08-15</lastmod>
   </url>
 </urlset>
