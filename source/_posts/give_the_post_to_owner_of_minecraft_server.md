@@ -1,5 +1,5 @@
 ---
-title: 如何在Git中使用GPG
+title: 给各位MC腐竹的信
 date: 2019-06-15 11:34:40
 tags: 
 - MC腐竹速成记
