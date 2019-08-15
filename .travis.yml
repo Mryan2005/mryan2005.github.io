@@ -15,6 +15,7 @@ script:
 - hexo clean
 - hexo g
 after_script:
+- hexo d
 - mv ./other/* ./public
 - rm -rf other/
 deploy:
@@ -31,5 +32,3 @@ deploy:
     target_branch: master
     on:
       branch: src
-after_deploy:
-- hexo d
