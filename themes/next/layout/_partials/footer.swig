@@ -29,7 +29,6 @@
   </span>
   <span><a rel="nofollow" href="http://tongji.baidu.com/web/welcome/ico?s=01d7af6f06ec1d8f776e6dfde8d0a7f8">百度统计</a></span>
   |
-  本作品采用<a rel="license" rel="nofollow"  href="http://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 国际许可协议</a>进行许可。
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
