@@ -7,11 +7,11 @@ top: 1000
 
 ## 原因
 
-因为sir准备上初三了，所以发表日常安排
+因为sir准备上初三了，所以发表假期安排
 
-## 日程安排表
+## 假期安排表
 
-有事请在我的QQ上<a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=71a0198b3ce67ee5e02cc448f0e1e3b0bb0b12619a5ca76e">预约</a>
+预约请在我的QQ上进行<a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=71a0198b3ce67ee5e02cc448f0e1e3b0bb0b12619a5ca76e">预约</a>
 
 | 时间段 | 项目 |
 | --- | --- |
