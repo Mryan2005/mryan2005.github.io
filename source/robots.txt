@@ -14,6 +14,7 @@ Sitemap: https://mryan05.coding.me/baidusitemap.xml
 User-agent: Baiduspider-image
 Crawl-delay: 5
 Allow: /img/
+Allow: /image/
 
 User-agent: Baiduspider-video 
 Crawl-delay: 5
