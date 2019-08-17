@@ -14,3 +14,23 @@ Sitemap: https://mryan05.coding.me/baidusitemap.xml
 User-agent: Baiduspider-image
 Crawl-delay: 5
 Allow: /img/
+
+User-agent: Baiduspider-video 
+Crawl-delay: 5
+Allow: /video/
+
+User-agent: Baiduspider-ads
+Crawl-delay: 5 
+Disallow: /
+
+User-agent: Baiduspider-favo 
+Crawl-delay: 5 
+Disallow: /
+
+User-agent: Baiduspider-cpro 
+Crawl-delay: 5 
+Disallow: /
+
+User-agent: Baiduspider-news 
+Crawl-delay: 5 
+Disallow: /
