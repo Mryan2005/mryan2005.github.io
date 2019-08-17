@@ -1,5 +1,5 @@
 ---
-title: 日程安排
+title: 假期预约安排
 date: 2019-08-16 18:26:28
 categories: 任务
 top: 1000
@@ -9,7 +9,7 @@ top: 1000
 
 因为sir准备上初三了，所以发表假期安排
 
-## 假期安排表
+## 假期预约安排表
 
 预约请在我的QQ上进行<a target="_blank" rel="nofollow" href="http://sighttp.qq.com/authd?IDKEY=71a0198b3ce67ee5e02cc448f0e1e3b0bb0b12619a5ca76e">预约</a>
 
