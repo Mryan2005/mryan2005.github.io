@@ -5,8 +5,11 @@
   {% set html_class = html_class + ' use-motion' %}
 {% endif %}
 
-<html class="{{ html_class | lower }}" lang="{{ config.language }}">
+<html class="{{ html_class | lower }}" lang="{{ config.language }}" mip>
 <head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v2/mip.css">
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
   {% include '_third-party/analytics/index.swig' %}
