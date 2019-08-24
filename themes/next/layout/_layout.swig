@@ -5,7 +5,7 @@
   {% set html_class = html_class + ' use-motion' %}
 {% endif %}
 
-<html class="{{ html_class | lower }}" lang="{{ config.language }}" mip>
+<html class="{{ html_class | lower }}" lang="{{ config.language }}">
 <head>
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
