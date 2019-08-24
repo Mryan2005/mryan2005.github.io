@@ -24,10 +24,7 @@
   <span><a href="https://mryan2005.github.io">全球站</a></span>
   <br />
   |
-  <span class="with-love">
-    <img class="fa" src="http://tongji.baidu.com/sc-web/image/icon/11.gif?__v=1564551472149"
-  </span>
-  <span><a rel="nofollow" href="http://tongji.baidu.com/web/welcome/ico?s=01d7af6f06ec1d8f776e6dfde8d0a7f8">百度统计</a></span>
+  <span><a rel="nofollow" href="http://tongji.baidu.com/web/welcome/ico?s=01d7af6f06ec1d8f776e6dfde8d0a7f8">网站统计</a></span>
   |
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
