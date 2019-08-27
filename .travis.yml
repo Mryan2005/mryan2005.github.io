@@ -4,9 +4,11 @@ node_js:
 branches:
   only:
   - src
+sudo: required
 before_install:
 - openssl aes-256-cbc -K $encrypted_6b5b110e1eb2_key -iv $encrypted_6b5b110e1eb2_iv -in __config.yml.enc -out _config.yml -d
 install:
+- sudo apt-get install enca -y
 - npm install -g hexo-cli
 - npm install -g hexo
 after_install:
