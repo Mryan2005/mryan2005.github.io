@@ -8,6 +8,7 @@
 <html class="{{ html_class | lower }}" lang="{{ config.language }}">
 <head>
   <meta name="shenma-site-verification" content="7bb3c340436cd21107cf58d10b31e859_1573224253"> 
+  <meta name="baidu-site-verification" content="0Uf15I2wtk" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v2/mip.css">
