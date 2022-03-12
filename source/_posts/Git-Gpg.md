@@ -91,6 +91,7 @@ pub  rsa2048/D609DBC4 2019-06-01 [SC] [expires: 2021-05-31]
       D511141C8CE2FF942A4DFA542E728412D609DBC4
 
 uid        [ultimate] xxxxx <xxxx@xxxx.com>
+
 ```
 
 ---
@@ -108,6 +109,7 @@ gpg --send-key 你的密钥
 ## github设置GPG key
 
 ### 拷贝上面得到的公钥到github账号中，注意：格式如:
+### 输入 gpg --armor --export xxxxxx
 
 > 开头:   
 >
