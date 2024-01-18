@@ -33,6 +33,6 @@
     "gulp-shell": "^0.6.1",
     "js-yaml": "^3.8.1",
     "jshint-stylish": "^2.1.0",
-    "stylint": "^1.5.9"
+    "stylint": "^2.0.0"
   }
 }
