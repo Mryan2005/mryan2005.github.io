@@ -46,7 +46,7 @@ jobs:
         git commit -m "Update"
         git fetch
         git switch -c origin/master
-        git pull
+        git pull origin master
     - name: clear dir
       run: rm -rf *
     - name: Copy
