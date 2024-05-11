@@ -9,6 +9,12 @@ categories:
 
 ## mathjax test
 
+### INLINE EQUATIONS
+
+$ y = mx + b $
+
+### MULTI-LINE EQUATIONS
+
 $$ evidence_{i}=\sum_{j}W_{ij}x_{j}+b_{i} $$
 
 ## code test
