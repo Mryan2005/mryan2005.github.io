@@ -47,7 +47,10 @@ jobs:
         git fetch
         git switch -c origin/master
         git pull
-        rm -rf *
+    - name: clear dir
+      run: rm -rf *
+    - name: Copy
+      run: |
         cp -r ../public/* ./
         git add .
         git commit -m "Update"
