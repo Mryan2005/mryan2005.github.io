@@ -27,6 +27,7 @@ jobs:
     - name: Install Hexo
       run: |
         npm install -g hexo-cli
+        npm i @upupming/hexo-renderer-markdown-it-plus --save
         npm install
     - name: clean
       run: hexo clean
