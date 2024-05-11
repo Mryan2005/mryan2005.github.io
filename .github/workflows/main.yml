@@ -25,8 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install Hexo
-      run: |
-        npm install hexo-cli -g
+      run: npm install
     - name: clean
       run: hexo clean
     - name: generate
@@ -41,6 +40,7 @@ jobs:
         git config --global user.email 'A2564011261@163.com'
         git checkout master
         git pull
+        rm -rf *
         cp -r ../public/* ./
         git add .
         git commit -m "Update"
