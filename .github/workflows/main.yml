@@ -43,7 +43,7 @@ jobs:
         git config --global user.name 'Mryan2005'
         git config --global user.email 'A2564011261@163.com'
         git fetch
-        git checkout origin/main
+        git checkout origin/master
         git pull
         rm -rf *
         cp -r ../public/* ./
