@@ -9,12 +9,7 @@ categories:
 
 ## mathjax test
 
-$$
-\begin{align*}
-\frac{1}{2} + \frac{1}{3} &= \frac{5}{6} \\
-\frac{1}{2} + \frac{1}{3} &= \frac{5}{6} \\
-\end{align*}
-$$
+$$ evidence_{i}=\sum_{j}W_{ij}x_{j}+b_{i} $$
 
 ## code test
 
