@@ -27,12 +27,14 @@ jobs:
     - name: Install Hexo
       run: |
         npm install hexo-cli -g
-    - name: Build
-      run: |
-        hexo clean
-        hexo generate
-        hexo generate
-        cp -r public/* ../public
+    - name: clean
+      run: hexo clean
+    - name: generate
+      run: hexo generate
+    - name: hexo generate again
+      run: hexo generate
+    - name: Copy
+      run: cp -r public/* ../public
     - name: Deploy
       run: |
         git config --global user.name 'Mryan2005'
