@@ -42,7 +42,7 @@ jobs:
       run: |
         git config --global user.name 'Mryan2005'
         git config --global user.email 'A2564011261@163.com'
-        git checkout master
+        git checkout main
         git pull
         rm -rf *
         cp -r ../public/* ./
