@@ -41,6 +41,8 @@ highlight:
 search:
   path: search.xml
   field: post
+  format: html
+  content: true
 prismjs:
   preprocess: true
   line_number: true
