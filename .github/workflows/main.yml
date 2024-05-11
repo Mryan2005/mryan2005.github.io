@@ -34,30 +34,8 @@ jobs:
       run: hexo generate
     - name: hexo generate again
       run: hexo generate
-    - name: Copy
-      run: |
-        mkdir ../public
-        cp -r ./public/* ../public
     - name: Deploy
-      run: |
-        git config --global user.name 'Mryan2005'
-        git config --global user.email 'A2564011261@163.com'
-        git add .
-        git commit -m "Update"
-        git fetch
-        git switch -c origin/master
-        git pull origin master
-    - name: clear dir
-      run: rm -rf *
-    - name: Copy
-      run: |
-        cp -r ../public/* ./
-        git add .
-        git commit -m "Update"
-        git push
-    - name: Clean
-      run: |
-        rm -rf ../public
-    - name: Finish
-      run: |
-        echo "Finish"
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITEE_TOKEN }}
+        publish_dir: ./public
