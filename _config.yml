@@ -73,3 +73,12 @@ math:
         display: false
       tex:
       svg:
+
+# Mathjax数学公式
+mathjax: true
+
+# Katex数学公式(allpost设置为false时只有头部设置math:true的文章才开启)
+katex:
+  enable: true
+  allpost: true
+  copy_tex: true
