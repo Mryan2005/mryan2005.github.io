@@ -2,5 +2,4 @@ baseURL = 'https://example.org/'
 languageCode = 'zh-hans'
 title = 'Mryan2005'
 subtitle = "All Things in my Blog"
-customImage = "./data/custom.jpeg"
 theme = 'bilberry-hugo-theme'

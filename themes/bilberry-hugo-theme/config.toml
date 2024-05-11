@@ -15,7 +15,7 @@ theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
 enableRobotsTXT = true
 
 # Change to one of your content languages defined at the end.
-DefaultContentLanguage = "zh"
+DefaultContentLanguage = "en"
 
 # Enable / Disable Google Analytics statistics for your site
 googleAnalytics = ""
