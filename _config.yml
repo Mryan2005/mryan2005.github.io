@@ -5,7 +5,7 @@ keywords: null
 author: Mryan2005
 language: zh-CN
 timezone: ''
-url: http://example.com
+url: https://www.mryan2005.top
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
@@ -38,6 +38,11 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
+search:
+  path: search.xml
+  field: post
+  content: true
+  template: ./search.xml
 prismjs:
   preprocess: true
   line_number: true
