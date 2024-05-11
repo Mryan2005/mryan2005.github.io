@@ -11,7 +11,7 @@ categories:
 
 ### INLINE EQUATIONS
 
-$ y = mx + b $
+$y = mx + b$
 
 ### MULTI-LINE EQUATIONS
 
