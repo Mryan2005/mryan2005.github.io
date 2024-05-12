@@ -10,4 +10,9 @@ def createUrlTxt(url):
                     f.write(url + '/' + os.path.join(root, file)[7:] + '\n')
 
 if __name__ == '__main__':
-    createUrlTxt("https://www.mryan2005.top")
+    createUrlTxt(sys.argv[1])
+    print('url.txt created')
+    with open('url.txt') as f:
+        urls = f.readlines()
+    for url in urls:
+        print(url)
