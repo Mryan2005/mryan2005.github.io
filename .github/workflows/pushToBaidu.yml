@@ -1,0 +1,17 @@
+name: Push to Baidu
+on: 
+    push:
+        branches:
+        - gh-pages
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+          with:
+            python-version: '3.x'
+        - name: run py file
+          run: python3 ./pushToBaidu.py
+        - name: commit
+          run: curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=${{secrets.SITEURL}}&token=${{secrets.BAIDUTOKEN}}"
