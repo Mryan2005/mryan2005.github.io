@@ -1,4 +1,3 @@
-import requests
 import os
 import sys
 import threading
@@ -27,3 +26,8 @@ if __name__ == '__main__':
     threads = []
     for i in range(1, id):
         thread = threading.Thread(target=os.system, args="curl -H \'Content-Type:text/plain\' --data-binary @urls{}.txt \"http://data.zz.baidu.com/urls?site={}&token={}\"".format(i, siteurl, baiduToken))
+        threads.append(thread)
+        thread.start()
+    for thread in threads:
+        thread.join()
+    print('All urls have been pushed to Baidu')
