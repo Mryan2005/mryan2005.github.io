@@ -4,7 +4,7 @@ import sys
 
 def createUrlTxt(url):
     with open('url.txt', 'w') as f:
-        for root, dirs, files in os.walk(os.getcwd()):
+        for root, dirs, files in os.walk("."):
             for file in files:
                 if file.endswith('.html'):
                     f.write(url + '/' + os.path.join(root, file)[7:] + '\n')
