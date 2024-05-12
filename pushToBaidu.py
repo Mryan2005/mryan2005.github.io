@@ -25,7 +25,7 @@ if __name__ == '__main__':
     print('urls.txt created')
     threads = []
     for i in range(1, id):
-        thread = threading.Thread(target=os.system, args=("curl -H \'Content-Type:text/plain\' --data-binary @urls{}.txt \"http://data.zz.baidu.com/urls?site={}&token={}\"".format(i, siteurl, baiduToken)))
+        thread = threading.Thread(target=os.system, args=("curl -H \'Content-Type:text/plain\' --data-binary @urls{}.txt \"http://data.zz.baidu.com/urls?site={}&token={}\"".format(i, siteurl, baiduToken),))
         threads.append(thread)
         thread.start()
     for thread in threads:
