@@ -1,9 +1,0 @@
-- group:  我的其他社交网站 # 分组名称
-  description:  # 分组描述
-  items:
-    - title: 我的CSDN # 名称
-      avatar:  # 头像
-      url:  https://blog.csdn.net/qq_21739599?spm=1000.2115.3001.5343 # 链接
-      screenshot: # 截图
-      keywords: CSDN # 关键词
-      description: # 描述
