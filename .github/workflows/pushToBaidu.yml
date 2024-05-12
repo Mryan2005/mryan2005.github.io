@@ -19,6 +19,7 @@ jobs:
         - name: run py file
           run: |
             pip install requests  
-            python3 ./pushToBaidu.py ${{secrets.SITEURL}}
+        - name: push to baidu
+          run: python3 ./pushToBaidu.py ${{secrets.SITEURL}}
         - name: commit
           run: curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=${{secrets.SITEURL}}&token=${{secrets.BAIDUTOKEN}}"
