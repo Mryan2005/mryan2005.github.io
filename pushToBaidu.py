@@ -7,7 +7,7 @@ def createUrlTxt(url):
         for root, dirs, files in os.walk("."):
             for file in files:
                 if file.endswith('.html'):
-                    f.write(url + '/' + os.path.join(root, file)[:] + '\n')
+                    f.write(url + '/' + os.path.join(root, file)[2:] + '\n')
 
 if __name__ == '__main__':
     createUrlTxt(sys.argv[1])
