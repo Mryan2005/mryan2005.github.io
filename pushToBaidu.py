@@ -25,6 +25,8 @@ if __name__ == '__main__':
             file = open('urls{}.txt'.format(id), 'w')
         else:
             file.write(links[i]+ '\n')
+    file.close()
+    print('urls{}.txt created'.format(id))
     print('urls.txt created')
     threads = []
     for i in range(1, id):
