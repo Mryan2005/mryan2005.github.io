@@ -86,7 +86,7 @@ elementType initAlist(seqList *L, int i) {
 3. 主要是要找到关键操作（递归和循环），就是嵌套最深的语句，可以是判断、也可以是普通语句。
 4. 当存在最好和最坏情况后，用平均复杂度。
 
-##### 例题<sup><a href="#ref1">1</a></sup>
+##### 例题 <sup><a href="#ref1">1</a></sup>
 
 1. 多重循环
 ![](https://pic.imgdb.cn/item/662db4800ea9cb14037a864f.png)
