@@ -10,7 +10,7 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - name: switch to gh-pages
-          run: git checkout gh-pages
+          run: git switch origin/gh-pages
         - uses: actions/setup-python@v2
           with:
             python-version: '3.x'
