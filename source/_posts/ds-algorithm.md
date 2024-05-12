@@ -112,6 +112,6 @@ elementType initAlist(seqList *L, int i) {
 ---
 <ol>
 <li>
-<p name="ref1"><a herf="https://blog.csdn.net/weixin_63866037/article/details/128087397">详解时间复杂度计算公式(附例题细致讲解过程)</a>
+<p name="ref1"><a href="https://blog.csdn.net/weixin_63866037/article/details/128087397">详解时间复杂度计算公式(附例题细致讲解过程)</a>
 </li>
 </ol>
