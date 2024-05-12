@@ -15,12 +15,13 @@ if __name__ == '__main__':
     siteurl = sys.argv[1]
     baiduToken = sys.argv[2]
     id = 1
+    file = open('urls{}.txt'.format(id), 'w')
     for i in range(len(links)):
-        if i % 20 == 0:
-            file = open('urls{}.txt'.format(id), 'w')
+        if i % 20 == 0 and i != 0:
             file.write(links[i]+ '\n')
-            file.close()
             id += 1
+            file.close()
+            file = open('urls{}.txt'.format(id), 'w')
         else:
             file.write(links[i]+ '\n')
     print('urls.txt created')
