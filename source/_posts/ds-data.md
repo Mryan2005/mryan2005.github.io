@@ -70,4 +70,4 @@ D是数据元素的有限集，S是D上关系的有限集
 
 ## 参考资料
 
-1. [数据结构（C语言版）| 作者：严蔚敏女士](url="http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html")
+1. [数据结构（C语言版）| 作者：严蔚敏女士](http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html)

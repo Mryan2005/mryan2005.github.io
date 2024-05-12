@@ -112,4 +112,4 @@ elementType initAlist(seqList *L, int i) {
 ## 参考资料
 
 1. [详解时间复杂度计算公式(附例题细致讲解过程)](https://blog.csdn.net/weixin_63866037/article/details/128087397)
-2. [数据结构（C语言版）| 作者：严蔚敏女士](url="http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html")
+2. [数据结构（C语言版）| 作者：严蔚敏女士](http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html)
