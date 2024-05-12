@@ -109,9 +109,7 @@ elementType initAlist(seqList *L, int i) {
 看看弄出了多少空间被占用。
 注意：如果是递归的算法，那就**是看层数**，不是看节点数，因为递归算法是单线程的弄完一个以后，就会删除掉。
 
----
-<ol>
-<li>
-<p name="ref1"><a href="https://blog.csdn.net/weixin_63866037/article/details/128087397">详解时间复杂度计算公式(附例题细致讲解过程)</a>
-</li>
-</ol>
+## 参考资料
+
+1. [详解时间复杂度计算公式(附例题细致讲解过程)](https://blog.csdn.net/weixin_63866037/article/details/128087397)
+
