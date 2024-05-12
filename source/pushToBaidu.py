@@ -19,6 +19,7 @@ if __name__ == '__main__':
         if i % 20 == 0:
             file = open('urls{}.txt'.format(id), 'w')
             file.write(links[i]+ '\n')
+            file.close()
             id += 1
         else:
             file.write(links[i]+ '\n')
