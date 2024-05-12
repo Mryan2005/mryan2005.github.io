@@ -1,13 +1,16 @@
 name: Push to Baidu
 on: 
-    
-    push:
-        branches: ["src"]
+    workflow_run: 
+        workflows: ["Hexo CI"]
+        types:
+            - completed
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v4
+        - name: switch to gh-pages
+          run: git checkout gh-pages
         - uses: actions/setup-python@v2
           with:
             python-version: '3.x'
