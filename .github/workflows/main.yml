@@ -30,6 +30,7 @@ jobs:
         npm install hexo-generator-search --save
         npm i @upupming/hexo-renderer-markdown-it-plus --save
         npm install markdown-it-katex --save
+        npm install hexo-reference --save
         npm install
     - name: clean
       run: hexo clean

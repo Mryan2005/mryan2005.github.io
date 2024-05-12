@@ -99,6 +99,7 @@ markdown_it_plus:
     quotes: '“”‘’'
   plugins:
     - markdown-it-katex
+    - hexo-reference
   anchors:	
     level: 2
     collisionSuffix: 'v'
