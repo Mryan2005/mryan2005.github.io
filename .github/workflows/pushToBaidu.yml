@@ -1,7 +1,8 @@
 name: Push to Baidu
 on: 
+    
     push:
-        branches: ["gh-pages"]
+        branches: ["src"]
 jobs:
     build:
         runs-on: ubuntu-latest
