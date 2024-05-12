@@ -975,6 +975,65 @@ article .readmore {
 .copyright.license .license-meta-text a:hover {
   border-bottom-color: #ff5722;
 }
+.category-all-page a:link {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+.category-all-page a:hover {
+  font-size: 14px;
+  color: #d8d;
+  text-decoration: none;
+  font-weight: bold;
+}
+.category-all-page .category-all-title {
+  text-align: left;
+}
+.category-all-page .category-all {
+  margin-top: 20px;
+}
+.category-all-page .category-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.category-all-page .category-list-item {
+  text-align: center;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline-block;
+  margin: 8px;
+  padding: 8px;
+  width: 150px;
+  position: relative;
+  background-color: rgba(237,237,237,0.53);
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  box-shadow: 0px 0px 0px 1px #ccc;
+  -webkit-box-shadow: 0px 0px 0px 1px #ccc;
+}
+.category-all-page .category-list-link {
+  color: #333;
+}
+.category-all-page .category-list-count {
+  color: #333;
+}
+.category-all-page .category-list-count:before {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline;
+  content: " (";
+}
+.category-all-page .category-list-count:after {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline;
+  content: ") ";
+}
+.category-all-page .category-list-child {
+  padding-left: 10px;
+  color: #333;
+}
 footer.footer {
   position: relative;
   padding: 40px 10px 120px 10px;
