@@ -67,3 +67,7 @@ D是数据元素的有限集，S是D上关系的有限集
 
 1. **顺序储存结构（sequential storage structure）** 
 2. **链式储存结构（linked storage structure）**
+
+## 参考资料
+
+1. [数据结构（C语言版）| 作者：严蔚敏女士](url="http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html")
