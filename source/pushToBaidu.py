@@ -1,18 +1,29 @@
 import requests
 import os
 import sys
+import threading
 
 def createUrlTxt(url):
-    with open('urls.txt', 'w') as f:
-        for root, dirs, files in os.walk("."):
-            for file in files:
-                if file.endswith('.html'):
-                    f.write(url + '/' + os.path.join(root, file)[2:] + '\n')
+    links = []
+    for root, dirs, files in os.walk("."):
+        for file in files:
+            if file.endswith('.html'):
+                links.append(url + '/' + os.path.join(root, file)[2:])
+    return links
 
 if __name__ == '__main__':
-    createUrlTxt(sys.argv[1])
+    links = createUrlTxt(sys.argv[1])
+    siteurl = sys.argv[1]
+    baiduToken = sys.argv[2]
+    id = 1
+    for i in range(len(links)):
+        if i % 20 == 0:
+            file = open('urls{}.txt'.format(id), 'w')
+            file.write(links[i]+ '\n')
+            id += 1
+        else:
+            file.write(links[i]+ '\n')
     print('urls.txt created')
-    with open('urls.txt') as f:
-        urls = f.readlines()
-    for url in urls:
-        print(url)
+    threads = []
+    for i in range(1, id):
+        thread = threading.Thread(target=os.system, args="curl -H \'Content-Type:text/plain\' --data-binary @urls{}.txt \"http://data.zz.baidu.com/urls?site={}&token={}\"".format(i, siteurl, baiduToken))
