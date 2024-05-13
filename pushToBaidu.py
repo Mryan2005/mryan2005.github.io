@@ -1,7 +1,9 @@
 import os
 import sys
 import threading
+import requests
 import random
+import json
 
 def createUrlTxt(url):
     links = []
@@ -15,27 +17,38 @@ if __name__ == '__main__':
     links = createUrlTxt(sys.argv[1])
     siteurl = sys.argv[1]
     baiduToken = sys.argv[2]
-    id = 1
-    file = open('urls{}.txt'.format(id), 'w')
-    for i in range(len(links)):
-        if i % 1 == 0 and i != 0:
-            file.write(links[i]+ '\n')
-            print('urls{}.txt created'.format(id))
-            id += 1
-            file.close()
-            file = open('urls{}.txt'.format(id), 'w')
-        else:
-            file.write(links[i]+ '\n')
-    file.close()
-    print('urls{}.txt created'.format(id))
-    print('urls.txt created')
-    threads = []
-    for i in range(1, id):
-        j = random.randint(1, id)
-        thread = threading.Thread(target=os.system, args=("curl -H \'Content-Type:text/plain\' --data-binary @urls{}.txt \"http://data.zz.baidu.com/urls?site={}&token={}\"".format(j, siteurl, baiduToken),))
-        print('urls{}.txt pushed to Baidu'.format(j))
-        threads.append(thread)
-        thread.start()
-    for thread in threads:
-        thread.join()
-    print('All urls have been pushed to Baidu')
+    bingToken = sys.argv[3]
+    needToPush = []
+    # random push 10 urls
+    for i in range(0, 10):
+        while True:
+            needToPush.append(links[random.randint(0, len(links) - 1)])
+            if len(needToPush) == 10:
+                break
+
+    # push to bing
+    headers = {
+        'Content-Type': 'Content-Type: application/json; charset=utf-8​',
+        "Host": "ssl.bing.com​"
+    }
+    data = {
+        "siteUrl": siteurl,
+        "urlList": needToPush
+    }
+    response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dump(needToPush), headers=headers)
+    print(response.text)
+
+    # push to baidu
+    """
+    User-Agent: curl/7.12.1
+    Host: data.zz.baidu.com
+    Content-Type: text/plain
+    """
+    headers = {
+        'Content-Type': 'text/plain',
+        "Host": "data.zz.baidu.com",
+        "User-Agent": "curl/7.12.1"
+    }
+    data = '\n'.join(needToPush)
+    response = requests.post('http://data.zz.baidu.com/urls?site=' + siteurl + '&token=' + baiduToken, data=data, headers=headers)
+    print(response.text)
