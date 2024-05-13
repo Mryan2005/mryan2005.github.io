@@ -17,4 +17,4 @@ jobs:
           with:
             python-version: '3.x'
         - name: push to baidu
-          run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} ${{secrets.BAIDUTOKEN}}
+          run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} ${{secrets.BAIDUTOKEN}} ${{secrets.BINGTOKEN}}
