@@ -19,7 +19,7 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-volantis": "^5.8.0",
     "hexo-generator-searchdb": "^1.4.1",
-    "hexo-generator-json-content": "^3.0.0",
+    "hexo-generator-json-content": "^4.2.3",
     "hexo-generator-sitemap": "^2.0.0"
   }
 }
