@@ -16,5 +16,8 @@ jobs:
         - uses: actions/setup-python@v2
           with:
             python-version: '3.x'
+        - name: install dependencies
+          run: |
+            pip install requests
         - name: push to baidu
           run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} ${{secrets.BAIDUTOKEN}} ${{secrets.BINGTOKEN}}
