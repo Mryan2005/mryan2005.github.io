@@ -12,7 +12,7 @@ def createUrlTxt(url):
         for file in files:
             if file.endswith('.html'):
                 urlc = url + '/' + os.path.join(root, file)[2:]
-                urlc = urlc.encode("utf-8").decode("latin1")
+                # urlc = urlc.encode("utf-8").decode("latin1")
                 links.append(urlc)
     return links
 
@@ -39,7 +39,7 @@ if __name__ == '__main__':
         "siteUrl": siteurl,
         "urlList": needToPush
     }
-    response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dumps(data), headers=headers)
+    response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dumps(data).encode("utf-8").decode("latin1"), headers=headers)
     print(response.text)
 
     # push to baidu
