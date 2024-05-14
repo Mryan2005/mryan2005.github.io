@@ -1,5 +1,5 @@
 ---
-title: jianxieyundong
+title: 简谐运动
 date: 2024-05-14 09:10:32
 tags:
 - 简谐运动
