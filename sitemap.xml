@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.mryan2005.top/about/index.html</loc>
+    
+    <lastmod>2024-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/categories/index.html</loc>
+    
+    <lastmod>2024-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/friends/index.html</loc>
+    
+    <lastmod>2024-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/tags/index.html</loc>
+    
+    <lastmod>2024-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mryan2005.top/2024/05/12/ds-algorithm/</loc>
     
     <lastmod>2024-05-14</lastmod>
@@ -47,6 +83,15 @@
   </url>
   
   <url>
+    <loc>https://www.mryan2005.top/2024/05/14/jianxieyundong/</loc>
+    
+    <lastmod>2024-05-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mryan2005.top/2024/05/11/suijishijianyugailv/</loc>
     
     <lastmod>2024-05-14</lastmod>
@@ -66,42 +111,6 @@
   
   <url>
     <loc>https://www.mryan2005.top/2024/05/14/the_reason_why_I_create_my_blog/</loc>
-    
-    <lastmod>2024-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mryan2005.top/about/index.html</loc>
-    
-    <lastmod>2024-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mryan2005.top/categories/index.html</loc>
-    
-    <lastmod>2024-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mryan2005.top/friends/index.html</loc>
-    
-    <lastmod>2024-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mryan2005.top/tags/index.html</loc>
     
     <lastmod>2024-05-14</lastmod>
     
@@ -140,6 +149,13 @@
   </url>
   
   <url>
+    <loc>https://www.mryan2005.top/tags/%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8/</loc>
+    <lastmod>2024-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mryan2005.top/tags/test/</loc>
     <lastmod>2024-05-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -157,6 +173,13 @@
   
   <url>
     <loc>https://www.mryan2005.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/</loc>
+    <lastmod>2024-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/categories/%E7%89%A9%E7%90%86-%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8/</loc>
     <lastmod>2024-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
