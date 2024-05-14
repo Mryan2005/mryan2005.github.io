@@ -36,7 +36,7 @@ if __name__ == '__main__':
         "siteUrl": siteurl,
         "urlList": needToPush
     }
-    response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dump(data), headers=headers)
+    response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dumps(data), headers=headers)
     print(response.text)
 
     # push to baidu
