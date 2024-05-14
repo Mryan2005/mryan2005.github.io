@@ -30,16 +30,16 @@ if __name__ == '__main__':
                 break
 
     # push to bing
-    headers = {
-        'Content-Type': 'Content-Type: application/json; charset=utf-8​',
-        "Host": "ssl.bing.com​"
-    }
-    data = {
-        "siteUrl": siteurl,
-        "urlList": needToPush
-    }
-    response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dumps(data).encode("utf-8").decode("latin-1"), headers=headers)
-    print(response.text)
+    # headers = {
+    #     'Content-Type': 'Content-Type: application/json; charset=utf-8​',
+    #     "Host": "ssl.bing.com​"
+    # }
+    # data = {
+    #     "siteUrl": siteurl,
+    #     "urlList": needToPush
+    # }
+    # response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dumps(data).encode("utf-8").decode("latin-1"), headers=headers)
+    # print(response.text)
 
     # push to baidu
     """
