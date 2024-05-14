@@ -36,6 +36,7 @@ if __name__ == '__main__':
         "siteUrl": siteurl,
         "urlList": needToPush
     }
+    data = data.encode('utf-8')
     response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dumps(data), headers=headers)
     print(response.text)
 
