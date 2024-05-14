@@ -11,7 +11,9 @@ def createUrlTxt(url):
     for root, dirs, files in os.walk("."):
         for file in files:
             if file.endswith('.html'):
-                links.append(url + '/' + os.path.join(root, file)[2:])
+                urlc = url + '/' + os.path.join(root, file)[2:]
+                urlc = urlc.encode("utf-8").decode("latin1")
+                links.append(urlc)
     return links
 
 if __name__ == '__main__':
@@ -25,7 +27,6 @@ if __name__ == '__main__':
         while True:
             choice = links[random.randint(0, len(links) - 1)]
             if choice not in needToPush:
-                choice = choice.encode('utf-8').decode("latin-1")
                 needToPush.append(choice)
                 break
 
