@@ -24,6 +24,7 @@ if __name__ == '__main__':
         while True:
             choice = links[random.randint(0, len(links) - 1)]
             if choice not in needToPush:
+                choice = choice.encode('utf-8').decode("latin1")
                 needToPush.append(choice)
                 break
 
@@ -36,7 +37,6 @@ if __name__ == '__main__':
         "siteUrl": siteurl,
         "urlList": needToPush
     }
-    data = data.encode('utf-8')
     response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?​apikey=' + bingToken, data=json.dumps(data), headers=headers)
     print(response.text)
 
