@@ -22,8 +22,9 @@ if __name__ == '__main__':
     # random push 10 urls
     for i in range(0, 10):
         while True:
-            needToPush.append(links[random.randint(0, len(links) - 1)])
-            if len(needToPush) == 10:
+            choice = links[random.randint(0, len(links) - 1)]
+            if choice not in needToPush:
+                needToPush.append(choice)
                 break
 
     # push to bing
