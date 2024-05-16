@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     # push to bing
     headers = {
-        'Content-Type': 'Content-Type: application/json; charset=utf-8',
+        'Content-Type': 'application/json; charset=utf-8',
         "Host": "ssl.bing.com"
     }
     data = {
