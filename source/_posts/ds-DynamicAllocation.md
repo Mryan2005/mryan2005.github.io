@@ -72,3 +72,7 @@ void addContent(DA *da, ElemType content) {
     da->length++;
 }
 ```
+
+## 参考资料
+
+1. [数据结构（C语言版）| 作者：严蔚敏女士](http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html)
