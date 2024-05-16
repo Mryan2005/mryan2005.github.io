@@ -61,9 +61,10 @@ void initDynamicAllocation(DA *da) {
     da->data = (ElemType*)malloc(sizeof(ElemType)*INITIALSIZE);
     /* initial process */
 }
-
+```
 
 ### 添加内容
+
 ```c
 void addContent(DA *da, ElemType content) {
     ElemType *p = da->data+length;
