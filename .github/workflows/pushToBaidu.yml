@@ -1,4 +1,4 @@
-name: Push to Baidu
+name: Push to Baidu and Bing
 on: 
     workflow_run: 
         workflows: ["Hexo CI"]
@@ -19,5 +19,5 @@ jobs:
         - name: install dependencies
           run: |
             pip install requests
-        - name: push to baidu
+        - name: push to baidu and Bing
           run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} ${{secrets.BAIDUTOKEN}} ${{secrets.BINGTOKEN}}
