@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ds-DynamicAllocation</title>
+    <title>动态分配</title>
     <url>/2024/05/16/ds-DynamicAllocation/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="前情提要"><a class="markdownIt-Anchor" href="#前情提要"></a> 前情提要</h2>
 <p>在之前的C语言的学习当中，我们提到了<code>malloc</code>和<code>free</code>，这两个函数是用来动态分配内存的。<br />
