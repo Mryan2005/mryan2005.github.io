@@ -22,6 +22,10 @@ length是你实际存了多少的东西，listSize是你目前表的最大长度
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">initDynamicAllocation</span><span class="params">(DA *da)</span> &#123;</span><br><span class="line">    da-&gt;data = (ElemType*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(ElemType)*INITIALSIZE);</span><br><span class="line">    <span class="comment">/* initial process */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="添加内容"><a class="markdownIt-Anchor" href="#添加内容"></a> 添加内容</h3>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">addContent</span><span class="params">(DA *da, ElemType content)</span> &#123;</span><br><span class="line">    ElemType *p = da-&gt;data+length;</span><br><span class="line">    *p = content;</span><br><span class="line">    da-&gt;length++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
+<ol>
+<li><a href="http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html">数据结构（C语言版）| 作者：严蔚敏女士</a></li>
+</ol>
 ]]></content>
       <categories>
         <category>数据结构与算法大全</category>
