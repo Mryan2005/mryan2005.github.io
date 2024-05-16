@@ -1,5 +1,5 @@
 ---
-title: ds-DynamicAllocation
+title: 动态分配
 date: 2024-05-16 10:42:21
 tags:
 - 动态分配
