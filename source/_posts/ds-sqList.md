@@ -4,7 +4,7 @@ date: 2024-05-17 12:22:25
 tags:
 - 线性表
 categories:
-- 数据结构与算法
+- 数据结构与算法大全
 ---
 
 ## 别称
@@ -458,3 +458,7 @@ void f(sqList *L) {
     }
 }
 ```
+
+## 参考资料
+
+1. [数据结构（C语言版）| 作者：严蔚敏女士](http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html)

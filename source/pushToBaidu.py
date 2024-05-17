@@ -26,6 +26,10 @@ if __name__ == '__main__':
         while True:
             choice = links[random.randint(0, len(links) - 1)]
             if choice not in needToPush and "mryan2005.top" in choice:
+                if choice.endswith('index.html'):
+                    choice = choice[:-10]
+                elif choice.endswith('.html'):
+                    choice = choice[:-5]
                 needToPush.append(choice)
                 break
 
