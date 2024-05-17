@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.mryan2005.top/tags/index.html</loc>
-    
-    <lastmod>2024-05-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mryan2005.top/2024/05/16/ds-DynamicAllocation/</loc>
     
     <lastmod>2024-05-17</lastmod>
@@ -83,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://www.mryan2005.top/2024/05/11/test-all-things/</loc>
+    <loc>https://www.mryan2005.top/2024/05/11/suijishijianyugailv/</loc>
     
     <lastmod>2024-05-17</lastmod>
     
@@ -92,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://www.mryan2005.top/2024/05/11/suijishijianyugailv/</loc>
+    <loc>https://www.mryan2005.top/2024/05/11/test-all-things/</loc>
     
     <lastmod>2024-05-17</lastmod>
     
@@ -129,6 +120,15 @@
   
   <url>
     <loc>https://www.mryan2005.top/friends/index.html</loc>
+    
+    <lastmod>2024-05-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/tags/index.html</loc>
     
     <lastmod>2024-05-17</lastmod>
     
@@ -204,6 +204,13 @@
   </url>
   
   <url>
+    <loc>https://www.mryan2005.top/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2024-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mryan2005.top/categories/%E7%89%A9%E7%90%86/</loc>
     <lastmod>2024-05-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -211,14 +218,14 @@
   </url>
   
   <url>
-    <loc>https://www.mryan2005.top/categories/test-example/</loc>
+    <loc>https://www.mryan2005.top/categories/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2024-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.mryan2005.top/categories/%E6%95%B0%E5%AD%A6/</loc>
+    <loc>https://www.mryan2005.top/categories/test-example/</loc>
     <lastmod>2024-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
