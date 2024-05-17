@@ -25,7 +25,7 @@ if __name__ == '__main__':
     for i in range(0, 10):
         while True:
             choice = links[random.randint(0, len(links) - 1)]
-            if choice not in needToPush:
+            if choice not in needToPush and "mryan2005.top" in choice:
                 needToPush.append(choice)
                 break
 
