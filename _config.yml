@@ -7,7 +7,10 @@ language: zh-CN
 timezone: ''
 favicon: /img/ajti8-5lnxq.png
 url: https://www.mryan2005.top
-permalink: ':year/:month/:day/:title/'
+permalink: posts/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
