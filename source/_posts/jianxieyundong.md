@@ -10,7 +10,7 @@ categories:
 
 # 用弹簧连接的木块反复在光滑的水平面上摩擦
 
-![](https://pic.imgdb.cn/item/663044c10ea9cb14035fade5.webp)
+![弹簧振子](https://pic.imgdb.cn/item/663044c10ea9cb14035fade5.webp)
 O点的地方叫做平衡位置。
 物块会在A、B两边反复滑动。
 像这样的系统又叫弹簧振子。

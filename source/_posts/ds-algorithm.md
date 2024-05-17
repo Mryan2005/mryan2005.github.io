@@ -89,15 +89,15 @@ elementType initAlist(seqList *L, int i) {
 ##### 例题 <sup><a href="https://blog.csdn.net/weixin_63866037/article/details/128087397">1</a></sup>
 
 1. 多重循环
-![](https://pic.imgdb.cn/item/662db4800ea9cb14037a864f.png)
-![](https://pic.imgdb.cn/item/662db4840ea9cb14037a8e71.png)
+![多重循环](https://pic.imgdb.cn/item/662db4800ea9cb14037a864f.png)
+![多重循环](https://pic.imgdb.cn/item/662db4840ea9cb14037a8e71.png)
 
 1. 一重循环
-![](https://pic.imgdb.cn/item/662db4800ea9cb14037a83a9.png)
+![一重循环](https://pic.imgdb.cn/item/662db4800ea9cb14037a83a9.png)
 ![d9379049-6e45-4356-a8b0-f19cb2ecb852.png](https://s2.loli.net/2024/04/18/AoCu61OVJqYiBhW.png)
-![](https://pic.imgdb.cn/item/662db4800ea9cb14037a8404.png)
-![](https://pic.imgdb.cn/item/662db4800ea9cb14037a852c.png)
-![](https://pic.imgdb.cn/item/662db4800ea9cb14037a8451.png)
+![一重循环](https://pic.imgdb.cn/item/662db4800ea9cb14037a8404.png)
+![一重循环](https://pic.imgdb.cn/item/662db4800ea9cb14037a852c.png)
+![一重循环](https://pic.imgdb.cn/item/662db4800ea9cb14037a8451.png)
 
 #### 事后统计
 

@@ -26,7 +26,7 @@ if __name__ == '__main__':
         while True:
             choice = links[random.randint(0, len(links) - 1)]
             if choice not in needToPush and "mryan2005.top" in choice:
-                needToPush.append(choice.split("/index.html")[0])
+                needToPush.append(choice.split("index.html")[0])
                 break
 
     # push to bing
