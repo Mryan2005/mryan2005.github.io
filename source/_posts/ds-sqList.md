@@ -1,8 +1,10 @@
 ---
-title: ds-sqList
+title: 顺序表
 date: 2024-05-17 12:22:25
 tags:
+- 线性表
 categories:
+- 数据结构与算法
 ---
 
 ## 别称
