@@ -1,1 +1,1223 @@
-document.addEventListener("DOMContentLoaded",function(){volantis.requestAnimationFrame(()=>{VolantisApp.init();VolantisApp.subscribe();VolantisFancyBox.init();highlightKeyWords.startFromURL();locationHash();volantis.pjax.push(()=>{VolantisApp.pjaxReload();VolantisFancyBox.init();sessionStorage.setItem("domTitle",document.title);highlightKeyWords.startFromURL()},"app.js");volantis.pjax.send(()=>{volantis.dom.switcher.removeClass("active");volantis.dom.header.removeClass("z_search-open");volantis.dom.wrapper.removeClass("sub");volantis.EventListener.remove()},"app.js")})});const locationHash=()=>{if(window.location.hash){let e=decodeURI(window.location.hash.split("#")[1]).replace(/\ /g,"-");let t=document.getElementById(e);if(t){setTimeout(()=>{if(window.location.hash.startsWith("#fn")){volantis.scroll.to(t,{addTop:-volantis.dom.header.offsetHeight-5,behavior:"instant",observer:true})}else{volantis.scroll.to(t,{addTop:5,behavior:"instant",observer:true})}},1e3)}}};Object.freeze(locationHash);const VolantisApp=(()=>{const a={},t='<button class="btn-copy" data-clipboard-snippet=""><i class="fa-solid fa-copy"></i><span>COPY</span></button>';let o=80;a.init=()=>{if(volantis.dom.header){o=volantis.dom.header.clientHeight+16}window.onresize=()=>{if(document.documentElement.clientWidth<500){volantis.isMobile=1}else{volantis.isMobile=0}if(volantis.isMobile!=volantis.isMobileOld){a.setGlobalHeaderMenuEvent();a.setHeader();a.setHeaderSearch()}};volantis.scroll.push(a.scrollEventCallBack,"scrollEventCallBack")};a.event=()=>{volantis.dom.$(document.getElementById("scroll-down"))?.on("click",function(){a.scrolltoElement(volantis.dom.bodyAnchor)});const e=document.querySelector("#l_side");if(e){const t=e.querySelectorAll("section");if(!t.length){document.querySelector("#l_main").classList.add("no_sidebar")}}if(volantis.GLOBAL_CONFIG.sidebar.for_page.includes("webinfo")||volantis.GLOBAL_CONFIG.sidebar.for_post.includes("webinfo")){const o=volantis.GLOBAL_CONFIG.sidebar.webinfo.lastupd;if(!!document.getElementById("last-update-show")&&o.enable&&o.friendlyShow){document.getElementById("last-update-show").innerHTML=a.utilTimeAgo(volantis.GLOBAL_CONFIG.lastupdate)}}if(!!document.getElementById("webinfo-runtime-count")){let e=new Date(volantis.GLOBAL_CONFIG.sidebar.webinfo.runtime.data);let t=(new Date).getTime()-e.getTime();let o=Math.floor(t/(24*60*60*1e3));document.getElementById("webinfo-runtime-count").innerHTML=`${o} ${volantis.GLOBAL_CONFIG.sidebar.webinfo.runtime.unit}`}document.body.oncopy=function(){a.messageCopyright()}};a.restData=()=>{o=volantis.dom.header?volantis.dom.header.clientHeight+16:80};a.setIsMobile=()=>{if(document.documentElement.clientWidth<500){volantis.isMobile=1;volantis.isMobileOld=1}else{volantis.isMobile=0;volantis.isMobileOld=0}};a.scrolltoElement=(e,t=o)=>{volantis.scroll.to(e,{top:e.offsetTop-t})};a.scrollEventCallBack=()=>{const e=volantis.dom.bodyAnchor.offsetTop-o;const t=volantis.scroll.getScrollTop();if(volantis.dom.topBtn){if(t>volantis.dom.bodyAnchor.offsetTop){volantis.dom.topBtn.addClass("show");if(volantis.scroll.del>0){volantis.dom.topBtn.removeClass("hl")}else{volantis.dom.topBtn.addClass("hl")}}else{volantis.dom.topBtn.removeClass("show").removeClass("hl")}}if(volantis.dom.header){if(t-e>-1){volantis.dom.header.addClass("show")}else{volantis.dom.header.removeClass("show")}}if(pdata.ispage&&volantis.dom.wrapper){if(volantis.scroll.del>0&&t>100){volantis.dom.wrapper.addClass("sub")}else if(volantis.scroll.del<0){volantis.dom.wrapper.removeClass("sub")}}if(volantis.isMobile){if(pdata.ispage&&volantis.dom.tocTarget&&volantis.dom.toc){volantis.dom.tocTarget.removeClass("active");volantis.dom.toc.removeClass("active")}if(volantis.dom.mPhoneList){volantis.dom.mPhoneList.forEach(function(e){volantis.dom.$(e).hide()})}}};a.setScrollAnchor=()=>{if(volantis.dom.topBtn&&volantis.dom.bodyAnchor){volantis.dom.topBtn.click(e=>{e.preventDefault();e.stopPropagation();a.scrolltoElement(volantis.dom.bodyAnchor);e.stopImmediatePropagation()})}};a.setHeader=()=>{if(!pdata.ispage)return;volantis.dom.wrapper.find(".nav-sub .title").html(document.title.split(" - ")[0]);volantis.dom.comment=volantis.dom.$(document.getElementById("s-comment"));volantis.dom.commentTarget=volantis.dom.$(document.querySelector("#l_main article#comments"));if(volantis.dom.commentTarget){volantis.dom.comment.click(e=>{e.preventDefault();e.stopPropagation();a.scrolltoElement(volantis.dom.commentTarget);e.stopImmediatePropagation()})}else volantis.dom.comment.style.display="none";if(volantis.isMobile){volantis.dom.toc=volantis.dom.$(document.getElementById("s-toc"));volantis.dom.tocTarget=volantis.dom.$(document.querySelector("#l_side .toc-wrapper"));if(volantis.dom.tocTarget){volantis.dom.toc.click(e=>{e.stopPropagation();volantis.dom.tocTarget.toggleClass("active");volantis.dom.toc.toggleClass("active")});volantis.dom.$(document).click(function(e){e.stopPropagation();if(volantis.dom.tocTarget){volantis.dom.tocTarget.removeClass("active")}volantis.dom.toc.removeClass("active")})}else volantis.dom.toc.style.display="none"}};a.setHeaderMenuSelection=()=>{volantis.dom.headerMenu=volantis.dom.$(document.querySelectorAll("#l_header .navigation,#l_cover .navigation,#l_side .navigation"));volantis.dom.headerMenu.forEach(e=>{let t=volantis.dom.$(e).find("li a.active");if(t)t.removeClass("active");let o=volantis.dom.$(e).find("div a.active");if(o)o.removeClass("active")});var o=location.pathname.replace(/\/|%|\./g,"");if(o.length==0){o="home"}var e=o.match(/page\d{0,}$/g);if(e){e=e[0];o=o.split(e)[0]}var t=o.match(/index.html/);if(t){t=t[0];o=o.split(t)[0]}o=o.replace(/(\[|\]|~|#|@)/g,"\\$1");if(o&&volantis.dom.headerMenu){volantis.dom.headerMenu.forEach(e=>{let t=e.querySelector("[active-action=action-"+o+"]");if(t){volantis.dom.$(t).addClass("active")}})}};a.setGlobalHeaderMenuEvent=()=>{if(volantis.isMobile){document.querySelectorAll("#l_header .m-phone li").forEach(function(e){if(e.querySelector(".list-v")){volantis.dom.$(e).click(function(e){e.stopPropagation();let t="";Array.from(e.currentTarget.children).some(e=>{if(e.classList.contains("s-menu")){t="menu";return}if(e.classList.contains("menuitem")){t="item";return}});if(t==="item"){e.currentTarget.parentElement.childNodes.forEach(function(e){if(Object.prototype.toString.call(e)=="[object HTMLLIElement]"){e.childNodes.forEach(function(e){if(Object.prototype.toString.call(e)=="[object HTMLUListElement]"){volantis.dom.$(e).hide()}})}});let t=e.currentTarget.children;for(let e=0;e<t.length;e++){const o=t[e];if(volantis.dom.$(o).title==="menu"){volantis.dom.$(o).style.display="flex"}else{volantis.dom.$(o).show()}}}else{let e=document.querySelector(".switcher .menu-phone");let t=window.getComputedStyle(e).display==="none";if(t){volantis.dom.$(e).show()}else{volantis.dom.$(e).hide();document.querySelector(".switcher .menu-phone").childNodes.forEach(function(e){if(Object.prototype.toString.call(e)=="[object HTMLLIElement]"){e.childNodes.forEach(function(e){if(Object.prototype.toString.call(e)=="[object HTMLUListElement]"){volantis.dom.$(e).hide()}})}})}}},0)}})}else{document.querySelectorAll("#wrapper .m-pc li > a[href]").forEach(function(e){volantis.dom.$(e.parentElement).click(function(e){e.stopPropagation();if(e.target.origin==e.target.baseURI){document.querySelectorAll("#wrapper .m-pc .list-v").forEach(function(e){volantis.dom.$(e).hide()})}},0)})}a.setPageHeaderMenuEvent()};a.setPageHeaderMenuEvent=()=>{if(!volantis.isMobile)return;volantis.dom.$(document).click(function(e){volantis.dom.mPhoneList.forEach(function(e){volantis.dom.$(e).hide()})})};a.setHeaderSearch=()=>{if(!volantis.isMobile)return;if(!volantis.dom.switcher)return;volantis.dom.switcher.click(function(e){e.stopPropagation();volantis.dom.header.toggleClass("z_search-open");volantis.dom.switcher.toggleClass("active")},false);volantis.dom.$(document).click(function(e){volantis.dom.header.removeClass("z_search-open");volantis.dom.switcher.removeClass("active")},false);volantis.dom.search.click(function(e){e.stopPropagation()},false)};a.setTabs=()=>{let e=document.querySelectorAll("#l_main .tabs .nav-tabs");if(!e)return;e.forEach(function(e){e.querySelectorAll("a").forEach(function(e){volantis.dom.$(e).on("click",e=>{e.preventDefault();e.stopPropagation();const t=volantis.dom.$(e.target.parentElement.parentElement.parentElement);t.find(".nav-tabs .active").removeClass("active");volantis.dom.$(e.target.parentElement).addClass("active");t.find(".tab-content .active").removeClass("active");t.find(e.target.className).addClass("active");return false})})})};a.footnotes=()=>{let o=document.querySelectorAll("#l_main .footnote-backref, #l_main .footnote-ref > a");o.forEach(function(e,t){o[t].click=()=>{};volantis.dom.$(e).on("click",e=>{e.stopPropagation();e.preventDefault();let t=decodeURI(e.target.hash.split("#")[1]).replace(/\ /g,"-");let o=document.getElementById(t);if(o){volantis.scroll.to(o,{addTop:-volantis.dom.header.offsetHeight-5,behavior:"instant"})}})})};a.utilCopyCode=e=>{document.querySelectorAll(e).forEach(i=>{const e=i.insertAdjacentHTML("beforebegin",t);const l=i.previousSibling;l.onclick=e=>{e.stopPropagation();const t=l.querySelector("i");const o=l.querySelector("span");i.focus();const n=new Range;n.selectNodeContents(i);document.getSelection().removeAllRanges();document.getSelection().addRange(n);const s=document.getSelection().toString();a.utilWriteClipText(s).then(()=>{a.messageCopyright();l.classList.add("copied");t.classList.remove("fa-copy");t.classList.add("fa-check-circle");o.innerText="COPIED";setTimeout(()=>{t.classList.remove("fa-check-circle");t.classList.add("fa-copy");o.innerText="COPY"},2e3)}).catch(e=>{VolantisApp.message("系统提示",e,{icon:"fa fa-exclamation-circle red"});l.classList.add("copied-failed");t.classList.remove("fa-copy");t.classList.add("fa-exclamation-circle");o.innerText="COPY FAILED";setTimeout(()=>{t.classList.remove("fa-exclamation-circle");t.classList.add("fa-copy");o.innerText="COPY"})})}})};a.utilWriteClipText=o=>{return navigator.clipboard.writeText(o).then(()=>{return Promise.resolve()}).catch(e=>{const t=document.createElement("textarea");t.setAttribute("readonly","readonly");document.body.appendChild(t);t.innerHTML=o;t.select();try{let e=document.execCommand("copy");document.body.removeChild(t);if(!e||e==="unsuccessful"){return Promise.reject("复制文本失败!")}else{return Promise.resolve()}}catch(e){document.body.removeChild(t);return Promise.reject("当前浏览器不支持复制功能，请检查更新或更换其他浏览器操作!")}})};a.utilTimeAgo=e=>{const t=1e3*60,o=t*60,n=o*24,s=n*7,i=n*30;const l=(new Date).getTime();const a=l-e;const r=a/t,c=a/o,d=a/n,m=a/s,u=a/i;if(a<0){result=""}else if(u>=1&&u<7){result=" "+parseInt(u)+" 月前"}else if(m>=1&&m<4){result=" "+parseInt(m)+" 周前"}else if(d>=1&&d<7){result=" "+parseInt(d)+" 天前"}else if(c>=1&&c<24){result=" "+parseInt(c)+" 小时前"}else if(r>=1&&r<60){result=" "+parseInt(r)+" 分钟前"}else if(a>=0&&a<=t){result="刚刚"}else{const g=new Date;g.setTime(e);const f=g.getFullYear();const h=g.getMonth()+1<10?"0"+(g.getMonth()+1):g.getMonth()+1;const v=g.getDate()<10?"0"+g.getDate():g.getDate();const p=g.getHours()<10?"0"+g.getHours():g.getHours();const y=g.getMinutes()<10?"0"+g.getMinutes():g.getMinutes();const b=g.getSeconds()<10?"0"+g.getSeconds():g.getSeconds();result=f+"-"+h+"-"+v}return result};a.message=(e,t,o={},n=null)=>{if(typeof iziToast==="undefined"){volantis.css(volantis.GLOBAL_CONFIG.plugins.message.css);volantis.js(volantis.GLOBAL_CONFIG.plugins.message.js,()=>{s(e,t,o,n)})}else{s(e,t,o,n)}function s(e,t,o,n){const{icon:s,time:i,position:l,transitionIn:a,transitionOut:r,messageColor:c,titleColor:d,backgroundColor:m,zindex:u,displayMode:g}=o;iziToast.show({layout:"2",icon:"Fontawesome",closeOnEscape:"true",displayMode:g||"replace",transitionIn:a||volantis.GLOBAL_CONFIG.plugins.message.transitionIn,transitionOut:r||volantis.GLOBAL_CONFIG.plugins.message.transitionOut,messageColor:c||volantis.GLOBAL_CONFIG.plugins.message.messageColor,titleColor:d||volantis.GLOBAL_CONFIG.plugins.message.titleColor,backgroundColor:m||volantis.GLOBAL_CONFIG.plugins.message.backgroundColor,zindex:u||volantis.GLOBAL_CONFIG.plugins.message.zindex,icon:s||volantis.GLOBAL_CONFIG.plugins.message.icon.default,timeout:i||volantis.GLOBAL_CONFIG.plugins.message.time.default,position:l||volantis.GLOBAL_CONFIG.plugins.message.position,title:e,message:t,onClosed:()=>{if(n)n()}})}};a.question=(e,t,o={},n=null,s=null,i=null)=>{if(typeof iziToast==="undefined"){volantis.css(volantis.GLOBAL_CONFIG.plugins.message.css);volantis.js(volantis.GLOBAL_CONFIG.plugins.message.js,()=>{l(e,t,o,n,s,i)})}else{l(e,t,o,n,s,i)}function l(e,t,o,n,s,i){const{icon:l,time:a,position:r,transitionIn:c,transitionOut:d,messageColor:m,titleColor:u,backgroundColor:g,zindex:f}=o;iziToast.question({id:"question",icon:"Fontawesome",close:false,overlay:true,displayMode:"once",position:"center",messageColor:m||volantis.GLOBAL_CONFIG.plugins.message.messageColor,titleColor:u||volantis.GLOBAL_CONFIG.plugins.message.titleColor,backgroundColor:g||volantis.GLOBAL_CONFIG.plugins.message.backgroundColor,zindex:f||volantis.GLOBAL_CONFIG.plugins.message.zindex,icon:l||volantis.GLOBAL_CONFIG.plugins.message.icon.quection,timeout:a||volantis.GLOBAL_CONFIG.plugins.message.time.quection,title:e,message:t,buttons:[["<button><b>是</b></button>",(e,t)=>{e.hide({transitionOut:d||"fadeOut"},t,"button");if(n)n(e,t)}],["<button><b>否</b></button>",(e,t)=>{e.hide({transitionOut:d||"fadeOut"},t,"button");if(s)s(e,t)}]],onClosed:(e,t,o)=>{if(i)i(e,t,o)}})}};a.hideMessage=(e=null)=>{const t=document.querySelector(".iziToast");if(!t){if(e)e();return}if(typeof iziToast==="undefined"){volantis.css(volantis.GLOBAL_CONFIG.plugins.message.css);volantis.js(volantis.GLOBAL_CONFIG.plugins.message.js,()=>{o(e)})}else{o(e)}function o(e){iziToast.hide({},t);if(e)e()}};let e=0;a.messageCopyright=()=>{if(volantis.GLOBAL_CONFIG.plugins.message.enable&&volantis.GLOBAL_CONFIG.plugins.message.copyright.enable&&e<1){e++;VolantisApp.message(volantis.GLOBAL_CONFIG.plugins.message.copyright.title,volantis.GLOBAL_CONFIG.plugins.message.copyright.message,{icon:volantis.GLOBAL_CONFIG.plugins.message.copyright.icon,transitionIn:"flipInX",transitionOut:"flipOutX",displayMode:1})}};return{init:()=>{a.init();a.event()},subscribe:()=>{a.setIsMobile();a.setHeader();a.setHeaderMenuSelection();a.setGlobalHeaderMenuEvent();a.setHeaderSearch();a.setScrollAnchor();a.setTabs();a.footnotes()},pjaxReload:()=>{a.event();a.restData();a.setHeader();a.setHeaderMenuSelection();a.setPageHeaderMenuEvent();a.setScrollAnchor();a.setTabs();a.footnotes();document.querySelector("#l_header .nav-main").querySelectorAll(".list-v:not(.menu-phone)").forEach(function(e){e.removeAttribute("style")});document.querySelector("#l_header .menu-phone.list-v").removeAttribute("style");e=0},utilCopyCode:a.utilCopyCode,utilWriteClipText:a.utilWriteClipText,utilTimeAgo:a.utilTimeAgo,message:a.message,question:a.question,hideMessage:a.hideMessage,messageCopyright:a.messageCopyright,scrolltoElement:a.scrolltoElement}})();Object.freeze(VolantisApp);const VolantisFancyBox=(()=>{const o={};o.loadFancyBox=e=>{volantis.css(volantis.GLOBAL_CONFIG.plugins.fancybox.css);volantis.js(volantis.GLOBAL_CONFIG.plugins.fancybox.js).then(()=>{if(e)e()})};o.init=(e=true,t=o.groupBind)=>{if(!document.querySelector(".md .gallery img, .fancybox")&&e)return;if(typeof Fancybox==="undefined"){o.loadFancyBox(t)}else{t()}};o.elementHandling=(e,o)=>{const t=document.querySelectorAll(e);t.forEach(e=>{if(e.hasAttribute("fancybox"))return;e.setAttribute("fancybox","");const t=document.createElement("a");t.setAttribute("href",e.src);t.setAttribute("data-caption",e.alt);t.setAttribute("data-fancybox",o);t.classList.add("fancybox");t.append(e.cloneNode());e.replaceWith(t)})};o.bind=e=>{o.init(false,()=>{Fancybox.bind(e,{groupAll:true,Hash:false,hideScrollbar:false,Thumbs:{autoStart:false},caption:function(e,t,o){return o.$trigger.alt||null}})})};o.groupBind=(e=null)=>{const t=new Set;document.querySelectorAll(".gallery").forEach(e=>{if(e.querySelector("img")){t.add(e.getAttribute("data-group")||"default")}});if(!!e)t.add(e);for(const o of t){Fancybox.unbind('[data-fancybox="'+o+'"]');Fancybox.bind('[data-fancybox="'+o+'"]',{Hash:false,hideScrollbar:false,Thumbs:{autoStart:false}})}};return{init:o.init,bind:o.bind,groupBind:(e,t="default")=>{try{o.elementHandling(e,t);o.init(false,()=>{o.groupBind(t)})}catch(e){console.error(e)}}}})();Object.freeze(VolantisFancyBox);const highlightKeyWords=(()=>{let c={};c.markNum=0;c.markNextId=-1;c.startFromURL=()=>{const e=decodeURI(new URL(location.href).searchParams.get("keyword"));const t=e?e.split(" "):[];const o=document.querySelector("#l_main");if(t.length==1&&t[0]=="null"){return}c.start(t,o);c.scrollToFirstHighlightKeywordMark()};c.scrollToFirstHighlightKeywordMark=()=>{volantis.cleanContentVisibility();let e=c.scrollToNextHighlightKeywordMark("0");if(!e){volantis.requestAnimationFrame(c.scrollToFirstHighlightKeywordMark)}};c.scrollToNextHighlightKeywordMark=e=>{let t=e||(c.markNextId+1)%c.markNum;c.markNextId=parseInt(t);let o=document.getElementById("keyword-mark-"+c.markNextId);if(!o){c.markNextId=(c.markNextId+1)%c.markNum;o=document.getElementById("keyword-mark-"+c.markNextId)}if(o){volantis.scroll.to(o,{addTop:-volantis.dom.header.offsetHeight-5,behavior:"instant"})}return o};c.scrollToPrevHighlightKeywordMark=e=>{let t=e||(c.markNextId-1+c.markNum)%c.markNum;c.markNextId=parseInt(t);let o=document.getElementById("keyword-mark-"+c.markNextId);if(!o){c.markNextId=(c.markNextId-1+c.markNum)%c.markNum;o=document.getElementById("keyword-mark-"+c.markNextId)}if(o){volantis.scroll.to(o,{addTop:-volantis.dom.header.offsetHeight-5,behavior:"instant"})}return o};c.start=(n,e)=>{c.markNum=0;if(!n.length||!e||n.length==1&&n[0]=="null")return;console.log(n);const t=document.createTreeWalker(e,NodeFilter.SHOW_TEXT,null);const o=[];while(t.nextNode()){if(!t.currentNode.parentNode.matches("button, select, textarea"))o.push(t.currentNode)}o.forEach(e=>{const[t]=c.getIndexByWord(n,e.nodeValue);if(!t.length)return;const o=c.mergeIntoSlice(0,e.nodeValue.length,t);c.highlightText(e,o,"keyword");c.highlightStyle()})};c.getIndexByWord=(e,i,l=false)=>{const a=[];const r=new Set;e.forEach(e=>{const t=document.createElement("div");t.innerText=e;e=t.innerHTML;const o=e.length;if(o===0)return;let n=0;let s=-1;if(!l){i=i.toLowerCase();e=e.toLowerCase()}while((s=i.indexOf(e,n))>-1){a.push({position:s,word:e});r.add(e);n=s+o}});a.sort((e,t)=>{if(e.position!==t.position){return e.position-t.position}return t.word.length-e.word.length});return[a,r]};c.mergeIntoSlice=(e,t,o)=>{let n=o[0];let{position:s,word:i}=n;const l=[];const a=new Set;while(s+i.length<=t&&o.length!==0){a.add(i);l.push({position:s,length:i.length});const r=s+i.length;o.shift();while(o.length!==0){n=o[0];s=n.position;i=n.word;if(r>s){o.shift()}else{break}}}return{hits:l,start:e,end:t,count:a.size}};c.highlightText=(t,e,o)=>{const n=t.nodeValue;let s=e.start;const i=[];for(const{position:l,length:a}of e.hits){const r=document.createTextNode(n.substring(s,l));s=l+a;let e=document.createElement("mark");e.className=o;e=c.highlightStyle(e);e.appendChild(document.createTextNode(n.substr(l,a)));i.push(r,e)}t.nodeValue=n.substring(s,e.end);i.forEach(e=>{t.parentNode.insertBefore(e,t)})};c.highlightStyle=e=>{if(!e)return;e.id="keyword-mark-"+c.markNum;c.markNum++;e.style.background="transparent";e.style["border-bottom"]="1px dashed #ff2a2a";e.style["color"]="#ff2a2a";e.style["font-weight"]="bold";return e};c.cleanHighlightStyle=()=>{document.querySelectorAll(".keyword").forEach(e=>{e.style.background="transparent";e.style["border-bottom"]=null;e.style["color"]=null;e.style["font-weight"]=null})};return{start:(e,t)=>{c.start(e,t)},startFromURL:()=>{c.startFromURL()},scrollToNextHighlightKeywordMark:e=>{c.scrollToNextHighlightKeywordMark(e)},scrollToPrevHighlightKeywordMark:e=>{c.scrollToPrevHighlightKeywordMark(e)},cleanHighlightStyle:()=>{c.cleanHighlightStyle()}}})();Object.freeze(highlightKeyWords);const DOMController={visible:(e,t=true)=>{if(e)e.style.display=t===true?"block":"none"},remove:e=>{const t=document.querySelectorAll(e);t.forEach(e=>{e.remove()})},removeList:e=>{e.forEach(e=>{DOMController.remove(e)})},setAttribute:(e,t,o)=>{const n=document.querySelectorAll(e);n.forEach(e=>{e.setAttribute(t,o)})},setAttributeList:e=>{e.forEach(e=>{DOMController.setAttribute(e[0],e[1],e[2])})},setStyle:(e,t,o)=>{const n=document.querySelectorAll(e);n.forEach(e=>{e.style[t]=o})},setStyleList:e=>{e.forEach(e=>{DOMController.setStyle(e[0],e[1],e[2])})},fadeIn:e=>{if(!e)return;e.style.visibility="visible";e.style.opacity=1;e.style.display="block";e.style.transition="all 0.5s linear";return e},fadeOut:e=>{if(!e)return;e.style.visibility="hidden";e.style.opacity=0;e.style.display="none";e.style.transition="all 0.5s linear";return e},fadeToggle:e=>{if(!e)return;if(e.style.visibility=="hidden"){e=DOMController.fadeIn(e)}else{e=DOMController.fadeOut(e)}return e},fadeToggleList:e=>{e.forEach(e=>{DOMController.fadeToggle(e)})},hasClass:(e,t)=>{if(!e)return;return e.className.match(new RegExp("(\\s|^)"+t+"(\\s|$)"))},addClass:(e,t)=>{if(!e)return;e.classList.add(t);return e},removeClass:(e,t)=>{if(!e)return;e.classList.remove(t);return e},toggleClass:(e,t)=>{if(!e)return;if(DOMController.hasClass(e,t)){DOMController.removeClass(e,t)}else{DOMController.addClass(e,t)}return e},toggleClassList:e=>{e.forEach(e=>{DOMController.toggleClass(e[0],e[1])})}};Object.freeze(DOMController);const VolantisRequest={timeoutFetch:(t,e,o)=>{const n=new AbortController;o.signal?.addEventListener("abort",()=>n.abort());let s=fetch(t,{...o,signal:n.signal});if(e>0){const i=setTimeout(()=>n.abort(),e);s.finally(()=>{clearTimeout(i)})}s=s.catch(e=>{throw(e||{}).name==="AbortError"?new Error(`Fetch timeout: ${t}`):e});return s},Fetch:async(e,t,o=15e3)=>{const n=await VolantisRequest.timeoutFetch(e,o,t);if(!n.ok)throw new Error(`Fetch error: ${e} | ${n.status}`);let s=await n.json();if(!s.success)throw s;return s},POST:async(e,t)=>{const o={method:"POST"};if(t){const s=new FormData;Object.keys(t).forEach(e=>s.append(e,String(t[e])));o.body=s}const n=await VolantisRequest.Fetch(e,o);return n.data},Get:async(e,t)=>{const o=await VolantisRequest.Fetch(e+(t?`?${new URLSearchParams(t)}`:""),{method:"GET"})}};Object.freeze(VolantisRequest);
+document.addEventListener("DOMContentLoaded", function () {
+  volantis.requestAnimationFrame(() => {
+    VolantisApp.init();
+    VolantisApp.subscribe();
+    VolantisFancyBox.init();
+    highlightKeyWords.startFromURL();
+    locationHash();
+
+    volantis.pjax.push(() => {
+      VolantisApp.pjaxReload();
+      VolantisFancyBox.init();
+      sessionStorage.setItem("domTitle", document.title);
+      highlightKeyWords.startFromURL();
+    }, 'app.js');
+    volantis.pjax.send(() => {
+      volantis.dom.switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.dom.header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.dom.wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+      volantis.EventListener.remove() // 移除事件监听器 see: layout/_partial/scripts/global.ejs
+    }, 'app.js');
+  });
+});
+
+/* 锚点定位 */
+const locationHash = () => {
+  if (window.location.hash) {
+    let locationID = decodeURI(window.location.hash.split('#')[1]).replace(/\ /g, '-');
+    let target = document.getElementById(locationID);
+    if (target) {
+      setTimeout(() => {
+        if (window.location.hash.startsWith('#fn')) { // hexo-reference https://github.com/volantis-x/hexo-theme-volantis/issues/647
+          volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant', observer: true })
+        } else {
+          // 锚点中上半部有大片空白 高度大概是 volantis.dom.header.offsetHeight
+          volantis.scroll.to(target, { addTop: 5, behavior: 'instant', observer: true })
+        }
+      }, 1000)
+    }
+  }
+}
+Object.freeze(locationHash);
+
+/* Main */
+const VolantisApp = (() => {
+  const fn = {},
+    COPYHTML = '<button class="btn-copy" data-clipboard-snippet=""><i class="fa-solid fa-copy"></i><span>COPY</span></button>';
+  let scrollCorrection = 80;
+
+  fn.init = () => {
+    if (volantis.dom.header) {
+      scrollCorrection = volantis.dom.header.clientHeight + 16;
+    }
+
+    window.onresize = () => {
+      if (document.documentElement.clientWidth < 500) {
+        volantis.isMobile = 1;
+      } else {
+        volantis.isMobile = 0;
+      }
+      if (volantis.isMobile != volantis.isMobileOld) {
+        fn.setGlobalHeaderMenuEvent();
+        fn.setHeader();
+        fn.setHeaderSearch();
+      }
+    }
+    volantis.scroll.push(fn.scrollEventCallBack, "scrollEventCallBack")
+  }
+
+  fn.event = () => {
+    volantis.dom.$(document.getElementById("scroll-down"))?.on('click', function () {
+      fn.scrolltoElement(volantis.dom.bodyAnchor);
+    });
+
+    // 如果 sidebar 为空，隐藏 sidebar。
+    const sidebar = document.querySelector("#l_side")
+    if (sidebar) {
+      const sectionList = sidebar.querySelectorAll("section")
+      if (!sectionList.length) {
+        document.querySelector("#l_main").classList.add("no_sidebar")
+      }
+    }
+
+    // 站点信息 最后活动日期
+    if (volantis.GLOBAL_CONFIG.sidebar.for_page.includes('webinfo') || volantis.GLOBAL_CONFIG.sidebar.for_post.includes('webinfo')) {
+      const lastupd = volantis.GLOBAL_CONFIG.sidebar.webinfo.lastupd;
+      if (!!document.getElementById('last-update-show') && lastupd.enable && lastupd.friendlyShow) {
+        document.getElementById('last-update-show').innerHTML = fn.utilTimeAgo(volantis.GLOBAL_CONFIG.lastupdate);
+      }
+    }
+
+    // 站点信息 运行时间
+    if (!!document.getElementById('webinfo-runtime-count')) {
+      let BirthDay = new Date(volantis.GLOBAL_CONFIG.sidebar.webinfo.runtime.data);
+      let timeold = (new Date().getTime() - BirthDay.getTime());
+      let daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
+      document.getElementById('webinfo-runtime-count').innerHTML = `${daysold} ${volantis.GLOBAL_CONFIG.sidebar.webinfo.runtime.unit}`;
+    }
+
+    // 消息提示 复制时弹出
+    document.body.oncopy = function () {
+      fn.messageCopyright()
+    };
+  }
+
+  fn.restData = () => {
+    scrollCorrection = volantis.dom.header ? volantis.dom.header.clientHeight + 16 : 80;
+  }
+
+  fn.setIsMobile = () => {
+    if (document.documentElement.clientWidth < 500) {
+      volantis.isMobile = 1;
+      volantis.isMobileOld = 1;
+    } else {
+      volantis.isMobile = 0;
+      volantis.isMobileOld = 0;
+    }
+  }
+
+  // 校正页面定位（被导航栏挡住的区域）
+  fn.scrolltoElement = (elem, correction = scrollCorrection) => {
+    volantis.scroll.to(elem, {
+      top: elem.offsetTop - correction
+    })
+  }
+
+  // 滚动事件回调们
+  fn.scrollEventCallBack = () => {
+    // 【移动端 PC】//////////////////////////////////////////////////////////////////////
+
+    // 显示/隐藏 Header导航 topBtn 【移动端 PC】
+    const showHeaderPoint = volantis.dom.bodyAnchor.offsetTop - scrollCorrection;
+    const scrollTop = volantis.scroll.getScrollTop(); // 滚动条距离顶部的距离
+
+    // topBtn
+    if (volantis.dom.topBtn) {
+      if (scrollTop > volantis.dom.bodyAnchor.offsetTop) {
+        volantis.dom.topBtn.addClass('show');
+        // 向上滚动高亮 topBtn
+        if (volantis.scroll.del > 0) {
+          volantis.dom.topBtn.removeClass('hl');
+        } else {
+          volantis.dom.topBtn.addClass('hl');
+        }
+      } else {
+        volantis.dom.topBtn.removeClass('show').removeClass('hl');
+      }
+    }
+
+    // Header导航
+    if (volantis.dom.header) {
+      if (scrollTop - showHeaderPoint > -1) {
+        volantis.dom.header.addClass('show');
+      } else {
+        volantis.dom.header.removeClass('show');
+      }
+    }
+
+    // 决定一二级导航栏的切换 【向上滚动切换为一级导航栏；向下滚动切换为二级导航栏】  【移动端 PC】
+    if (pdata.ispage && volantis.dom.wrapper) {
+      if (volantis.scroll.del > 0 && scrollTop > 100) { // 向下滚动
+        volantis.dom.wrapper.addClass('sub'); // <---- 二级导航显示
+      } else if (volantis.scroll.del < 0) { // 向上滚动
+        volantis.dom.wrapper.removeClass('sub'); // <---- 取消二级导航显示 一级导航显示
+      }
+    }
+
+    // 【移动端】//////////////////////////////////////////////////////////////////////
+    if (volantis.isMobile) {
+      // 【移动端】 页面滚动  隐藏 移动端toc目录按钮
+      if (pdata.ispage && volantis.dom.tocTarget && volantis.dom.toc) {
+        volantis.dom.tocTarget.removeClass('active');
+        volantis.dom.toc.removeClass('active');
+      }
+      // 【移动端】 滚动时隐藏子菜单
+      if (volantis.dom.mPhoneList) {
+        volantis.dom.mPhoneList.forEach(function (e) {
+          volantis.dom.$(e).hide();
+        })
+      }
+    }
+  }
+
+  // 设置滚动锚点
+  fn.setScrollAnchor = () => {
+    // click topBtn 滚动至bodyAnchor 【移动端 PC】
+    if (volantis.dom.topBtn && volantis.dom.bodyAnchor) {
+      volantis.dom.topBtn.click(e => {
+        e.preventDefault();
+        e.stopPropagation();
+        fn.scrolltoElement(volantis.dom.bodyAnchor);
+        e.stopImmediatePropagation();
+      });
+    }
+
+  }
+
+  // 设置导航栏
+  fn.setHeader = () => {
+    // !!! 此处的Dom对象需要重载 !!!
+    if (!pdata.ispage) return;
+
+    // 填充二级导航文章标题 【移动端 PC】
+    volantis.dom.wrapper.find('.nav-sub .title').html(document.title.split(" - ")[0]);
+
+    // ====== bind events to every btn =========
+    // 评论按钮 【移动端 PC】
+    volantis.dom.comment = volantis.dom.$(document.getElementById("s-comment")); // 评论按钮  桌面端 移动端
+    volantis.dom.commentTarget = volantis.dom.$(document.querySelector('#l_main article#comments')); // 评论区域
+    if (volantis.dom.commentTarget) {
+      volantis.dom.comment.click(e => { // 评论按钮点击后 跳转到评论区域
+        e.preventDefault();
+        e.stopPropagation();
+        fn.scrolltoElement(volantis.dom.commentTarget);
+        e.stopImmediatePropagation();
+      });
+    } else volantis.dom.comment.style.display = 'none'; // 关闭了评论，则隐藏评论按钮
+
+    // 移动端toc目录按钮 【移动端】
+    if (volantis.isMobile) {
+      volantis.dom.toc = volantis.dom.$(document.getElementById("s-toc")); // 目录按钮  仅移动端
+      volantis.dom.tocTarget = volantis.dom.$(document.querySelector('#l_side .toc-wrapper')); // 侧边栏的目录列表
+      if (volantis.dom.tocTarget) {
+        // 点击移动端目录按钮 激活目录按钮 显示侧边栏的目录列表
+        volantis.dom.toc.click((e) => {
+          e.stopPropagation();
+          volantis.dom.tocTarget.toggleClass('active');
+          volantis.dom.toc.toggleClass('active');
+        });
+        // 点击空白 隐藏
+        volantis.dom.$(document).click(function (e) {
+          e.stopPropagation();
+          if (volantis.dom.tocTarget) {
+            volantis.dom.tocTarget.removeClass('active');
+          }
+          volantis.dom.toc.removeClass('active');
+        });
+      } else volantis.dom.toc.style.display = 'none'; // 隐藏toc目录按钮
+    }
+  }
+
+  // 设置导航栏菜单选中状态  【移动端 PC】
+  fn.setHeaderMenuSelection = () => {
+    // !!! 此处的Dom对象需要重载 !!!
+    volantis.dom.headerMenu = volantis.dom.$(document.querySelectorAll('#l_header .navigation,#l_cover .navigation,#l_side .navigation')); // 导航列表
+
+    // 先把已经激活的取消激活
+    volantis.dom.headerMenu.forEach(element => {
+      let li = volantis.dom.$(element).find('li a.active')
+      if (li)
+        li.removeClass('active')
+      let div = volantis.dom.$(element).find('div a.active')
+      if (div)
+        div.removeClass('active')
+    });
+
+    // replace '%' '/' '.'
+    var idname = location.pathname.replace(/\/|%|\./g, '');
+    if (idname.length == 0) {
+      idname = 'home';
+    }
+    var page = idname.match(/page\d{0,}$/g);
+    if (page) {
+      page = page[0];
+      idname = idname.split(page)[0];
+    }
+    var index = idname.match(/index.html/);
+    if (index) {
+      index = index[0];
+      idname = idname.split(index)[0];
+    }
+    // 转义字符如 [, ], ~, #, @
+    idname = idname.replace(/(\[|\]|~|#|@)/g, '\\$1');
+    if (idname && volantis.dom.headerMenu) {
+      volantis.dom.headerMenu.forEach(element => {
+        // idname 不能为数字开头, 加一个 action- 前缀
+        let id = element.querySelector("[active-action=action-" + idname + "]")
+        if (id) {
+          volantis.dom.$(id).addClass('active')
+        }
+      });
+    }
+  }
+
+  // 设置全局事件
+  fn.setGlobalHeaderMenuEvent = () => {
+    if (volantis.isMobile) {
+      // 【移动端】 关闭已经展开的子菜单 点击展开子菜单
+      document.querySelectorAll('#l_header .m-phone li').forEach(function (_e) {
+        if (_e.querySelector(".list-v")) {
+          // 点击菜单
+          volantis.dom.$(_e).click(function (e) {  
+            e.stopPropagation();
+            let menuType = ''
+            // 关闭.menu-phone
+            Array.from(e.currentTarget.children).some(val => {
+              if(val.classList.contains('s-menu')) {
+                menuType = 'menu' // 代表点击的是一级菜单外层的icon
+                return
+              }
+              if(val.classList.contains('menuitem')) {
+                menuType = 'item' // 点击的是下拉一级菜单
+                return
+              }
+            })
+            if(menuType === 'item') {
+              // 关闭已经展开的子菜单, 这一步是针对点击多个拥有二级子菜单的一级菜单，关闭其他所有一级菜单的二级菜单
+              // ①
+              e.currentTarget.parentElement.childNodes.forEach(function (e2) {
+                if (Object.prototype.toString.call(e2) == '[object HTMLLIElement]') {
+                  e2.childNodes.forEach(function (e1) {
+                    if (Object.prototype.toString.call(e1) == '[object HTMLUListElement]') {
+                      volantis.dom.$(e1).hide()
+                    }
+                  })
+                }
+              })
+              // 点击展开二级子菜单
+
+              /* 
+                由于采用事件委托，因此此处点击， 两种情况，currentTarget指向菜单按钮a.s-menu和ul的共同父元素li， 第二，指向ul中的li元素，也就是子菜单
+                区分：情况一的第一个子元素a的类名是s-menu；情况二的子元素a的类名为menuitem
+                我们要点击外部的menu icon时要关闭的是.menu-phone而不是.menuitem
+              */
+              let array = e.currentTarget.children
+              for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                if (volantis.dom.$(element).title === 'menu') { // 移动端菜单栏异常
+                  volantis.dom.$(element).style.display = "flex"      // https://github.com/volantis-x/hexo-theme-volantis/issues/706
+                } else {
+                  volantis.dom.$(element).show()
+                }
+              }
+            } else {  
+              let menuPhone = document.querySelector('.switcher .menu-phone')
+              let isHiding = window.getComputedStyle(menuPhone).display === 'none'
+              if(isHiding) {
+                volantis.dom.$(menuPhone).show()
+              } else {
+                volantis.dom.$(menuPhone).hide()
+                // 别忘了再执行①
+                // 准备关闭所有二级菜单, 注意此时的e和点击一级菜单时候的e层级不同
+                // 此处好像不能使用变量存储的menuPhone？要重新查询
+                document.querySelector('.switcher .menu-phone').childNodes.forEach(function (e2) {
+                  if (Object.prototype.toString.call(e2) == '[object HTMLLIElement]') {
+                    e2.childNodes.forEach(function (e1) {
+                      if (Object.prototype.toString.call(e1) == '[object HTMLUListElement]') {
+                        volantis.dom.$(e1).hide()
+                      }
+                    })
+                  }
+                })
+              }
+            }
+
+          }, 0);
+        }
+      })
+    } else {
+      // 【PC端】 hover时展开子菜单，点击时[target.baseURI==origin时]隐藏子菜单? 现有逻辑大部分情况不隐藏子菜单
+      document.querySelectorAll('#wrapper .m-pc li > a[href]').forEach(function (e) {
+        volantis.dom.$(e.parentElement).click(function (e) {
+          e.stopPropagation();
+          if (e.target.origin == e.target.baseURI) {
+            document.querySelectorAll('#wrapper .m-pc .list-v').forEach(function (e) {
+              volantis.dom.$(e).hide(); // 大概率不会执行
+            })
+          }
+        }, 0);
+      })
+    }
+    fn.setPageHeaderMenuEvent();
+  }
+  
+  // 【移动端】隐藏子菜单
+  fn.setPageHeaderMenuEvent = () => {
+    if (!volantis.isMobile) return
+    // 【移动端】 点击空白处隐藏子菜单
+    volantis.dom.$(document).click(function (e) {
+      volantis.dom.mPhoneList.forEach(function (e) {
+        volantis.dom.$(e).hide();
+      })
+    });
+  }
+
+  // 设置导航栏搜索框 【移动端】
+  fn.setHeaderSearch = () => {
+    if (!volantis.isMobile) return;
+    if (!volantis.dom.switcher) return;
+    // 点击移动端搜索按钮
+    volantis.dom.switcher.click(function (e) {
+      e.stopPropagation();
+      volantis.dom.header.toggleClass('z_search-open'); // 激活移动端搜索框
+      volantis.dom.switcher.toggleClass('active'); // 移动端搜索按钮
+    }, false); // false : pjax 不移除监听
+    // 点击空白取消激活
+    volantis.dom.$(document).click(function (e) {
+      volantis.dom.header.removeClass('z_search-open');
+      volantis.dom.switcher.removeClass('active');
+    }, false); // false : pjax 不移除监听
+    // 移动端点击搜索框 停止事件传播
+    volantis.dom.search.click(function (e) {
+      e.stopPropagation();
+    }, false); // false : pjax 不移除监听
+  }
+
+  // 设置 tabs 标签  【移动端 PC】
+  fn.setTabs = () => {
+    let tabs = document.querySelectorAll('#l_main .tabs .nav-tabs')
+    if (!tabs) return
+    tabs.forEach(function (e) {
+      e.querySelectorAll('a').forEach(function (e) {
+        volantis.dom.$(e).on('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const $tab = volantis.dom.$(e.target.parentElement.parentElement.parentElement);
+          $tab.find('.nav-tabs .active').removeClass('active');
+          volantis.dom.$(e.target.parentElement).addClass('active');
+          $tab.find('.tab-content .active').removeClass('active');
+          $tab.find(e.target.className).addClass('active');
+          return false;
+        });
+      })
+    })
+  }
+
+  // hexo-reference 页脚跳转 https://github.com/volantis-x/hexo-theme-volantis/issues/647
+  fn.footnotes = () => {
+    let ref = document.querySelectorAll('#l_main .footnote-backref, #l_main .footnote-ref > a');
+    ref.forEach(function (e, i) {
+      ref[i].click = () => { }; // 强制清空原 click 事件
+      volantis.dom.$(e).on('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        let targetID = decodeURI(e.target.hash.split('#')[1]).replace(/\ /g, '-');
+        let target = document.getElementById(targetID);
+        if (target) {
+          volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
+        }
+      });
+    })
+  }
+
+  // 工具类：代码块复制
+  fn.utilCopyCode = (Selector) => {
+    document.querySelectorAll(Selector).forEach(node => {
+      const test = node.insertAdjacentHTML("beforebegin", COPYHTML);
+      const _BtnCopy = node.previousSibling;
+      _BtnCopy.onclick = e => {
+        e.stopPropagation();
+        const _icon = _BtnCopy.querySelector('i');
+        const _span = _BtnCopy.querySelector('span');
+
+        node.focus();
+        const range = new Range();
+        range.selectNodeContents(node);
+        document.getSelection().removeAllRanges();
+        document.getSelection().addRange(range);
+
+        const str = document.getSelection().toString();
+        fn.utilWriteClipText(str).then(() => {
+          fn.messageCopyright();
+          _BtnCopy.classList.add('copied');
+          _icon.classList.remove('fa-copy');
+          _icon.classList.add('fa-check-circle');
+          _span.innerText = "COPIED";
+          setTimeout(() => {
+            _icon.classList.remove('fa-check-circle');
+            _icon.classList.add('fa-copy');
+            _span.innerText = "COPY";
+          }, 2000)
+        }).catch(e => {
+          VolantisApp.message('系统提示', e, {
+            icon: 'fa fa-exclamation-circle red'
+          });
+          _BtnCopy.classList.add('copied-failed');
+          _icon.classList.remove('fa-copy');
+          _icon.classList.add('fa-exclamation-circle');
+          _span.innerText = "COPY FAILED";
+          setTimeout(() => {
+            _icon.classList.remove('fa-exclamation-circle');
+            _icon.classList.add('fa-copy');
+            _span.innerText = "COPY";
+          })
+        })
+      }
+    });
+  }
+
+  // 工具类：复制字符串到剪切板
+  fn.utilWriteClipText = (str) => {
+    return navigator.clipboard
+      .writeText(str)
+      .then(() => {
+        return Promise.resolve()
+      })
+      .catch(e => {
+        const input = document.createElement('textarea');
+        input.setAttribute('readonly', 'readonly');
+        document.body.appendChild(input);
+        input.innerHTML = str;
+        input.select();
+        try {
+          let result = document.execCommand('copy')
+          document.body.removeChild(input);
+          if (!result || result === 'unsuccessful') {
+            return Promise.reject('复制文本失败!')
+          } else {
+            return Promise.resolve()
+          }
+        } catch (e) {
+          document.body.removeChild(input);
+          return Promise.reject(
+            '当前浏览器不支持复制功能，请检查更新或更换其他浏览器操作!'
+          )
+        }
+      })
+  }
+
+  // 工具类：返回时间间隔
+  fn.utilTimeAgo = (dateTimeStamp) => {
+    const minute = 1e3 * 60, hour = minute * 60, day = hour * 24, week = day * 7, month = day * 30;
+    const now = new Date().getTime();
+    const diffValue = now - dateTimeStamp;
+    const minC = diffValue / minute,
+      hourC = diffValue / hour,
+      dayC = diffValue / day,
+      weekC = diffValue / week,
+      monthC = diffValue / month;
+    if (diffValue < 0) {
+      result = ""
+    } else if (monthC >= 1 && monthC < 7) {
+      result = " " + parseInt(monthC) + " 月前"
+    } else if (weekC >= 1 && weekC < 4) {
+      result = " " + parseInt(weekC) + " 周前"
+    } else if (dayC >= 1 && dayC < 7) {
+      result = " " + parseInt(dayC) + " 天前"
+    } else if (hourC >= 1 && hourC < 24) {
+      result = " " + parseInt(hourC) + " 小时前"
+    } else if (minC >= 1 && minC < 60) {
+      result = " " + parseInt(minC) + " 分钟前"
+    } else if (diffValue >= 0 && diffValue <= minute) {
+      result = "刚刚"
+    } else {
+      const datetime = new Date();
+      datetime.setTime(dateTimeStamp);
+      const Nyear = datetime.getFullYear();
+      const Nmonth = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
+      const Ndate = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
+      const Nhour = datetime.getHours() < 10 ? "0" + datetime.getHours() : datetime.getHours();
+      const Nminute = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes();
+      const Nsecond = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds();
+      result = Nyear + "-" + Nmonth + "-" + Ndate
+    }
+    return result;
+  }
+
+  // 消息提示：标准
+  fn.message = (title, message, option = {}, done = null) => {
+    if (typeof iziToast === "undefined") {
+      volantis.css(volantis.GLOBAL_CONFIG.plugins.message.css)
+      volantis.js(volantis.GLOBAL_CONFIG.plugins.message.js, () => {
+        tozashMessage(title, message, option, done);
+      });
+    } else {
+      tozashMessage(title, message, option, done);
+    }
+    function tozashMessage(title, message, option, done) {
+      const {
+        icon,
+        time,
+        position,
+        transitionIn,
+        transitionOut,
+        messageColor,
+        titleColor,
+        backgroundColor,
+        zindex,
+        displayMode
+      } = option;
+      iziToast.show({
+        layout: '2',
+        icon: 'Fontawesome',
+        closeOnEscape: 'true',
+        displayMode: displayMode || 'replace',
+        transitionIn: transitionIn || volantis.GLOBAL_CONFIG.plugins.message.transitionIn,
+        transitionOut: transitionOut || volantis.GLOBAL_CONFIG.plugins.message.transitionOut,
+        messageColor: messageColor || volantis.GLOBAL_CONFIG.plugins.message.messageColor,
+        titleColor: titleColor || volantis.GLOBAL_CONFIG.plugins.message.titleColor,
+        backgroundColor: backgroundColor || volantis.GLOBAL_CONFIG.plugins.message.backgroundColor,
+        zindex: zindex || volantis.GLOBAL_CONFIG.plugins.message.zindex,
+        icon: icon || volantis.GLOBAL_CONFIG.plugins.message.icon.default,
+        timeout: time || volantis.GLOBAL_CONFIG.plugins.message.time.default,
+        position: position || volantis.GLOBAL_CONFIG.plugins.message.position,
+        title: title,
+        message: message,
+        onClosed: () => {
+          if (done) done();
+        },
+      });
+    }
+  }
+
+  // 消息提示：询问
+  fn.question = (title, message, option = {}, success = null, cancel = null, done = null) => {
+    if (typeof iziToast === "undefined") {
+      volantis.css(volantis.GLOBAL_CONFIG.plugins.message.css)
+      volantis.js(volantis.GLOBAL_CONFIG.plugins.message.js, () => {
+        tozashQuestion(title, message, option, success, cancel, done);
+      });
+    } else {
+      tozashQuestion(title, message, option, success, cancel, done);
+    }
+
+    function tozashQuestion(title, message, option, success, cancel, done) {
+      const {
+        icon,
+        time,
+        position,
+        transitionIn,
+        transitionOut,
+        messageColor,
+        titleColor,
+        backgroundColor,
+        zindex
+      } = option;
+      iziToast.question({
+        id: 'question',
+        icon: 'Fontawesome',
+        close: false,
+        overlay: true,
+        displayMode: 'once',
+        position: 'center',
+        messageColor: messageColor || volantis.GLOBAL_CONFIG.plugins.message.messageColor,
+        titleColor: titleColor || volantis.GLOBAL_CONFIG.plugins.message.titleColor,
+        backgroundColor: backgroundColor || volantis.GLOBAL_CONFIG.plugins.message.backgroundColor,
+        zindex: zindex || volantis.GLOBAL_CONFIG.plugins.message.zindex,
+        icon: icon || volantis.GLOBAL_CONFIG.plugins.message.icon.quection,
+        timeout: time || volantis.GLOBAL_CONFIG.plugins.message.time.quection,
+        title: title,
+        message: message,
+        buttons: [
+          ['<button><b>是</b></button>', (instance, toast) => {
+            instance.hide({ transitionOut: transitionOut || 'fadeOut' }, toast, 'button');
+            if (success) success(instance, toast)
+          }],
+          ['<button><b>否</b></button>', (instance, toast) => {
+            instance.hide({ transitionOut: transitionOut || 'fadeOut' }, toast, 'button');
+            if (cancel) cancel(instance, toast)
+          }]
+        ],
+        onClosed: (instance, toast, closedBy) => {
+          if (done) done(instance, toast, closedBy);
+        }
+      });
+    }
+  }
+
+  // 消息提示：隐藏
+  fn.hideMessage = (done = null) => {
+    const toast = document.querySelector('.iziToast');
+    if (!toast) {
+      if (done) done()
+      return;
+    }
+
+    if (typeof iziToast === "undefined") {
+      volantis.css(volantis.GLOBAL_CONFIG.plugins.message.css)
+      volantis.js(volantis.GLOBAL_CONFIG.plugins.message.js, () => {
+        hideMessage(done);
+      });
+    } else {
+      hideMessage(done);
+    }
+
+    function hideMessage(done) {
+      iziToast.hide({}, toast);
+      if (done) done();
+    }
+  }
+
+  // 消息提示：复制
+  let messageCopyrightShow = 0;
+  fn.messageCopyright = () => {
+    // 消息提示 复制时弹出
+    if (volantis.GLOBAL_CONFIG.plugins.message.enable
+      && volantis.GLOBAL_CONFIG.plugins.message.copyright.enable
+      && messageCopyrightShow < 1) {
+      messageCopyrightShow++;
+      VolantisApp.message(volantis.GLOBAL_CONFIG.plugins.message.copyright.title,
+        volantis.GLOBAL_CONFIG.plugins.message.copyright.message, {
+        icon: volantis.GLOBAL_CONFIG.plugins.message.copyright.icon,
+        transitionIn: 'flipInX',
+        transitionOut: 'flipOutX',
+        displayMode: 1
+      });
+    }
+  }
+
+  return {
+    init: () => {
+      fn.init();
+      fn.event();
+    },
+    subscribe: () => {
+      fn.setIsMobile();
+      fn.setHeader();
+      fn.setHeaderMenuSelection();
+      fn.setGlobalHeaderMenuEvent();
+      fn.setHeaderSearch();
+      fn.setScrollAnchor();
+      fn.setTabs();
+      fn.footnotes();
+    },
+    pjaxReload: () => {
+      fn.event();
+      fn.restData();
+      fn.setHeader();
+      fn.setHeaderMenuSelection();
+      fn.setPageHeaderMenuEvent();
+      fn.setScrollAnchor();
+      fn.setTabs();
+      fn.footnotes();
+
+      // 移除小尾巴的移除
+      document.querySelector("#l_header .nav-main").querySelectorAll('.list-v:not(.menu-phone)').forEach(function (e) {
+        e.removeAttribute("style")
+      })
+      document.querySelector("#l_header .menu-phone.list-v").removeAttribute("style");
+      messageCopyrightShow = 0;
+    },
+    utilCopyCode: fn.utilCopyCode,
+    utilWriteClipText: fn.utilWriteClipText,
+    utilTimeAgo: fn.utilTimeAgo,
+    message: fn.message,
+    question: fn.question,
+    hideMessage: fn.hideMessage,
+    messageCopyright: fn.messageCopyright,
+    scrolltoElement: fn.scrolltoElement
+  }
+})()
+Object.freeze(VolantisApp);
+
+/* FancyBox */
+const VolantisFancyBox = (() => {
+  const fn = {};
+
+  fn.loadFancyBox = (done) => {
+    volantis.css(volantis.GLOBAL_CONFIG.plugins.fancybox.css);
+    volantis.js(volantis.GLOBAL_CONFIG.plugins.fancybox.js).then(() => {
+      if (done) done();
+    })
+  }
+
+  /**
+   * 加载及处理
+   * 
+   * @param {*} checkMain 是否只处理文章区域的文章
+   * @param {*} done      FancyBox 加载完成后的动作，默认执行分组绑定
+   * @returns 
+   */
+  fn.init = (checkMain = true, done = fn.groupBind) => {
+    if (!document.querySelector(".md .gallery img, .fancybox") && checkMain) return;
+    if (typeof Fancybox === "undefined") {
+      fn.loadFancyBox(done);
+    } else {
+      done();
+    }
+  }
+
+  /**
+   * 图片元素预处理
+   * 
+   * @param {*} selectors 选择器
+   * @param {*} name      分组
+   */
+  fn.elementHandling = (selectors, name) => {
+    const nodeList = document.querySelectorAll(selectors);
+    nodeList.forEach($item => {
+      if ($item.hasAttribute('fancybox')) return;
+      $item.setAttribute('fancybox', '');
+      const $link = document.createElement('a');
+      $link.setAttribute('href', $item.src);
+      $link.setAttribute('data-caption', $item.alt);
+      $link.setAttribute('data-fancybox', name);
+      $link.classList.add('fancybox');
+      $link.append($item.cloneNode());
+      $item.replaceWith($link);
+    })
+  }
+
+  /**
+   * 原生绑定
+   * 
+   * @param {*} selectors 选择器
+   */
+  fn.bind = (selectors) => {
+    fn.init(false, () => {
+      Fancybox.bind(selectors, {
+        groupAll: true,
+        Hash: false,
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: function (fancybox, carousel, slide) {
+          return slide.$trigger.alt || null
+        }
+      });
+    });
+  }
+
+  /**
+   * 分组绑定
+   * 
+   * @param {*} groupName 分组名称
+   */
+  fn.groupBind = (groupName = null) => {
+    const group = new Set();
+
+    document.querySelectorAll(".gallery").forEach(ele => {
+      if (ele.querySelector("img")) {
+        group.add(ele.getAttribute('data-group') || 'default');
+      }
+    })
+
+    if (!!groupName) group.add(groupName);
+
+    for (const iterator of group) {
+      Fancybox.unbind('[data-fancybox="' + iterator + '"]');
+      Fancybox.bind('[data-fancybox="' + iterator + '"]', {
+        Hash: false,
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        }
+      });
+    }
+  }
+
+  return {
+    init: fn.init,
+    bind: fn.bind,
+    groupBind: (selectors, groupName = 'default') => {
+      try {
+        fn.elementHandling(selectors, groupName);
+        fn.init(false, () => {
+          fn.groupBind(groupName)
+        });
+      } catch (error) {
+        console.error(error)
+      }
+    }
+  }
+})()
+Object.freeze(VolantisFancyBox);
+
+// highlightKeyWords 与 搜索功能搭配 https://github.com/next-theme/hexo-theme-next/blob/eb194a7258058302baf59f02d4b80b6655338b01/source/js/third-party/search/local-search.js
+// Question: 锚点稳定性未知
+// ToDo: 查找模式
+// 0. (/////////要知道浏览器自带全页面查找功能 CTRL + F)
+// 1. 右键开启查找模式 / 导航栏菜单开启?? / CTRL + F ???
+// 2. 查找模式面板 (可拖动? or 固定?)
+// 3. keyword mark id 从 0 开始编号 查找下一处 highlightKeyWords.scrollToNextHighlightKeywordMark() 查找上一处 scrollToPrevHighlightKeywordMark() 循环查找(取模%)
+// 4. 可输入修改 查找关键词 keywords(type:list)
+// 5. 区分大小写 caseSensitive (/ 全字匹配?? / 正则匹配??)
+// 6. 在选定区域中查找 querySelector ??
+// 7. 关闭查找模式
+// 8. 搜索跳转 (URL 入口) 自动开启查找模式 调用 scrollToNextHighlightKeywordMark()
+const highlightKeyWords = (() => {
+  let fn = {}
+  fn.markNum = 0
+  fn.markNextId = -1
+  fn.startFromURL = () => {
+    const params = decodeURI(new URL(location.href).searchParams.get('keyword'));
+    const keywords = params ? params.split(' ') : [];
+    const post = document.querySelector('#l_main');
+    if (keywords.length == 1 && keywords[0] == "null") {
+      return;
+    }
+    fn.start(keywords, post); // 渲染耗时较长
+    fn.scrollToFirstHighlightKeywordMark()
+  }
+  fn.scrollToFirstHighlightKeywordMark = () => {
+    volantis.cleanContentVisibility();
+    let target = fn.scrollToNextHighlightKeywordMark("0");
+    if (!target) {
+      volantis.requestAnimationFrame(fn.scrollToFirstHighlightKeywordMark)
+    }
+  }
+  fn.scrollToNextHighlightKeywordMark = (id) => {
+    // Next Id
+    let input = id || (fn.markNextId + 1) % fn.markNum;
+    fn.markNextId = parseInt(input)
+    let target = document.getElementById("keyword-mark-" + fn.markNextId);
+    if (!target) {
+      fn.markNextId = (fn.markNextId + 1) % fn.markNum;
+      target = document.getElementById("keyword-mark-" + fn.markNextId);
+    }
+    if (target) {
+      volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
+    }
+    // Current target
+    return target
+  }
+  fn.scrollToPrevHighlightKeywordMark = (id) => {
+    // Prev Id
+    let input = id || (fn.markNextId - 1 + fn.markNum) % fn.markNum;
+    fn.markNextId = parseInt(input)
+    let target = document.getElementById("keyword-mark-" + fn.markNextId);
+    if (!target) {
+      fn.markNextId = (fn.markNextId - 1 + fn.markNum) % fn.markNum;
+      target = document.getElementById("keyword-mark-" + fn.markNextId);
+    }
+    if (target) {
+      volantis.scroll.to(target, { addTop: - volantis.dom.header.offsetHeight - 5, behavior: 'instant' })
+    }
+    // Current target
+    return target
+  }
+  fn.start = (keywords, querySelector) => {
+    fn.markNum = 0
+    if (!keywords.length || !querySelector || (keywords.length == 1 && keywords[0] == "null")) return;
+    console.log(keywords);
+    const walk = document.createTreeWalker(querySelector, NodeFilter.SHOW_TEXT, null);
+    const allNodes = [];
+    while (walk.nextNode()) {
+      if (!walk.currentNode.parentNode.matches('button, select, textarea')) allNodes.push(walk.currentNode);
+    }
+    allNodes.forEach(node => {
+      const [indexOfNode] = fn.getIndexByWord(keywords, node.nodeValue);
+      if (!indexOfNode.length) return;
+      const slice = fn.mergeIntoSlice(0, node.nodeValue.length, indexOfNode);
+      fn.highlightText(node, slice, 'keyword');
+      fn.highlightStyle()
+    });
+  }
+  fn.getIndexByWord = (words, text, caseSensitive = false) => {
+    const index = [];
+    const included = new Set();
+    words.forEach(word => {
+      const div = document.createElement('div');
+      div.innerText = word;
+      word = div.innerHTML;
+
+      const wordLen = word.length;
+      if (wordLen === 0) return;
+      let startPosition = 0;
+      let position = -1;
+      if (!caseSensitive) {
+        text = text.toLowerCase();
+        word = word.toLowerCase();
+      }
+      while ((position = text.indexOf(word, startPosition)) > -1) {
+        index.push({ position, word });
+        included.add(word);
+        startPosition = position + wordLen;
+      }
+    });
+    index.sort((left, right) => {
+      if (left.position !== right.position) {
+        return left.position - right.position;
+      }
+      return right.word.length - left.word.length;
+    });
+    return [index, included];
+  };
+  fn.mergeIntoSlice = (start, end, index) => {
+    let item = index[0];
+    let { position, word } = item;
+    const hits = [];
+    const count = new Set();
+    while (position + word.length <= end && index.length !== 0) {
+      count.add(word);
+      hits.push({
+        position,
+        length: word.length
+      });
+      const wordEnd = position + word.length;
+
+      index.shift();
+      while (index.length !== 0) {
+        item = index[0];
+        position = item.position;
+        word = item.word;
+        if (wordEnd > position) {
+          index.shift();
+        } else {
+          break;
+        }
+      }
+    }
+    return {
+      hits,
+      start,
+      end,
+      count: count.size
+    };
+  };
+  fn.highlightText = (node, slice, className) => {
+    const val = node.nodeValue;
+    let index = slice.start;
+    const children = [];
+    for (const { position, length } of slice.hits) {
+      const text = document.createTextNode(val.substring(index, position));
+      index = position + length;
+      let mark = document.createElement('mark');
+      mark.className = className;
+      mark = fn.highlightStyle(mark)
+      mark.appendChild(document.createTextNode(val.substr(position, length)));
+      children.push(text, mark);
+    }
+    node.nodeValue = val.substring(index, slice.end);
+    children.forEach(element => {
+      node.parentNode.insertBefore(element, node);
+    });
+  }
+  fn.highlightStyle = (mark) => {
+    if (!mark) return;
+    mark.id = "keyword-mark-" + fn.markNum;
+    fn.markNum++;
+    mark.style.background = "transparent";
+    mark.style["border-bottom"] = "1px dashed #ff2a2a";
+    mark.style["color"] = "#ff2a2a";
+    mark.style["font-weight"] = "bold";
+    return mark
+  }
+  fn.cleanHighlightStyle = () => {
+    document.querySelectorAll(".keyword").forEach(mark => {
+      mark.style.background = "transparent";
+      mark.style["border-bottom"] = null;
+      mark.style["color"] = null;
+      mark.style["font-weight"] = null;
+    })
+  }
+  return {
+    start: (keywords, querySelector) => {
+      fn.start(keywords, querySelector)
+    },
+    startFromURL: () => {
+      fn.startFromURL()
+    },
+    scrollToNextHighlightKeywordMark: (id) => {
+      fn.scrollToNextHighlightKeywordMark(id)
+    },
+    scrollToPrevHighlightKeywordMark: (id) => {
+      fn.scrollToPrevHighlightKeywordMark(id)
+    },
+    cleanHighlightStyle: () => {
+      fn.cleanHighlightStyle()
+    },
+  }
+})()
+Object.freeze(highlightKeyWords);
+
+/* DOM 控制 */
+const DOMController = {
+  /**
+   * 控制元素显隐
+   */
+  visible: (ele, type = true) => {
+    if (ele) ele.style.display = type === true ? 'block' : 'none';
+  },
+
+  /**
+   * 移除元素
+   */
+  remove: (param) => {
+    const node = document.querySelectorAll(param);
+    node.forEach(ele => {
+      ele.remove();
+    })
+  },
+
+  removeList: (list) => {
+    list.forEach(param => {
+      DOMController.remove(param)
+    })
+  },
+
+  /**
+   * 设置属性
+   */
+  setAttribute: (param, attrName, attrValue) => {
+    const node = document.querySelectorAll(param);
+    node.forEach(ele => {
+      ele.setAttribute(attrName, attrValue)
+    })
+  },
+
+  setAttributeList: (list) => {
+    list.forEach(item => {
+      DOMController.setAttribute(item[0], item[1], item[2])
+    })
+  },
+
+  /**
+   * 设置样式
+   */
+  setStyle: (param, styleName, styleValue) => {
+    const node = document.querySelectorAll(param);
+    node.forEach(ele => {
+      ele.style[styleName] = styleValue;
+    })
+  },
+
+  setStyleList: (list) => {
+    list.forEach(item => {
+      DOMController.setStyle(item[0], item[1], item[2])
+    })
+  },
+
+  fadeIn: (e) => {
+    if (!e) return;
+    e.style.visibility = "visible";
+    e.style.opacity = 1;
+    e.style.display = "block";
+    e.style.transition = "all 0.5s linear";
+    return e
+  },
+
+  fadeOut: (e) => {
+    if (!e) return;
+    e.style.visibility = "hidden";
+    e.style.opacity = 0;
+    e.style.display = "none";
+    e.style.transition = "all 0.5s linear";
+    return e
+  },
+
+  fadeToggle: (e) => {
+    if (!e) return;
+    if (e.style.visibility == "hidden") {
+      e = DOMController.fadeIn(e)
+    } else {
+      e = DOMController.fadeOut(e)
+    }
+    return e
+  },
+
+  fadeToggleList: (list) => {
+    list.forEach(param => {
+      DOMController.fadeToggle(param)
+    })
+  },
+
+  hasClass: (e, c) => {
+    if (!e) return;
+    return e.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
+  },
+
+  addClass: (e, c) => {
+    if (!e) return;
+    e.classList.add(c);
+    return e
+  },
+
+  removeClass: (e, c) => {
+    if (!e) return;
+    e.classList.remove(c);
+    return e
+  },
+
+  toggleClass: (e, c) => {
+    if (!e) return;
+    if (DOMController.hasClass(e, c)) {
+      DOMController.removeClass(e, c)
+    } else {
+      DOMController.addClass(e, c)
+    }
+    return e
+  },
+
+  toggleClassList: (list) => {
+    list.forEach(item => {
+      DOMController.toggleClass(item[0], item[1])
+    })
+  }
+}
+Object.freeze(DOMController);
+
+const VolantisRequest = {
+  timeoutFetch: (url, ms, requestInit) => {
+    const controller = new AbortController()
+    requestInit.signal?.addEventListener('abort', () => controller.abort())
+    let promise = fetch(url, { ...requestInit, signal: controller.signal })
+    if (ms > 0) {
+      const timer = setTimeout(() => controller.abort(), ms)
+      promise.finally(() => { clearTimeout(timer) })
+    }
+    promise = promise.catch((err) => {
+      throw ((err || {}).name === 'AbortError') ? new Error(`Fetch timeout: ${url}`) : err
+    })
+    return promise
+  },
+
+  Fetch: async (url, requestInit, timeout = 15000) => {
+    const resp = await VolantisRequest.timeoutFetch(url, timeout, requestInit);
+    if (!resp.ok) throw new Error(`Fetch error: ${url} | ${resp.status}`);
+    let json = await resp.json()
+    if (!json.success) throw json
+    return json
+  },
+
+  POST: async (url, data) => {
+    const requestInit = {
+      method: 'POST',
+    }
+    if (data) {
+      const formData = new FormData();
+      Object.keys(data).forEach(key => formData.append(key, String(data[key])))
+      requestInit.body = formData;
+    }
+    const json = await VolantisRequest.Fetch(url, requestInit)
+    return json.data;
+  },
+
+  Get: async (url, data) => {
+    const json = await VolantisRequest.Fetch(url + (data ? (`?${new URLSearchParams(data)}`) : ''), {
+      method: 'GET'
+    })
+  }
+}
+Object.freeze(VolantisRequest);
