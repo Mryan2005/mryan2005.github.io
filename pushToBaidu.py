@@ -9,7 +9,7 @@ def createUrlTxt(url):
     links = []
     for root, dirs, files in os.walk("."):
         for file in files:
-            if file.endswith('.html'):
+            if file.endswith('.html') and "Readme" not in file and "README" not in file:
                 urlc = url + '/' + os.path.join(root, file)[2:]
                 # urlc = urlc.encode("utf-8").decode("latin1")
                 links.append(urlc)
