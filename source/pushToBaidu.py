@@ -25,14 +25,14 @@ if __name__ == '__main__':
     for i in range(0, 10):
         while True:
             choice = links[random.randint(0, len(links) - 1)]
-            if choice not in needToPush and "mryan2005.top" in choice:
+            if choice not in needToPush and "www.mryan2005.top" in choice:
                 if choice.endswith('index.html'):
                     choice = choice[:-10]
                 elif choice.endswith('.html'):
                     choice = choice[:-5]
                 needToPush.append(choice)
                 break
-
+    print("we will push the url as follow", needToPush)
     # push to bing
     headers = {
         'Content-Type': 'application/json; charset=utf-8',
