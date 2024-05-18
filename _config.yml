@@ -111,3 +111,12 @@ markdown_it_plus:
     permalinkClass: header-anchor
     permalinkSide: 'left'
     permalinkSymbol: ¶
+
+# Extensions
+plugins:
+  hexo-generator-feed
+#Feed Atom
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
