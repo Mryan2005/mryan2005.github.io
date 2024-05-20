@@ -63,7 +63,7 @@
 <figure class="highlight c"><figcaption><span>[]</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="title function_">shuffle</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> n, <span class="type">int</span>* returnSize)</span>&#123;</span><br><span class="line">    <span class="type">int</span> *q = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*<span class="number">2</span>*n);</span><br><span class="line">    *returnSize = <span class="number">2</span>*n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, p = <span class="number">0</span>; i &lt; numsSize/<span class="number">2</span>; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = numsSize/<span class="number">2</span>, p = <span class="number">1</span>; i &lt; numsSize; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">return</span> q;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>LeeCode</category>
+        <category>LeetCode</category>
         <category>简单题</category>
       </categories>
       <tags>
