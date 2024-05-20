@@ -4,7 +4,7 @@ date: 2024-05-20 17:18:08
 tags:
 - 数组
 categories:
-- LeeCode
+- LeetCode
 - 简单题
 ---
 
