@@ -442,6 +442,11 @@ article#tag .all-tags ul li span:before {
   color: var(--color-p);
   word-wrap: break-word;
 }
+.article strong {
+  border-bottom: 2px solid;
+  padding-bottom: 1.2px;
+  color: #238ecf;
+}
 .article a {
   word-break: break-word;
 }
