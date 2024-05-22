@@ -62,6 +62,7 @@ if __name__ == '__main__':
         }
         response = requests.post('https://www.bing.com/IndexNow', data=json.dumps(data), headers=headers)
     print(response.text)
+    print(response.status_code)
     if "indexNew" not in sys.argv:
         # push to baidu
         """
