@@ -19,7 +19,7 @@ if __name__ == '__main__':
     links = createUrlTxt(sys.argv[1])
     siteurl = sys.argv[1]
     if "indexNew" in sys.argv:
-        bingIndexNewToken = sys.argv[2]
+        bingIndexNewToken = sys.argv[3]
     else:
         baiduToken = sys.argv[2]
         bingToken = sys.argv[3]
