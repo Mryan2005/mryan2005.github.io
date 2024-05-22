@@ -21,3 +21,7 @@ jobs:
             pip install requests
         - name: push to baidu and Bing
           run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} ${{secrets.BAIDUTOKEN}} ${{secrets.BINGTOKEN}}
+        - name: Using IndexNew push
+          run: |
+            echo ${{secrets.BINGINDEXNEWTOKEN}} > ${{secrets.BINGINDEXNEWTOKEN}}.txt
+            python3 ./pushToBingIndexNew.py IndexNew ${{secrets.BINGINDEXNEWTOKEN}}
