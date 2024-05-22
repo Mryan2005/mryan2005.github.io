@@ -55,7 +55,7 @@ if __name__ == '__main__':
             "Host": "api.indexnow.org"
         }
         data = {
-            "host": url,
+            "host": "www.mryan2005.top",
             "key": bingIndexNewToken,
             "keyLocation": siteurl + '/' + bingIndexNewToken + '.txt',
             "urlList": needToPush
