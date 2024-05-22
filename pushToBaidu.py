@@ -57,7 +57,7 @@ if __name__ == '__main__':
         data = {
             "host": url,
             "key": bingIndexNewToken,
-            "keyLocation": siteurl + bingIndexNewToken + '.txt',
+            "keyLocation": siteurl + '/' + bingIndexNewToken + '.txt',
             "urlList": needToPush
         }
         response = requests.post('https://www.bing.com/IndexNow', data=json.dumps(data), headers=headers)
