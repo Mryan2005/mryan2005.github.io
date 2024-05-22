@@ -48,12 +48,15 @@ if __name__ == '__main__':
         }
         response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=' + bingToken, data=json.dumps(data), headers=headers)
     elif "indexNew" in sys.argv:
+        url = siteurl.split('://')[1]
+        url = url.split('/')[1]
+        url = url[1:]
         headers = {
             'Content-Type': 'application/json; charset=utf-8',
             "Host": "api.indexnow.org"
         }
         data = {
-            "host": siteurl.split('://')[1],
+            "host": url,
             "key": bingIndexNewToken,
             "keyLocation": siteurl + bingIndexNewToken + '.txt',
             "urlList": needToPush
