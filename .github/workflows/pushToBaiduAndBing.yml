@@ -24,4 +24,4 @@ jobs:
         - name: Using IndexNew push
           run: |
             echo ${{secrets.BINGINDEXNEWTOKEN}} > ${{secrets.BINGINDEXNEWTOKEN}}.txt
-            python3 ./pushToBingIndexNew.py IndexNew ${{secrets.BINGINDEXNEWTOKEN}}
+            python3 ./pushToBaidu.py ${{secrets.SITEURL}} IndexNew ${{secrets.BINGINDEXNEWTOKEN}}
