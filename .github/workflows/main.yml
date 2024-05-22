@@ -36,6 +36,8 @@ jobs:
       run: hexo generate
     - name: move CNAME
       run: mv ./CNAME ./public
+    - name: add Bing IndexNew Token
+      run: echo ${{secrets.BINGINDEXNEWTOKEN}} > ${{secrets.BINGINDEXNEWTOKEN}}.txt
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
