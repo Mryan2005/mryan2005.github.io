@@ -1,5 +1,5 @@
 ---
-title: linklist-pre
+title: 链表入门
 date: 2024-05-23 22:25:31
 tags:
 - 链表
