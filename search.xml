@@ -106,6 +106,11 @@ c53.7,-170.3,84.5,-266.8,92.5,-289.5z
 M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.604946em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mord">3</span><span class="mord">.</span><span class="mord">5</span><span class="mord">4</span><span class="mord">8</span><span class="mord">7</span></span></span></span></p>
 <p>这可以说明<strong>对于一个未知参数的估计量而言</strong>，显然<strong>不同的样本值</strong>得到<strong>不同的估计值</strong>。<br />
 对同一未知参数，<strong>其点估计也可以构造不同的统计量而得到，从而得到不同的估计量</strong>。</p>
+<h2 id="评价估计量好坏的标准无偏性标准"><a class="markdownIt-Anchor" href="#评价估计量好坏的标准无偏性标准"></a> 评价估计量好坏的标准——无偏性标准</h2>
+<p>估计量是随机变量，<strong>不同的样本值会得到不同的估计值</strong>。<br />
+因此，<strong>一个基本的标准就是希望估计值在未知参数真值的附近</strong>，也就是说，<strong>多次估计值的期望是未知参数真值</strong>。这就是所谓估计量的<strong>无偏性标准</strong>。<br />
+<img src="https://s21.ax1x.com/2024/05/24/pkQdfYQ.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/05/24/pkQdfYQ.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="pkQdfYQ.png" /></p>
+<h3 id="例题-2"><a class="markdownIt-Anchor" href="#例题-2"></a> 例题</h3>
 ]]></content>
       <categories>
         <category>概率论与数理统计</category>
