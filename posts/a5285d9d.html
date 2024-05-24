@@ -1,17 +1,19 @@
-<!DOCTYPE html><html lang="zh-CN"><head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0">
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
   <meta name="generator" content="Hexo 7.2.0">
   <meta name="Volantis" content="5.8.0">
   <!-- <meta name="referrer" content="strict-origin-when-cross-origin"> -->
   <meta charset="utf-8">
   <!-- 百度 -->
-  <meta name="baidu-site-verification" content="codeva-LCVVHesh2I">
+  <meta name="baidu-site-verification" content="codeva-LCVVHesh2I" />
   <!-- SEO相关 -->
   
   
   <!-- 渲染优化 -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-      <link rel="dns-prefetch" href="https://unpkg.com">
-      <link rel="preconnect" href="https://unpkg.com" crossorigin="">
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <!-- 百度统计 -->
   <script>
@@ -35,7 +37,7 @@
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True">
+  <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -47,7 +49,7 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-    <link rel="shortcut icon" type="image/x-icon" href="/img/ajti8-5lnxq.png">
+    <link rel="shortcut icon" type='image/x-icon' href="/img/ajti8-5lnxq.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -57,17 +59,17 @@
   <!-- 页面元数据 -->
   <title>有效的括号的栈思想 - Mryan2005's Blog</title>
   <meta name="keywords" content="Stack,null">
-  <meta desc="" name="description" content="All Things is in it - Mryan2005 - Mryan2005's Blog">
+  <meta desc name="description" content="All Things is in it - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="有效的括号的栈思想">
 <meta property="og:url" content="https://www.mryan2005.top/posts/a5285d9d.html">
-<meta property="og:site_name" content="Mryan2005's Blog">
+<meta property="og:site_name" content="Mryan2005&#39;s Blog">
 <meta property="og:description" content="Problem: 20. 有效的括号   思路  Mryan2005，觉得要先将不相干的先入栈，然后，当遇到相关的括号时，出栈。   解题方法  有思路可得   复杂度 时间复杂度:  O(n)O(n)O(n)  空间复杂度:  O(n)O(n)O(n)   Code []12345678910111213141516171819202122232425262728293031323334typ">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-05-19T13:07:11.000Z">
-<meta property="article:modified_time" content="2024-05-24T12:10:51.558Z">
+<meta property="article:modified_time" content="2024-05-24T12:13:25.330Z">
 <meta property="article:author" content="Mryan2005">
 <meta property="article:tag" content="Stack">
 <meta name="twitter:card" content="summary">
@@ -1576,8 +1578,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  
-  <noscript></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1633,12 +1635,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 			display: none;
 		}
 	</style>
-    </noscript><script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://unpkg.com/katex@0.12.0/dist/katex.min.css');loadCss('https://unpkg.com/hexo-math@4.0.0/dist/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://unpkg.com/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="https://unpkg.com/hexo-math@4.0.0/dist/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"></noscript></head><body itemscope="" itemtype="http://schema.org/WebPage"><div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 &gt;</strong></a>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
-
+</noscript>
 
 
   <script>
@@ -1651,7 +1653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716552658596),
+    lastupdate: new Date(1716552808287),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2071,11 +2073,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- front-matter head_end begin -->
   <!-- front-matter head_end end -->
 <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://unpkg.com/katex@0.12.0/dist/katex.min.css">
 
-
-
-<!-- hexo injector head_end end -->
-  
+<link rel="stylesheet" href="https://unpkg.com/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
     <!-- import body_begin end-->
     <!-- Custom Files bodyBegin begin-->
@@ -2083,38 +2085,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope="" itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style="opacity: 0">
-  <div class="container">
-  <div id="wrapper">
-    <div class="nav-sub">
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
       <h2 class="title"></h2>
-      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href="/">
+        <a class="title flat-box" target="_self" href='/'>
           
           
           
         </a>
       
 
-			<div class="menu navigation">
-				<ul class="nav-list-h m-pc">
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="博客" active-action="action-home">
-                  <i class="fa-solid fa-rss fa-fw"></i>博客
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2124,8 +2132,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
-                  <i class="fa-solid fa-archive fa-fw"></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2135,8 +2149,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
-                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2146,8 +2166,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
-                  <i class="fa-solid fa-tags fa-fw"></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2157,8 +2183,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
-                  <i class="fa-solid fa-link fa-fw"></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -2168,8 +2200,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
-                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2182,12 +2220,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search...">
+          <input type="text" class="input u-search-input" placeholder="Search..." />
         </form>
       </div>
       
 
-			<ul class="switcher nav-list-h m-phone">
+			<ul class='switcher nav-list-h m-phone'>
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2198,8 +2236,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="博客" active-action="action-home">
-                  <i class="fa-solid fa-rss fa-fw"></i>博客
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2209,8 +2253,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
-                  <i class="fa-solid fa-archive fa-fw"></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2220,8 +2270,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
-                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2231,8 +2287,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
-                  <i class="fa-solid fa-tags fa-fw"></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2242,8 +2304,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
-                  <i class="fa-solid fa-link fa-fw"></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -2253,8 +2321,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
-                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2278,12 +2352,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class="cover-wrapper post search" style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class="cover-bg lazyload placeholder" data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
-<div class="cover-body">
-  <div class="top">
+<div class='cover-body'>
+  <div class='top'>
     
     
       <p class="title">Mryan2005's Blog</p>
@@ -2292,20 +2366,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">All Things is in it</p>
     
   </div>
-  <div class="bottom">
+  <div class='bottom'>
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="what is you went to search?">
+          <input type="text" class="input u-search-input" placeholder="what is you went to search?" />
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class="menu navigation">
-      <div class="list-h">
+    <div class='menu navigation'>
+      <div class='list-h'>
         
           
-            <a href="/" active-action="action-home">
+            <a href="/"
+              
+              
+              active-action="action-home">
               <p>主页</p>
             </a>
           
@@ -2324,13 +2401,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class="">
-  <article itemscope="" itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/a5285d9d.html">
-  <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
-  <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/Post">
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
     <meta itemprop="name" content="Mryan2005's Blog">
     <meta itemprop="description" content="All Things is in it">
   </span>
@@ -2338,7 +2415,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden="">
+    <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
@@ -2349,12 +2426,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         有效的括号的栈思想
       </h1>
-      <div class="new-meta-box">
+      <div class='new-meta-box'>
         
           
             
-<div class="new-meta-item author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-  <a itemprop="url" class="author" href="/" rel="nofollow">
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
     <img alt="authorAvatar" itemprop="image" src="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Mryan2005</p>
   </a>
@@ -2364,11 +2441,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class="new-meta-item category">
+  <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
     
-      <span hidden="" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/LeetCode/" itemprop="url"><span itemprop="name">LeetCode</span></a>
       </span>
     
@@ -2379,7 +2456,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-19T13:07:11+00:00">
-  <a class="notlink">
+  <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2024年5月19日</p>
   </a>
@@ -2404,7 +2481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <blockquote>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
 <p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/description/">20. 有效的括号</a></p>
 </blockquote>
 <h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
@@ -2425,14 +2502,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
 </blockquote>
 <h1 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h1>
-<figure class="highlight c"><figcaption><span>[]</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">stackNode</span> {</span></span><br><span class="line">    <span class="type">char</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">stackNode</span> *<span class="title">next</span>;</span></span><br><span class="line">} stackNode, *Stack;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Push</span><span class="params">(Stack *S, <span class="type">char</span> data)</span> {</span><br><span class="line">    stackNode *p = (stackNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(stackNode));</span><br><span class="line">    p-&gt;data = data;</span><br><span class="line">    p-&gt;next = *S;</span><br><span class="line">    *S = p;</span><br><span class="line">}</span><br><span class="line"><span class="type">char</span> <span class="title function_">GetHead</span><span class="params">(Stack S)</span> {<span class="keyword">return</span> S? S-&gt;data: <span class="number">0</span>;}</span><br><span class="line"><span class="type">char</span> <span class="title function_">Pop</span><span class="params">(Stack *S)</span> {</span><br><span class="line">    <span class="type">char</span> data;</span><br><span class="line">    stackNode *p = *S;</span><br><span class="line">    data = p-&gt;data;</span><br><span class="line">    *S = (*S)-&gt;next;</span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">    <span class="keyword">return</span> data;</span><br><span class="line">}</span><br><span class="line"><span class="type">bool</span> <span class="title function_">isValid</span><span class="params">(<span class="type">char</span>* s)</span> {</span><br><span class="line">    Stack S = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">char</span> *p = s, c; *p != <span class="number">0</span>; p++) {</span><br><span class="line">        <span class="keyword">if</span>(S) {</span><br><span class="line">            c = GetHead(S);</span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">'('</span> &amp;&amp; *p == <span class="string">')'</span>) Pop(&amp;S);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">'['</span> &amp;&amp; *p == <span class="string">']'</span>) Pop(&amp;S);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">'{'</span> &amp;&amp; *p == <span class="string">'}'</span>) Pop(&amp;S);</span><br><span class="line">            <span class="keyword">else</span> Push(&amp;S, *p);</span><br><span class="line">        } <span class="keyword">else</span> Push(&amp;S, *p);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span>(!S) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight c"><figcaption><span>[]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">stackNode</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">stackNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; stackNode, *Stack;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Push</span><span class="params">(Stack *S, <span class="type">char</span> data)</span> &#123;</span><br><span class="line">    stackNode *p = (stackNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(stackNode));</span><br><span class="line">    p-&gt;data = data;</span><br><span class="line">    p-&gt;next = *S;</span><br><span class="line">    *S = p;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">char</span> <span class="title function_">GetHead</span><span class="params">(Stack S)</span> &#123;<span class="keyword">return</span> S? S-&gt;data: <span class="number">0</span>;&#125;</span><br><span class="line"><span class="type">char</span> <span class="title function_">Pop</span><span class="params">(Stack *S)</span> &#123;</span><br><span class="line">    <span class="type">char</span> data;</span><br><span class="line">    stackNode *p = *S;</span><br><span class="line">    data = p-&gt;data;</span><br><span class="line">    *S = (*S)-&gt;next;</span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">    <span class="keyword">return</span> data;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">bool</span> <span class="title function_">isValid</span><span class="params">(<span class="type">char</span>* s)</span> &#123;</span><br><span class="line">    Stack S = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">char</span> *p = s, c; *p != <span class="number">0</span>; p++) &#123;</span><br><span class="line">        <span class="keyword">if</span>(S) &#123;</span><br><span class="line">            c = GetHead(S);</span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">&#x27;(&#x27;</span> &amp;&amp; *p == <span class="string">&#x27;)&#x27;</span>) Pop(&amp;S);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">&#x27;[&#x27;</span> &amp;&amp; *p == <span class="string">&#x27;]&#x27;</span>) Pop(&amp;S);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">&#x27;&#123;&#x27;</span> &amp;&amp; *p == <span class="string">&#x27;&#125;&#x27;</span>) Pop(&amp;S);</span><br><span class="line">            <span class="keyword">else</span> Push(&amp;S, *p);</span><br><span class="line">        &#125; <span class="keyword">else</span> Push(&amp;S, *p);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!S) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </div>
   
   
     
     
-    <div class="footer">
+    <div class='footer'>
        <!-- 参考资料、相关资料等 -->
       
        <!-- 相关文章 -->
@@ -2447,12 +2524,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class="article-meta" id="bottom">
-    <div class="new-meta-box">
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T12:10:51+00:00">
-  <a class="notlink">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T12:13:25+00:00">
+  <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年5月24日</p>
   </a>
@@ -2464,7 +2541,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
   
   <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Stack/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Stack</p></a></div>
-  <span hidden="" itemprop="keywords">Stack</span>
+  <span hidden itemprop="keywords">Stack</span>
 
 
         
@@ -2504,18 +2581,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class="prev" href="/posts/48b27268.html">
-          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>相干光</p>
-          <p class="content"> 形成条件
+        <a class='prev' href='/posts/48b27268.html'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>相干光</p>
+          <p class='content'> 形成条件
 由频率相同、振动方向相同、相位差恒定的光源发出的光波，经过叠加后，光强呈现明显的周期性变化，这种光波称为相干光。
  干涉现象
 在两个相干光波相遇的区域内，有的点振动始终加强，有的点振...</p>
         </a>
       
       
-        <a class="next" href="/posts/374524ff.html">
-          <p class="title">简谐运动的合成<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content"> 同方向同频率合成
+        <a class='next' href='/posts/374524ff.html'>
+          <p class='title'>简谐运动的合成<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'> 同方向同频率合成
  相位差为2kπ(k=0,±1,±2,±3,……)2k\pi(k=0, \plusmn1, \plusmn2, \plusmn3, ……)2kπ(k=0,±1,±2,±3,…...</p>
         </a>
       
@@ -2537,7 +2614,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 </div>
-<aside id="l_side" itemscope="" itemtype="http://schema.org/WPSideBar">
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
 
   
@@ -2554,16 +2631,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div">
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-    <div class="content">
+    <div class='content'>
         
     </div>
   </section>
@@ -2645,7 +2722,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </div>
         
   
-  <footer class="footer clearfix" itemscope="" itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -2658,7 +2735,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <br>
-        <div class="social-wrapper" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
           
@@ -2676,7 +2753,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
@@ -2688,7 +2765,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div class="copyright">
+        <div class='copyright'>
         <p><a href="/">Copyright © since 2024 Mryan2005</a></p>
 
         </div>
@@ -2776,7 +2853,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -2815,7 +2892,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 	hoverDelay: 0
   };
 </script>
-<script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -3089,7 +3166,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/","name":"LeetCode"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/a5285d9d.html","name":"有效的括号的栈思想"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"有效的括号的栈思想","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/a5285d9d.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/a5285d9d.html","wordCount":0,"datePublished":"2024-05-19T13:07:11.000Z","dateModified":"2024-05-24T12:10:51.558Z","articleSection":"LeetCode","keywords":"Stack","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/","name":"LeetCode"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/a5285d9d.html","name":"有效的括号的栈思想"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"有效的括号的栈思想","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/a5285d9d.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/a5285d9d.html","wordCount":0,"datePublished":"2024-05-19T13:07:11.000Z","dateModified":"2024-05-24T12:13:25.330Z","articleSection":"LeetCode","keywords":"Stack","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
@@ -3175,6 +3252,5 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyEnd end-->
     <!-- front-matter body_end begin -->
     <!-- front-matter body_end end -->
-  
-
-</body></html>
+  </body>
+</html>

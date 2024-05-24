@@ -1,17 +1,19 @@
-<!DOCTYPE html><html lang="zh-CN"><head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0">
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
   <meta name="generator" content="Hexo 7.2.0">
   <meta name="Volantis" content="5.8.0">
   <!-- <meta name="referrer" content="strict-origin-when-cross-origin"> -->
   <meta charset="utf-8">
   <!-- 百度 -->
-  <meta name="baidu-site-verification" content="codeva-LCVVHesh2I">
+  <meta name="baidu-site-verification" content="codeva-LCVVHesh2I" />
   <!-- SEO相关 -->
   
   
   <!-- 渲染优化 -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-      <link rel="dns-prefetch" href="https://unpkg.com">
-      <link rel="preconnect" href="https://unpkg.com" crossorigin="">
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <!-- 百度统计 -->
   <script>
@@ -35,7 +37,7 @@
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True">
+  <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -47,7 +49,7 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-    <link rel="shortcut icon" type="image/x-icon" href="/img/ajti8-5lnxq.png">
+    <link rel="shortcut icon" type='image/x-icon' href="/img/ajti8-5lnxq.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -57,17 +59,17 @@
   <!-- 页面元数据 -->
   <title>算法的基础知识 - Mryan2005's Blog</title>
   <meta name="keywords" content="第一版,算法,null">
-  <meta desc="" name="description" content="All Things is in it - Mryan2005 - Mryan2005's Blog">
+  <meta desc name="description" content="All Things is in it - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法的基础知识">
 <meta property="og:url" content="https://www.mryan2005.top/posts/5e7b20a2.html">
-<meta property="og:site_name" content="Mryan2005's Blog">
+<meta property="og:site_name" content="Mryan2005&#39;s Blog">
 <meta property="og:description" content="算法的五大特性  确定性 有穷性 可行性 输入和输出（可以没有输入，但是得要有输出）   辨析  程序是不是算法？ 答案是False，因为程序可以没有输入。   算法的要求  正确性（correctness） 可读性（readability） 健壮性（robustness） 效率与低储存量需求   算法的书写 我们要把它写成一个函数。 声明行由返回值类型（int、char、double、floa">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-05-12T10:51:11.000Z">
-<meta property="article:modified_time" content="2024-05-24T12:10:51.546Z">
+<meta property="article:modified_time" content="2024-05-24T12:13:25.322Z">
 <meta property="article:author" content="Mryan2005">
 <meta property="article:tag" content="第一版">
 <meta property="article:tag" content="算法">
@@ -1577,8 +1579,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  
-  <noscript></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1634,12 +1636,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 			display: none;
 		}
 	</style>
-    </noscript><script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://unpkg.com/katex@0.12.0/dist/katex.min.css');loadCss('https://unpkg.com/hexo-math@4.0.0/dist/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://unpkg.com/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="https://unpkg.com/hexo-math@4.0.0/dist/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"></noscript></head><body itemscope="" itemtype="http://schema.org/WebPage"><div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 &gt;</strong></a>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
-
+</noscript>
 
 
   <script>
@@ -1652,7 +1654,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716552658596),
+    lastupdate: new Date(1716552808287),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2072,11 +2074,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- front-matter head_end begin -->
   <!-- front-matter head_end end -->
 <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://unpkg.com/katex@0.12.0/dist/katex.min.css">
 
-
-
-<!-- hexo injector head_end end -->
-  
+<link rel="stylesheet" href="https://unpkg.com/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
     <!-- import body_begin end-->
     <!-- Custom Files bodyBegin begin-->
@@ -2084,38 +2086,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope="" itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style="opacity: 0">
-  <div class="container">
-  <div id="wrapper">
-    <div class="nav-sub">
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
       <h2 class="title"></h2>
-      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href="/">
+        <a class="title flat-box" target="_self" href='/'>
           
           
           
         </a>
       
 
-			<div class="menu navigation">
-				<ul class="nav-list-h m-pc">
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="博客" active-action="action-home">
-                  <i class="fa-solid fa-rss fa-fw"></i>博客
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2125,8 +2133,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
-                  <i class="fa-solid fa-archive fa-fw"></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2136,8 +2150,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
-                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2147,8 +2167,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
-                  <i class="fa-solid fa-tags fa-fw"></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2158,8 +2184,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
-                  <i class="fa-solid fa-link fa-fw"></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -2169,8 +2201,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
-                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2183,12 +2221,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search...">
+          <input type="text" class="input u-search-input" placeholder="Search..." />
         </form>
       </div>
       
 
-			<ul class="switcher nav-list-h m-phone">
+			<ul class='switcher nav-list-h m-phone'>
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2199,8 +2237,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="博客" active-action="action-home">
-                  <i class="fa-solid fa-rss fa-fw"></i>博客
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2210,8 +2254,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
-                  <i class="fa-solid fa-archive fa-fw"></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2221,8 +2271,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
-                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2232,8 +2288,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
-                  <i class="fa-solid fa-tags fa-fw"></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2243,8 +2305,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
-                  <i class="fa-solid fa-link fa-fw"></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -2254,8 +2322,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
-                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2279,12 +2353,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class="cover-wrapper post search" style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class="cover-bg lazyload placeholder" data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
-<div class="cover-body">
-  <div class="top">
+<div class='cover-body'>
+  <div class='top'>
     
     
       <p class="title">Mryan2005's Blog</p>
@@ -2293,20 +2367,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">All Things is in it</p>
     
   </div>
-  <div class="bottom">
+  <div class='bottom'>
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="what is you went to search?">
+          <input type="text" class="input u-search-input" placeholder="what is you went to search?" />
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class="menu navigation">
-      <div class="list-h">
+    <div class='menu navigation'>
+      <div class='list-h'>
         
           
-            <a href="/" active-action="action-home">
+            <a href="/"
+              
+              
+              active-action="action-home">
               <p>主页</p>
             </a>
           
@@ -2325,13 +2402,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class="">
-  <article itemscope="" itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/5e7b20a2.html">
-  <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
-  <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/Post">
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
     <meta itemprop="name" content="Mryan2005's Blog">
     <meta itemprop="description" content="All Things is in it">
   </span>
@@ -2339,7 +2416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden="">
+    <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
@@ -2350,12 +2427,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         算法的基础知识
       </h1>
-      <div class="new-meta-box">
+      <div class='new-meta-box'>
         
           
             
-<div class="new-meta-item author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-  <a itemprop="url" class="author" href="/" rel="nofollow">
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
     <img alt="authorAvatar" itemprop="image" src="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Mryan2005</p>
   </a>
@@ -2365,15 +2442,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class="new-meta-item category">
+  <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/">入门</a>
     
-      <span hidden="" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
       </span>
     
-      <span hidden="" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/" itemprop="url"><span itemprop="name">入门</span></a>
       </span>
     
@@ -2384,7 +2461,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-12T10:51:11+00:00">
-  <a class="notlink">
+  <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2024年5月12日</p>
   </a>
@@ -2409,7 +2486,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="算法的五大特性"><a class="markdownIt-Anchor" href="#算法的五大特性"></a> 算法的五大特性</h2>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="算法的五大特性"><a class="markdownIt-Anchor" href="#算法的五大特性"></a> 算法的五大特性</h2>
 <ol>
 <li><strong>确定性</strong></li>
 <li><strong>有穷性</strong></li>
@@ -2418,7 +2495,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <h2 id="辨析"><a class="markdownIt-Anchor" href="#辨析"></a> 辨析</h2>
 <ol>
-<li>程序是不是算法？<br>
+<li>程序是不是算法？<br />
 答案是False，因为程序可以没有输入。</li>
 </ol>
 <h2 id="算法的要求"><a class="markdownIt-Anchor" href="#算法的要求"></a> 算法的要求</h2>
@@ -2431,13 +2508,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="算法的书写"><a class="markdownIt-Anchor" href="#算法的书写"></a> 算法的书写</h2>
 <p>我们要把它写成一个函数。</p>
 <p>声明行由返回值类型（int、char、double、float、void、long int）、函数名称和形式参数声明区构成</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">returnValueType <span class="title function_">functionName</span><span class="params">(type1 value1;type2 value2)</span> {</span><br><span class="line">    command <span class="number">1</span>;</span><br><span class="line">    command <span class="number">2</span>;</span><br><span class="line">    ……</span><br><span class="line">    command n;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">returnValueType <span class="title function_">functionName</span><span class="params">(type1 value1;type2 value2)</span> &#123;</span><br><span class="line">    command <span class="number">1</span>;</span><br><span class="line">    command <span class="number">2</span>;</span><br><span class="line">    ……</span><br><span class="line">    command n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果没有声明行，那一定要原型声明，如果不进行原型声明，就有可能造成C语言去猜测变量。</p>
 <p>如果输入参数与定义的不匹配，那么会发生变量类型转换。</p>
-<p>当然如果你把要声明的函数放到main函数的前面或者是放到头文件当中就不会需要声明行了。<br>
+<p>当然如果你把要声明的函数放到main函数的前面或者是放到头文件当中就不会需要声明行了。<br />
 总之，要知道，我们要用到函数来表示一个算法。譬如，我们要从顺序表（从零号位开始存数据，里面的数值都大于等于0）中返回指定位置的值：</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">#define maxSize 100 </span></span><br><span class="line"><span class="comment">typedef struct {</span></span><br><span class="line"><span class="comment">    elementType data[maxSize];</span></span><br><span class="line"><span class="comment">    int length;</span></span><br><span class="line"><span class="comment">};</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">elementType <span class="title function_">initAlist</span><span class="params">(seqList *L, <span class="type">int</span> i)</span> {</span><br><span class="line">    <span class="keyword">if</span>(i &gt; L-&gt;length) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>至于顺序表是什么，为什么要特别声明是从0号位开始，我们以后再说。<br>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">#define maxSize 100 </span></span><br><span class="line"><span class="comment">typedef struct &#123;</span></span><br><span class="line"><span class="comment">    elementType data[maxSize];</span></span><br><span class="line"><span class="comment">    int length;</span></span><br><span class="line"><span class="comment">&#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">elementType <span class="title function_">initAlist</span><span class="params">(seqList *L, <span class="type">int</span> i)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(i &gt; L-&gt;length) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> L-&gt;data[i<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至于顺序表是什么，为什么要特别声明是从0号位开始，我们以后再说。<br />
 不过，在这里形式参数声明区代表的是要输入的值的区域，函数名称得表达出算法的用途，实在不行可以随意。</p>
 <h2 id="算法的衡量标准"><a class="markdownIt-Anchor" href="#算法的衡量标准"></a> 算法的衡量标准</h2>
 <p>即时间复杂度（time complexity）和空间复杂度（space complexity）。</p>
@@ -2457,17 +2534,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h5 id="例题-supa-hrefhttpsblogcsdnnetweixin_63866037articledetails1280873971asup"><a class="markdownIt-Anchor" href="#例题-supa-hrefhttpsblogcsdnnetweixin_63866037articledetails1280873971asup"></a> 例题 <sup><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_63866037/article/details/128087397">1</a></sup></h5>
 <ol>
 <li>
-<p>多重循环<br>
-<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a864f.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a864f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="多重循环"><br>
-<img src="https://pic.imgdb.cn/item/662db4840ea9cb14037a8e71.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4840ea9cb14037a8e71.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="多重循环"></p>
+<p>多重循环<br />
+<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a864f.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a864f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="多重循环" /><br />
+<img src="https://pic.imgdb.cn/item/662db4840ea9cb14037a8e71.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4840ea9cb14037a8e71.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="多重循环" /></p>
 </li>
 <li>
-<p>一重循环<br>
-<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a83a9.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a83a9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环"><br>
-<img src="https://s2.loli.net/2024/04/18/AoCu61OVJqYiBhW.png" class="lazyload" data-srcset="https://s2.loli.net/2024/04/18/AoCu61OVJqYiBhW.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="d9379049-6e45-4356-a8b0-f19cb2ecb852.png"><br>
-<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a8404.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a8404.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环"><br>
-<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a852c.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a852c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环"><br>
-<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a8451.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a8451.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环"></p>
+<p>一重循环<br />
+<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a83a9.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a83a9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环" /><br />
+<img src="https://s2.loli.net/2024/04/18/AoCu61OVJqYiBhW.png" class="lazyload" data-srcset="https://s2.loli.net/2024/04/18/AoCu61OVJqYiBhW.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="d9379049-6e45-4356-a8b0-f19cb2ecb852.png" /><br />
+<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a8404.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a8404.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环" /><br />
+<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a852c.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a852c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环" /><br />
+<img src="https://pic.imgdb.cn/item/662db4800ea9cb14037a8451.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4800ea9cb14037a8451.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="一重循环" /></p>
 </li>
 </ol>
 <h4 id="事后统计"><a class="markdownIt-Anchor" href="#事后统计"></a> 事后统计</h4>
@@ -2475,8 +2552,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>利用计算机的计时工具，用一组或多组数据去测。<strong>缺点是要运行程序，还会依赖于硬件、软件等因素。</strong></li>
 </ol>
 <h3 id="空间复杂度space-complexity"><a class="markdownIt-Anchor" href="#空间复杂度space-complexity"></a> 空间复杂度（space complexity）</h3>
-<p>算法本身会占用：输入、输出、指令、常数、变量等。<br>
-看看弄出了多少空间被占用。<br>
+<p>算法本身会占用：输入、输出、指令、常数、变量等。<br />
+看看弄出了多少空间被占用。<br />
 注意：如果是递归的算法，那就<strong>是看层数</strong>，不是看节点数，因为递归算法是单线程的弄完一个以后，就会删除掉。</p>
 <h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
 <ol>
@@ -2489,7 +2566,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     
-    <div class="footer">
+    <div class='footer'>
        <!-- 参考资料、相关资料等 -->
       
        <!-- 相关文章 -->
@@ -2504,12 +2581,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class="article-meta" id="bottom">
-    <div class="new-meta-box">
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T12:10:51+00:00">
-  <a class="notlink">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T12:13:25+00:00">
+  <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年5月24日</p>
   </a>
@@ -2521,7 +2598,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
   
   <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AC%AC%E4%B8%80%E7%89%88/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>第一版</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div>
-  <span hidden="" itemprop="keywords">第一版 算法</span>
+  <span hidden itemprop="keywords">第一版 算法</span>
 
 
         
@@ -2561,9 +2638,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class="prev" href="/posts/371e8e7e.html">
-          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>线性表入门</p>
-          <p class="content"> 定义
+        <a class='prev' href='/posts/371e8e7e.html'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>线性表入门</p>
+          <p class='content'> 定义
 线性表（linear list）有以下三个规则：
 
 存在唯一的一个“第一个”数据元素
@@ -2572,9 +2649,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
       
-        <a class="next" href="/posts/98650707.html">
-          <p class="title">随机事件的概率<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content"> 随机事件的频率
+        <a class='next' href='/posts/98650707.html'>
+          <p class='title'>随机事件的概率<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'> 随机事件的频率
 在相同条件下重复进行的n次随机试验中，事件A发生的次数记为rn(A)r_n(A)rn​(A)，称rn(A)r_n(A)rn​(A)为事件A发生的频数，称fn(A)=rn(A)n...</p>
         </a>
       
@@ -2596,7 +2673,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 </div>
-<aside id="l_side" itemscope="" itemtype="http://schema.org/WPSideBar">
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
 
   
@@ -2613,16 +2690,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div">
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-    <div class="content">
+    <div class='content'>
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E4%BA%94%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="toc-text"> 算法的五大特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%A8%E6%9E%90"><span class="toc-text"> 辨析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E8%A6%81%E6%B1%82"><span class="toc-text"> 算法的要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E4%B9%A6%E5%86%99"><span class="toc-text"> 算法的书写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E8%A1%A1%E9%87%8F%E6%A0%87%E5%87%86"><span class="toc-text"> 算法的衡量标准</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6time-complexity"><span class="toc-text"> 时间复杂度（time complexity）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%89%8D%E4%BC%B0%E8%AE%A1"><span class="toc-text"> 事前估计</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%AD%E5%8F%A5%E9%A2%91%E5%BA%A6"><span class="toc-text"> 语句频度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B8%90%E8%BF%9B%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6asymptotic-time-complexity"><span class="toc-text"> 渐进时间复杂度（asymptotic time complexity）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98-supa-hrefhttpsblogcsdnnetweixin_63866037articledetails1280873971asup"><span class="toc-text"> 例题 1</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%90%8E%E7%BB%9F%E8%AE%A1"><span class="toc-text"> 事后统计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6space-complexity"><span class="toc-text"> 空间复杂度（space complexity）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text"> 参考资料</span></a></li></ol>
     </div>
   </section>
@@ -2704,7 +2781,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </div>
         
   
-  <footer class="footer clearfix" itemscope="" itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -2717,7 +2794,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <br>
-        <div class="social-wrapper" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
           
@@ -2735,7 +2812,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
@@ -2747,7 +2824,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div class="copyright">
+        <div class='copyright'>
         <p><a href="/">Copyright © since 2024 Mryan2005</a></p>
 
         </div>
@@ -2835,7 +2912,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -2874,7 +2951,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 	hoverDelay: 0
   };
 </script>
-<script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -3148,7 +3225,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/数据结构与算法大全/","name":"数据结构与算法大全"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/数据结构与算法大全/入门/","name":"入门"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/5e7b20a2.html","name":"算法的基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"算法的基础知识","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/5e7b20a2.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/5e7b20a2.html","wordCount":0,"datePublished":"2024-05-12T10:51:11.000Z","dateModified":"2024-05-24T12:10:51.546Z","articleSection":"数据结构与算法大全","keywords":"第一版,算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/数据结构与算法大全/","name":"数据结构与算法大全"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/数据结构与算法大全/入门/","name":"入门"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/5e7b20a2.html","name":"算法的基础知识"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"算法的基础知识","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/5e7b20a2.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/5e7b20a2.html","wordCount":0,"datePublished":"2024-05-12T10:51:11.000Z","dateModified":"2024-05-24T12:13:25.322Z","articleSection":"数据结构与算法大全","keywords":"第一版,算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
@@ -3234,6 +3311,5 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyEnd end-->
     <!-- front-matter body_end begin -->
     <!-- front-matter body_end end -->
-  
-
-</body></html>
+  </body>
+</html>

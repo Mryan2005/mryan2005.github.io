@@ -1,17 +1,19 @@
-<!DOCTYPE html><html lang="zh-CN"><head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0">
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
   <meta name="generator" content="Hexo 7.2.0">
   <meta name="Volantis" content="5.8.0">
   <!-- <meta name="referrer" content="strict-origin-when-cross-origin"> -->
   <meta charset="utf-8">
   <!-- 百度 -->
-  <meta name="baidu-site-verification" content="codeva-LCVVHesh2I">
+  <meta name="baidu-site-verification" content="codeva-LCVVHesh2I" />
   <!-- SEO相关 -->
   
   
   <!-- 渲染优化 -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-      <link rel="dns-prefetch" href="https://unpkg.com">
-      <link rel="preconnect" href="https://unpkg.com" crossorigin="">
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <!-- 百度统计 -->
   <script>
@@ -35,7 +37,7 @@
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True">
+  <meta name="HandheldFriendly" content="True" >
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -47,7 +49,7 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-    <link rel="shortcut icon" type="image/x-icon" href="/img/ajti8-5lnxq.png">
+    <link rel="shortcut icon" type='image/x-icon' href="/img/ajti8-5lnxq.png">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
@@ -57,17 +59,17 @@
   <!-- 页面元数据 -->
   <title>矩阵的秩 - Mryan2005's Blog</title>
   <meta name="keywords" content="矩阵,null">
-  <meta desc="" name="description" content="All Things is in it - Mryan2005 - Mryan2005's Blog">
+  <meta desc name="description" content="All Things is in it - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="矩阵的秩">
 <meta property="og:url" content="https://www.mryan2005.top/posts/50ea32d2.html">
-<meta property="og:site_name" content="Mryan2005's Blog">
-<meta property="og:description" content="定义  k阶子式 在m✖️n的矩阵A当中，任取k行k列（1≤k≤m，1≤k≤n），位于k2k^2k2个元素。 m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。 设A为m✖️n矩阵，当A=Ｏ时，它的任何子式都为零；当A≠Ｏ时，它至少有一个r阶子式不为零。  秩 设Ａ为m✖️n矩阵，如果存在Ａ的r阶子式不为零，而任何的r+1阶子式皆为零，则称数r为矩阵A的秩，记">
+<meta property="og:site_name" content="Mryan2005&#39;s Blog">
+<meta property="og:description" content="定义  k阶子式 在m✖️n的矩阵A当中，任取k行k列（1≤k≤m，1≤k≤n），位于k2k^2k2个元素。 m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。 设A为m✖️n矩阵，当A&#x3D;Ｏ时，它的任何子式都为零；当A≠Ｏ时，它至少有一个r阶子式不为零。  秩 设Ａ为m✖️n矩阵，如果存在Ａ的r阶子式不为零，而任何的r+1阶子式皆为零，则称数r为矩阵A的秩，记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-05-16T11:29:20.000Z">
-<meta property="article:modified_time" content="2024-05-24T12:10:51.550Z">
+<meta property="article:modified_time" content="2024-05-24T12:13:25.326Z">
 <meta property="article:author" content="Mryan2005">
 <meta property="article:tag" content="矩阵">
 <meta name="twitter:card" content="summary">
@@ -1576,8 +1578,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  
-  <noscript></noscript>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1633,12 +1635,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 			display: none;
 		}
 	</style>
-    </noscript><script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://unpkg.com/katex@0.12.0/dist/katex.min.css');loadCss('https://unpkg.com/hexo-math@4.0.0/dist/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://unpkg.com/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="https://unpkg.com/hexo-math@4.0.0/dist/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"></noscript></head><body itemscope="" itemtype="http://schema.org/WebPage"><div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 &gt;</strong></a>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
-
+</noscript>
 
 
   <script>
@@ -1651,7 +1653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716552658596),
+    lastupdate: new Date(1716552808287),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2071,11 +2073,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <!-- front-matter head_end begin -->
   <!-- front-matter head_end end -->
 <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://unpkg.com/katex@0.12.0/dist/katex.min.css">
 
-
-
-<!-- hexo injector head_end end -->
-  
+<link rel="stylesheet" href="https://unpkg.com/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
     <!-- import body_begin begin-->
     <!-- import body_begin end-->
     <!-- Custom Files bodyBegin begin-->
@@ -2083,38 +2085,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope="" itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style="opacity: 0">
-  <div class="container">
-  <div id="wrapper">
-    <div class="nav-sub">
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
       <h2 class="title"></h2>
-      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href="/">
+        <a class="title flat-box" target="_self" href='/'>
           
           
           
         </a>
       
 
-			<div class="menu navigation">
-				<ul class="nav-list-h m-pc">
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="博客" active-action="action-home">
-                  <i class="fa-solid fa-rss fa-fw"></i>博客
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2124,8 +2132,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
-                  <i class="fa-solid fa-archive fa-fw"></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2135,8 +2149,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
-                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2146,8 +2166,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
-                  <i class="fa-solid fa-tags fa-fw"></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2157,8 +2183,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
-                  <i class="fa-solid fa-link fa-fw"></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -2168,8 +2200,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
-                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2182,12 +2220,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search...">
+          <input type="text" class="input u-search-input" placeholder="Search..." />
         </form>
       </div>
       
 
-			<ul class="switcher nav-list-h m-phone">
+			<ul class='switcher nav-list-h m-phone'>
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2198,8 +2236,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="博客" active-action="action-home">
-                  <i class="fa-solid fa-rss fa-fw"></i>博客
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
                 </a>
                 
               </li>
@@ -2209,8 +2253,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
-                  <i class="fa-solid fa-archive fa-fw"></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
                 </a>
                 
               </li>
@@ -2220,8 +2270,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/categories/" title="分类" active-action="action-categories">
-                  <i class="fa-solid fa-folder-open fa-fw"></i>分类
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
                 </a>
                 
               </li>
@@ -2231,8 +2287,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/tags/" title="标签" active-action="action-tags">
-                  <i class="fa-solid fa-tags fa-fw"></i>标签
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
                 </a>
                 
               </li>
@@ -2242,8 +2304,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="友链" active-action="action-friends">
-                  <i class="fa-solid fa-link fa-fw"></i>友链
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
                 </a>
                 
               </li>
@@ -2253,8 +2321,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
-                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -2278,12 +2352,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class="cover-wrapper post search" style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class="cover-bg lazyload placeholder" data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
-<div class="cover-body">
-  <div class="top">
+<div class='cover-body'>
+  <div class='top'>
     
     
       <p class="title">Mryan2005's Blog</p>
@@ -2292,20 +2366,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">All Things is in it</p>
     
   </div>
-  <div class="bottom">
+  <div class='bottom'>
     
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
-          <input type="text" class="input u-search-input" placeholder="what is you went to search?">
+          <input type="text" class="input u-search-input" placeholder="what is you went to search?" />
           <i class="icon fa-solid fa-search fa-fw"></i>
         </form>
       </div>
     
-    <div class="menu navigation">
-      <div class="list-h">
+    <div class='menu navigation'>
+      <div class='list-h'>
         
           
-            <a href="/" active-action="action-home">
+            <a href="/"
+              
+              
+              active-action="action-home">
               <p>主页</p>
             </a>
           
@@ -2324,13 +2401,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class="">
-  <article itemscope="" itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/50ea32d2.html">
-  <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
-  <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/Post">
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
     <meta itemprop="name" content="Mryan2005's Blog">
     <meta itemprop="description" content="All Things is in it">
   </span>
@@ -2338,7 +2415,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden="">
+    <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
@@ -2349,12 +2426,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <h1 class="title" itemprop="name headline">
         矩阵的秩
       </h1>
-      <div class="new-meta-box">
+      <div class='new-meta-box'>
         
           
             
-<div class="new-meta-item author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-  <a itemprop="url" class="author" href="/" rel="nofollow">
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
     <img alt="authorAvatar" itemprop="image" src="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">Mryan2005</p>
   </a>
@@ -2364,15 +2441,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class="new-meta-item category">
+  <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
     <a class="category-link" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a><span class="sep"></span><a class="category-link" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/">矩阵</a>
     
-      <span hidden="" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">线性代数</span></a>
       </span>
     
-      <span hidden="" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/" itemprop="url"><span itemprop="name">矩阵</span></a>
       </span>
     
@@ -2383,7 +2460,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-16T11:29:20+00:00">
-  <a class="notlink">
+  <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2024年5月16日</p>
   </a>
@@ -2408,14 +2485,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
 <h3 id="k阶子式"><a class="markdownIt-Anchor" href="#k阶子式"></a> k阶子式</h3>
-<p>在m✖️n的矩阵A当中，任取k行k列（1≤k≤m，1≤k≤n），位于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>个元素。<br>
-m✖️n矩阵A的k阶子式共有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mi>m</mi><mi>k</mi></msubsup><mo separator="true">⋅</mo><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">C^k_m·C^k_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.096108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>个。<br>
+<p>在m✖️n的矩阵A当中，任取k行k列（1≤k≤m，1≤k≤n），位于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>个元素。<br />
+m✖️n矩阵A的k阶子式共有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mi>m</mi><mi>k</mi></msubsup><mo separator="true">⋅</mo><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">C^k_m·C^k_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.096108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>个。<br />
 设A为m✖️n矩阵，当A=Ｏ时，它的任何子式都为零；当A≠Ｏ时，它至少有一个r阶子式不为零。</p>
 <h3 id="秩"><a class="markdownIt-Anchor" href="#秩"></a> 秩</h3>
-<p>设Ａ为m✖️n矩阵，如果存在Ａ的r阶子式不为零，而任何的r+1阶子式皆为零，则称数r为矩阵A的秩，记作r(A)或R(A)。<br>
-零矩阵的秩等于零。<br>
+<p>设Ａ为m✖️n矩阵，如果存在Ａ的r阶子式不为零，而任何的r+1阶子式皆为零，则称数r为矩阵A的秩，记作r(A)或R(A)。<br />
+零矩阵的秩等于零。<br />
 除了计算矩阵，还可以通过变换矩阵（使其出现都为0的行），直到矩阵不能在变换了。那么有多少行上的元素不为0，那r就等于多少。</p>
 <h4 id="性质"><a class="markdownIt-Anchor" href="#性质"></a> 性质</h4>
 <ol>
@@ -2440,7 +2517,7 @@ m✖️n矩阵A的k阶子式共有<span class="katex"><span class="katex-mathml"
   
     
     
-    <div class="footer">
+    <div class='footer'>
        <!-- 参考资料、相关资料等 -->
       
        <!-- 相关文章 -->
@@ -2455,12 +2532,12 @@ m✖️n矩阵A的k阶子式共有<span class="katex"><span class="katex-mathml"
     
 
 
-  <div class="article-meta" id="bottom">
-    <div class="new-meta-box">
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T12:10:51+00:00">
-  <a class="notlink">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T12:13:25+00:00">
+  <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年5月24日</p>
   </a>
@@ -2472,7 +2549,7 @@ m✖️n矩阵A的k阶子式共有<span class="katex"><span class="katex-mathml"
           
   
   <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%9F%A9%E9%98%B5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>矩阵</p></a></div>
-  <span hidden="" itemprop="keywords">矩阵</span>
+  <span hidden itemprop="keywords">矩阵</span>
 
 
         
@@ -2512,9 +2589,9 @@ m✖️n矩阵A的k阶子式共有<span class="katex"><span class="katex-mathml"
   
     <div class="prev-next">
       
-        <a class="prev" href="/posts/f35acf61.html">
-          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>顺序表</p>
-          <p class="content"> 别称
+        <a class='prev' href='/posts/f35acf61.html'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>顺序表</p>
+          <p class='content'> 别称
 线性表的顺序表示、顺序存储结构、顺序映像、随机存取结构的储存结构
  作用
 利用数组的连续存储空间顺序存放线性表的各个元素
@@ -2522,9 +2599,9 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
         </a>
       
       
-        <a class="next" href="/posts/ccb7e96d.html">
-          <p class="title">动态分配<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class="content"> 前情提要
+        <a class='next' href='/posts/ccb7e96d.html'>
+          <p class='title'>动态分配<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'> 前情提要
 在之前的C语言的学习当中，我们提到了malloc和free，这两个函数是用来动态分配内存的。
 看好。
 动态分配的代码是这样写的。
@@ -2549,7 +2626,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
 
 
 </div>
-<aside id="l_side" itemscope="" itemtype="http://schema.org/WPSideBar">
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
 
   
@@ -2566,17 +2643,17 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div">
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
-    <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text"> 定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k%E9%98%B6%E5%AD%90%E5%BC%8F"><span class="toc-text"> k阶子式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%A9"><span class="toc-text"> 秩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text"> 性质</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text"> 矩阵的秩的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93a%E7%BB%8F%E8%BF%87%E4%B8%80%E6%AC%A1%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E5%8F%98%E6%88%90b%E6%97%B6rarb"><span class="toc-text"> 当A经过一次初等变换变成B时，r(A)=r(B)；</span></a></li></ol></li></ol>
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-text"> 定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#k%E9%98%B6%E5%AD%90%E5%BC%8F"><span class="toc-text"> k阶子式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%A9"><span class="toc-text"> 秩</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-text"> 性质</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E7%A7%A9%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text"> 矩阵的秩的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93a%E7%BB%8F%E8%BF%87%E4%B8%80%E6%AC%A1%E5%88%9D%E7%AD%89%E5%8F%98%E6%8D%A2%E5%8F%98%E6%88%90b%E6%97%B6rarb"><span class="toc-text"> 当A经过一次初等变换变成B时，r(A)&#x3D;r(B)；</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2657,7 +2734,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
         </div>
         
   
-  <footer class="footer clearfix" itemscope="" itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
@@ -2670,7 +2747,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
     
       
         <br>
-        <div class="social-wrapper" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
           
@@ -2688,7 +2765,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
@@ -2700,7 +2777,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
       
     
       
-        <div class="copyright">
+        <div class='copyright'>
         <p><a href="/">Copyright © since 2024 Mryan2005</a></p>
 
         </div>
@@ -2788,7 +2865,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
 
 
 
-  <script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
@@ -2827,7 +2904,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
 	hoverDelay: 0
   };
 </script>
-<script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
 
 
 
@@ -3101,7 +3178,7 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/线性代数/","name":"线性代数"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/线性代数/矩阵/","name":"矩阵"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/50ea32d2.html","name":"矩阵的秩"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"矩阵的秩","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/50ea32d2.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/50ea32d2.html","wordCount":0,"datePublished":"2024-05-16T11:29:20.000Z","dateModified":"2024-05-24T12:10:51.550Z","articleSection":"线性代数","keywords":"矩阵","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/线性代数/","name":"线性代数"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/线性代数/矩阵/","name":"矩阵"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/50ea32d2.html","name":"矩阵的秩"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"矩阵的秩","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/50ea32d2.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/50ea32d2.html","wordCount":0,"datePublished":"2024-05-16T11:29:20.000Z","dateModified":"2024-05-24T12:13:25.326Z","articleSection":"线性代数","keywords":"矩阵","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
@@ -3187,6 +3264,5 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后...</p>
     <!-- Custom Files bodyEnd end-->
     <!-- front-matter body_end begin -->
     <!-- front-matter body_end end -->
-  
-
-</body></html>
+  </body>
+</html>
