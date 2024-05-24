@@ -1648,7 +1648,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716552374035),
+    lastupdate: new Date(1716552658596),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2730,7 +2730,7 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
 
 <!-- internal -->
 
-
+<script src="/js/app.js"></script>
 
 
 
@@ -2741,105 +2741,7 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
 
 
 
-
-
-
-
-
-  <script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
-
-
-
-
-
-  
-
-
-<script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- optional -->
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
-<pjax>
-
-</pjax>
-
-
-
-
-
-
-
-
-  
-
-
-
-      
-        <!--
-  pjax重载区域接口：
-  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
-  2.  script[data-pjax]
-  3.  .pjax-reload script
-  4.  .pjax
--->
-
-
-
-<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/pjax/pjax.min.js"></script>
-
-
-
-
-      
-    </div>
-    <!-- import body_end begin-->
-    <!-- import body_end end-->
-    <!-- Custom Files bodyEnd begin-->
-    
-    <!-- Custom Files bodyEnd end-->
-    <!-- front-matter body_end begin -->
-    <!-- front-matter body_end end -->
-  
-
-<script src="/bundle.js"></script><script>
+<script>
   function loadIssuesJS() {
     
       const sites_api = document.getElementById('sites-api');
@@ -2865,8 +2767,13 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
     loadIssuesJS();
   })
 
-;
+</script>
 
+
+
+
+  <script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+<script>
   // https://www.npmjs.com/package/vanilla-lazyload
   // Set the options globally
   // to make LazyLoad self-initialize
@@ -2889,16 +2796,39 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
   document.addEventListener('pjax:complete', function () {
     lazyLoadInstance.update();
   });
-;
+</script>
 
+
+
+
+  
+
+<script>
   window.FPConfig = {
 	delay: 0,
 	ignoreKeywords: ["#"],
 	maxRPS: 6,
 	hoverDelay: 0
   };
-;
+</script>
+<script defer="" src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- optional -->
+
+  <script>
   const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
     "/" || "/" :
     "//" || "/";
@@ -2947,8 +2877,15 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
   document.querySelectorAll(".input.u-search-input").forEach((e) => {
     e.addEventListener("focus", loadSearchService, false);
   });
-;
+</script>
 
+
+
+
+
+
+
+  <script>
 
 
 
@@ -2962,8 +2899,20 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
   volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
   volantis.pjax.push(pjax_highlightjs_copyCode)
 
-;
+</script>
 
+
+
+
+
+
+
+
+
+
+
+
+  <script>
   function load_swiper() {
     if (!document.querySelectorAll(".swiper-container")[0]) return;
     volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.css");
@@ -2999,8 +2948,15 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
       pjax_swiper();
     }
   });
-;
+</script>
 
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
   function listennSidebarTOC() {
     const navItems = document.querySelectorAll(".toc li");
     if (!navItems.length) return;
@@ -3109,8 +3065,11 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
   document.addEventListener("pjax:success", ()=>{
     volantis.requestAnimationFrame(listennSidebarTOC)
   });
-;
+</script>
 
+
+
+<script>
   document.onreadystatechange = function () {
     if (document.readyState == 'complete') {
       // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
@@ -3123,9 +3082,28 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
       }
     }
   }
-;
-[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/矩阵/","name":"矩阵"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}];
+</script>
 
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/矩阵/","name":"矩阵"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"All Things is in it","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+
+
+
+      
+        <!--
+  pjax重载区域接口：
+  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
+  2.  script[data-pjax]
+  3.  .pjax-reload script
+  4.  .pjax
+-->
+
+
+
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/pjax/pjax.min.js"></script>
+
+
+<script>
     var pjax;
     document.addEventListener('DOMContentLoaded', function () {
       pjax = new Pjax({
@@ -3182,4 +3160,17 @@ m✖️n矩阵A的k阶子式共有Cmk⋅CnkC^k_m·C^k_nCmk​⋅Cnk​个。
         window.location.href = e.triggerElement.href;
       }
     });
-</script></body></html>
+</script>
+
+      
+    </div>
+    <!-- import body_end begin-->
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    
+    <!-- Custom Files bodyEnd end-->
+    <!-- front-matter body_end begin -->
+    <!-- front-matter body_end end -->
+  
+
+</body></html>
