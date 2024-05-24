@@ -1,11 +1,12 @@
 ---
 title: 回文数
-date: 2024-05-18 11:19:15
 tags:
-- 对数字的处理
+  - 对数字的处理
 categories:
-- LeetCode
-- 简单题
+  - LeetCode
+  - 简单题
+abbrlink: df58b0a0
+date: 2024-05-18 11:19:15
 ---
 
 > Problem: [9. 回文数](https://leetcode.cn/problems/palindrome-number/description/)

@@ -1,10 +1,11 @@
 ---
 title: 简谐运动的一些参数
+categories:
+  - 物理
+  - 简谐运动
+abbrlink: ebca20c7
 date: 2024-05-18 16:32:54
 tags:
-categories:
-- 物理
-- 简谐运动
 ---
 
 ## 振幅 A

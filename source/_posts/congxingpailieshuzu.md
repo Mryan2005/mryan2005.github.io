@@ -1,11 +1,12 @@
 ---
 title: 重新排列数组
-date: 2024-05-20 17:18:08
 tags:
-- 数组
+  - 数组
 categories:
-- LeetCode
-- 简单题
+  - LeetCode
+  - 简单题
+abbrlink: 95f3cae3
+date: 2024-05-20 17:18:08
 ---
 
 > Problem: [1470. 重新排列数组](https://leetcode.cn/problems/shuffle-the-array/description/)

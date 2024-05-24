@@ -1,10 +1,11 @@
 ---
 title: test_all_things
-date: 2024-05-11 20:06:44
-tags: 
-- test
+tags:
+  - test
 categories:
-- test example
+  - test example
+abbrlink: 90341f05
+date: 2024-05-11 20:06:44
 ---
 
 ## mathjax test

@@ -1,10 +1,11 @@
 ---
 title: 有效的括号的栈思想
-date: 2024-05-19 13:07:11
 tags:
-- Stack
+  - Stack
 categories:
-- LeetCode
+  - LeetCode
+abbrlink: a5285d9d
+date: 2024-05-19 13:07:11
 ---
 
 

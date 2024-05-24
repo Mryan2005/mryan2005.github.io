@@ -1,10 +1,11 @@
 ---
 title: 简谐运动（入门）
+categories:
+  - 物理
+  - 简谐运动
+abbrlink: 67c22e3
 date: 2024-05-14 09:10:32
 tags:
-categories: 
-- 物理
-- 简谐运动
 ---
 
 ## 弹簧振子

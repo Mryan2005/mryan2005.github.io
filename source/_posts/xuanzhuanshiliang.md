@@ -1,10 +1,11 @@
 ---
 title: 旋转矢量
+categories:
+  - 物理
+  - 简谐运动
+abbrlink: 6e211ebe
 date: 2024-05-18 17:09:50
 tags:
-categories:
-- 物理
-- 简谐运动
 ---
 
 ## 一些位置的相位

@@ -1,10 +1,11 @@
 ---
 title: 简谐运动的合成
+categories:
+  - 物理
+  - 简谐运动
+abbrlink: 374524ff
 date: 2024-05-18 23:57:27
 tags:
-categories:
-- 物理
-- 简谐运动
 ---
 
 ## 同方向同频率合成
