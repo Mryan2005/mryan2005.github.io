@@ -1650,7 +1650,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716567398997),
+    lastupdate: new Date(1716568784021),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2447,19 +2447,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         链表（linked list）的别称
-线性表的链式表示、链式存储结构、链式映像、随机存取结构的储存结构
- 单向链表
- 长相
- 无头链表
-
-指向首元结点的指针叫做头指针（head pointed）
- 有头链表
-第一个结点叫头结点（head node）
- 结构体定义
-12345typedef struct node &#123;    ElementType data;    struct n...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="链表linked-list的别称"><a class="markdownIt-Anchor" href="#链表linked-list的别称"></a> 链表（<strong>linked list</strong>）的别称</h2>
+<p><strong>线性表的链式表示</strong>、<strong>链式存储结构</strong>、<strong>链式映像</strong>、<strong>随机存取结构</strong>的储存结构</p>
+<h2 id="单向链表"><a class="markdownIt-Anchor" href="#单向链表"></a> 单向链表</h2>
+<h3 id="长相"><a class="markdownIt-Anchor" href="#长相"></a> 长相</h3>
+<h4 id="无头链表"><a class="markdownIt-Anchor" href="#无头链表"></a> 无头链表</h4>
+<p><img src="https://pic.imgdb.cn/item/662db4730ea9cb14037a6420.jpg" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4730ea9cb14037a6420.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt><br>
+指向首元结点的指针叫做<strong>头指针（head pointed）</strong></p>
+<h4 id="有头链表"><a class="markdownIt-Anchor" href="#有头链表"></a> 有头链表</h4>
+<p>第一个结点叫<strong>头结点（head node）</strong></p>
+<h3 id="结构体定义"><a class="markdownIt-Anchor" href="#结构体定义"></a> 结构体定义</h3>
     
   </div>
   
@@ -2532,16 +2529,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         别称
-线性表的顺序表示、顺序存储结构、顺序映像、随机存取结构的储存结构
- 作用
-利用数组的连续存储空间顺序存放线性表的各个元素
-a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后继。
- 结构体代码
- 第一种写法
-1234typedef struct sqList &#123;    ElementType Data[MAXSIZE];    int Last;&#125; s...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="别称"><a class="markdownIt-Anchor" href="#别称"></a> 别称</h2>
+<p><strong>线性表的顺序表示</strong>、<strong>顺序存储结构</strong>、<strong>顺序映像</strong>、<strong>随机存取结构</strong>的储存结构</p>
+<h2 id="作用"><a class="markdownIt-Anchor" href="#作用"></a> 作用</h2>
+<p>利用数组的连续存储空间顺序存放线性表的各个元素<br>
+<code>a[n-1]</code>是<code>a[n]</code>的直接前趋，<code>a[n+1]</code>是<code>a[n]</code>的直接后继。</p>
+<h2 id="结构体代码"><a class="markdownIt-Anchor" href="#结构体代码"></a> 结构体代码</h2>
+<h3 id="第一种写法"><a class="markdownIt-Anchor" href="#第一种写法"></a> 第一种写法</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">sqList</span> &#123;</span></span><br><span class="line">    ElementType Data[MAXSIZE];</span><br><span class="line">    <span class="type">int</span> Last;</span><br><span class="line">&#125; sqList;</span><br></pre></td></tr></table></figure>
+<h4 id="python"><a class="markdownIt-Anchor" href="#python"></a> Python</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.Data = []</span><br><span class="line">        self.last = -<span class="number">1</span></span><br></pre></td></tr></table></figure>
     
   </div>
   
@@ -2614,13 +2611,18 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后继。
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         前情提要
-在之前的C语言的学习当中，我们提到了malloc和free，这两个函数是用来动态分配内存的。
-看好。
-动态分配的代码是这样写的。
-12345678#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;int main() &#123;    int n;    scanf(&quot;%d&quot;, &amp;n);    int ...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="前情提要"><a class="markdownIt-Anchor" href="#前情提要"></a> 前情提要</h2>
+<p>在之前的C语言的学习当中，我们提到了<code>malloc</code>和<code>free</code>，这两个函数是用来动态分配内存的。<br>
+看好。<br>
+动态分配的代码是这样写的。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="type">int</span> *a = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*n);</span><br><span class="line">    <span class="built_in">free</span>(a);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h2 id="结构体结构"><a class="markdownIt-Anchor" href="#结构体结构"></a> 结构体结构</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    ElemType *data;</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">    <span class="type">int</span> listSize;</span><br><span class="line">&#125; DA;</span><br></pre></td></tr></table></figure>
+<p>我来解释一下，这个结构体声明。<br>
+length是你实际存了多少的东西，listSize是你目前表的最大长度。</p>
+<h2 id="动态分配的使用"><a class="markdownIt-Anchor" href="#动态分配的使用"></a> 动态分配的使用</h2>
+<p>其实，无非就是创、增、删、改、读、销。</p>
+<h3 id="创建一个动态分配"><a class="markdownIt-Anchor" href="#创建一个动态分配"></a> 创建一个动态分配</h3>
     
   </div>
   
@@ -2693,19 +2695,29 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后继。
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         定义
-线性表（linear list）有以下三个规则：
-
-存在唯一的一个“第一个”数据元素
-存在唯一的一个“最后一个”数据元素
-除“第一个”和“最后一个”元素均只有一个直接前驱（immediate predecessor）和一个直接后继（immediate successor）。
-
- 一些参数
-线性表长度为n，也可以直接用xxLen表示
-当n=0时，就是空表
-a的下表i表示的是a(i)在线...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
+<p>线性表（<strong>linear list</strong>）有以下三个规则：</p>
+<ol>
+<li>存在唯一的一个“第一个”数据元素</li>
+<li>存在唯一的一个“最后一个”数据元素</li>
+<li>除“第一个”和“最后一个”元素均只有一个<strong>直接前驱（immediate predecessor）<strong>和一个</strong>直接后继（immediate successor）</strong>。</li>
+</ol>
+<h2 id="一些参数"><a class="markdownIt-Anchor" href="#一些参数"></a> 一些参数</h2>
+<p>线性表长度为<code>n</code>，也可以直接用<code>xxLen</code>表示<br>
+当<code>n=0</code>时，就是空表<br>
+<code>a</code>的下表i表示的是<code>a(i)</code>在线性表的位序</p>
+<h2 id="一些要说的东西"><a class="markdownIt-Anchor" href="#一些要说的东西"></a> 一些要说的东西</h2>
+<p>对于线性表存在两种输入的情况：</p>
+<ol>
+<li>不修改内容，只是把内容传入，如<code>List L</code></li>
+<li>譬如，<code>getLength(List L)</code></li>
+<li>可修改内容，也可把内容传入，就传地址（指针），如<code>List *L</code></li>
+<li>譬如，<code>initList(List *L)</code></li>
+<li>但是，在此后要访问这指针的内容要用到<code>L-&gt;</code></li>
+</ol>
+<p>但是，我们要注意的是结构体。<br>
+举个例子<br>
+这是一个动态分配</p>
     
   </div>
   

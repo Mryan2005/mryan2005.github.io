@@ -1650,7 +1650,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716567398997),
+    lastupdate: new Date(1716568784021),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2443,16 +2443,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         别称
-线性表的顺序表示、顺序存储结构、顺序映像、随机存取结构的储存结构
- 作用
-利用数组的连续存储空间顺序存放线性表的各个元素
-a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后继。
- 结构体代码
- 第一种写法
-1234typedef struct sqList &#123;    ElementType Data[MAXSIZE];    int Last;&#125; s...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="别称"><a class="markdownIt-Anchor" href="#别称"></a> 别称</h2>
+<p><strong>线性表的顺序表示</strong>、<strong>顺序存储结构</strong>、<strong>顺序映像</strong>、<strong>随机存取结构</strong>的储存结构</p>
+<h2 id="作用"><a class="markdownIt-Anchor" href="#作用"></a> 作用</h2>
+<p>利用数组的连续存储空间顺序存放线性表的各个元素<br>
+<code>a[n-1]</code>是<code>a[n]</code>的直接前趋，<code>a[n+1]</code>是<code>a[n]</code>的直接后继。</p>
+<h2 id="结构体代码"><a class="markdownIt-Anchor" href="#结构体代码"></a> 结构体代码</h2>
+<h3 id="第一种写法"><a class="markdownIt-Anchor" href="#第一种写法"></a> 第一种写法</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">sqList</span> &#123;</span></span><br><span class="line">    ElementType Data[MAXSIZE];</span><br><span class="line">    <span class="type">int</span> Last;</span><br><span class="line">&#125; sqList;</span><br></pre></td></tr></table></figure>
+<h4 id="python"><a class="markdownIt-Anchor" href="#python"></a> Python</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.Data = []</span><br><span class="line">        self.last = -<span class="number">1</span></span><br></pre></td></tr></table></figure>
     
   </div>
   
@@ -2525,19 +2525,29 @@ a[n-1]是a[n]的直接前趋，a[n+1]是a[n]的直接后继。
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         定义
-线性表（linear list）有以下三个规则：
-
-存在唯一的一个“第一个”数据元素
-存在唯一的一个“最后一个”数据元素
-除“第一个”和“最后一个”元素均只有一个直接前驱（immediate predecessor）和一个直接后继（immediate successor）。
-
- 一些参数
-线性表长度为n，也可以直接用xxLen表示
-当n=0时，就是空表
-a的下表i表示的是a(i)在线...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
+<p>线性表（<strong>linear list</strong>）有以下三个规则：</p>
+<ol>
+<li>存在唯一的一个“第一个”数据元素</li>
+<li>存在唯一的一个“最后一个”数据元素</li>
+<li>除“第一个”和“最后一个”元素均只有一个<strong>直接前驱（immediate predecessor）<strong>和一个</strong>直接后继（immediate successor）</strong>。</li>
+</ol>
+<h2 id="一些参数"><a class="markdownIt-Anchor" href="#一些参数"></a> 一些参数</h2>
+<p>线性表长度为<code>n</code>，也可以直接用<code>xxLen</code>表示<br>
+当<code>n=0</code>时，就是空表<br>
+<code>a</code>的下表i表示的是<code>a(i)</code>在线性表的位序</p>
+<h2 id="一些要说的东西"><a class="markdownIt-Anchor" href="#一些要说的东西"></a> 一些要说的东西</h2>
+<p>对于线性表存在两种输入的情况：</p>
+<ol>
+<li>不修改内容，只是把内容传入，如<code>List L</code></li>
+<li>譬如，<code>getLength(List L)</code></li>
+<li>可修改内容，也可把内容传入，就传地址（指针），如<code>List *L</code></li>
+<li>譬如，<code>initList(List *L)</code></li>
+<li>但是，在此后要访问这指针的内容要用到<code>L-&gt;</code></li>
+</ol>
+<p>但是，我们要注意的是结构体。<br>
+举个例子<br>
+这是一个动态分配</p>
     
   </div>
   

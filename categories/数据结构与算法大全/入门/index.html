@@ -1650,7 +1650,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716567398997),
+    lastupdate: new Date(1716568784021),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2443,30 +2443,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         算法的五大特性
-
-确定性
-有穷性
-可行性
-输入和输出（可以没有输入，但是得要有输出）
-
- 辨析
-
-程序是不是算法？
-答案是False，因为程序可以没有输入。
-
- 算法的要求
-
-正确性（correctness）
-可读性（readability）
-健壮性（robustness）
-效率与低储存量需求
-
- 算法的书写
-我们要把它写成一个函数。
-声明行由返回值类型（int、char、double、f...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="算法的五大特性"><a class="markdownIt-Anchor" href="#算法的五大特性"></a> 算法的五大特性</h2>
+<ol>
+<li><strong>确定性</strong></li>
+<li><strong>有穷性</strong></li>
+<li><strong>可行性</strong></li>
+<li><strong>输入</strong>和<strong>输出</strong>（可以没有输入，但是得要有输出）</li>
+</ol>
+<h2 id="辨析"><a class="markdownIt-Anchor" href="#辨析"></a> 辨析</h2>
+<ol>
+<li>程序是不是算法？<br>
+答案是False，因为程序可以没有输入。</li>
+</ol>
+<h2 id="算法的要求"><a class="markdownIt-Anchor" href="#算法的要求"></a> 算法的要求</h2>
+<ol>
+<li><strong>正确性（correctness）</strong></li>
+<li><strong>可读性（readability）</strong></li>
+<li><strong>健壮性（robustness）</strong></li>
+<li>效率与低储存量需求</li>
+</ol>
+<h2 id="算法的书写"><a class="markdownIt-Anchor" href="#算法的书写"></a> 算法的书写</h2>
+<p>我们要把它写成一个函数。</p>
+<p>声明行由返回值类型（int、char、double、float、void、long int）、函数名称和形式参数声明区构成</p>
     
   </div>
   
@@ -2539,14 +2537,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-         数据（data）
-能输入到计算机当中的并能被处理的符号的总称。
- 数据元素（data item）
-数据的基本单位，通常是以一个整体去考虑，有若干个数据项组成，又名记录。
-在计算机当中，最小的储存单位是位（bit），就是二进制数的一位。将若干个位组合起来连成一个位串表示一个数据元素，通常这个位串为一个元素（element）或结点（node），有时可以看成是数据元素在计算机中的映像。
-当数据元...
-      
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="数据data"><a class="markdownIt-Anchor" href="#数据data"></a> 数据（data）</h2>
+<p>能输入到计算机当中的并能被处理的符号的总称。</p>
+<h2 id="数据元素data-item"><a class="markdownIt-Anchor" href="#数据元素data-item"></a> 数据元素（data item）</h2>
+<p>数据的<strong>基本单位，通常是以一个整体去考虑，有若干个数据项组成</strong>，又名记录。<br>
+在计算机当中，最小的储存单位是<strong>位（bit）</strong>，就是二进制数的一位。<strong>将若干个位组合起来连成一个位串表示一个数据元素</strong>，通常这个位串为一个元素（element）或结点（node），有时可以看成是数据元素在计算机中的映像。<br>
+当数据元素组成各个数据项时，位串应于各个数据项的子串称为数据域（data field）</p>
+<h2 id="数据对象data-object"><a class="markdownIt-Anchor" href="#数据对象data-object"></a> 数据对象（data object）</h2>
+<p>性质相同的数据元素的集合，是数据的子集。</p>
+<h2 id="数据结构data-structure"><a class="markdownIt-Anchor" href="#数据结构data-structure"></a> 数据结构（data structure）</h2>
+<p>存在一种或一种以上的特殊关系的数据元素的集合——Data_Structure = (D,S)<br>
+D是数据元素的有限集，S是D上关系的有限集<br>
+数据结构通常分为4种基本结构：</p>
+<ol>
+<li>集合</li>
+<li>线性</li>
+<li>树</li>
+<li>图</li>
+</ol>
     
   </div>
   
