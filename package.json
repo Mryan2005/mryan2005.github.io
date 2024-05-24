@@ -27,6 +27,8 @@
     "hexo-abbrlink": "^2.2.1",
     "markdown-it-katex": "^2.0.3",
     "hexo-reference":"^1.0.4",
-    "hexo-renderer-markdown-it-plus": "^1.0.6"
+    "hexo-renderer-markdown-it-plus": "^1.0.6",
+    "hexo-admonition": "^1.1.2",
+    "hexo-filter-optimize": "^0.3.1"
   }
 }
