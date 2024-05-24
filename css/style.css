@@ -441,77 +441,63 @@ article#tag .all-tags ul li span:before {
 .article {
   color: var(--color-p);
   word-wrap: break-word;
-/* 禁止页面选中、复制 */
 }
-html,
-body {
-  moz-user-select: -moz-none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-strong {
+.article strong {
   border-bottom: 2px solid;
   padding-bottom: 1.2px;
   color: #238ecf;
 }
-a {
+.article a {
   word-break: break-word;
 }
-h1.title,
-h2.title {
+.article h1.title,
+.article h2.title {
   left: 0;
 }
-h1.title:before,
-h2.title:before {
+.article h1.title:before,
+.article h2.title:before {
   content: none;
 }
-h1,
-h2 {
+.article h1,
+.article h2 {
   padding-bottom: 0.2rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(68,68,68,0.1);
 }
-h1 {
+.article h1 {
   text-align: left;
   color: var(--color-h1);
   margin-top: 48px;
 }
-h2 {
+.article h2 {
   text-align: left;
   color: var(--color-h2);
   margin-top: 48px;
 }
-h3 {
+.article h3 {
   text-align: left;
   color: var(--color-h3);
   margin-top: 24px;
 }
-h4 {
+.article h4 {
   text-align: left;
   color: var(--color-h4);
   margin-top: 16px;
 }
-h5 {
+.article h5 {
   font-weight: bold;
   color: var(--color-h5);
   margin-top: 1em;
 }
-h6 {
+.article h6 {
   color: var(--color-h6);
   margin-top: 1em;
 }
-center,
-center p {
+.article center,
+.article center p {
   text-align: center;
 }
-.aplayer {
+.article .aplayer {
   margin: 1em 0;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
@@ -522,41 +508,41 @@ center p {
   -webkit-border-radius: 4px;
   color: #666;
 }
-p.small-img img,
-div.small-img img {
+.article p.small-img img,
+.article div.small-img img {
   width: auto;
   max-width: 100%;
   margin: 0;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-s {
+.article s {
   color: #8e8e8e;
   text-decoration-color: #8e8e8e;
 }
-p {
+.article p {
   margin-top: 1em;
   margin-bottom: 1em;
   text-align: justify;
   max-width: 100%;
   line-height: inherit;
 }
-.subtitle h6 {
+.article .subtitle h6 {
   color: rgba(68,68,68,0.9);
 }
-figure figcaption span {
+.article figure figcaption span {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline-block;
   margin-right: 5px;
 }
-blockquote {
+.article blockquote {
   background: var(--color-block);
   border-left: 4px solid #3dd9b6;
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-blockquote {
+.article blockquote {
   position: relative;
   width: 100%;
   padding: 16px;
@@ -567,39 +553,39 @@ blockquote {
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
 }
-blockquote,
-blockquote p,
-blockquote ul,
-blockquote ol {
+.article blockquote,
+.article blockquote p,
+.article blockquote ul,
+.article blockquote ol {
   text-align: left;
   word-wrap: normal;
   font-size: 0.9375rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-blockquote footer {
+.article blockquote footer {
   padding: 0;
   text-align: justify;
   color: inherit;
   font-style: italic;
   margin: 1em 0;
 }
-blockquote footer cite {
+.article blockquote footer cite {
   color: var(--color-meta);
   margin-left: 1em;
 }
-blockquote footer cite::before {
+.article blockquote footer cite::before {
   content: '----';
   padding: 0 0.3em;
 }
-blockquote.pullquote.right {
+.article blockquote.pullquote.right {
   border-left: none;
   border-right: 4px solid #3dd9b6;
 }
-blockquote.pullquote.right p {
+.article blockquote.pullquote.right p {
   text-align: right;
 }
-pre {
+.article pre {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: block;
@@ -618,39 +604,39 @@ pre {
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-pre >code:not([class]) {
+.article pre >code:not([class]) {
   background: transparent;
 }
-div>pre {
+.article div>pre {
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-div>pre>code:not([class]) {
+.article div>pre>code:not([class]) {
   padding: 0;
   margin: 0;
   background: transparent;
   color: rgba(68,68,68,0.9);
 }
-code {
+.article code {
   font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
 }
-code:not([class]) {
+.article code:not([class]) {
   word-break: break-all;
   color: var(--color-inlinecode);
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 @media screen and (max-width: 500px) {
-  ul,
-  ol {
+  .article ul,
+  .article ol {
     font-size: 0.875rem;
   }
-  figure {
+  .article figure {
     font-size: 13px;
     line-height: 1.5;
   }
 }
-.widget {
+.article .widget {
   background: transparent;
   margin: 1em 0;
   box-shadow: none;
@@ -668,58 +654,58 @@ code:not([class]) {
   -ms-transition: all 0.28s ease;
   width: 100%;
 }
-.widget:hover {
+.article .widget:hover {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-.widget:active {
+.article .widget:active {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-.widget header {
+.article .widget header {
   padding: 4px 0.6em;
   padding-bottom: 0;
 }
-.widget header,
-.widget header a {
+.article .widget header,
+.article .widget header a {
   color: rgba(68,68,68,0.85);
 }
-.widget.copyright,
-.widget.qrcode {
+.article .widget.copyright,
+.article .widget.qrcode {
   background: none;
   padding: 0;
 }
-.widget.copyright header,
-.widget.qrcode header {
+.article .widget.copyright header,
+.article .widget.qrcode header {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: none;
 }
-.widget.copyright .content,
-.widget.qrcode .content {
+.article .widget.copyright .content,
+.article .widget.qrcode .content {
   padding: 0;
 }
-.widget.list .content,
-.widget.related_posts .content {
+.article .widget.list .content,
+.article .widget.related_posts .content {
   padding: 0 0.6em !important;
 }
-.widget.list .content a,
-.widget.related_posts .content a {
+.article .widget.list .content a,
+.article .widget.related_posts .content a {
   color: #2092ec;
 }
-.widget.list .content a:hover,
-.widget.related_posts .content a:hover {
+.article .widget.list .content a:hover,
+.article .widget.related_posts .content a:hover {
   color: #ff5722;
 }
-.widget .content {
+.article .widget .content {
   padding: 0 0.6em;
   margin: 0;
 }
-.widget .content ul {
+.article .widget .content ul {
   padding-left: 4px;
   margin-left: 16px;
 }
-.widget .content ul a {
+.article .widget .content ul a {
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
   -khtml-transition: all 0.1s ease;
@@ -736,25 +722,25 @@ code:not([class]) {
   font-weight: normal;
   text-decoration: none;
 }
-.widget .content ul a:hover,
-.widget .content ul a.active,
-.widget .content ul a:active {
+.article .widget .content ul a:hover,
+.article .widget .content ul a.active,
+.article .widget .content ul a:active {
   border-left: none !important;
   background: none !important;
 }
-.widget .content ul a:hover {
+.article .widget .content ul a:hover {
   color: #ff5722;
 }
-.widget .content .list a .name {
+.article .widget .content .list a .name {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline;
   color: #2092ec;
 }
-.widget .content .list a:hover .name {
+.article .widget .content .list a:hover .name {
   color: #ff5722;
 }
-.widget.qrcode > .content {
+.article .widget.qrcode > .content {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -778,17 +764,17 @@ code:not([class]) {
   padding-right: 16px;
   margin-bottom: 4px;
 }
-.widget.qrcode > .content>.fancybox,
-.widget.qrcode > .content>img {
+.article .widget.qrcode > .content>.fancybox,
+.article .widget.qrcode > .content>img {
   margin: 0 8px;
 }
-.widget.qrcode > .content img {
+.article .widget.qrcode > .content img {
   margin-bottom: 4px;
 }
-.article_footer {
+.article .article_footer {
   margin-top: 64px;
 }
-.widget-blur {
+.article .widget-blur {
   backdrop-filter: none;
 }
 .md .footer {
