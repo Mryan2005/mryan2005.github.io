@@ -441,63 +441,77 @@ article#tag .all-tags ul li span:before {
 .article {
   color: var(--color-p);
   word-wrap: break-word;
+/* 禁止页面选中、复制 */
 }
-.article strong {
+html,
+body {
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+strong {
   border-bottom: 2px solid;
   padding-bottom: 1.2px;
   color: #238ecf;
 }
-.article a {
+a {
   word-break: break-word;
 }
-.article h1.title,
-.article h2.title {
+h1.title,
+h2.title {
   left: 0;
 }
-.article h1.title:before,
-.article h2.title:before {
+h1.title:before,
+h2.title:before {
   content: none;
 }
-.article h1,
-.article h2 {
+h1,
+h2 {
   padding-bottom: 0.2rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(68,68,68,0.1);
 }
-.article h1 {
+h1 {
   text-align: left;
   color: var(--color-h1);
   margin-top: 48px;
 }
-.article h2 {
+h2 {
   text-align: left;
   color: var(--color-h2);
   margin-top: 48px;
 }
-.article h3 {
+h3 {
   text-align: left;
   color: var(--color-h3);
   margin-top: 24px;
 }
-.article h4 {
+h4 {
   text-align: left;
   color: var(--color-h4);
   margin-top: 16px;
 }
-.article h5 {
+h5 {
   font-weight: bold;
   color: var(--color-h5);
   margin-top: 1em;
 }
-.article h6 {
+h6 {
   color: var(--color-h6);
   margin-top: 1em;
 }
-.article center,
-.article center p {
+center,
+center p {
   text-align: center;
 }
-.article .aplayer {
+.aplayer {
   margin: 1em 0;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
@@ -508,41 +522,41 @@ article#tag .all-tags ul li span:before {
   -webkit-border-radius: 4px;
   color: #666;
 }
-.article p.small-img img,
-.article div.small-img img {
+p.small-img img,
+div.small-img img {
   width: auto;
   max-width: 100%;
   margin: 0;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-.article s {
+s {
   color: #8e8e8e;
   text-decoration-color: #8e8e8e;
 }
-.article p {
+p {
   margin-top: 1em;
   margin-bottom: 1em;
   text-align: justify;
   max-width: 100%;
   line-height: inherit;
 }
-.article .subtitle h6 {
+.subtitle h6 {
   color: rgba(68,68,68,0.9);
 }
-.article figure figcaption span {
+figure figcaption span {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline-block;
   margin-right: 5px;
 }
-.article blockquote {
+blockquote {
   background: var(--color-block);
   border-left: 4px solid #3dd9b6;
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-.article blockquote {
+blockquote {
   position: relative;
   width: 100%;
   padding: 16px;
@@ -553,39 +567,39 @@ article#tag .all-tags ul li span:before {
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
 }
-.article blockquote,
-.article blockquote p,
-.article blockquote ul,
-.article blockquote ol {
+blockquote,
+blockquote p,
+blockquote ul,
+blockquote ol {
   text-align: left;
   word-wrap: normal;
   font-size: 0.9375rem;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-.article blockquote footer {
+blockquote footer {
   padding: 0;
   text-align: justify;
   color: inherit;
   font-style: italic;
   margin: 1em 0;
 }
-.article blockquote footer cite {
+blockquote footer cite {
   color: var(--color-meta);
   margin-left: 1em;
 }
-.article blockquote footer cite::before {
+blockquote footer cite::before {
   content: '----';
   padding: 0 0.3em;
 }
-.article blockquote.pullquote.right {
+blockquote.pullquote.right {
   border-left: none;
   border-right: 4px solid #3dd9b6;
 }
-.article blockquote.pullquote.right p {
+blockquote.pullquote.right p {
   text-align: right;
 }
-.article pre {
+pre {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: block;
@@ -604,39 +618,39 @@ article#tag .all-tags ul li span:before {
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-.article pre >code:not([class]) {
+pre >code:not([class]) {
   background: transparent;
 }
-.article div>pre {
+div>pre {
   border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-.article div>pre>code:not([class]) {
+div>pre>code:not([class]) {
   padding: 0;
   margin: 0;
   background: transparent;
   color: rgba(68,68,68,0.9);
 }
-.article code {
+code {
   font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
 }
-.article code:not([class]) {
+code:not([class]) {
   word-break: break-all;
   color: var(--color-inlinecode);
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 @media screen and (max-width: 500px) {
-  .article ul,
-  .article ol {
+  ul,
+  ol {
     font-size: 0.875rem;
   }
-  .article figure {
+  figure {
     font-size: 13px;
     line-height: 1.5;
   }
 }
-.article .widget {
+.widget {
   background: transparent;
   margin: 1em 0;
   box-shadow: none;
@@ -654,58 +668,58 @@ article#tag .all-tags ul li span:before {
   -ms-transition: all 0.28s ease;
   width: 100%;
 }
-.article .widget:hover {
+.widget:hover {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-.article .widget:active {
+.widget:active {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
-.article .widget header {
+.widget header {
   padding: 4px 0.6em;
   padding-bottom: 0;
 }
-.article .widget header,
-.article .widget header a {
+.widget header,
+.widget header a {
   color: rgba(68,68,68,0.85);
 }
-.article .widget.copyright,
-.article .widget.qrcode {
+.widget.copyright,
+.widget.qrcode {
   background: none;
   padding: 0;
 }
-.article .widget.copyright header,
-.article .widget.qrcode header {
+.widget.copyright header,
+.widget.qrcode header {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: none;
 }
-.article .widget.copyright .content,
-.article .widget.qrcode .content {
+.widget.copyright .content,
+.widget.qrcode .content {
   padding: 0;
 }
-.article .widget.list .content,
-.article .widget.related_posts .content {
+.widget.list .content,
+.widget.related_posts .content {
   padding: 0 0.6em !important;
 }
-.article .widget.list .content a,
-.article .widget.related_posts .content a {
+.widget.list .content a,
+.widget.related_posts .content a {
   color: #2092ec;
 }
-.article .widget.list .content a:hover,
-.article .widget.related_posts .content a:hover {
+.widget.list .content a:hover,
+.widget.related_posts .content a:hover {
   color: #ff5722;
 }
-.article .widget .content {
+.widget .content {
   padding: 0 0.6em;
   margin: 0;
 }
-.article .widget .content ul {
+.widget .content ul {
   padding-left: 4px;
   margin-left: 16px;
 }
-.article .widget .content ul a {
+.widget .content ul a {
   transition: all 0.1s ease;
   -webkit-transition: all 0.1s ease;
   -khtml-transition: all 0.1s ease;
@@ -722,25 +736,25 @@ article#tag .all-tags ul li span:before {
   font-weight: normal;
   text-decoration: none;
 }
-.article .widget .content ul a:hover,
-.article .widget .content ul a.active,
-.article .widget .content ul a:active {
+.widget .content ul a:hover,
+.widget .content ul a.active,
+.widget .content ul a:active {
   border-left: none !important;
   background: none !important;
 }
-.article .widget .content ul a:hover {
+.widget .content ul a:hover {
   color: #ff5722;
 }
-.article .widget .content .list a .name {
+.widget .content .list a .name {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: inline;
   color: #2092ec;
 }
-.article .widget .content .list a:hover .name {
+.widget .content .list a:hover .name {
   color: #ff5722;
 }
-.article .widget.qrcode > .content {
+.widget.qrcode > .content {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -764,17 +778,17 @@ article#tag .all-tags ul li span:before {
   padding-right: 16px;
   margin-bottom: 4px;
 }
-.article .widget.qrcode > .content>.fancybox,
-.article .widget.qrcode > .content>img {
+.widget.qrcode > .content>.fancybox,
+.widget.qrcode > .content>img {
   margin: 0 8px;
 }
-.article .widget.qrcode > .content img {
+.widget.qrcode > .content img {
   margin-bottom: 4px;
 }
-.article .article_footer {
+.article_footer {
   margin-top: 64px;
 }
-.article .widget-blur {
+.widget-blur {
   backdrop-filter: none;
 }
 .md .footer {
