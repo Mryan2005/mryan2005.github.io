@@ -757,6 +757,10 @@ k阶主子式 = <span class="katex"><span class="katex-mathml"><math xmlns="http
         <category>线性代数</category>
         <category>矩阵</category>
       </categories>
+      <tags>
+        <tag>向量</tag>
+        <tag>矩阵</tag>
+      </tags>
   </entry>
   <entry>
     <title>矩阵的秩</title>
