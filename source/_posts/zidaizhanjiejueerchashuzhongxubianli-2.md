@@ -13,8 +13,6 @@ categories:
 
 > Problem: [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/description/)
 
-[TOC]
-
 ## 思路
 
 > 我们都知道中序遍历是左边——>中间——>右边
