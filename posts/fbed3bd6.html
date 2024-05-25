@@ -57,32 +57,40 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Mryan2005's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>重新排列数组 - Mryan2005's Blog</title>
-  <meta name="keywords" content="数组,null">
+  <title>使用 “自带栈” 解决中序遍历（2） - Mryan2005's Blog</title>
+  <meta name="keywords" content="二叉树的中序遍历,栈,二叉树,null">
   <meta desc name="description" content="
-Problem: 1470. 重新排列数组
+Problem: 94. 二叉树的中序遍历
 
+[TOC]
  思路
 
-由题可知，x的部分被放在0~n/2-1处，y的部分放在n/2~n处，而重排是按照[x1,y1,……,xn,yn][x_1, y_1, ……, x_n, y_n][x1​,y1​,……,xn​,yn​]摆放。
+我们都知道中序遍历是左边——&gt;中间——&gt;右边
 
  解题方法
 
-解题方法如Code所示。
+一直向左边走
+到达左边尽头后弹出并打印，然后向右边走一个。
+继续一直向左边走。
+到达左边尽头后弹出并打印，然后向右边走一个。
+结束条件是p和栈S都为空。
 
- 复... - Mryan2005 - Mryan2005's Blog">
+ 复杂度
+时间... - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="重新排列数组">
-<meta property="og:url" content="https://www.mryan2005.top/posts/95f3cae3.html">
+<meta property="og:title" content="使用 “自带栈” 解决中序遍历（2）">
+<meta property="og:url" content="https://www.mryan2005.top/posts/fbed3bd6.html">
 <meta property="og:site_name" content="Mryan2005&#39;s Blog">
-<meta property="og:description" content="Problem: 1470. 重新排列数组   思路  由题可知，x的部分被放在0~n&#x2F;2-1处，y的部分放在n&#x2F;2~n处，而重排是按照[x1,y1,……,xn,yn][x_1, y_1, ……, x_n, y_n][x1​,y1​,……,xn​,yn​]摆放。   解题方法  解题方法如Code所示。   复杂度 时间复杂度:  O(n)O(n)O(n)  空间复杂度:">
+<meta property="og:description" content="Problem: 94. 二叉树的中序遍历  [TOC]  思路  我们都知道中序遍历是左边——&gt;中间——&gt;右边   解题方法  一直向左边走 到达左边尽头后弹出并打印，然后向右边走一个。 继续一直向左边走。 到达左边尽头后弹出并打印，然后向右边走一个。 结束条件是p和栈S都为空。   复杂度 时间复杂度:  O(n)O(n)O(n)">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-20T17:18:08.000Z">
-<meta property="article:modified_time" content="2024-05-25T05:14:42.036Z">
+<meta property="article:published_time" content="2024-05-25T13:12:50.000Z">
+<meta property="article:modified_time" content="2024-05-25T05:14:52.472Z">
 <meta property="article:author" content="Mryan2005">
-<meta property="article:tag" content="数组">
+<meta property="article:tag" content="二叉树的中序遍历">
+<meta property="article:tag" content="栈">
+<meta property="article:tag" content="二叉树">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2421,7 +2429,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/95f3cae3.html">
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/fbed3bd6.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
@@ -2442,7 +2450,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        重新排列数组
+        使用 “自带栈” 解决中序遍历（2）
       </h1>
       <div class='new-meta-box'>
         
@@ -2477,10 +2485,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-20T17:18:08+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-25T13:12:50+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年5月20日</p>
+    <p>发布于：2024年5月25日</p>
   </a>
 </div>
 
@@ -2504,17 +2512,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
-<p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shuffle-the-array/description/">1470. 重新排列数组</a></p>
+<p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-inorder-traversal/description/">94. 二叉树的中序遍历</a></p>
 </blockquote>
-<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
+<p>[TOC]</p>
+<h2 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h2>
 <blockquote>
-<p>由题可知，x的部分被放在0~n/2-1处，y的部分放在n/2~n处，而重排是按照<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[x_1, y_1, ……, x_n, y_n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span>摆放。</p>
+<p>我们都知道中序遍历是左边——&gt;中间——&gt;右边</p>
 </blockquote>
-<h1 id="解题方法"><a class="markdownIt-Anchor" href="#解题方法"></a> 解题方法</h1>
-<blockquote>
-<p>解题方法如Code所示。</p>
-</blockquote>
-<h1 id="复杂度"><a class="markdownIt-Anchor" href="#复杂度"></a> 复杂度</h1>
+<h2 id="解题方法"><a class="markdownIt-Anchor" href="#解题方法"></a> 解题方法</h2>
+<ol>
+<li>一直向左边走</li>
+<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
+<li>继续一直向左边走。</li>
+<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
+<li>结束条件是p和栈S都为空。</li>
+</ol>
+<h2 id="复杂度"><a class="markdownIt-Anchor" href="#复杂度"></a> 复杂度</h2>
 <p>时间复杂度:</p>
 <blockquote>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
@@ -2523,8 +2536,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
 </blockquote>
-<h1 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h1>
-<figure class="highlight c"><figcaption><span>[]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="title function_">shuffle</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> n, <span class="type">int</span>* returnSize)</span>&#123;</span><br><span class="line">    <span class="type">int</span> *q = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*<span class="number">2</span>*n);</span><br><span class="line">    *returnSize = <span class="number">2</span>*n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, p = <span class="number">0</span>; i &lt; numsSize/<span class="number">2</span>; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = numsSize/<span class="number">2</span>, p = <span class="number">1</span>; i &lt; numsSize; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">return</span> q;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *right;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span> &#123;</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> **<span class="title">TreeNode</span>;</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; StackNode, *Stack;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Push</span><span class="params">(Stack *S, <span class="keyword">struct</span> TreeNode **tNode)</span> &#123;</span><br><span class="line"> StackNode *SN = (StackNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(StackNode));</span><br><span class="line"> SN-&gt;TreeNode = tNode;</span><br><span class="line"> <span class="keyword">if</span>(!*S) &#123;</span><br><span class="line">  SN-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">  (*S) = SN; </span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  SN-&gt;next = *S;</span><br><span class="line">  *S = SN;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 出栈</span></span><br><span class="line"><span class="keyword">struct</span> TreeNode **<span class="title function_">Pop</span><span class="params">(Stack *S)</span> &#123;</span><br><span class="line"> <span class="keyword">if</span>(*S) &#123;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> **<span class="title">p</span> =</span> (*S)-&gt;TreeNode;</span><br><span class="line">  StackNode *q = *S;</span><br><span class="line">  (*S) = (*S)-&gt;next;</span><br><span class="line">  <span class="built_in">free</span>(q);</span><br><span class="line">  <span class="keyword">return</span> p;</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* <span class="title function_">inorderTraversal</span><span class="params">(<span class="keyword">struct</span> TreeNode* root, <span class="type">int</span>* returnSize)</span> &#123;</span><br><span class="line">    Stack S = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">p</span> =</span> root;</span><br><span class="line">    <span class="type">int</span> *a = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">100</span>), *q = a;</span><br><span class="line">    <span class="keyword">if</span>(root) Push(&amp;S, &amp;root);</span><br><span class="line"> <span class="keyword">while</span>(p || S) &#123;</span><br><span class="line">  <span class="keyword">if</span>(p) &#123;</span><br><span class="line">   <span class="keyword">if</span>(p-&gt;left) Push(&amp;S, &amp;p-&gt;left);</span><br><span class="line">   p = p-&gt;left;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   p = *Pop(&amp;S);</span><br><span class="line">            *(q++) = p-&gt;val;</span><br><span class="line">            <span class="keyword">if</span>(p-&gt;right) Push(&amp;S, &amp;p-&gt;right);</span><br><span class="line">            p = p-&gt;right;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">    *returnSize = q - a;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </div>
   
@@ -2541,8 +2554,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">重新排列数组</div>
-            <div class="license-link"><a href="https://www.mryan2005.top/posts/95f3cae3.html">https://www.mryan2005.top/posts/95f3cae3.html</a>
+            <div class="license-title">使用 “自带栈” 解决中序遍历（2）</div>
+            <div class="license-link"><a href="https://www.mryan2005.top/posts/fbed3bd6.html">https://www.mryan2005.top/posts/fbed3bd6.html</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -2551,11 +2564,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2024年5月20日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
                 <div class="license-meta-text">2024年5月25日</div>
               </div>
               
@@ -2581,7 +2589,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-25T05:14:42+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-25T05:14:52+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年5月25日</p>
@@ -2593,8 +2601,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E7%BB%84/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>数组</p></a></div>
-  <span hidden itemprop="keywords">数组</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>二叉树的中序遍历</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%A0%88/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>栈</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>二叉树</p></a></div>
+  <span hidden itemprop="keywords">二叉树的中序遍历 栈 二叉树</span>
 
 
         
@@ -2634,17 +2642,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/171c39b7.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>剪辑入门</p>
-          <p class='content'> 软件的选择
-</p>
-        </a>
       
-      
-        <a class='next' href='/posts/960aa022.html'>
-          <p class='title'>我为什么要创建我的博客<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>
-其实，我们都知道计算机界的大佬都是有一个属于自己的博客，并且他们的博客都是自己搭建的。这是因为他们知道，一个人的知识是有限的，而一个团队的知识是无限的。所以，他们会把自己的知识分享出来，让更多...</p>
+        <a class='next' href='/posts/6f990142.html'>
+          <p class='title'>点估计<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'> 参数估计问题
+是指当所研究的总体分布类型已知，但分布中含有一个或多个未知参数时，如何根据样本来估计未知参数的问题。
+譬如：一批灯泡寿命的预测，如果将灯泡的寿命XXX看作一个总体，根据实际经验知...</p>
         </a>
       
     </div>
@@ -2692,7 +2695,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95"><span class="toc-text"> 解题方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text"> 复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#code"><span class="toc-text"> Code</span></a></li></ol>
     </div>
   </section>
 
@@ -3217,7 +3220,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/","name":"LeetCode"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/简单题/","name":"简单题"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/95f3cae3.html","name":"重新排列数组"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"重新排列数组","description":"\nProblem: 1470. 重新排列数组\n\n 思路\n\n由题可知，x的部分被放在0~n/2-1处，y的部分放在n/2~n处，而重排是按照[x1,y1,……,xn,yn][x_1, y_1, ……, x_n, y_n][x1​,y1​,……,xn​,yn​]摆放。\n\n 解题方法\n\n解题方法如Code所示。\n\n 复杂度\n时间复杂度:\n\nO(n)O(n)O(n)\n\n空间复杂度:","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/95f3cae3.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/95f3cae3.html","wordCount":188,"datePublished":"2024-05-20T17:18:08.000Z","dateModified":"2024-05-25T05:14:42.036Z","articleSection":"LeetCode","keywords":"数组","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":"All Things is in it"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/","name":"LeetCode"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/简单题/","name":"简单题"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/fbed3bd6.html","name":"使用 “自带栈” 解决中序遍历（2）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"All Things is in it","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":"All Things is in it"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用 “自带栈” 解决中序遍历（2）","description":"\nProblem: 94. 二叉树的中序遍历\n\n[TOC]\n 思路\n\n我们都知道中序遍历是左边——&gt;中间——&gt;右边\n\n 解题方法\n\n一直向左边走\n到达左边尽头后弹出并打印，然后向右边走一个。\n继续一直向左边走。\n到达左边尽头后弹出并打印，然后向右边走一个。\n结束条件是p和栈S都为空。\n\n 复杂度\n时间复杂度:\n\nO(n)O(n)O(n)\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/fbed3bd6.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/fbed3bd6.html","wordCount":176,"datePublished":"2024-05-25T13:12:50.000Z","dateModified":"2024-05-25T05:14:52.472Z","articleSection":"LeetCode","keywords":"二叉树的中序遍历,栈,二叉树","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

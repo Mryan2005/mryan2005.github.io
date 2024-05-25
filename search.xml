@@ -1105,4 +1105,45 @@ x_2 &amp;= A\cos(\omega t_1 + φ_2)
         <tag>Stack</tag>
       </tags>
   </entry>
+  <entry>
+    <title>使用 “自带栈” 解决中序遍历（2）</title>
+    <url>/posts/fbed3bd6.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
+<p>Problem: <a href="https://leetcode.cn/problems/binary-tree-inorder-traversal/description/">94. 二叉树的中序遍历</a></p>
+</blockquote>
+<p>[TOC]</p>
+<h2 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h2>
+<blockquote>
+<p>我们都知道中序遍历是左边——&gt;中间——&gt;右边</p>
+</blockquote>
+<h2 id="解题方法"><a class="markdownIt-Anchor" href="#解题方法"></a> 解题方法</h2>
+<ol>
+<li>一直向左边走</li>
+<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
+<li>继续一直向左边走。</li>
+<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
+<li>结束条件是p和栈S都为空。</li>
+</ol>
+<h2 id="复杂度"><a class="markdownIt-Anchor" href="#复杂度"></a> 复杂度</h2>
+<p>时间复杂度:</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+</blockquote>
+<p>空间复杂度:</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+</blockquote>
+<h2 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h2>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *right;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span> &#123;</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> **<span class="title">TreeNode</span>;</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125; StackNode, *Stack;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Push</span><span class="params">(Stack *S, <span class="keyword">struct</span> TreeNode **tNode)</span> &#123;</span><br><span class="line"> StackNode *SN = (StackNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(StackNode));</span><br><span class="line"> SN-&gt;TreeNode = tNode;</span><br><span class="line"> <span class="keyword">if</span>(!*S) &#123;</span><br><span class="line">  SN-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">  (*S) = SN; </span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  SN-&gt;next = *S;</span><br><span class="line">  *S = SN;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 出栈</span></span><br><span class="line"><span class="keyword">struct</span> TreeNode **<span class="title function_">Pop</span><span class="params">(Stack *S)</span> &#123;</span><br><span class="line"> <span class="keyword">if</span>(*S) &#123;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> **<span class="title">p</span> =</span> (*S)-&gt;TreeNode;</span><br><span class="line">  StackNode *q = *S;</span><br><span class="line">  (*S) = (*S)-&gt;next;</span><br><span class="line">  <span class="built_in">free</span>(q);</span><br><span class="line">  <span class="keyword">return</span> p;</span><br><span class="line"> &#125; <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* <span class="title function_">inorderTraversal</span><span class="params">(<span class="keyword">struct</span> TreeNode* root, <span class="type">int</span>* returnSize)</span> &#123;</span><br><span class="line">    Stack S = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">p</span> =</span> root;</span><br><span class="line">    <span class="type">int</span> *a = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">100</span>), *q = a;</span><br><span class="line">    <span class="keyword">if</span>(root) Push(&amp;S, &amp;root);</span><br><span class="line"> <span class="keyword">while</span>(p || S) &#123;</span><br><span class="line">  <span class="keyword">if</span>(p) &#123;</span><br><span class="line">   <span class="keyword">if</span>(p-&gt;left) Push(&amp;S, &amp;p-&gt;left);</span><br><span class="line">   p = p-&gt;left;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   p = *Pop(&amp;S);</span><br><span class="line">            *(q++) = p-&gt;val;</span><br><span class="line">            <span class="keyword">if</span>(p-&gt;right) Push(&amp;S, &amp;p-&gt;right);</span><br><span class="line">            p = p-&gt;right;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br><span class="line">    *returnSize = q - a;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>简单题</category>
+      </categories>
+      <tags>
+        <tag>二叉树的中序遍历</tag>
+        <tag>栈</tag>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
 </search>
