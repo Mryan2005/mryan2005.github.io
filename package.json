@@ -37,6 +37,7 @@
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "markdown-it-katex": "^2.0.3",
+    "markmap-view": "^0.17.0",
     "punycode": "^2.3.1",
     "yawn-yaml": "^2.2.0"
   }

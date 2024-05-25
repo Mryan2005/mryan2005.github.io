@@ -27,7 +27,7 @@ def test():
 
 ## mindmap
 
-{% markmap 800px %}
+{% markmap %}
 - C
   - input and output
     - scanf
