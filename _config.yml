@@ -155,7 +155,15 @@ neat_enable: true
 neat_html:
   enable: true
   exclude:
-
+  include:
+neat_css:
+  enable: false
+  exclude:
+  include:
+neat_js:
+  enable: false
+  exclude:
+  include:
 
 exo_markmap:
   lockView: true
