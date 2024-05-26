@@ -11,24 +11,6 @@
   </url>
   
   <url>
-    <loc>https://www.mryan2005.top/tags/index.html</loc>
-    
-    <lastmod>2024-05-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mryan2005.top/works/index.html</loc>
-    
-    <lastmod>2024-05-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mryan2005.top/posts/df58b0a0.html</loc>
     
     <lastmod>2024-05-26</lastmod>
@@ -291,6 +273,24 @@
   
   <url>
     <loc>https://www.mryan2005.top/friends/index.html</loc>
+    
+    <lastmod>2024-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/tags/index.html</loc>
+    
+    <lastmod>2024-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/works/index.html</loc>
     
     <lastmod>2024-05-26</lastmod>
     
