@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>重新排列数组</title>
+    <url>/posts/95f3cae3.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
+<p>Problem: <a href="https://leetcode.cn/problems/shuffle-the-array/description/">1470. 重新排列数组</a></p>
+</blockquote>
+<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
+<blockquote>
+<p>由题可知，x 的部分被放在 0~n/2-1 处，y 的部分放在 n/2~n 处，而重排是按照<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false"> [</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[x_1, y_1, ……, x_n, y_n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span> 摆放。</p>
+</blockquote>
+<h1 id="解题方法"><a class="markdownIt-Anchor" href="#解题方法"></a> 解题方法</h1>
+<blockquote>
+<p>解题方法如 Code 所示。</p>
+</blockquote>
+<h1 id="复杂度"><a class="markdownIt-Anchor" href="#复杂度"></a> 复杂度</h1>
+<p>时间复杂度:</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+</blockquote>
+<p>空间复杂度:</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+</blockquote>
+<h1 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h1>
+<figure class="highlight c"><figcaption><span>[]</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="title function_">shuffle</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> n, <span class="type">int</span>* returnSize)</span>{</span><br><span class="line">    <span class="type">int</span> *q = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*<span class="number">2</span>*n);</span><br><span class="line">    *returnSize = <span class="number">2</span>*n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, p = <span class="number">0</span>; i &lt; numsSize/<span class="number">2</span>; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = numsSize/<span class="number">2</span>, p = <span class="number">1</span>; i &lt; numsSize; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">return</span> q;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>简单题</category>
+      </categories>
+      <tags>
+        <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>回文数</title>
     <url>/posts/df58b0a0.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
@@ -34,40 +68,6 @@
       </categories>
       <tags>
         <tag>对数字的处理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>重新排列数组</title>
-    <url>/posts/95f3cae3.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
-<p>Problem: <a href="https://leetcode.cn/problems/shuffle-the-array/description/">1470. 重新排列数组</a></p>
-</blockquote>
-<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
-<blockquote>
-<p>由题可知，x 的部分被放在 0~n/2-1 处，y 的部分放在 n/2~n 处，而重排是按照<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false"> [</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[x_1, y_1, ……, x_n, y_n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span> 摆放。</p>
-</blockquote>
-<h1 id="解题方法"><a class="markdownIt-Anchor" href="#解题方法"></a> 解题方法</h1>
-<blockquote>
-<p>解题方法如 Code 所示。</p>
-</blockquote>
-<h1 id="复杂度"><a class="markdownIt-Anchor" href="#复杂度"></a> 复杂度</h1>
-<p>时间复杂度:</p>
-<blockquote>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
-</blockquote>
-<p>空间复杂度:</p>
-<blockquote>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
-</blockquote>
-<h1 id="code"><a class="markdownIt-Anchor" href="#code"></a> Code</h1>
-<figure class="highlight c"><figcaption><span>[]</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"><span class="type">int</span>* <span class="title function_">shuffle</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> n, <span class="type">int</span>* returnSize)</span>{</span><br><span class="line">    <span class="type">int</span> *q = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*<span class="number">2</span>*n);</span><br><span class="line">    *returnSize = <span class="number">2</span>*n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, p = <span class="number">0</span>; i &lt; numsSize/<span class="number">2</span>; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = numsSize/<span class="number">2</span>, p = <span class="number">1</span>; i &lt; numsSize; i++, p += <span class="number">2</span>) q[p] = nums[i];</span><br><span class="line">    <span class="keyword">return</span> q;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>简单题</category>
-      </categories>
-      <tags>
-        <tag>数组</tag>
       </tags>
   </entry>
   <entry>
@@ -763,44 +763,6 @@ k 阶主子式 = <span class="katex"><span class="katex-mathml"><math xmlns="htt
       </tags>
   </entry>
   <entry>
-    <title>矩阵的秩</title>
-    <url>/posts/50ea32d2.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
-<h3 id="k阶子式"><a class="markdownIt-Anchor" href="#k阶子式"></a> k 阶子式</h3>
-<p>在 m✖️n 的矩阵 A 当中，任取 k 行 k 列（1≤k≤m，1≤k≤n），位于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi> k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 个元素。<br>
-m✖️n 矩阵 A 的 k 阶子式共有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi> C</mi><mi>m</mi><mi>k</mi></msubsup><mo separator="true">⋅</mo><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">C^k_m·C^k_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.096108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>个。<br>
-设 A 为 m✖️n 矩阵，当 A=Ｏ时，它的任何子式都为零；当 A≠Ｏ时，它至少有一个 r 阶子式不为零。</p>
-<h3 id="秩"><a class="markdownIt-Anchor" href="#秩"></a> 秩</h3>
-<p>设Ａ为 m✖️n 矩阵，如果存在Ａ的 r 阶子式不为零，而任何的 r+1 阶子式皆为零，则称数 r 为矩阵 A 的秩，记作 r (A) 或 R (A)。<br>
-零矩阵的秩等于零。<br>
-除了计算矩阵，还可以通过变换矩阵（使其出现都为 0 的行），直到矩阵不能在变换了。那么有多少行上的元素不为 0，那 r 就等于多少。</p>
-<h4 id="性质"><a class="markdownIt-Anchor" href="#性质"></a> 性质</h4>
-<ol>
-<li>若矩阵 A 中有某个 s 阶子式不为 0，则 r (A)≥s；</li>
-<li>若 A 中所有的 t 阶子式全为 0，则 r (A)&lt;t；</li>
-<li>若 A 为 m✖️n 矩阵，则 0≤r (A)≤min {m,n}；</li>
-<li>r(A)=r(<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>)。</li>
-</ol>
-<p>当 r (A)=min {m,n} 时，为满阶矩阵，否则为降阶矩阵。</p>
-<h2 id="矩阵的秩的计算"><a class="markdownIt-Anchor" href="#矩阵的秩的计算"></a> 矩阵的秩的计算</h2>
-<h3 id="当a经过一次初等变换变成b时rarb"><a class="markdownIt-Anchor" href="#当a经过一次初等变换变成b时rarb"></a> 当 A 经过一次初等变换变成 B 时，r (A)=r (B)；</h3>
-<p>何为初等变换？</p>
-<ol>
-<li>交换两行；</li>
-<li>一行上的数乘以一个非零常数；</li>
-<li>把一行的数乘以一个非零常数加到另一行上。</li>
-</ol>
-<p>由此，当矩阵变成行阶梯形矩阵时，矩阵的秩就是矩阵的非零行的行数。</p>
-]]></content>
-      <categories>
-        <category>线性代数</category>
-        <category>矩阵</category>
-      </categories>
-      <tags>
-        <tag>矩阵</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>链表入门</title>
     <url>/posts/e86a0aed.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="链表linked-list的别称"><a class="markdownIt-Anchor" href="#链表linked-list的别称"></a> 链表（<strong>linked list</strong>）的别称</h2>
@@ -897,6 +859,44 @@ m✖️n 矩阵 A 的 k 阶子式共有<span class="katex"><span class="katex-ma
       </categories>
       <tags>
         <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>矩阵的秩</title>
+    <url>/posts/50ea32d2.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
+<h3 id="k阶子式"><a class="markdownIt-Anchor" href="#k阶子式"></a> k 阶子式</h3>
+<p>在 m✖️n 的矩阵 A 当中，任取 k 行 k 列（1≤k≤m，1≤k≤n），位于<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi> k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">k^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 个元素。<br>
+m✖️n 矩阵 A 的 k 阶子式共有<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi> C</mi><mi>m</mi><mi>k</mi></msubsup><mo separator="true">⋅</mo><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup></mrow><annotation encoding="application/x-tex">C^k_m·C^k_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.096108em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span>个。<br>
+设 A 为 m✖️n 矩阵，当 A=Ｏ时，它的任何子式都为零；当 A≠Ｏ时，它至少有一个 r 阶子式不为零。</p>
+<h3 id="秩"><a class="markdownIt-Anchor" href="#秩"></a> 秩</h3>
+<p>设Ａ为 m✖️n 矩阵，如果存在Ａ的 r 阶子式不为零，而任何的 r+1 阶子式皆为零，则称数 r 为矩阵 A 的秩，记作 r (A) 或 R (A)。<br>
+零矩阵的秩等于零。<br>
+除了计算矩阵，还可以通过变换矩阵（使其出现都为 0 的行），直到矩阵不能在变换了。那么有多少行上的元素不为 0，那 r 就等于多少。</p>
+<h4 id="性质"><a class="markdownIt-Anchor" href="#性质"></a> 性质</h4>
+<ol>
+<li>若矩阵 A 中有某个 s 阶子式不为 0，则 r (A)≥s；</li>
+<li>若 A 中所有的 t 阶子式全为 0，则 r (A)&lt;t；</li>
+<li>若 A 为 m✖️n 矩阵，则 0≤r (A)≤min {m,n}；</li>
+<li>r(A)=r(<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A^T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span>)。</li>
+</ol>
+<p>当 r (A)=min {m,n} 时，为满阶矩阵，否则为降阶矩阵。</p>
+<h2 id="矩阵的秩的计算"><a class="markdownIt-Anchor" href="#矩阵的秩的计算"></a> 矩阵的秩的计算</h2>
+<h3 id="当a经过一次初等变换变成b时rarb"><a class="markdownIt-Anchor" href="#当a经过一次初等变换变成b时rarb"></a> 当 A 经过一次初等变换变成 B 时，r (A)=r (B)；</h3>
+<p>何为初等变换？</p>
+<ol>
+<li>交换两行；</li>
+<li>一行上的数乘以一个非零常数；</li>
+<li>把一行的数乘以一个非零常数加到另一行上。</li>
+</ol>
+<p>由此，当矩阵变成行阶梯形矩阵时，矩阵的秩就是矩阵的非零行的行数。</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+        <category>矩阵</category>
+      </categories>
+      <tags>
+        <tag>矩阵</tag>
       </tags>
   </entry>
   <entry>
