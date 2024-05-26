@@ -151,9 +151,9 @@ filter_optimize:
   priority: 12
 
 
-neat_enable: true
+neat_enable: false
 neat_html:
-  enable: true
+  enable: false
   exclude:
   include:
 neat_css:
