@@ -95,3 +95,21 @@ def test():
     - gets
     - puts
 {% endmarkmap %}
+
+## Terminal Test
+
+```
+{% gdemo_terminal command [最小高度] [窗口标题] [延迟时间] [提示字符] [唯一id] [高亮语言] %}
+content
+{% endgdemo_terminal %}
+```
+
+用`;`隔开代码，可以执行多条命令
+
+{% gdemo_terminal 'cd /usr/bin;./node ./demo' '250px' 'bash' '500' '$' 'demo-teriminal' %}
+Hello World!
+{% endgdemo_terminal %}
+
+{% gdemo_terminal 'node ./demo' '250px' 'bash' '500' '$' 'demo-teriminal' %}
+Hello World!
+{% endgdemo_terminal %}
