@@ -165,7 +165,7 @@ neat_js:
   exclude:
   include:
 
-all_minifier: true
+all_minifier: false
 
 exo_markmap:
   lockView: true
