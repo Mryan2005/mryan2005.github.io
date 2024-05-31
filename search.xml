@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Latex 大全</title>
+    <url>/posts/41713084.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>本来我是不想写这份文件的，毕竟，往上面很多，我写只不过是水一次博文，但是，他们写的不算很全面，所以，我决定写一份 Latex 大全，这样，我就可以不用再全网搜索了。</p>
+<h2 id="参考资料"><a class="markdownIt-Anchor" href="#参考资料"></a> 参考资料</h2>
+<ol>
+<li><a href="https://blog.csdn.net/weixin_46233323/article/details/105242847">多种方法在 Markdown 加入上划线、中划线、下划线</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Markdown</category>
+        <category>Latex</category>
+      </categories>
+      <tags>
+        <tag>Latex</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>回文数</title>
     <url>/posts/df58b0a0.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
