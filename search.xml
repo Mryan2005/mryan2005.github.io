@@ -729,6 +729,16 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 <td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord">∨</span></span></span></span></td>
 </tr>
 <tr>
+<td>并</td>
+<td><code>$\bigvee$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋁</mo></mrow><annotation encoding="application/x-tex">\bigvee</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋁</span></span></span></span></td>
+</tr>
+<tr>
+<td>交</td>
+<td><code>$\bigwedge$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋀</mo></mrow><annotation encoding="application/x-tex">\bigwedge</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋀</span></span></span></span></td>
+</tr>
+<tr>
 <td>非</td>
 <td><code>$\lnot$</code></td>
 <td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">¬</mi></mrow><annotation encoding="application/x-tex">\lnot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord">¬</span></span></span></span></td>
@@ -809,6 +819,401 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 <td>对称差</td>
 <td><code>$\bigtriangleup$</code></td>
 <td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>△</mo></mrow><annotation encoding="application/x-tex">\bigtriangleup</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">△</span></span></span></span></td>
+</tr>
+<tr>
+<td>交</td>
+<td><code>$\bigcap$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋂</mo></mrow><annotation encoding="application/x-tex">\bigcap</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋂</span></span></span></span></td>
+</tr>
+<tr>
+<td>并</td>
+<td><code>$\bigcup$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋃</mo></mrow><annotation encoding="application/x-tex">\bigcup</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⋃</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="箭头"> 箭头</span></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>代码</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>左箭头</td>
+<td><code>$\leftarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>←</mo></mrow><annotation encoding="application/x-tex">\leftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">←</span></span></span></span></td>
+</tr>
+<tr>
+<td>向左粗箭头</td>
+<td><code>$\Leftarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇐</mo></mrow><annotation encoding="application/x-tex">\Leftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇐</span></span></span></span></td>
+</tr>
+<tr>
+<td>向左长箭头</td>
+<td><code>$\longleftarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟵</mo></mrow><annotation encoding="application/x-tex">\longleftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.522em;vertical-align:-0.011em;"></span><span class="mrel">⟵</span></span></span></span></td>
+</tr>
+<tr>
+<td>向左长粗箭头</td>
+<td><code>$\Longleftarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟸</mo></mrow><annotation encoding="application/x-tex">\Longleftarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mrel">⟸</span></span></span></span></td>
+</tr>
+<tr>
+<td>右箭头</td>
+<td><code>$\rightarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">→</span></span></span></span></td>
+</tr>
+<tr>
+<td>向右粗箭头</td>
+<td><code>$\Rightarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇒</span></span></span></span></td>
+</tr>
+<tr>
+<td>向右长箭头</td>
+<td><code>$\longrightarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟶</mo></mrow><annotation encoding="application/x-tex">\longrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.522em;vertical-align:-0.011em;"></span><span class="mrel">⟶</span></span></span></span></td>
+</tr>
+<tr>
+<td>向右长粗箭头</td>
+<td><code>$\Longrightarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⟹</mo></mrow><annotation encoding="application/x-tex">\Longrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mrel">⟹</span></span></span></span></td>
+</tr>
+<tr>
+<td>左右箭头</td>
+<td><code>$\leftrightarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↔</mo></mrow><annotation encoding="application/x-tex">\leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">↔</span></span></span></span></td>
+</tr>
+<tr>
+<td>左右粗箭头</td>
+<td><code>$\Leftrightarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span></td>
+</tr>
+<tr>
+<td>上箭头</td>
+<td><code>$\uparrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↑</mo></mrow><annotation encoding="application/x-tex">\uparrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel">↑</span></span></span></span></td>
+</tr>
+<tr>
+<td>下箭头</td>
+<td><code>$\downarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↓</mo></mrow><annotation encoding="application/x-tex">\downarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel">↓</span></span></span></span></td>
+</tr>
+<tr>
+<td>向上粗箭头</td>
+<td><code>$\Uparrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇑</mo></mrow><annotation encoding="application/x-tex">\Uparrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel">⇑</span></span></span></span></td>
+</tr>
+<tr>
+<td>向下粗箭头</td>
+<td><code>$\Downarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇓</mo></mrow><annotation encoding="application/x-tex">\Downarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel">⇓</span></span></span></span></td>
+</tr>
+<tr>
+<td>上下箭头</td>
+<td><code>$\updownarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>↕</mo></mrow><annotation encoding="application/x-tex">\updownarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mrel">↕</span></span></span></span></td>
+</tr>
+<tr>
+<td>上下粗箭头</td>
+<td><code>$\Updownarrow$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇕</mo></mrow><annotation encoding="application/x-tex">\Updownarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mrel">⇕</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="大型运算符"> 大型运算符</span></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>代码</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>求和</td>
+<td><code>$\sum$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo></mrow><annotation encoding="application/x-tex">\sum</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span></span></span></span></td>
+</tr>
+<tr>
+<td>积分</td>
+<td><code>$\int$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo></mrow><annotation encoding="application/x-tex">\int</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.11112em;vertical-align:-0.30612em;"></span><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∫</span></span></span></span></td>
+</tr>
+<tr>
+<td>积分</td>
+<td><code>$\oint$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∮</mo></mrow><annotation encoding="application/x-tex">\oint</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.11112em;vertical-align:-0.30612em;"></span><span class="mop op-symbol small-op" style="margin-right:0.19445em;position:relative;top:-0.0005599999999999772em;">∮</span></span></span></span></td>
+</tr>
+<tr>
+<td>乘积</td>
+<td><code>$\prod$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∏</mo></mrow><annotation encoding="application/x-tex">\prod</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∏</span></span></span></span></td>
+</tr>
+<tr>
+<td>并</td>
+<td><code>$\bigsqcup$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⨆</mo></mrow><annotation encoding="application/x-tex">\bigsqcup</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨆</span></span></span></span></td>
+</tr>
+<tr>
+<td>并</td>
+<td><code>$\biguplus$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⨄</mo></mrow><annotation encoding="application/x-tex">\biguplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨄</span></span></span></span></td>
+</tr>
+<tr>
+<td>并</td>
+<td><code>$\bigotimes$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⨂</mo></mrow><annotation encoding="application/x-tex">\bigotimes</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨂</span></span></span></span></td>
+</tr>
+<tr>
+<td>并</td>
+<td><code>$\bigoplus$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⨁</mo></mrow><annotation encoding="application/x-tex">\bigoplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span></span></span></span></td>
+</tr>
+<tr>
+<td>并</td>
+<td><code>$\bigodot$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⨀</mo></mrow><annotation encoding="application/x-tex">\bigodot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨀</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="空格与换行"> 空格与换行</span></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>代码</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空格</td>
+<td><code>a\ b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mtext>&nbsp;</mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\ b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace">&nbsp;</span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+<tr>
+<td> 双空格</td>
+<td><code>a\quad b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mspace width="1em"></mspace><mi>b</mi></mrow><annotation encoding="application/x-tex">a\quad b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+<tr>
+<td> 四空格</td>
+<td><code>a\qquad b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mspace width="2em"></mspace><mi>b</mi></mrow><annotation encoding="application/x-tex">a\qquad b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:2em;"></span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+<tr>
+<td> 紧贴</td>
+<td><code>a\!b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mtext> ⁣</mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\!b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:-0.16666666666666666em;"></span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+<tr>
+<td> 空格</td>
+<td><code>a\,b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mtext> </mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\,b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+<tr>
+<td> 空格</td>
+<td><code>a\;b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mtext>  </mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\;b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+<tr>
+<td> 换行</td>
+<td><code>a\\b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mspace linebreak="newline"></mspace><mi>b</mi></mrow><annotation encoding="application/x-tex">a\\b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+<tr>
+<td> 换行</td>
+<td><code>a\\\\b</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mspace linebreak="newline"></mspace><mspace linebreak="newline"></mspace><mi>b</mi></mrow><annotation encoding="application/x-tex">a\\\\b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span><span class="mspace newline"></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="字体"> 字体</span></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>代码</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>粗体</td>
+<td><code>$\mathbf{a}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">a</mi></mrow><annotation encoding="application/x-tex">\mathbf{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.44444em;vertical-align:0em;"></span><span class="mord"><span class="mord mathbf">a</span></span></span></span></span></td>
+</tr>
+<tr>
+<td> 斜体</td>
+<td><code>$\mathit{a}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">\mathit{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mord mathit">a</span></span></span></span></span></td>
+</tr>
+<tr>
+<td> 等宽</td>
+<td><code>$\mathtt{a}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="monospace">a</mi></mrow><annotation encoding="application/x-tex">\mathtt{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mord mathtt">a</span></span></span></span></span></td>
+</tr>
+<tr>
+<td> 黑板粗体</td>
+<td><code>$\mathbb{a}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">a</mi></mrow><annotation encoding="application/x-tex">\mathbb{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span></span></span></td>
+</tr>
+<tr>
+<td> 手写体</td>
+<td><code>$\mathcal{a}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">a</mi></mrow><annotation encoding="application/x-tex">\mathcal{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span></span></span></td>
+</tr>
+<tr>
+<td> 花体</td>
+<td><code>$\mathfrak{a}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="fraktur">a</mi></mrow><annotation encoding="application/x-tex">\mathfrak{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.47534em;vertical-align:0em;"></span><span class="mord"><span class="mord mathfrak">a</span></span></span></span></span></td>
+</tr>
+<tr>
+<td> 空心</td>
+<td><code>$\mathbb{a}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">a</mi></mrow><annotation encoding="application/x-tex">\mathbb{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span></span></span></td>
+</tr>
+<tr>
+<td> 粗斜体</td>
+<td><code>$\mathbf{\mathit{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">\mathbf{\mathit{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathit">a</span></span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="其他符号"> 其他符号</span></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>代码</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>正常省略号</td>
+<td><code>$\ldots$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>…</mo></mrow><annotation encoding="application/x-tex">\ldots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.12em;vertical-align:0em;"></span><span class="minner">…</span></span></span></span></td>
+</tr>
+<tr>
+<td> 列省略号</td>
+<td><code>$\cdots$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋯</mo></mrow><annotation encoding="application/x-tex">\cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.31em;vertical-align:0em;"></span><span class="minner">⋯</span></span></span></span></td>
+</tr>
+<tr>
+<td>行省略号</td>
+<td><code>$\vdots$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi><mi mathvariant="normal">⋮</mi><mpadded height="+0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mrow><annotation encoding="application/x-tex">\vdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.53em;vertical-align:-0.03em;"></span><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>斜省略号</td>
+<td><code>$\ddots$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⋱</mo></mrow><annotation encoding="application/x-tex">\ddots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.82em;vertical-align:0em;"></span><span class="minner">⋱</span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="标注符号"> 标注符号</span></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>代码</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> hat</td>
+<td><code>$\hat{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>^</mo></mover></mrow><annotation encoding="application/x-tex">\hat{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">^</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>bar</td>
+<td><code>$\bar{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>ˉ</mo></mover></mrow><annotation encoding="application/x-tex">\bar{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.56778em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.56778em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˉ</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>tilde</td>
+<td><code>$\tilde{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>~</mo></mover></mrow><annotation encoding="application/x-tex">\tilde{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6678599999999999em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6678599999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3.35em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">~</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>dot</td>
+<td><code>$\dot{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>˙</mo></mover></mrow><annotation encoding="application/x-tex">\dot{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66786em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.66786em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.13889em;"><span class="mord">˙</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>ddot</td>
+<td><code>$\ddot{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>¨</mo></mover></mrow><annotation encoding="application/x-tex">\ddot{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66786em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.66786em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">¨</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>check</td>
+<td><code>$\check{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>ˇ</mo></mover></mrow><annotation encoding="application/x-tex">\check{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.62847em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.62847em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˇ</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>breve</td>
+<td><code>$\breve{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>˘</mo></mover></mrow><annotation encoding="application/x-tex">\breve{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">˘</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>acute</td>
+<td><code>$\acute{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>ˊ</mo></mover></mrow><annotation encoding="application/x-tex">\acute{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>grave</td>
+<td><code>$\grave{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>ˋ</mo></mover></mrow><annotation encoding="application/x-tex">\grave{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˋ</span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>vec</td>
+<td><code>$\vec{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo>⃗</mo></mover></mrow><annotation encoding="application/x-tex">\vec{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.714em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2355em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width="0.471em" height="0.714em" style="width:0.471em" viewbox="0 0 471 714" preserveaspectratio="xMinYMin"><path d="M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
+3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
+10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
+-1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
+-7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
+H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
+c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>overline</td>
+<td><code>$\overline{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mtext>a</mtext><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.63056em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.63056em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span><span style="top:-3.55056em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>underline</td>
+<td><code>$\underline{\text{a}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><mtext>a</mtext><mo stretchy="true">‾</mo></munder></mrow><annotation encoding="application/x-tex">\underline{\text{a}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.63056em;vertical-align:-0.19999999999999996em;"></span><span class="mord underline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056000000000005em;"><span style="top:-2.84em;"><span class="pstrut" style="height:3em;"></span><span class="underline-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19999999999999996em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td>underline</td>
+<td><code>$\underline{\underline{\text{a}}}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder accentunder="true"><munder accentunder="true"><mtext>a</mtext><mo stretchy="true">‾</mo></munder><mo stretchy="true">‾</mo></munder></mrow><annotation encoding="application/x-tex">\underline{\underline{\text{a}}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83056em;vertical-align:-0.3999999999999999em;"></span><span class="mord underline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056000000000005em;"><span style="top:-2.64em;"><span class="pstrut" style="height:3em;"></span><span class="underline-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord underline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056000000000005em;"><span style="top:-2.84em;"><span class="pstrut" style="height:3em;"></span><span class="underline-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord text"><span class="mord">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19999999999999996em;"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3999999999999999em;"><span></span></span></span></span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<h2><span id="方程组"> 方程组</span></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>代码</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方程组</td>
+<td><code>$\begin{cases} a = b \\ c = d \end{cases}$</code></td>
+<td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>a</mi><mo>=</mo><mi>b</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>c</mi><mo>=</mo><mi>d</mi></mrow></mstyle></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\begin{cases} a = b \\ c = d \end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">b</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></td>
 </tr>
 </tbody>
 </table>
