@@ -106,7 +106,6 @@ date: 2024-05-31 23:25:36
 | $\digamma$ | `$\digamma$` | $\digamma$ |
 | $\varkappa$ | `$\varkappa$` | $\varkappa$ |
 
-
 ## 上划线、中划线、下划线
 
 | 符号 | 代码 | 表现 |
@@ -177,6 +176,8 @@ date: 2024-05-31 23:25:36
 | --- | --- | --- |
 | 与 | `$\land$` | $\land$ |
 | 或 | `$\lor$` | $\lor$ |
+| 并 | `$\bigvee$` | $\bigvee$ |
+| 交 | `$\bigwedge$` | $\bigwedge$ |
 | 非 | `$\lnot$` | $\lnot$ |
 
 ## 集合运算符
@@ -196,6 +197,104 @@ date: 2024-05-31 23:25:36
 | 补集 | `$\complement$` | $\complement$ |
 | 差集 | `$\setminus$` | $\setminus$ |
 | 对称差 | `$\bigtriangleup$` | $\bigtriangleup$ |
+| 交 | `$\bigcap$` | $\bigcap$ |
+| 并 | `$\bigcup$` | $\bigcup$ |
+
+
+## 箭头
+
+| 符号 | 代码 | 表现 |
+| --- | --- | --- |
+| 左箭头 | `$\leftarrow$` | $\leftarrow$ |
+| 向左粗箭头 | `$\Leftarrow$` | $\Leftarrow$ |
+| 向左长箭头 | `$\longleftarrow$` | $\longleftarrow$ |
+| 向左长粗箭头 | `$\Longleftarrow$` | $\Longleftarrow$ |
+| 右箭头 | `$\rightarrow$` | $\rightarrow$ |
+| 向右粗箭头 | `$\Rightarrow$` | $\Rightarrow$ |
+| 向右长箭头 | `$\longrightarrow$` | $\longrightarrow$ |
+| 向右长粗箭头 | `$\Longrightarrow$` | $\Longrightarrow$ |
+| 左右箭头 | `$\leftrightarrow$` | $\leftrightarrow$ |
+| 左右粗箭头 | `$\Leftrightarrow$` | $\Leftrightarrow$ |
+| 上箭头 | `$\uparrow$` | $\uparrow$ |
+| 下箭头 | `$\downarrow$` | $\downarrow$ |
+| 向上粗箭头 | `$\Uparrow$` | $\Uparrow$ |
+| 向下粗箭头 | `$\Downarrow$` | $\Downarrow$ |
+| 上下箭头 | `$\updownarrow$` | $\updownarrow$ |
+| 上下粗箭头 | `$\Updownarrow$` | $\Updownarrow$ |
+
+## 大型运算符
+
+| 符号 | 代码 | 表现 |
+| --- | --- | --- |
+| 求和 | `$\sum$` | $\sum$ |
+| 积分 | `$\int$` | $\int$ |
+| 积分 | `$\oint$` | $\oint$ |
+| 乘积 | `$\prod$` | $\prod$ |
+| 并 | `$\bigsqcup$` | $\bigsqcup$ |
+| 并 | `$\biguplus$` | $\biguplus$ |
+| 并 | `$\bigotimes$` | $\bigotimes$ |
+| 并 | `$\bigoplus$` | $\bigoplus$ |
+| 并 | `$\bigodot$` | $\bigodot$ |
+
+## 空格与换行
+
+| 符号 | 代码 | 表现 |
+| --- | --- | --- |
+| 空格 | `a\ b` | $a\ b$ |
+| 双空格 | `a\quad b` | $a\quad b$ |
+| 四空格 | `a\qquad b` | $a\qquad b$ |
+| 紧贴 | `a\!b` | $a\!b$ |
+| 空格 | `a\,b` | $a\,b$ |
+| 空格 | `a\;b` | $a\;b$ |
+| 换行 | `a\\b` | $a\\b$ |
+| 换行 | `a\\\\b` | $a\\\\b$ |
+
+## 字体
+
+| 符号 | 代码 | 表现 |
+| --- | --- | --- |
+| 粗体 | `$\mathbf{a}$` | $\mathbf{a}$ |
+| 斜体 | `$\mathit{a}$` | $\mathit{a}$ |
+| 等宽 | `$\mathtt{a}$` | $\mathtt{a}$ |
+| 黑板粗体 | `$\mathbb{a}$` | $\mathbb{a}$ |
+| 手写体 | `$\mathcal{a}$` | $\mathcal{a}$ |
+| 花体 | `$\mathfrak{a}$` | $\mathfrak{a}$ |
+| 空心 | `$\mathbb{a}$` | $\mathbb{a}$ |
+| 粗斜体 | `$\mathbf{\mathit{a}}$` | $\mathbf{\mathit{a}}$ |
+
+## 其他符号
+
+| 符号 | 代码 | 表现 |
+| --- | --- | --- |
+| 正常省略号 | `$\ldots$` | $\ldots$ |
+| 列省略号 | `$\cdots$` | $\cdots$ |
+| 行省略号 | `$\vdots$` | $\vdots$ |
+| 斜省略号 | `$\ddots$` | $\ddots$ |
+
+## 标注符号
+
+| 符号 | 代码 | 表现 |
+| --- | --- | --- |
+| hat | `$\hat{\text{a}}$` | $\hat{\text{a}}$ |
+| bar | `$\bar{\text{a}}$` | $\bar{\text{a}}$ |
+| tilde | `$\tilde{\text{a}}$` | $\tilde{\text{a}}$ |
+| dot | `$\dot{\text{a}}$` | $\dot{\text{a}}$ |
+| ddot | `$\ddot{\text{a}}$` | $\ddot{\text{a}}$ |
+| check | `$\check{\text{a}}$` | $\check{\text{a}}$ |
+| breve | `$\breve{\text{a}}$` | $\breve{\text{a}}$ |
+| acute | `$\acute{\text{a}}$` | $\acute{\text{a}}$ |
+| grave | `$\grave{\text{a}}$` | $\grave{\text{a}}$ |
+| vec | `$\vec{\text{a}}$` | $\vec{\text{a}}$ |
+| overline | `$\overline{\text{a}}$` | $\overline{\text{a}}$ |
+| underline | `$\underline{\text{a}}$` | $\underline{\text{a}}$ |
+| underline | `$\underline{\underline{\text{a}}}$` | $\underline{\underline{\text{a}}}$ |
+
+## 方程组
+
+| 符号 | 代码 | 表现 |
+| --- | --- | --- |
+| 方程组 | `$\begin{cases} a = b \\ c = d \end{cases}$` | $\begin{cases} a = b \\ c = d \end{cases}$ |
+
 
 
 
