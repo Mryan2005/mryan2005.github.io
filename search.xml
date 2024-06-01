@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>2024-05-18 更新日志</title>
-    <url>/posts/2TZAX5C.html</url>
+    <title>2024-06-01 更新日志</title>
+    <url>/posts/23AEAY0.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>添加显示文章摘要功能，即在文章中添加 <code>&lt;!--more--&gt;</code>，在此之前，只有标题和日期，现在，可以显示文章的摘要了。<br>
 添加了评论功能。<br>
 添加了思维导图功能。</p>
