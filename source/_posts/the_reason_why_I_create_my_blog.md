@@ -8,6 +8,8 @@ abbrlink: 960aa022
 date: 2024-05-20 17:18:08
 ---
 
+<!--more-->
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1933219702&auto=1&height=66"></iframe>
 
 其实，我们都知道计算机界的大佬都是有一个属于自己的博客，并且他们的博客都是自己搭建的。这是因为他们知道，一个人的知识是有限的，而一个团队的知识是无限的。所以，他们会把自己的知识分享出来，让更多的人来帮助他们完善自己的知识体系。  

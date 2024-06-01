@@ -9,7 +9,7 @@ tags:
 ---
 
 ## 一些位置的相位
-
+<!--more-->
 ![图示1](https://pic.imgdb.cn/item/664883a6d9c307b7e9acd582.jpg)
 
 当相位 $\omega t+φ=0+2k\pi$ 时，$x=A$，物体在最大正向位移处。  

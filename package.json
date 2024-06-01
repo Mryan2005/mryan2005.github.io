@@ -6,7 +6,6 @@
     "version": "7.2.0"
   },
   "dependencies": {
-    "@heowc/hexo-tag-gdemo": "^0.15.0",
     "cjs": "^0.0.11",
     "gitalk": "^1.8.0",
     "hexo": "^7.0.0",
@@ -42,6 +41,10 @@
     "markdown-it-katex": "^2.0.3",
     "markmap-view": "^0.17.0",
     "punycode": "^2.3.1",
-    "yawn-yaml": "^2.2.0"
+    "yawn-yaml": "^2.2.0",
+    "hexo-generator-index-pin-top": "^0.2.2",
+    "hexo-pangu": "^0.2.2",
+    "hexo-enhancer": "^1.0.10",
+    "hexo-toc": "^1.1.0"
   }
 }

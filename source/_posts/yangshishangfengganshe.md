@@ -10,6 +10,8 @@ tags:
 
 ![](https://pic.imgdb.cn/item/664c9eacd9c307b7e9ae3cb0.jpg)  
 
+<!--more-->
+
 d表示两缝间距，D表示缝到屏幕的距离，λ表示光波长，x表示屏幕上的某一点到中心的距离。O点处表示中央明纹，在O点两侧，与$k=1,2,3, ……$相应的$x_k$处的$\Delta r$分别是$\plusmn\lambda, \plusmn2\lambda, \plusmn3\lambda, ……$，分别称为一级明纹、二级明纹、三级明纹，……。
 
 ## 明纹与暗纹
