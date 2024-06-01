@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2024-05-18 更新日志</title>
+    <url>/posts/2TZAX5C.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>添加显示文章摘要功能，即在文章中添加 <code>&lt;!--more--&gt;</code>，在此之前，只有标题和日期，现在，可以显示文章的摘要了。</p>
+]]></content>
+      <categories>
+        <category>更新日志</category>
+      </categories>
+      <tags>
+        <tag>更新日志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Latex 大全</title>
     <url>/posts/41713084.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>本来我是不想写这份文件的，毕竟，往上面很多，我写只不过是水一次博文，但是，他们写的不算很全面，所以，我决定写一份 Latex 大全，这样，我就可以不用再全网搜索了。</p>
