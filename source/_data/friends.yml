@@ -1,5 +1,5 @@
-- group: My Friends' Websites# 分组标题
-  description:  # 分组描述
+- group: 我朋友们的网站 # 分组标题
+  description: 还是将他们的网站放进来吧 # 分组描述
   items:
     - title: AkiACG论坛 # 名称
       avatar: # 头像
