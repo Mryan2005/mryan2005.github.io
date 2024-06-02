@@ -1,6 +1,7 @@
 ---
 layout: docs
 seo_title: 关于作者
+title: 关于作者
 bottom_meta: false
 ---
 
