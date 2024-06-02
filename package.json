@@ -42,6 +42,7 @@
     "yawn-yaml": "^2.2.0",
     "hexo-generator-index-pin-top": "^0.2.2",
     "hexo-enhancer": "^1.0.10",
-    "hexo-toc": "^1.1.0"
+    "hexo-toc": "^1.1.0",
+    "hexo-link-card": "^1.0.1"
   }
 }
