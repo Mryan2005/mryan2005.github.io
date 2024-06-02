@@ -2,7 +2,7 @@
   description: 还是将他们的网站放进来吧 # 分组描述
   items:
     - title: AkiACG论坛 # 名称
-      avatar: https://forum.akiacg.com/assets/logo-lr1fx0s6.png # 头像
+      avatar:  # 头像
       url: https://forum.akiacg.com/ # 链接
       screenshot: # 截图
       keywords: AkiACG # 关键词
