@@ -1,0 +1,15 @@
+- group: # 分组标题
+  description:  # 分组描述
+  items:
+    - title: AkiACG论坛 # 名称
+      avatar: # 头像
+      url: https://forum.akiacg.com/ # 链接
+      screenshot: # 截图
+      keywords: AkiACG # 关键词
+      description: # 描述
+    - title: AkiACG总站 # 名称
+      avatar: # 头像
+      url: https://akiacg.com/ # 链接
+      screenshot: # 截图
+      keywords: AkiACG # 关键词
+      description: # 描述
