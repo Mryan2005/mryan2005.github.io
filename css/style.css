@@ -1177,7 +1177,6 @@ footer.footer .copyright p {
   -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
   padding: 8px 0;
   margin: 8px;
-  margin-top: calc(2.25 * 16px + 32px);
   color: var(--color-meta);
   background: var(--color-block);
   justify-content: flex-start;
