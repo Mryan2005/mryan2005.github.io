@@ -35,7 +35,12 @@ jobs:
     - name: hexo generate again
       run: hexo generate
     - name: move CNAME
-      run: mv ./CNAME ./public
+      run: |
+        mv ./CNAME ./public
+    - name: move pdfjs
+      run: |
+        mkdir ./public/pdfjs
+        mv ./pdfjs/ ./public/pdfjs
     - name: add Bing IndexNew Token
       run: echo ${{secrets.BINGINDEXNEWTOKEN}} > ./public/${{secrets.BINGINDEXNEWTOKEN}}.txt
     - name: Deploy
