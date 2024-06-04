@@ -39,6 +39,8 @@ jobs:
         mv ./CNAME ./public
     - name: move pdfjs
       run: mv ./pdfjs ./public/
+    - name: move 
+      run: mv ./baidu_verify_codeva-ZQiBChkpG0.html ./public/
     - name: add Bing IndexNew Token
       run: echo ${{secrets.BINGINDEXNEWTOKEN}} > ./public/${{secrets.BINGINDEXNEWTOKEN}}.txt
     - name: Deploy
