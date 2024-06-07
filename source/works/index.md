@@ -15,4 +15,4 @@ date: 2024-05-25 09:56:01
 
 | 名字 | 简介 |
 | --- | --- |
-| [SSPUBot](https://github.com/Mryan2005/SSPU-Bot) | 一个基于Python的SSPU信息收集机器人。 |
+| [SSPUBot](https://github.com/Mryan2005/SSPU-Bot) | It's a bot that can gather the notice and activity of school |
