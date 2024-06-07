@@ -1,5 +1,14 @@
+- group: 我的其他网站
+  description: 我的其他网站
+  items:
+    - title: 网站状态
+      avatar: 
+      url: https://stats.uptimerobot.com/znp1vu8lWm
+      screenshot:
+      keywords: 网站状态
+      description: 网站状态
 - group: 我朋友们的网站 # 分组标题
-  description: 还是将他们的网站放进来吧 # 分组描述
+  description: 欢迎前去他们的网站 # 分组描述
   items:
     - title: AkiACG论坛 # 名称
       avatar:  # 头像
