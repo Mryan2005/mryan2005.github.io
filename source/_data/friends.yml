@@ -6,7 +6,40 @@
       url: https://stats.uptimerobot.com/znp1vu8lWm
       screenshot:
       keywords: 网站状态
-      description: 网站状态
+      description: 
+- group: 我的社交媒体
+  description: 与我有关的社交媒体
+  items:
+    - title: AkiACG forum
+      avatar: 
+      url: https://forum.akiacg.com/u/Mryan2005
+      screenshot:
+      keywords: AkiACG
+      description: 我的AkiACG论坛个人资料
+    - title: CSDN
+      avatar: 
+      url: https://blog.csdn.net/qq_21739599
+      screenshot:
+      keywords: CSDN
+      description: 我的CSDN博客
+    - title: GitHub
+      avatar: 
+      url: https://github.com/Mryan2005
+      screenshot:
+      keywords: GitHub
+      description: 我的GitHub主页
+    - title: LeetCode
+      avatar: 
+      url: https://leetcode.cn/u/Mryan2005/
+      screenshot:
+      keywords: LeetCode
+      description: 我的LeetCode主页
+    - title: lofter
+      avatar: 
+      url: http://mryan2005.lofter.com/
+      screenshot:
+      keywords: lofter
+      description: 我的lofter主页
 - group: 我朋友们的网站 # 分组标题
   description: 欢迎前去他们的网站 # 分组描述
   items:
