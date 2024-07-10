@@ -4,12 +4,13 @@ date: 2024-07-10 14:34:56
 tags: OpenJudge
 categories: OpenJudge
 ---
-
 总时间限制: 1000ms 内存限制: 65536kB
 
 ## 描述
 
 给定一个十进制整数N，求其对应2进制数中1的个数
+
+<!-- more -->
 
 ## 输入
 
