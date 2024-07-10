@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>苹果和虫子</title>
+    <url>/posts/2JJD3JN.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>你买了一箱 n 个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每 x 小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，那么经过 y 小时你还有多少个完整的苹果？</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>输入仅一行，包括 n，x 和 y（均为整数）。输入数据保证 y &lt;= n * x。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出也仅一行，剩下的苹果个数</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<p>10 4 9</p>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<p>7</p>
+<h2><span id="提示"> 提示</span></h2>
+<p>注意：是要求完整的苹果数。</p>
+<h2><span id="解题思路"> 解题思路</span></h2>
+<h3><span id="方法一"> 方法一</span></h3>
+<p>我们已经知道虫子每 x 小时能吃掉一个苹果，那么 y 小时内虫子能吃掉 y/x 个苹果，所以剩下的苹果数为 n - y/x。<br>
+此时，我们要看看 y/x 是否为整数，如果不是整数，说明虫子在 y 小时内还没吃完一个苹果，所以剩下的苹果数还要减 1。</p>
+<h3><span id="方法二"> 方法二</span></h3>
+<p>可以通过循环的方式来模拟虫子吃苹果的过程，每次循环判断是否是虫子吃苹果的时间，如果是，苹果数减 1，直到循环结束。</p>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="c"> C</span></h3>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> n, x, y;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;n, &amp;x, &amp;y);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> hour = <span class="number">0</span>; hour &lt; y; hour++) {</span><br><span class="line">        <span class="keyword">if</span>(hour % x == <span class="number">0</span>) n -= <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(n &lt; <span class="number">0</span>) {</span><br><span class="line">            n = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, n);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c"> C++</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> n, x, y;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; x &gt;&gt; y;</span><br><span class="line">	n -= y/x;</span><br><span class="line">	<span class="keyword">if</span>(y % x &gt; <span class="number">0</span>) n -= <span class="number">1</span>;</span><br><span class="line">	cout &lt;&lt; n;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数组逆序重放</title>
     <url>/posts/3YRVYNP.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
@@ -24,9 +58,9 @@
 <p>先按逆序输入（<code>for(int i = n-1; i &gt;= 0; i--)</code>），然后再按逆序输出（<code>for(int i = 0; i &lt; n; i++)</code>）</p>
 <h2><span id="code"> Code</span></h2>
 <h3><span id="c"> C</span></h3>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">  <span class="type">static</span> <span class="type">int</span> n, a[<span class="number">100</span>], t;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i&lt;= n; i++) {</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i<span class="number">-1</span>]);</span><br><span class="line">  } </span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = n<span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--) {</span><br><span class="line">    <span class="keyword">if</span>(i == n<span class="number">-1</span>)</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">    <span class="keyword">else</span>  </span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">" %d"</span>, a[i]);</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">  <span class="type">static</span> <span class="type">int</span> n, a[<span class="number">100</span>], t;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i&lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i<span class="number">-1</span>]);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i = n<span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--) {</span><br><span class="line">    <span class="keyword">if</span>(i == n<span class="number">-1</span>) <span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">" %d"</span>, a[i]);</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h3><span id="c"> C++</span></h3>
-<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	array&lt;<span class="type">int</span>, 100&gt; a {};</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = n<span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--) {</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) {</span><br><span class="line">		cout &lt;&lt; a[i];</span><br><span class="line">		<span class="keyword">if</span>(i &lt; n<span class="number">-1</span>) cout &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	array&lt;<span class="type">int</span>, 100&gt; a {};</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = n<span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--) cin &gt;&gt; a[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) {</span><br><span class="line">		cout &lt;&lt; a[i];</span><br><span class="line">		<span class="keyword">if</span>(i &lt; n<span class="number">-1</span>) cout &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 ]]></content>
       <categories>
         <category>OpenJudge</category>
