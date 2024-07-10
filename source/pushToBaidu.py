@@ -32,7 +32,7 @@ if __name__ == '__main__':
                 if choice.endswith('index.html'):
                     choice = choice[:-10]
                 elif choice.endswith('.html'):
-                    choice = choice[:-5]
+                    choice = choice
                 needToPush.append(choice)
                 break
     print("we will push the url as follow", needToPush)
