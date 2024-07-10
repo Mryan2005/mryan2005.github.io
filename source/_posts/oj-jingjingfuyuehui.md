@@ -2,9 +2,8 @@
 title: 晶晶赴约会
 date: 2024-07-10 12:32:50
 tags: OpenJudge
-categories: 
+categories:
 ---
-
 总时间限制: 1000ms 内存限制: 65536kB
 
 ## 描述
@@ -23,6 +22,7 @@ categories:
 ```
 2
 ```
+
 
 ## 样例输出
 
