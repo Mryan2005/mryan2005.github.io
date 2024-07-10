@@ -4,7 +4,6 @@ date: 2024-07-10 16:42:14
 tags: OpenJudge
 categories: OpenJudge
 ---
-
 总时间限制: 1000ms 内存限制: 65536kB
 
 ## 描述
@@ -37,6 +36,16 @@ categories: OpenJudge
 ## 来源
 
 计算概论05
+
+## 解题方法
+
+### 方法一
+
+先按顺序输入（`for(int i = 0; i < n; i++)`），然后再按逆序输出（`for(int i = n-1; i >= 0; i--)`）
+
+### 方法二
+
+先按逆序输入（`for(int i = n-1; i >= 0; i--)`），然后再按逆序输出（`for(int i = 0; i < n; i++)`）
 
 ## Code
 
