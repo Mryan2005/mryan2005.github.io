@@ -1,8 +1,8 @@
 ---
 title: 整数的个数
 date: 2024-07-10 13:39:05
-tags:
-categories:
+tags: OpenJudge
+categories: OpenJudge
 ---
 
 总时间限制: 1000ms 内存限制: 65536kB
