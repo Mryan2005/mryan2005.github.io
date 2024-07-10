@@ -57,14 +57,10 @@ categories: OpenJudge
 int main() {
   static int n, a[100], t;
   scanf("%d", &n);
-  for(int i = 1; i<= n; i++) {
-    scanf("%d", &a[i-1]);
-  } 
+  for(int i = 1; i<= n; i++) scanf("%d", &a[i-1]);
   for(int i = n-1; i >= 0; i--) {
-    if(i == n-1)
-      printf("%d", a[i]);
-    else  
-      printf(" %d", a[i]);
+    if(i == n-1) printf("%d", a[i]);
+    else printf(" %d", a[i]);
   }
 }
 ```
@@ -78,9 +74,7 @@ int main() {
 	array<int, 100> a {};
 	int n;
 	cin >> n;
-	for(int i = n-1; i >= 0; i--) {
-		cin >> a[i];
-	}
+	for(int i = n-1; i >= 0; i--) cin >> a[i];
 	for(int i = 0; i < n; i++) {
 		cout << a[i];
 		if(i < n-1) cout << " ";
