@@ -6,6 +6,7 @@
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
 <p>你买了一箱 n 个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每 x 小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，那么经过 y 小时你还有多少个完整的苹果？</p>
+<span id="more"></span>
 <h2><span id="输入"> 输入</span></h2>
 <p>输入仅一行，包括 n，x 和 y（均为整数）。输入数据保证 y &lt;= n * x。</p>
 <h2><span id="输出"> 输出</span></h2>
