@@ -6,6 +6,7 @@
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
 <p>将一个数组中的值按逆序重新存放。例如，原来的顺序为 8,6,5,4,1。要求改为 1,4,5,6,8。</p>
+<span id="more"></span>
 <h2><span id="输入"> 输入</span></h2>
 <p>输入为两行：第一行数组中元素的个数 n（1&lt;n&lt;100)，第二行是 n 个整数，每两个整数之间用空格分隔。</p>
 <h2><span id="输出"> 输出</span></h2>
@@ -60,6 +61,7 @@
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
 <p>给定 k（1 &lt; k &lt; 100）个正整数，其中每个数都是大于等于 1，小于等于 10 的数。写程序计算给定的 k 个正整数中，1，5 和 10 出现的次数。</p>
+<span id="more"></span>
 <h2><span id="输入"> 输入</span></h2>
 <p>输入有两行：第一行包含一个正整数 k，第二行包含 k 个正整数，每两个正整数用一个空格分开。</p>
 <h2><span id="输出"> 输出</span></h2>
@@ -90,6 +92,7 @@
 <h2><span id="描述"> 描述</span></h2>
 <p>计算非负整数 m 到 n（包括 m 和 n ）之间的所有奇数的和，其中，m 不大于 n，且 n 不大于 300。例如 m=3, n=12, 其和则为：3+5+7+9+11=35。</p>
 <p>输入两个数 m 和 n，两个数以一个空格分开，其中 0 &lt;= m &lt;= n &lt;= 300 。输出输出一行，包含一个整数，表示 m 到 n（包括 m 和 n ）之间的所有奇数的和</p>
+<span id="more"></span>
 <h2><span id="样例输入"> 样例输入</span></h2>
 <figure class="highlight basic"><table><tbody><tr><td class="code"><pre><span class="line"><span class="symbol">7 </span><span class="number">15</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="样例输出"> 样例输出</span></h2>
