@@ -31,8 +31,7 @@
     <url>/posts/3R819W.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
-<p>给定 k（1<br>
-&lt; k &lt; 100）个正整数，其中每个数都是大于等于 1，小于等于 10 的数。写程序计算给定的 k 个正整数中，1，5 和 10 出现的次数。</p>
+<p>给定 k（1 &lt; k &lt; 100）个正整数，其中每个数都是大于等于 1，小于等于 10 的数。写程序计算给定的 k 个正整数中，1，5 和 10 出现的次数。</p>
 <h2><span id="输入"> 输入</span></h2>
 <p>输入有两行：第一行包含一个正整数 k，第二行包含 k 个正整数，每两个正整数用一个空格分开。</p>
 <h2><span id="输出"> 输出</span></h2>
