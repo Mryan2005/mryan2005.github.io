@@ -1,5 +1,5 @@
 ---
-title: oj-zhengshugeshu
+title: 整数的个数
 date: 2024-07-10 13:39:05
 tags:
 categories:
