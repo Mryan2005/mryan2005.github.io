@@ -14,6 +14,10 @@ categories: OpenJudge
 
 <!-- more -->
 
+## 思路
+
+循环遍历 m 到 n 之间的所有数，如果是奇数则加到 sum 上。
+
 ## 样例输入
 
 ```
