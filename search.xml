@@ -6,6 +6,7 @@
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
 <p>孙老师讲授的《计算概论》这门课期中考试刚刚结束，他想知道考试中取得的最高分数。因为人数比较多，他觉得这件事情交给计算机来做比较方便。你能帮孙老师解决这个问题吗？</p>
+<span id="more"></span>
 <h2><span id="输入"> 输入</span></h2>
 <p>输入两行，第一行为整数 n（1 &lt;= n &lt; 100），表示参加这次考试的人数。第二行是这 n 个学生的成绩，相邻两个数之间用单个空格隔开。所有成绩均为 0 到 100 之间的整数。</p>
 <h2><span id="输出"> 输出</span></h2>
@@ -273,6 +274,7 @@
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
 <p>晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的 <code>1</code>、<code>3</code>、<code>5</code> 有课必须上课，请帮晶晶判断她能否接受贝贝的邀请，如果能输出 <code>YES</code>；如果不能则输出 <code>NO</code>。</p>
+<span id="more"></span>
 <h2><span id="输入"> 输入</span></h2>
 <p>输入有一行，贝贝邀请晶晶去看展览的日期，用数字 <code>1</code> 到 <code>7</code> 表示从星期一到星期日。</p>
 <h2><span id="输出"> 输出</span></h2>
