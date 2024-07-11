@@ -78,6 +78,7 @@
 <h2><span id="描述"> 描述</span></h2>
 <p>利用动态链表记录从标准输入输入的学生信息（学号、姓名、性别、年龄、得分、地址）</p>
 <p>其中，学号长度不超过 20, 姓名长度不超过 40, 性别长度为 1, 地址长度不超过 40</p>
+<span id="more"></span>
 <h2><span id="输入"> 输入</span></h2>
 <p>包括若干行，每一行都是一个学生的信息，如：</p>
 <figure class="highlight basic"><table><tbody><tr><td class="code"><pre><span class="line"><span class="symbol">00630018 </span>zhouyan m <span class="number">20</span> <span class="number">10.0</span> <span class="number">28#</span><span class="number">460</span></span><br></pre></td></tr></tbody></table></figure>
