@@ -1,5 +1,5 @@
 ---
-title: oj-daxiangheshui
+title: 大象喝水
 date: 2024-07-11 10:29:05
 tags: OpenJudge
 categories: OpenJudge
