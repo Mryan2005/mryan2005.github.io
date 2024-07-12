@@ -1,8 +1,8 @@
 ---
 title: 最大奇数与最小偶数之差的绝对值
 date: 2024-07-12 10:30:40
-tags: 
-categories: 
+tags: OpenJudge
+categories: OpenJudge
 ---
 
 总时间限制: 1000ms 内存限制: 65536kB
