@@ -56,7 +56,144 @@ categories: OpenJudge
 
 还有一个点，就是输入的日期中，月份和日期都是负数，所以要将其转换为正数。（这是在C++中的特殊情况）
 
+## 我的测试用例
+
+### 用例1
+
+#### 输入
+
+```cpp
+2010-07-05
+```
+
+#### 输出
+
+```cpp
+2010-07-06
+```
+
+### 用例2
+
+#### 输入
+
+```cpp
+2004-02-28
+```
+
+#### 输出
+
+```cpp
+2004-02-29
+```
+
+### 用例3
+
+#### 输入
+
+```cpp
+2003-02-28
+```
+
+#### 输出
+
+```cpp
+2003-03-01
+```
+
+### 用例4
+
+#### 输入
+
+```cpp
+2003-12-31
+```
+
+#### 输出
+
+```cpp
+2004-01-01
+```
+
+### 用例5
+
+#### 输入
+
+```cpp
+1100-02-28
+```
+
+#### 输出
+
+```cpp
+1100-03-01
+```
+
+### 用例6
+
+#### 输入
+
+```cpp
+2003-12-30
+```
+
+#### 输出
+
+```cpp
+2003-12-31
+```
+
+### 用例7
+
+#### 输入
+
+```cpp
+2000-02-28
+```
+
+#### 输出
+
+```cpp
+2000-02-29
+```
+
 ## Code
+
+### C
+    
+```c
+#include <stdio.h>
+
+typedef struct date {
+	int year;
+	int month;
+	int day;
+} date;
+
+int main() {
+	date input;
+	scanf("%d-%d-%d", &input.year, &input.month, &input.day);
+	input.day++;
+	if((input.day > 29) && (input.month == 2) && ((input.year % 4 == 0 && input.year % 100 != 0) || input.year % 400 == 0)) {
+		input.day = 1;
+		input.month++;
+	} else if((input.day > 28) && (input.month == 2) && ((input.year % 4 == 0 && input.year % 100 != 0) || input.year % 400 == 0));
+	else if(((input.year % 4 != 0 && input.year % 400 != 0) || input.year % 100 == 0) && input.month == 2 && input.day > 28) {
+		input.day = 1;
+		input.month++;
+	} else if((input.month == 1 || input.month == 3 || input.month == 5 || input.month == 7 || input.month == 8 || input.month == 10) && input.month != 12 && input.day > 31) {
+		input.day = 1;
+		input.month++;
+	} else if((input.month == 2 || input.month == 4 || input.month == 6 || input.month == 9 || input.month == 11) && input.month != 12 && input.day > 30) {
+		input.day = 1;
+		input.month++;
+	} else if(input.month == 12 && input.day > 31) {
+		input.day = 1;
+		input.month = 1;
+		input.year++;
+	}
+	printf("%d-%02d-%02d", input.year, input.month, input.day);
+}
+```
 
 ### C++
 
