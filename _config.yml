@@ -95,6 +95,7 @@ katex:
 
 toc:
   maxDepth: 3
+  slugify: false
 
 
 # Markdown config
