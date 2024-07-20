@@ -72,29 +72,67 @@ TTTGGCCAAA
 using namespace std;
 
 int main() {
-	int n, m;
-	cin >> n >> m;
-	array<pair<string, int>, 102> a;		// 字符串和无序度
-	for(int i = 1, count = 0; i <= m; i++) {
-		count = 0;
-		cin >> a[i].first;
-		for(int j = 0; j < n; j++) {
-			for(int k = j+1; k < n; k++) {
-				if(a[i].first[j] > a[i].first[k]) count++;
-			}
-		}
-		a[i].second = count;
-	}
-	for(int i = 1; i <= m-1; i ++) {
-		for(int j = 1; j <= m-1; j++) {
-			if(a[j].second > a[j+1].second) {
-				a[0] = a[j];
-				a[j] = a[j+1];
-				a[j+1] = a[0];
-			}
-		}
-	}
-	for(int i = 1; i <= m; i++) cout << a[i].first << endl;
+ int n, m;
+ cin >> n >> m;
+ array<pair<string, int>, 102> a;  // 字符串和无序度
+ for(int i = 1, count = 0; i <= m; i++) {
+  count = 0;
+  cin >> a[i].first;
+  for(int j = 0; j < n; j++) {
+   for(int k = j+1; k < n; k++) {
+    if(a[i].first[j] > a[i].first[k]) count++;
+   }
+  }
+  a[i].second = count;
+ }
+ for(int i = 1; i <= m-1; i ++) {
+  for(int j = 1; j <= m-1; j++) {
+   if(a[j].second > a[j+1].second) {
+    a[0] = a[j];
+    a[j] = a[j+1];
+    a[j+1] = a[0];
+   }
+  }
+ }
+ for(int i = 1; i <= m; i++) cout << a[i].first << endl;
+}
+```
+
+### 使用结构体数组
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+struct DNA {
+ char first[53];
+ int second;
+};
+
+int main() {
+ int n, m;
+ cin >> n >> m;
+ DNA a[103];  // 字符串和无序度
+ for(int i = 1, count = 0; i <= m; i++) {
+  count = 0;
+  cin >> a[i].first;
+  for(int j = 0; j < n; j++) {
+   for(int k = j+1; k < n; k++) {
+    if(a[i].first[j] > a[i].first[k]) count++;
+   }
+  }
+  a[i].second = count;
+ }
+ for(int i = 1; i <= m-1; i ++) {
+  for(int j = 1; j <= m-1; j++) {
+   if(a[j].second > a[j+1].second) {
+    a[0] = a[j];
+    a[j] = a[j+1];
+    a[j+1] = a[0];
+   }
+  }
+ }
+ for(int i = 1; i <= m; i++) cout << a[i].first << endl;
 }
 ```
 
