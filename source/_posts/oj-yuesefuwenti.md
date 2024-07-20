@@ -88,6 +88,34 @@ int main() {
 }
 ```
 
+### C++ Array
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, m, count, arr[302] = {0};
+    while(cin >> n >> m && n != 0 && m != 0){
+        count = n;
+        for(int i = 0; i <= n; i++) arr[i] = 0;
+        for(int i = 1, j = 1; count > 1; i = (i+1) % n? (i+1) % n: n) {
+            if(arr[i] != m) {
+                arr[i] = j;
+                j = (j+1) % m? (j+1) % m: m;
+                if(arr[i] == m) count--;
+            }
+        }
+        for(int i = 1; i <= n; i++) {
+            if(arr[i] != m) {
+                cout << i << endl;
+                break;
+            }
+        }
+    }
+}
+```
+
 ### C
 
 ```c
