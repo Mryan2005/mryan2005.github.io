@@ -1,7 +1,7 @@
 ---
 title: 细菌实验分组
 date: 2024-07-21 11:19:50
-tags: OpenJudge
+tags: [OpenJudge, STL]
 categories: OpenJudge
 ---
 
