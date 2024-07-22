@@ -50,7 +50,7 @@ categories: OpenJudge
 
 ## 图例
 
-![pk7bT41.png](https://s21.ax1x.com/2024/07/22/pk7bT41.png)]
+![pk7bT41.png](https://s21.ax1x.com/2024/07/22/pk7bT41.png)
 
 ## Code
 
