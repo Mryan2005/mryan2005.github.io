@@ -48,6 +48,10 @@ categories: OpenJudge
 3. 找出每列的最小值的位置，将其存入数组`row`中
 4. 遍历`line`和`row`，找出鞍点
 
+## 图例
+
+![pk7bT41.png](https://s21.ax1x.com/2024/07/22/pk7bT41.png)]
+
 ## Code
 
 ### C++ STL
