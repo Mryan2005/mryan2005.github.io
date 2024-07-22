@@ -70,27 +70,28 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Mryan2005's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>最大奇数与最小偶数之差的绝对值 - Mryan2005's Blog</title>
-  <meta name="keywords" content="OpenJudge,null">
+  <title>计算鞍点 - Mryan2005's Blog</title>
+  <meta name="keywords" content="OpenJudge,C++,STL,null">
   <meta desc name="description" content="总时间限制: 1000ms 内存限制: 65536kB
  描述
-输入 6 个正整数，且这 6 个正整数中至少存在一个奇数和一个偶数。
-设这 6 个正整数中最大的奇数为 a，最小的偶数为 b，求出 | a-b | 的值
- 输入
-输入为一行，6 个正整数，且 6 个正整数都小于 100
-输入保证这 6 个数中至少存在... - Mryan2005 - Mryan2005's Blog">
+给定一个 5*5 的矩阵，每行只有一个最大值，每列只有一个最小值，寻找这个矩阵的鞍点。
+鞍点指的是矩阵中的一个元素，它是所在行的最大值，并且是所在列的最小值。
+例如：在下面的例子中（第 4 行第 1 列的元素就是鞍点，值为 8 ）。
+11 3 5 6... - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="最大奇数与最小偶数之差的绝对值">
-<meta property="og:url" content="https://www.mryan2005.top/posts/1JHJQ22.html">
+<meta property="og:title" content="计算鞍点">
+<meta property="og:url" content="https://www.mryan2005.top/posts/16CK67F.html">
 <meta property="og:site_name" content="Mryan2005&#39;s Blog">
-<meta property="og:description" content="总时间限制: 1000ms 内存限制: 65536kB  描述 输入 6 个正整数，且这 6 个正整数中至少存在一个奇数和一个偶数。 设这 6 个正整数中最大的奇数为 a，最小的偶数为 b，求出 | a-b | 的值  输入 输入为一行，6 个正整数，且 6 个正整数都小于 100 输入保证这 6 个数中至少存在一个奇数和一个偶数  输出 输出为一行，输出最大的奇数与最小的偶数之差的绝对值  样例">
+<meta property="og:description" content="总时间限制: 1000ms 内存限制: 65536kB  描述 给定一个 5*5 的矩阵，每行只有一个最大值，每列只有一个最小值，寻找这个矩阵的鞍点。 鞍点指的是矩阵中的一个元素，它是所在行的最大值，并且是所在列的最小值。 例如：在下面的例子中（第 4 行第 1 列的元素就是鞍点，值为 8 ）。 11 3 5 6 9 12 4 7 8 10 10 5 6 9 11 8 6 4 7 2 15 10">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-07-12T10:30:40.000Z">
+<meta property="article:published_time" content="2024-07-22T22:10:10.000Z">
 <meta property="article:modified_time" content="2024-07-22T14:17:13.241Z">
 <meta property="article:author" content="Mryan2005">
 <meta property="article:tag" content="OpenJudge">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="STL">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2406,7 +2407,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/1JHJQ22.html">
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/16CK67F.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
@@ -2427,7 +2428,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        最大奇数与最小偶数之差的绝对值
+        计算鞍点
       </h1>
       <div class='new-meta-box'>
         
@@ -2458,10 +2459,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-12T10:30:40+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-22T22:10:10+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年7月12日</p>
+    <p>发布于：2024年7月22日</p>
   </a>
 </div>
 
@@ -2486,24 +2487,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
-<p>输入 6 个正整数，且这 6 个正整数中至少存在一个奇数和一个偶数。<br>
-设这 6 个正整数中最大的奇数为 a，最小的偶数为 b，求出 | a-b | 的值</p>
+<p>给定一个 5*5 的矩阵，每行只有一个最大值，每列只有一个最小值，寻找这个矩阵的鞍点。<br>
+鞍点指的是矩阵中的一个元素，它是所在行的最大值，并且是所在列的最小值。<br>
+例如：在下面的例子中（第 4 行第 1 列的元素就是鞍点，值为 8 ）。<br>
+11 3 5 6 9<br>
+12 4 7 8 10<br>
+10 5 6 9 11<br>
+8 6 4 7 2<br>
+15 10 11 20 25</p>
 <h2><span id="输入"> 输入</span></h2>
-<p>输入为一行，6 个正整数，且 6 个正整数都小于 100<br>
-输入保证这 6 个数中至少存在一个奇数和一个偶数</p>
+<p>输入包含一个 5 行 5 列的矩阵</p>
 <h2><span id="输出"> 输出</span></h2>
-<p>输出为一行，输出最大的奇数与最小的偶数之差的绝对值</p>
+<p>如果存在鞍点，输出鞍点所在的行、列及其值，如果不存在，输出 "not found"</p>
 <h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 5 6</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">11</span> <span class="number">3</span> <span class="number">5</span> <span class="number">6</span> <span class="number">9</span></span><br><span class="line"><span class="number">12</span> <span class="number">4</span> <span class="number">7</span> <span class="number">8</span> <span class="number">10</span></span><br><span class="line"><span class="number">10</span> <span class="number">5</span> <span class="number">6</span> <span class="number">9</span> <span class="number">11</span></span><br><span class="line"><span class="number">8</span>  <span class="number">6</span> <span class="number">4</span> <span class="number">7</span> <span class="number">2</span></span><br><span class="line"><span class="number">15</span> <span class="number">10</span> <span class="number">11</span> <span class="number">20</span> <span class="number">25</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="样例输出"> 样例输出</span></h2>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> <span class="number">1</span> <span class="number">8</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="思路"> 思路</span></h2>
-<p>使用两个变量分别记录最大的奇数和最小的偶数，然后输出两者之差的绝对值。</p>
+<ol>
+<li>读入矩阵</li>
+<li>找出每行的最大值的位置，将其存入数组 <code>line</code> 中</li>
+<li>找出每列的最小值的位置，将其存入数组 <code>row</code> 中</li>
+<li>遍历 <code>line</code> 和 <code>row</code>，找出鞍点</li>
+</ol>
 <h2><span id="code"> Code</span></h2>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line"> array&lt;array&lt;<span class="type">int</span>, 5&gt;, 5&gt; a;</span><br><span class="line"> array&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;, 5&gt; line, row; <span class="comment">// (first, second)</span></span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) cin &gt;&gt; a[i][j];</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) { <span class="comment">// (i, j)</span></span><br><span class="line">  line[i].first = i, line[i].second = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) {</span><br><span class="line">   <span class="keyword">if</span>(a[line[i].first][line[i].second] &lt; a[i][j]) {</span><br><span class="line">    line[i].first = i;</span><br><span class="line">    line[i].second = j;</span><br><span class="line">   }</span><br><span class="line">  }</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) { <span class="comment">// (j, i)</span></span><br><span class="line">  row[i].first = <span class="number">0</span>, row[i].second = i;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) {</span><br><span class="line">   <span class="keyword">if</span>(a[row[i].first][row[i].second] &gt; a[j][i]) {</span><br><span class="line">    row[i].first = j;</span><br><span class="line">    row[i].second = i;</span><br><span class="line">   }</span><br><span class="line">  }</span><br><span class="line"> }</span><br><span class="line"> <span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) {</span><br><span class="line">   <span class="keyword">if</span>(row[i].first == line[j].first &amp;&amp; line[j].second == row[i].second) {</span><br><span class="line">    cout &lt;&lt; row[i].first+<span class="number">1</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; row[i].second+<span class="number">1</span> &lt;&lt; <span class="string">" "</span> &lt;&lt; a[row[i].first][row[i].second] &lt;&lt; endl;</span><br><span class="line">    flag = <span class="number">1</span>;</span><br><span class="line">   }</span><br><span class="line">  }</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">if</span>(!flag) cout &lt;&lt; <span class="string">"not found"</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h3><span id="c"> C</span></h3>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> aMax=<span class="number">-1</span>, bMin=<span class="number">100</span>, a;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a);</span><br><span class="line">        <span class="keyword">if</span>(i == <span class="number">0</span>) {</span><br><span class="line">            aMax=a;</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(a % <span class="number">2</span> != <span class="number">0</span>) {</span><br><span class="line">            <span class="keyword">if</span>(aMax &lt; a) {</span><br><span class="line">                aMax = a;</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            <span class="keyword">if</span>(bMin &gt; a) {</span><br><span class="line">                bMin = a;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, <span class="built_in">abs</span>(aMax-bMin));</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<h3><span id="c"> C++</span></h3>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> minNum = <span class="number">100</span>, maxNum = <span class="number">0</span>, num;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">6</span>; i++) {</span><br><span class="line">		cin &gt;&gt; num;</span><br><span class="line">		<span class="keyword">if</span>(num % <span class="number">2</span> == <span class="number">0</span>) {</span><br><span class="line">			<span class="keyword">if</span>(num &lt; minNum) minNum = num;</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line">			<span class="keyword">if</span>(num &gt; maxNum) maxNum = num;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	cout &lt;&lt; <span class="built_in">abs</span>(maxNum-minNum);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line"> <span class="type">int</span> a[<span class="number">5</span>][<span class="number">5</span>];</span><br><span class="line"> <span class="type">int</span> line[<span class="number">5</span>][<span class="number">2</span>], row[<span class="number">5</span>][<span class="number">2</span>]; <span class="comment">// (first, second)</span></span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i][j]);</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) { <span class="comment">// (i, j)</span></span><br><span class="line">  line[i][<span class="number">0</span>] = i, line[i][<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) {</span><br><span class="line">   <span class="keyword">if</span>(a[line[i][<span class="number">0</span>]][line[i][<span class="number">1</span>]] &lt; a[i][j]) {</span><br><span class="line">    line[i][<span class="number">0</span>] = i;</span><br><span class="line">    line[i][<span class="number">1</span>] = j;</span><br><span class="line">   }</span><br><span class="line">  }</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) { <span class="comment">// (j, i)</span></span><br><span class="line">  row[i][<span class="number">0</span>] = <span class="number">0</span>, row[i][<span class="number">1</span>] = i;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) {</span><br><span class="line">   <span class="keyword">if</span>(a[row[i][<span class="number">0</span>]][row[i][<span class="number">1</span>]] &gt; a[j][i]) {</span><br><span class="line">    row[i][<span class="number">0</span>] = j;</span><br><span class="line">    row[i][<span class="number">1</span>] = i;</span><br><span class="line">   }</span><br><span class="line">  }</span><br><span class="line"> }</span><br><span class="line"> <span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line"> <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) {</span><br><span class="line">   <span class="keyword">if</span>(row[i][<span class="number">0</span>] == line[j][<span class="number">0</span>] &amp;&amp; line[j][<span class="number">1</span>] == row[i][<span class="number">1</span>]) {</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d %d %d\n"</span>, row[i][<span class="number">0</span>]+<span class="number">1</span>, row[i][<span class="number">1</span>]+<span class="number">1</span>, a[row[i][<span class="number">0</span>]][row[i][<span class="number">1</span>]]);</span><br><span class="line">    flag = <span class="number">1</span>;</span><br><span class="line">   }</span><br><span class="line">  }</span><br><span class="line"> }</span><br><span class="line"> <span class="keyword">if</span>(!flag) <span class="built_in">printf</span>(<span class="string">"not found"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
   </div>
   
   
@@ -2519,8 +2531,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">最大奇数与最小偶数之差的绝对值</div>
-            <div class="license-link"><a href="https://www.mryan2005.top/posts/1JHJQ22.html">https://www.mryan2005.top/posts/1JHJQ22.html</a>
+            <div class="license-title">计算鞍点</div>
+            <div class="license-link"><a href="https://www.mryan2005.top/posts/16CK67F.html">https://www.mryan2005.top/posts/16CK67F.html</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -2529,11 +2541,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2024年7月12日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
                 <div class="license-meta-text">2024年7月22日</div>
               </div>
               
@@ -2571,8 +2578,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenJudge/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenJudge</p></a></div>
-  <span hidden itemprop="keywords">OpenJudge</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenJudge/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenJudge</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STL/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STL</p></a></div>
+  <span hidden itemprop="keywords">OpenJudge C++ STL</span>
 
 
         
@@ -2612,19 +2619,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/3XEW4S.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>分离整数的各个数位</p>
+      
+        <a class='next' href='/posts/AK4DW9.html'>
+          <p class='title'>点评赛车<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>总时间限制: 1000ms 内存限制: 65536kB
  描述
-从键盘输入一个任意的三位整数，要求正确地分离出它的百位、十位和个位数，并分别在屏幕上输出，输出采用每行输出一个数的方式，不带其它符...</p>
-        </a>
-      
-      
-        <a class='next' href='/posts/2X8KEHF.html'>
-          <p class='title'>最高的分数<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>总时间限制: 1000ms 内存限制: 65536kB
- 描述
-孙老师讲授的《计算概论》这门课期中考试刚刚结束，他想知道考试中取得的最高分数。因为人数比较多，他觉得这件事情交给计算机来做比较方便...</p>
+4 名专家对 4 款赛车进行评论
+1）A 说：2 号赛车是最好的；
+2）B 说：4 号赛车是最好的；
+3）C 说：3 号赛车不是最...</p>
         </a>
       
     </div>
@@ -2680,7 +2683,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C++</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C++ STL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3798,7 +3801,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/OpenJudge/","name":"OpenJudge"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/1JHJQ22.html","name":"最大奇数与最小偶数之差的绝对值"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"最大奇数与最小偶数之差的绝对值","description":"总时间限制: 1000ms 内存限制: 65536kB\n 描述\n输入 6 个正整数，且这 6 个正整数中至少存在一个奇数和一个偶数。\n设这 6 个正整数中最大的奇数为 a，最小的偶数为 b，求出 | a-b | 的值\n 输入\n输入为一行，6 个正整数，且 6 个正整数都小于 100\n输入保证这 6 个数中至少存在一个奇数和一个偶数\n 输出\n输出为一行，输出最大的奇数与最小的偶数之差的绝对值\n 样例输入\n11 2 3 4 5 6","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/1JHJQ22.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/1JHJQ22.html","wordCount":215,"datePublished":"2024-07-12T10:30:40.000Z","dateModified":"2024-07-22T14:17:13.241Z","articleSection":"OpenJudge","keywords":"OpenJudge","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/OpenJudge/","name":"OpenJudge"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/16CK67F.html","name":"计算鞍点"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"计算鞍点","description":"总时间限制: 1000ms 内存限制: 65536kB\n 描述\n给定一个 5*5 的矩阵，每行只有一个最大值，每列只有一个最小值，寻找这个矩阵的鞍点。\n鞍点指的是矩阵中的一个元素，它是所在行的最大值，并且是所在列的最小值。\n例如：在下面的例子中（第 4 行第 1 列的元素就是鞍点，值为 8 ）。\n11 3 5 6 9\n12 4 7 8 10\n10 5 6 9 11\n8 6 4 7 2\n15 10 11 20 25\n 输入\n输入包含一个 5 行 5 列的矩阵\n 输出\n如果存在鞍点，输出鞍点所在的行、列及其值，如果不存在，输出 \"not found\"\n 样例输入\n1234511 3 5 6 912 4 7 8 1010 5 6 9 118  6 4 7 215 10 11 20 25","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/16CK67F.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/16CK67F.html","wordCount":344,"datePublished":"2024-07-22T22:10:10.000Z","dateModified":"2024-07-22T14:17:13.241Z","articleSection":"OpenJudge","keywords":"OpenJudge,C++,STL","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
