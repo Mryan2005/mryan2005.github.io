@@ -70,39 +70,30 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Mryan2005's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>使用 “自带栈” 解决中序遍历（2） - Mryan2005's Blog</title>
-  <meta name="keywords" content="二叉树的中序遍历,栈,二叉树,null">
-  <meta desc name="description" content="
-Problem: 94. 二叉树的中序遍历
-
- 思路
-
-我们都知道中序遍历是左边 ——&gt; 中间 ——&gt; 右边
-
- 解题方法
-
-一直向左边走
-到达左边尽头后弹出并打印，然后向右边走一个。
-继续一直向左边走。
-到达左边尽头后弹出并打印，然后向右边走一个。
-结束条件是 p 和栈 S 都为空。
-
- 复杂度
-... - Mryan2005 - Mryan2005's Blog">
+  <title>扩号匹配问题 - Mryan2005's Blog</title>
+  <meta name="keywords" content="OpenJudge,C++,STL,Array,C,Stack,String,Queue,null">
+  <meta desc name="description" content="总时间限制: 1000ms 内存限制: 65536kB
+ 描述
+在某个字符串（长度不超过 100）中有左括号、右括号和大小写字母；规定（与常见的算数式子一样）任何一个左括号都从内到外与在它右边且距离最近的右括号匹配。写一个程序，找到无法匹配的左括号和右括号，输出原来字符串，并在下一行标出不能匹配的括号。不能匹配的... - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 “自带栈” 解决中序遍历（2）">
-<meta property="og:url" content="https://www.mryan2005.top/posts/fbed3bd6.html">
+<meta property="og:title" content="扩号匹配问题">
+<meta property="og:url" content="https://www.mryan2005.top/posts/3EN78FX.html">
 <meta property="og:site_name" content="Mryan2005&#39;s Blog">
-<meta property="og:description" content="Problem: 94. 二叉树的中序遍历   思路  我们都知道中序遍历是左边 ——&gt; 中间 ——&gt; 右边   解题方法  一直向左边走 到达左边尽头后弹出并打印，然后向右边走一个。 继续一直向左边走。 到达左边尽头后弹出并打印，然后向右边走一个。 结束条件是 p 和栈 S 都为空。   复杂度 时间复杂度:  O(n)O(n)O(n)  空间复杂度:">
+<meta property="og:description" content="总时间限制: 1000ms 内存限制: 65536kB  描述 在某个字符串（长度不超过 100）中有左括号、右括号和大小写字母；规定（与常见的算数式子一样）任何一个左括号都从内到外与在它右边且距离最近的右括号匹配。写一个程序，找到无法匹配的左括号和右括号，输出原来字符串，并在下一行标出不能匹配的括号。不能匹配的左括号用 &quot;$“标注，不能匹配的右括号用”?&quot; 标注.  输入 输入包括多组数据，每组">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-05-25T13:12:50.000Z">
+<meta property="article:published_time" content="2024-07-24T18:16:11.000Z">
 <meta property="article:modified_time" content="2024-07-24T10:23:32.624Z">
 <meta property="article:author" content="Mryan2005">
-<meta property="article:tag" content="二叉树的中序遍历">
-<meta property="article:tag" content="栈">
-<meta property="article:tag" content="二叉树">
+<meta property="article:tag" content="OpenJudge">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="STL">
+<meta property="article:tag" content="Array">
+<meta property="article:tag" content="C">
+<meta property="article:tag" content="Stack">
+<meta property="article:tag" content="String">
+<meta property="article:tag" content="Queue">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2418,7 +2409,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/fbed3bd6.html">
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/3EN78FX.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
@@ -2439,7 +2430,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        使用 “自带栈” 解决中序遍历（2）
+        扩号匹配问题
       </h1>
       <div class='new-meta-box'>
         
@@ -2458,14 +2449,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/LeetCode/">LeetCode</a><span class="sep"></span><a class="category-link" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/">简单题</a>
+    <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/LeetCode/" itemprop="url"><span itemprop="name">LeetCode</span></a>
-      </span>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/" itemprop="url"><span itemprop="name">简单题</span></a>
+        <a href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
       </span>
     
   </div>
@@ -2474,10 +2461,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-25T13:12:50+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-24T18:16:11+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年5月25日</p>
+    <p>发布于：2024年7月24日</p>
   </a>
 </div>
 
@@ -2500,32 +2487,37 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
-<p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-inorder-traversal/description/">94. 二叉树的中序遍历</a></p>
-</blockquote>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>在某个字符串（长度不超过 100）中有左括号、右括号和大小写字母；规定（与常见的算数式子一样）任何一个左括号都从内到外与在它右边且距离最近的右括号匹配。写一个程序，找到无法匹配的左括号和右括号，输出原来字符串，并在下一行标出不能匹配的括号。不能匹配的左括号用 "$“标注，不能匹配的右括号用”?" 标注.</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>输入包括多组数据，每组数据一行，包含一个字符串，只包含左右括号和大小写字母，字符串长度不超过 100<br>
+注意：cin.getline (str,100) 最多只能输入 99 个字符！</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>对每组输出数据，输出两行，第一行包含原始输入字符，第二行由 "<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">"</mi><mo separator="true">,</mo><mi mathvariant="normal">"</mi><mo stretchy="false">?</mo><mi mathvariant="normal">"</mi><mtext> 和空格组成，</mtext><mi mathvariant="normal">"</mi></mrow><annotation encoding="application/x-tex">","?"和空格组成，"</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">"</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">"</span><span class="mclose">?</span><span class="mord">"</span><span class="mord cjk_fallback"> 和</span><span class="mord cjk_fallback">空</span><span class="mord cjk_fallback">格</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">，</span><span class="mord">"</span></span></span></span>“和”?" 表示与之对应的左括号和右括号不能匹配。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">((<span class="built_in">ABCD</span>(x)</span><br><span class="line">)(<span class="built_in">rttyy</span>())sss)(</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">((<span class="built_in">ABCD</span>(x)</span><br><span class="line">$$</span><br><span class="line">)(<span class="built_in">rttyy</span>())sss)(</span><br><span class="line">?            ?$</span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="思路"> 思路</span></h2>
-<blockquote>
-<p>我们都知道中序遍历是左边 ——&gt; 中间 ——&gt; 右边</p>
-</blockquote>
-<h2><span id="解题方法"> 解题方法</span></h2>
+<p>括号匹配主要是使用栈来解决，遇到左括号就入栈，遇到右括号就出栈，如果栈为空，说明右括号没有匹配的左括号，如果栈不为空，说明左括号没有匹配的右括号。</p>
+<h2><span id="解题步骤"> 解题步骤</span></h2>
 <ol>
-<li>一直向左边走</li>
-<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
-<li>继续一直向左边走。</li>
-<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
-<li>结束条件是 p 和栈 S 都为空。</li>
+<li>设置字符串 <code>str</code> 和结果字符串 <code>res</code>，栈 <code>S</code> 和队列 <code>Q2</code>，还有一个数组 <code>res1</code>，用来记录左括号和右括号的匹配情况</li>
+<li>读入字符串 <code>str</code></li>
+<li>遍历字符串，遇到左括号就入栈 <code>S</code>，遇到右括号就出栈 <code>S</code>，直到栈为空</li>
+<li>如果栈 <code>S</code> 为空，说明右括号没有匹配的左括号，就要将右括号入队列 <code>Q2</code></li>
+<li>如果栈 <code>S</code> 不为空，说明左括号没有匹配的右括号。</li>
+<li>遍历字符串，将左括号和右括号的匹配情况记录到数组 <code>res1</code> 中</li>
+<li>遍历数组 <code>res1</code>，根据左括号和右括号的匹配情况，将 <code>res</code> 字符串填充</li>
+<li>输出原字符串和结果字符串</li>
+<li>清空结果字符串和数组 <code>res1</code></li>
 </ol>
-<h2><span id="复杂度"> 复杂度</span></h2>
-<p>时间复杂度:</p>
-<blockquote>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
-</blockquote>
-<p>空间复杂度:</p>
-<blockquote>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
-</blockquote>
 <h2><span id="code"> Code</span></h2>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode {</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *right;</span></span><br><span class="line"><span class="comment"> * };</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span> {</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> **<span class="title">TreeNode</span>;</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">StackNode</span> *<span class="title">next</span>;</span></span><br><span class="line">} StackNode, *Stack;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">Push</span><span class="params">(Stack *S, <span class="keyword">struct</span> TreeNode **tNode)</span> {</span><br><span class="line"> StackNode *SN = (StackNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(StackNode));</span><br><span class="line"> SN-&gt;TreeNode = tNode;</span><br><span class="line"> <span class="keyword">if</span>(!*S) {</span><br><span class="line">  SN-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">  (*S) = SN; </span><br><span class="line"> } <span class="keyword">else</span> {</span><br><span class="line">  SN-&gt;next = *S;</span><br><span class="line">  *S = SN;</span><br><span class="line"> }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 出栈</span></span><br><span class="line"><span class="keyword">struct</span> TreeNode **<span class="title function_">Pop</span><span class="params">(Stack *S)</span> {</span><br><span class="line"> <span class="keyword">if</span>(*S) {</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> **<span class="title">p</span> =</span> (*S)-&gt;TreeNode;</span><br><span class="line">  StackNode *q = *S;</span><br><span class="line">  (*S) = (*S)-&gt;next;</span><br><span class="line">  <span class="built_in">free</span>(q);</span><br><span class="line">  <span class="keyword">return</span> p;</span><br><span class="line"> } <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* <span class="title function_">inorderTraversal</span><span class="params">(<span class="keyword">struct</span> TreeNode* root, <span class="type">int</span>* returnSize)</span> {</span><br><span class="line">    Stack S = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">p</span> =</span> root;</span><br><span class="line">    <span class="type">int</span> *a = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">100</span>), *q = a;</span><br><span class="line">    <span class="keyword">if</span>(root) Push(&amp;S, &amp;root);</span><br><span class="line"> <span class="keyword">while</span>(p || S) {</span><br><span class="line">  <span class="keyword">if</span>(p) {</span><br><span class="line">   <span class="keyword">if</span>(p-&gt;left) Push(&amp;S, &amp;p-&gt;left);</span><br><span class="line">   p = p-&gt;left;</span><br><span class="line">  } <span class="keyword">else</span> {</span><br><span class="line">   p = *Pop(&amp;S);</span><br><span class="line">            *(q++) = p-&gt;val;</span><br><span class="line">            <span class="keyword">if</span>(p-&gt;right) Push(&amp;S, &amp;p-&gt;right);</span><br><span class="line">            p = p-&gt;right;</span><br><span class="line">  }</span><br><span class="line"> }</span><br><span class="line">    *returnSize = q - a;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	string str, res;</span><br><span class="line">	array&lt;<span class="type">int</span>, 100&gt; res1 {};</span><br><span class="line">	queue&lt;<span class="type">int</span>&gt; Q2;</span><br><span class="line">	stack&lt;<span class="type">int</span>&gt; S;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">getline</span>(cin, str) &amp;&amp; str[<span class="number">0</span>]) {</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">size</span>(); i++) {</span><br><span class="line">			<span class="keyword">if</span>(str[i] == <span class="string">'('</span>) S.<span class="built_in">push</span>(i);</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(str[i] == <span class="string">')'</span>) {</span><br><span class="line">				<span class="keyword">if</span>(!S.<span class="built_in">empty</span>()) S.<span class="built_in">pop</span>();</span><br><span class="line">				<span class="keyword">else</span> Q2.<span class="built_in">push</span>(i);</span><br><span class="line">			}</span><br><span class="line">		}	</span><br><span class="line">		<span class="keyword">while</span>(!S.<span class="built_in">empty</span>()) {</span><br><span class="line">			res1[S.<span class="built_in">top</span>()] = <span class="number">1</span>;</span><br><span class="line">			S.<span class="built_in">pop</span>();</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">while</span>(!Q2.<span class="built_in">empty</span>()) {</span><br><span class="line">			res1[Q2.<span class="built_in">front</span>()] = <span class="number">2</span>;</span><br><span class="line">			Q2.<span class="built_in">pop</span>();</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">size</span>(); i++) {</span><br><span class="line">			<span class="keyword">if</span>(res1[i] == <span class="number">0</span>) res.<span class="built_in">insert</span>(res.<span class="built_in">end</span>(), <span class="string">' '</span>);</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(res1[i] == <span class="number">1</span>) res.<span class="built_in">insert</span>(res.<span class="built_in">end</span>(), <span class="string">'$'</span>);</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(res1[i] == <span class="number">2</span>) res.<span class="built_in">insert</span>(res.<span class="built_in">end</span>(), <span class="string">'?'</span>);</span><br><span class="line">		}</span><br><span class="line">		cout &lt;&lt; str &lt;&lt; endl &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">		res.<span class="built_in">clear</span>();</span><br><span class="line">		res1.<span class="built_in">fill</span>(<span class="number">0</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c"> C</span></h3>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">char</span> str[<span class="number">100</span>], res[<span class="number">100</span>];</span><br><span class="line">    <span class="type">int</span> res1[<span class="number">100</span>];</span><br><span class="line">    <span class="keyword">while</span>(gets(str) &amp;&amp; str[<span class="number">0</span>]) {</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) res1[i] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) res[i] = <span class="string">'\0'</span>;</span><br><span class="line">        <span class="type">int</span> S[<span class="number">100</span>], Q2[<span class="number">100</span>], top = <span class="number">-1</span>, front = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; str[i]; i++) {</span><br><span class="line">            <span class="keyword">if</span>(str[i] == <span class="string">'('</span>) S[++top] = i;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(str[i] == <span class="string">')'</span>) {</span><br><span class="line">                <span class="keyword">if</span>(top &gt;= <span class="number">0</span>) top--;</span><br><span class="line">                <span class="keyword">else</span> Q2[++front] = i;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= top; i++) res1[S[i]] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= front; i++) res1[Q2[i]] = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; str[i]; i++) {</span><br><span class="line">            <span class="keyword">if</span>(res1[i] == <span class="number">0</span>) res[i] = <span class="string">' '</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(res1[i] == <span class="number">1</span>) res[i] = <span class="string">'$'</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(res1[i] == <span class="number">2</span>) res[i] = <span class="string">'?'</span>;</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%s\n%s\n"</span>, str, res);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
   </div>
   
   
@@ -2541,8 +2533,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">使用 “自带栈” 解决中序遍历（2）</div>
-            <div class="license-link"><a href="https://www.mryan2005.top/posts/fbed3bd6.html">https://www.mryan2005.top/posts/fbed3bd6.html</a>
+            <div class="license-title">扩号匹配问题</div>
+            <div class="license-link"><a href="https://www.mryan2005.top/posts/3EN78FX.html">https://www.mryan2005.top/posts/3EN78FX.html</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -2551,11 +2543,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2024年5月25日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
                 <div class="license-meta-text">2024年7月24日</div>
               </div>
               
@@ -2593,8 +2580,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>二叉树的中序遍历</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%A0%88/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>栈</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>二叉树</p></a></div>
-  <span hidden itemprop="keywords">二叉树的中序遍历 栈 二叉树</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenJudge/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenJudge</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STL/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Array/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Array</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Stack/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Stack</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/String/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>String</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Queue/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Queue</p></a></div>
+  <span hidden itemprop="keywords">OpenJudge C++ STL Array C Stack String Queue</span>
 
 
         
@@ -2634,19 +2621,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/816f0c9a.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>矩阵的特征值</p>
-          <p class='content'> 特征多项式
-特征多项式是指 f(λ)=∣A−λE∣f(\lambda) = |A - λE|f(λ)=∣A−λE∣。
-依然，还是上面的例子，特征多项式是 (λ−4)(λ+2)(λ-4)(λ+2...</p>
-        </a>
       
-      
-        <a class='next' href='/posts/6f990142.html'>
-          <p class='title'>点估计<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'> 参数估计问题
-是指当所研究的总体分布类型已知，但分布中含有一个或多个未知参数时，如何根据样本来估计未知参数的问题。
-譬如：一批灯泡寿命的预测，如果将灯泡的寿命 XXX 看作一个总体，根据实际经...</p>
+        <a class='next' href='/posts/N1HMND.html'>
+          <p class='title'>矩阵归零消减序列和<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>总时间限制: 1000ms 内存限制: 65536kB
+ 描述
+给定一个 n*n 的矩阵（3 &lt;= n &lt;= 100，元素的值都是非负整数）。通过 (n-1) 次实施下述过程，可把这...</p>
         </a>
       
     </div>
@@ -2702,7 +2682,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 解题方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 解题步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C++ STL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3820,7 +3800,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/","name":"LeetCode"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/LeetCode/简单题/","name":"简单题"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/fbed3bd6.html","name":"使用 “自带栈” 解决中序遍历（2）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"使用 “自带栈” 解决中序遍历（2）","description":"\nProblem: 94. 二叉树的中序遍历\n\n 思路\n\n我们都知道中序遍历是左边 ——&gt; 中间 ——&gt; 右边\n\n 解题方法\n\n一直向左边走\n到达左边尽头后弹出并打印，然后向右边走一个。\n继续一直向左边走。\n到达左边尽头后弹出并打印，然后向右边走一个。\n结束条件是 p 和栈 S 都为空。\n\n 复杂度\n时间复杂度:\n\nO(n)O(n)O(n)\n\n空间复杂度:","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/fbed3bd6.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/fbed3bd6.html","wordCount":185,"datePublished":"2024-05-25T13:12:50.000Z","dateModified":"2024-07-24T10:23:32.624Z","articleSection":"LeetCode","keywords":"二叉树的中序遍历,栈,二叉树","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/OpenJudge/","name":"OpenJudge"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/3EN78FX.html","name":"扩号匹配问题"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"扩号匹配问题","description":"总时间限制: 1000ms 内存限制: 65536kB\n 描述\n在某个字符串（长度不超过 100）中有左括号、右括号和大小写字母；规定（与常见的算数式子一样）任何一个左括号都从内到外与在它右边且距离最近的右括号匹配。写一个程序，找到无法匹配的左括号和右括号，输出原来字符串，并在下一行标出不能匹配的括号。不能匹配的左括号用 \"$“标注，不能匹配的右括号用”?\" 标注.\n 输入\n输入包括多组数据，每组数据一行，包含一个字符串，只包含左右括号和大小写字母，字符串长度不超过 100\n注意：cin.getline (str,100) 最多只能输入 99 个字符！\n 输出\n对每组输出数据，输出两行，第一行包含原始输入字符，第二行由 \"\",\"?\" 和空格组成，\"\",\"?\"和空格组成，\"\",\"?\" 和空格组成，\"“和”?\" 表示与之对应的左括号和右括号不能匹配。\n 样例输入\n12((ABCD(x))(rttyy())sss)(","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/3EN78FX.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/3EN78FX.html","wordCount":411,"datePublished":"2024-07-24T18:16:11.000Z","dateModified":"2024-07-24T10:23:32.624Z","articleSection":"OpenJudge","keywords":"OpenJudge,C++,STL,Array,C,Stack,String,Queue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
