@@ -40,6 +40,12 @@
       screenshot:
       keywords: lofter
       description: 我的lofter主页
+    - title: OpenJudge
+      avatar: 
+      url: http://openjudge.cn/user/1380396/
+      screenshot:
+      keywords: OpenJudge
+      description: 我的OpenJudge主页
 - group: 我朋友们的网站 # 分组标题
   description: 欢迎前去他们的网站 # 分组描述
   items:
