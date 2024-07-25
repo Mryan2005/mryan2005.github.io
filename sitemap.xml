@@ -29,6 +29,15 @@
   </url>
   
   <url>
+    <loc>https://www.mryan2005.top/posts/351GJ1G.html</loc>
+    
+    <lastmod>2024-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mryan2005.top/posts/3EN78FX.html</loc>
     
     <lastmod>2024-07-25</lastmod>
@@ -587,7 +596,7 @@
   </url>
   
   <url>
-    <loc>https://www.mryan2005.top/about/index.html</loc>
+    <loc>https://www.mryan2005.top/categories/index.html</loc>
     
     <lastmod>2024-07-25</lastmod>
     
@@ -596,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://www.mryan2005.top/categories/index.html</loc>
+    <loc>https://www.mryan2005.top/about/index.html</loc>
     
     <lastmod>2024-07-25</lastmod>
     
@@ -755,6 +764,20 @@
   
   <url>
     <loc>https://www.mryan2005.top/tags/Queue/</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2024-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mryan2005.top/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/</loc>
     <lastmod>2024-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
