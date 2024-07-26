@@ -44,7 +44,7 @@ Bill 3 2
 3. 用`sort`排序`vector<pair<int, int>>`
 4. 用`sort`排序`vector<string>`，然后按照长度从小到大排序。
 5. 输出
-6. 如果`flag`为0，输出`None`
+6. 如果`flag`为0，输出`None`。这里要感谢[Looy_cai的博文](https://blog.csdn.net/lalala625/article/details/113404312)
 
 ## Code
 
