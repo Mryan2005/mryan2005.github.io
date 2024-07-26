@@ -21,7 +21,7 @@
 <li>用 <code>sort</code> 排序 <code>vector&lt;pair&lt;int, int&gt;&gt;</code></li>
 <li>用 <code>sort</code> 排序 <code>vector&lt;string&gt;</code>，然后按照长度从小到大排序。</li>
 <li>输出</li>
-<li>如果 <code>flag</code> 为 0，输出 <code>None</code></li>
+<li>如果 <code>flag</code> 为 0，输出 <code>None</code>。这里要感谢 <a href="https://blog.csdn.net/lalala625/article/details/113404312">Looy_cai 的博文</a></li>
 </ol>
 <h2><span id="code"> Code</span></h2>
 <h3><span id="c-stl"> C++ STL</span></h3>
