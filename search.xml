@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>生日相同 2.0</title>
+    <url>/posts/3DJB0B8.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>在一个有 180 人的大班级中，存在两个人生日相同的概率非常大，现给出每个学生的名字，出生月日。试找出所有生日相同的学生。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行为整数 n，表示有 n 个学生，n ≤ 180。此后每行包含一个字符串和两个整数，分别表示学生的名字（名字第一个字母大写，其余小写，不含空格，且长度小于 20）和出生月 (1 ≤ m ≤ 12) 日 (1 ≤ d ≤ 31)。名字、月、日之间用一个空格分隔</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>每组生日相同的学生，输出一行，其中前两个数字表示月和日，后面跟着所有在当天出生的学生的名字，数字、名字之间都用一个空格分隔。对所有的输出，要求按日期从前到后的顺序输出。 对生日相同的名字，按名字从短到长按序输出，长度相同的按字典序输出。如没有生日相同的学生，输出”None”</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line">Avril <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Candy <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Tim <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Sufia <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Lagrange <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Bill <span class="number">3</span> <span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">2</span> Tim Bill Avril</span><br><span class="line"><span class="number">4</span> <span class="number">5</span> Candy Sufia Lagrange</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="思路"> 思路</span></h2>
+<ol>
+<li>用 <code>map&lt;pair&lt;int, int&gt;, vector&lt;string&gt;&gt;</code> 存储生日相同的学生名字</li>
+<li>用 <code>vector&lt;pair&lt;int, int&gt;&gt;</code> 存储生日相同的日期</li>
+<li>用 <code>sort</code> 排序 <code>vector&lt;pair&lt;int, int&gt;&gt;</code></li>
+<li>用 <code>sort</code> 排序 <code>vector&lt;string&gt;</code>，然后按照长度从小到大排序。</li>
+<li>输出</li>
+<li>如果 <code>flag</code> 为 0，输出 <code>None</code></li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	string tempName;</span><br><span class="line">	pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; tempDate;</span><br><span class="line">	vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; List;</span><br><span class="line">	map&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;, vector&lt;string&gt;&gt; mp;		<span class="comment">// (3, 2) -&gt; ["Avril", "Tim"]</span></span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">		cin &gt;&gt; tempName &gt;&gt; tempDate.first &gt;&gt; tempDate.second;</span><br><span class="line">		mp[tempDate].<span class="built_in">insert</span>(mp[tempDate].<span class="built_in">end</span>(), tempName);</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> j = <span class="number">0</span>; j &lt; List.<span class="built_in">size</span>(); j++) {</span><br><span class="line">			<span class="keyword">if</span>(List[j] == tempDate) <span class="keyword">goto</span> out;</span><br><span class="line">		}</span><br><span class="line">		List.<span class="built_in">insert</span>(List.<span class="built_in">end</span>(), tempDate);</span><br><span class="line">		out:;</span><br><span class="line">	}</span><br><span class="line">	<span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">sort</span>(List.<span class="built_in">begin</span>(), List.<span class="built_in">end</span>());</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i: List) {</span><br><span class="line">		<span class="keyword">if</span>(mp[i].<span class="built_in">size</span>() != <span class="number">1</span>) {</span><br><span class="line">			flag = <span class="number">1</span>;</span><br><span class="line">			<span class="built_in">sort</span>(mp[i].<span class="built_in">begin</span>(), mp[i].<span class="built_in">end</span>());</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> j = <span class="number">0</span>; j &lt; mp[i].<span class="built_in">size</span>()<span class="number">-1</span>; j++) {</span><br><span class="line">				<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> k = <span class="number">0</span>; k &lt; mp[i].<span class="built_in">size</span>()<span class="number">-1</span>; k++) {</span><br><span class="line">					<span class="keyword">if</span>(mp[i][k].<span class="built_in">size</span>() &gt; mp[i][k+<span class="number">1</span>].<span class="built_in">size</span>()) {</span><br><span class="line">						tempName = mp[i][k];</span><br><span class="line">						mp[i][k] = mp[i][k+<span class="number">1</span>];</span><br><span class="line">						mp[i][k+<span class="number">1</span>] = tempName;</span><br><span class="line">					}</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">			cout &lt;&lt; i.first &lt;&lt; <span class="string">" "</span> &lt;&lt; i.second;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> j = <span class="number">0</span>; j &lt; mp[i].<span class="built_in">size</span>(); j++) {</span><br><span class="line">				cout &lt;&lt; <span class="string">" "</span> &lt;&lt; mp[i][j];</span><br><span class="line">			}</span><br><span class="line">			cout &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">if</span>(!flag) cout &lt;&lt; <span class="string">"None"</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="测试用例"> 测试用例</span></h2>
+<h3><span id="测试用例-1"> 测试用例 1</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line">Avril <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Candy <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Tim <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Sufia <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Lagrange <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Bill <span class="number">3</span> <span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">2</span> Tim Bill Avril</span><br><span class="line"><span class="number">4</span> <span class="number">5</span> Candy Sufia Lagrange</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-2"> 测试用例 2</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line">Avril <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Candy <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Tim <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Sufia <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Lagrange <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Bill <span class="number">3</span> <span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">2</span> Tim Avril</span><br><span class="line"><span class="number">4</span> <span class="number">5</span> Candy Sufia Lagrange</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-3"> 测试用例 3</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line">Avril <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Candy <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Tim <span class="number">3</span> <span class="number">3</span></span><br><span class="line">Sufia <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Lagrange <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Bill <span class="number">3</span> <span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">3</span> Tim Bill</span><br><span class="line"><span class="number">4</span> <span class="number">5</span> Candy Sufia Lagrange</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-4"> 测试用例 4</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">6</span></span><br><span class="line">Avril <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Candy <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Tim <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Bufia <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Lagrange <span class="number">4</span> <span class="number">5</span></span><br><span class="line">Bill <span class="number">3</span> <span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">2</span> Tim Bill Avril</span><br><span class="line"><span class="number">4</span> <span class="number">5</span> Bufia Candy Lagrange</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-5"> 测试用例 5</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line">Avril <span class="number">3</span> <span class="number">2</span></span><br><span class="line">Candy <span class="number">4</span> <span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">None</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>String</tag>
+        <tag>Map</tag>
+        <tag>Vector</tag>
+        <tag>Sort</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>请开发一个自上而下的模块化程序，用于完成以下任务</title>
     <url>/posts/351GJ1G.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
