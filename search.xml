@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>计算矩阵边缘元素之和</title>
+    <url>/posts/FHSV6J.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>输入一个整数矩阵，计算位于矩阵边缘的元素之和。所谓矩阵边缘的元素，就是第一行和最后一行的元素以及第一列和最后一列的元素。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行为整数 k，表示有 k 组数据。<br>
+每组数据有多行组成，表示一个矩阵：<br>
+第一行分别为矩阵的行数 m 和列数 n（m &lt; 100，n &lt; 100），两者之间以空格分隔。<br>
+接下来输入的 m 行数据中，每行包含 n 个整数，整数之间以空格作为间隔。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出对应矩阵的边缘元素和，一个一行。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">4</span> <span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">3</span> <span class="number">3</span></span><br><span class="line"><span class="number">3</span> <span class="number">4</span> <span class="number">1</span></span><br><span class="line"><span class="number">3</span> <span class="number">7</span> <span class="number">1</span></span><br><span class="line"><span class="number">2</span> <span class="number">0</span> <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">15</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="思路"> 思路</span></h2>
+<h3><span id="直接计算"> 直接计算</span></h3>
+<ol>
+<li>用 <code>for</code> 循环输入矩阵，在循环中用 <code>if</code> 判断是否为边缘元素，是则加入 <code>sum</code> 中。</li>
+<li>输出 <code>sum</code>。</li>
+</ol>
+<h3><span id="使用数组"> 使用数组</span></h3>
+<ol>
+<li>用 <code>array&lt;array&lt;int, 100&gt;, 100&gt; a;</code> 定义二维数组。</li>
+<li>用 <code>for</code> 循环输入矩阵。</li>
+<li>用 <code>for</code> 循环判断是否为边缘元素，是则加入 <code>sum</code> 中。</li>
+<li>输出 <code>sum</code>。</li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="c"> C++</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> k, m, n, sum = <span class="number">0</span>, tmp;</span><br><span class="line">	cin &gt;&gt; k;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= k; i++) {</span><br><span class="line">		cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++) {</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n; k++) {</span><br><span class="line">					cin &gt;&gt; tmp;</span><br><span class="line">					<span class="keyword">if</span>(j == <span class="number">0</span> || k == <span class="number">0</span> || j == m<span class="number">-1</span> || k == n<span class="number">-1</span>) sum += tmp;</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">		sum = <span class="number">0</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">int</span> k, m, n, sum = <span class="number">0</span>, tmp;</span><br><span class="line">    cin &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= k; i++) {</span><br><span class="line">        cin &gt;&gt; m &gt;&gt; n;</span><br><span class="line">        array&lt;array&lt;<span class="type">int</span>, 100&gt;, 100&gt; a;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++) {</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n; k++) {</span><br><span class="line">                cin &gt;&gt; a[j][k];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++) {</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n; k++) {</span><br><span class="line">                <span class="keyword">if</span>(j == <span class="number">0</span> || k == <span class="number">0</span> || j == m<span class="number">-1</span> || k == n<span class="number">-1</span>) sum += a[j][k];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        cout &lt;&lt; sum &lt;&lt; endl;</span><br><span class="line">        sum = <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c"> C</span></h3>
+<h3><span id="解法一直接计算"> 解法一：直接计算</span></h3>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> k, m, n, sum = <span class="number">0</span>, tmp;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= k; i++) {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++) {</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n; k++) {</span><br><span class="line">                    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;tmp);</span><br><span class="line">                    <span class="keyword">if</span>(j == <span class="number">0</span> || k == <span class="number">0</span> || j == m<span class="number">-1</span> || k == n<span class="number">-1</span>) sum += tmp;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">        sum = <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="解法二使用数组"> 解法二：使用数组</span></h3>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> k, m, n, sum = <span class="number">0</span>, tmp;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= k; i++) {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">        <span class="type">int</span> a[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++) {</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n; k++) {</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[j][k]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; m; j++) {</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n; k++) {</span><br><span class="line">                <span class="keyword">if</span>(j == <span class="number">0</span> || k == <span class="number">0</span> || j == m<span class="number">-1</span> || k == n<span class="number">-1</span>) sum += a[j][k];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">        sum = <span class="number">0</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>Matrix</tag>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>删除数组中的元素（链表）</title>
     <url>/posts/1KR2YDN.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
@@ -199,8 +250,8 @@ d)  显示已排序的列表。</p>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
         <tag>STL</tag>
-        <tag>Array</tag>
         <tag>C</tag>
+        <tag>Array</tag>
         <tag>Stack</tag>
         <tag>String</tag>
         <tag>Queue</tag>
@@ -249,9 +300,9 @@ d)  显示已排序的列表。</p>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
         <tag>STL</tag>
+        <tag>C</tag>
         <tag>Array</tag>
         <tag>2D Array</tag>
-        <tag>C</tag>
       </tags>
   </entry>
   <entry>
