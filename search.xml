@@ -21,7 +21,7 @@
 <li>用 <code>int n;</code> 定义整数</li>
 <li>用 <code>cin &gt;&gt; n;</code> 输入整数</li>
 <li>用 <code>int summaryLine = 0;</code> 定义行字符数</li>
-<li>用 <code>for</code> 循环接收字符串</li>
+<li>用 <code>for</code> 循环接收字符串，这里用了 <code>cin &gt;&gt; str;</code> 只能接收一个单词，如果有标点符号则会被分开的特性。</li>
 <li>用 <code>if</code> 判断是否超过 80 个字符，是则换行，否则输出字符串。注意：<code>str.size()+1</code> 是字符串长度加上一个空格的长度，此时设 <code>summaryLine</code> 为字符串长度。</li>
 <li>用 <code>else if</code> 判断是否为第一个字符串，是则输出字符串，否则输出空格和字符串，并更新 <code>summaryLine</code>。</li>
 <li>用 <code>else</code> 输出空格和字符串，并更新 <code>summaryLine</code>。</li>
