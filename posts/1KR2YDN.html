@@ -70,29 +70,28 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Mryan2005's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>点评赛车 - Mryan2005's Blog</title>
-  <meta name="keywords" content="OpenJudge,null">
+  <title>删除数组中的元素（链表） - Mryan2005's Blog</title>
+  <meta name="keywords" content="OpenJudge,C++,LinkedList,null">
   <meta desc name="description" content="总时间限制: 1000ms 内存限制: 65536kB
  描述
-4 名专家对 4 款赛车进行评论
-1）A 说：2 号赛车是最好的；
-2）B 说：4 号赛车是最好的；
-3）C 说：3 号赛车不是最好的；
-4）D 说： B 说错了。
-事实上只有 1 款赛车最佳，且只有 1 名专家说对了，其他 3 人都说错了。
-请编程... - Mryan2005 - Mryan2005's Blog">
+给定 N 个整数，将这些整数中与 M 相等的删除
+假定给出的整数序列为：1,3,3,0,-3,5,6,8,3,10,22,-1,3,5,11,20,100,3,9,3
+应该将其放在一个链表中，链表长度为 20
+要删除的数是 3，删除以后，链表中只剩 ... - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="点评赛车">
-<meta property="og:url" content="https://www.mryan2005.top/posts/AK4DW9.html">
+<meta property="og:title" content="删除数组中的元素（链表）">
+<meta property="og:url" content="https://www.mryan2005.top/posts/1KR2YDN.html">
 <meta property="og:site_name" content="Mryan2005&#39;s Blog">
-<meta property="og:description" content="总时间限制: 1000ms 内存限制: 65536kB  描述 4 名专家对 4 款赛车进行评论 1）A 说：2 号赛车是最好的； 2）B 说：4 号赛车是最好的； 3）C 说：3 号赛车不是最好的； 4）D 说： B 说错了。 事实上只有 1 款赛车最佳，且只有 1 名专家说对了，其他 3 人都说错了。 请编程输出最佳车的车号，以及说对的专家。  输入 无输入。  输出 输出两行。第一行输出最佳">
+<meta property="og:description" content="总时间限制: 1000ms 内存限制: 65536kB  描述 给定 N 个整数，将这些整数中与 M 相等的删除 假定给出的整数序列为：1,3,3,0,-3,5,6,8,3,10,22,-1,3,5,11,20,100,3,9,3 应该将其放在一个链表中，链表长度为 20 要删除的数是 3，删除以后，链表中只剩 14 个元素：1 0 -3 5 6 8 10 22 -1 5 11 20 100 9">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-07-21T13:40:20.000Z">
+<meta property="article:published_time" content="2024-07-27T09:00:53.000Z">
 <meta property="article:modified_time" content="2024-07-27T01:11:51.213Z">
 <meta property="article:author" content="Mryan2005">
 <meta property="article:tag" content="OpenJudge">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="LinkedList">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2408,7 +2407,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/AK4DW9.html">
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/1KR2YDN.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
@@ -2429,7 +2428,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        点评赛车
+        删除数组中的元素（链表）
       </h1>
       <div class='new-meta-box'>
         
@@ -2460,10 +2459,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-21T13:40:20+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-27T09:00:53+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年7月21日</p>
+    <p>发布于：2024年7月27日</p>
   </a>
 </div>
 
@@ -2488,31 +2487,40 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
-<p>4 名专家对 4 款赛车进行评论<br>
-1）A 说：2 号赛车是最好的；<br>
-2）B 说：4 号赛车是最好的；<br>
-3）C 说：3 号赛车不是最好的；<br>
-4）D 说： B 说错了。<br>
-事实上只有 1 款赛车最佳，且只有 1 名专家说对了，其他 3 人都说错了。<br>
-请编程输出最佳车的车号，以及说对的专家。</p>
+<p>给定 N 个整数，将这些整数中与 M 相等的删除<br>
+假定给出的整数序列为：1,3,3,0,-3,5,6,8,3,10,22,-1,3,5,11,20,100,3,9,3<br>
+应该将其放在一个链表中，链表长度为 20<br>
+要删除的数是 3，删除以后，链表中只剩 14 个元素：1 0 -3 5 6 8 10 22 -1 5 11 20 100 9</p>
+<p>要求：必须使用链表，不允许使用数组，也不允许不删除元素直接输出<br>
+程序中必须有链表的相关操作：建立链表，删除元素，输出删除后链表中元素，释放链表<br>
+不符合要求的程序即使通过，也会算作 0 分</p>
 <h2><span id="输入"> 输入</span></h2>
-<p>无输入。</p>
+<p>输入包含 3 行：<br>
+第一行是一个整数 n (1 &lt;= n &lt;= 200000)，代表数组中元素的个数。<br>
+第二行包含 n 个整数，代表数组中的 n 个元素。每个整数之间用空格分隔；每个整数的取值在 32 位有符号整数范围以内。<br>
+第三行是一个整数 k，代表待删除元素的值（k 的取值也在 32 位有符号整数范围内）。</p>
 <h2><span id="输出"> 输出</span></h2>
-<p>输出两行。第一行输出最佳车的车号（1-4 中的某个数字）。第二行输出说对的专家（A-D 中的某个字母）。</p>
+<p>输出只有 1 行：<br>
+将数组内所有待删除元素删除以后，输出数组内的剩余元素的值，每个整数之间用空格分隔。</p>
 <h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(无)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span> <span class="number">3</span> <span class="number">0</span> <span class="number">-3</span> <span class="number">5</span> <span class="number">6</span> <span class="number">8</span> <span class="number">3</span> <span class="number">10</span> <span class="number">22</span> <span class="number">-1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">11</span> <span class="number">20</span> <span class="number">100</span> <span class="number">3</span> <span class="number">9</span> <span class="number">3</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="样例输出"> 样例输出</span></h2>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">A</span><br></pre></td></tr></tbody></table></figure>
-<h2><span id="提示"> 提示</span></h2>
-<p>样例输出只是格式说明，并非正确答案</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">-3</span> <span class="number">5</span> <span class="number">6</span> <span class="number">8</span> <span class="number">10</span> <span class="number">22</span> <span class="number">-1</span> <span class="number">5</span> <span class="number">11</span> <span class="number">20</span> <span class="number">100</span> <span class="number">9</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="思路"> 思路</span></h2>
-<p><img src="https://s21.ax1x.com/2024/07/21/pk799DP.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/21/pk799DP.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt><br>
-<img src="https://s21.ax1x.com/2024/07/21/pk79put.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/21/pk79put.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt></p>
+<ol>
+<li>用 <code>struct node {int data; node *next;};</code> 定义链表</li>
+<li>用 <code>typedef node *List;</code> 定义链表指针</li>
+<li>用 <code>List init()</code> 初始化链表</li>
+<li>用 <code>for</code> 循环输入链表</li>
+<li>用 <code>for</code> 循环删除链表中的元素，注意这里删除操作中的 <code>q = q-&gt;next</code> 要放在 <code>for</code> 语句之外，否则会出现邻近的元素没被删除的情况。（注意：将结点删除后，要释放结点的内存空间）</li>
+<li>用 <code>for</code> 循环输出链表中的元素</li>
+</ol>
 <h2><span id="code"> Code</span></h2>
 <h3><span id="c"> C++</span></h3>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	cout &lt;&lt; <span class="string">"3\nD"</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> {<span class="type">int</span> data; node *next;};</span><br><span class="line"><span class="keyword">typedef</span> node *List;</span><br><span class="line"></span><br><span class="line"><span class="function">List <span class="title">init</span><span class="params">()</span> </span>{</span><br><span class="line">	List L = (node*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(node));</span><br><span class="line">	L-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">return</span> L;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	List L = <span class="built_in">init</span>(); node *p = L; <span class="type">int</span> n, b;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">		p-&gt;next = (node*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(node));</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">		cin &gt;&gt; p-&gt;data;</span><br><span class="line">	}</span><br><span class="line">	cin &gt;&gt; b;</span><br><span class="line">	<span class="keyword">for</span>(node *q = L, *k; q &amp;&amp; q-&gt;next;) {</span><br><span class="line">		<span class="keyword">if</span>(q-&gt;next-&gt;data == b) {k = q-&gt;next; q-&gt;next = k-&gt;next; <span class="built_in">free</span>(k);} <span class="keyword">else</span> q = q-&gt;next;</span><br><span class="line">	}</span><br><span class="line">	<span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(node *q = L-&gt;next; q; q = q-&gt;next) {</span><br><span class="line">		<span class="keyword">if</span>(i++ == <span class="number">0</span>) cout &lt;&lt; q-&gt;data;</span><br><span class="line">		<span class="keyword">else</span> cout &lt;&lt; <span class="string">" "</span> &lt;&lt; q-&gt;data;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h3><span id="c"> C</span></h3>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"3\nD"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span> {</span><span class="type">int</span> data; <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span>} node;</span><br><span class="line"></span><br><span class="line">node *<span class="title function_">init</span><span class="params">()</span> {</span><br><span class="line">    node *L = (node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(node));</span><br><span class="line">    L-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> L;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    node *L = init(), *p = L, *q, *k; <span class="type">int</span> n, b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">        p-&gt;next = (node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(node));</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;p-&gt;data);</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;b);</span><br><span class="line">    <span class="keyword">for</span>(q = L; q &amp;&amp; q-&gt;next;) {</span><br><span class="line">        <span class="keyword">if</span>(q-&gt;next-&gt;data == b) {k = q-&gt;next; q-&gt;next = k-&gt;next; <span class="built_in">free</span>(k);} <span class="keyword">else</span> q = q-&gt;next;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(q = L-&gt;next; q; q = q-&gt;next) {</span><br><span class="line">        <span class="keyword">if</span>(i++ == <span class="number">0</span>) <span class="built_in">printf</span>(<span class="string">"%d"</span>, q-&gt;data);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">" %d"</span>, q-&gt;data);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
   </div>
   
   
@@ -2528,8 +2536,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">点评赛车</div>
-            <div class="license-link"><a href="https://www.mryan2005.top/posts/AK4DW9.html">https://www.mryan2005.top/posts/AK4DW9.html</a>
+            <div class="license-title">删除数组中的元素（链表）</div>
+            <div class="license-link"><a href="https://www.mryan2005.top/posts/1KR2YDN.html">https://www.mryan2005.top/posts/1KR2YDN.html</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -2538,11 +2546,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2024年7月21日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
                 <div class="license-meta-text">2024年7月27日</div>
               </div>
               
@@ -2580,8 +2583,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenJudge/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenJudge</p></a></div>
-  <span hidden itemprop="keywords">OpenJudge</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenJudge/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenJudge</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LinkedList/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>LinkedList</p></a></div>
+  <span hidden itemprop="keywords">OpenJudge C++ LinkedList</span>
 
 
         
@@ -2621,20 +2624,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/16CK67F.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>计算鞍点</p>
+      
+        <a class='next' href='/posts/3DJB0B8.html'>
+          <p class='title'>生日相同 2.0<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>总时间限制: 1000ms 内存限制: 65536kB
  描述
-给定一个 5*5 的矩阵，每行只有一个最大值，每列只有一个最小值，寻找这个矩阵的鞍点。
-鞍点指的是矩阵中的一个元素，它是所在行的最...</p>
-        </a>
-      
-      
-        <a class='next' href='/posts/3D9ZPPE.html'>
-          <p class='title'>细菌实验分组<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>总时间限制: 1000ms 内存限制: 65536kB
- 描述
-有一种细菌分为 A、B 两个亚种，它们的外在特征几乎完全相同，仅仅在繁殖能力上有显著差别，A 亚种繁殖能力非常强，B 亚种的繁殖能...</p>
+在一个有 180 人的大班级中，存在两个人生日相同的概率非常大，现给出每个学生的名字，出生月日。试找出所有生日相同的学生。
+ 输入...</p>
         </a>
       
     </div>
@@ -2690,7 +2686,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3821,7 +3817,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/OpenJudge/","name":"OpenJudge"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/AK4DW9.html","name":"点评赛车"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"点评赛车","description":"总时间限制: 1000ms 内存限制: 65536kB\n 描述\n4 名专家对 4 款赛车进行评论\n1）A 说：2 号赛车是最好的；\n2）B 说：4 号赛车是最好的；\n3）C 说：3 号赛车不是最好的；\n4）D 说： B 说错了。\n事实上只有 1 款赛车最佳，且只有 1 名专家说对了，其他 3 人都说错了。\n请编程输出最佳车的车号，以及说对的专家。\n 输入\n无输入。\n 输出\n输出两行。第一行输出最佳车的车号（1-4 中的某个数字）。第二行输出说对的专家（A-D 中的某个字母）。\n 样例输入\n1(无)","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/AK4DW9.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/AK4DW9.html","wordCount":251,"datePublished":"2024-07-21T13:40:20.000Z","dateModified":"2024-07-27T01:11:51.213Z","articleSection":"OpenJudge","keywords":"OpenJudge","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/OpenJudge/","name":"OpenJudge"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/1KR2YDN.html","name":"删除数组中的元素（链表）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"删除数组中的元素（链表）","description":"总时间限制: 1000ms 内存限制: 65536kB\n 描述\n给定 N 个整数，将这些整数中与 M 相等的删除\n假定给出的整数序列为：1,3,3,0,-3,5,6,8,3,10,22,-1,3,5,11,20,100,3,9,3\n应该将其放在一个链表中，链表长度为 20\n要删除的数是 3，删除以后，链表中只剩 14 个元素：1 0 -3 5 6 8 10 22 -1 5 11 20 100 9\n要求：必须使用链表，不允许使用数组，也不允许不删除元素直接输出\n程序中必须有链表的相关操作：建立链表，删除元素，输出删除后链表中元素，释放链表\n不符合要求的程序即使通过，也会算作 0 分\n 输入\n输入包含 3 行：\n第一行是一个整数 n (1 &lt;= n &lt;= 200000)，代表数组中元素的个数。\n第二行包含 n 个整数，代表数组中的 n 个元素。每个整数之间用空格分隔；每个整数的取值在 32 位有符号整数范围以内。\n第三行是一个整数 k，代表待删除元素的值（k 的取值也在 32 位有符号整数范围内）。\n 输出\n输出只有 1 行：\n将数组内所有待删除元素删除以后，输出数组内的剩余元素的值，每个整数之间用空格分隔。\n 样例输入","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/1KR2YDN.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/1KR2YDN.html","wordCount":522,"datePublished":"2024-07-27T09:00:53.000Z","dateModified":"2024-07-27T01:11:51.213Z","articleSection":"OpenJudge","keywords":"OpenJudge,C++,LinkedList","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
