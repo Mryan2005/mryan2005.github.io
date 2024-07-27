@@ -45,7 +45,7 @@ of the line finally got his turn to "buy" his ice cream, he gave me two hugs.
 2. 用`int n;`定义整数
 3. 用`cin >> n;`输入整数
 4. 用`int summaryLine = 0;`定义行字符数
-5. 用`for`循环接收字符串
+5. 用`for`循环接收字符串，这里用了`cin >> str;`只能接收一个单词，如果有标点符号则会被分开的特性。
 6. 用`if`判断是否超过80个字符，是则换行，否则输出字符串。注意：`str.size()+1`是字符串长度加上一个空格的长度，此时设`summaryLine`为字符串长度。
 7. 用`else if`判断是否为第一个字符串，是则输出字符串，否则输出空格和字符串，并更新`summaryLine`。
 8. 用`else`输出空格和字符串，并更新`summaryLine`。
