@@ -47,6 +47,10 @@ categories: OpenJudge
 
 先按逆序输入（`for(int i = n-1; i >= 0; i--)`），然后再按逆序输出（`for(int i = 0; i < n; i++)`）
 
+### 方法三：递归
+
+递归的方法，先输入，然后递归输出。
+
 ## Code
 
 ### C
@@ -67,6 +71,8 @@ int main() {
 
 ### C++
 
+#### 非递归
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -79,5 +85,28 @@ int main() {
 		cout << a[i];
 		if(i < n-1) cout << " ";
 	}
+}
+```
+
+#### 递归
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void output(int n) {
+	if(n > 0) {
+		int a;
+		cin >> a;
+		output(n-1);
+		if(n == 1) cout << a;
+		else cout << " " << a;
+	}
+}
+
+int main() {
+	int n;
+	cin >> n;
+	output(n);
 }
 ```
