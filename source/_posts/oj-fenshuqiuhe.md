@@ -1,8 +1,8 @@
 ---
-title: oj-fenshuqiuhe
+title: 分数求和
 date: 2024-07-29 22:18:22
-tags:
-categories:
+tags: [C++, OpenJudge, C, STL]
+categories: OpenJudge
 ---
 
 总时间限制: 1000ms 内存限制: 65536kB
