@@ -70,23 +70,29 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Mryan2005's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>整数的个数 - Mryan2005's Blog</title>
-  <meta name="keywords" content="OpenJudge,null">
+  <title>求字母的个数 - Mryan2005's Blog</title>
+  <meta name="keywords" content="OpenJudge,C++,Map,null">
   <meta desc name="description" content="总时间限制: 1000ms 内存限制: 65536kB
  描述
-给定 k（1 &lt; k &lt; 100）个正整数，其中每个数都是大于等于 1，小于等于 10 的数。写程序计算给定的 k 个正整数中，1，5 和 10 出现的次数。 - Mryan2005 - Mryan2005's Blog">
+在一个字符串中找出元音字母 a,e,i,o,u 出现的次数。
+ 输入
+输入一行字符串（字符串中可能有空格，请用 gets (s) 方法把一行字符串输入到字符数组 s 中），字符串长度小于 80 个字符。
+ 输出
+输出一行，依次输出 a,e,i,o,u... - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="整数的个数">
-<meta property="og:url" content="https://www.mryan2005.top/posts/3R819W.html">
+<meta property="og:title" content="求字母的个数">
+<meta property="og:url" content="https://www.mryan2005.top/posts/3ZSPDD9.html">
 <meta property="og:site_name" content="Mryan2005&#39;s Blog">
-<meta property="og:description" content="总时间限制: 1000ms 内存限制: 65536kB  描述 给定 k（1 &lt; k &lt; 100）个正整数，其中每个数都是大于等于 1，小于等于 10 的数。写程序计算给定的 k 个正整数中，1，5 和 10 出现的次数。">
+<meta property="og:description" content="总时间限制: 1000ms 内存限制: 65536kB  描述 在一个字符串中找出元音字母 a,e,i,o,u 出现的次数。  输入 输入一行字符串（字符串中可能有空格，请用 gets (s) 方法把一行字符串输入到字符数组 s 中），字符串长度小于 80 个字符。  输出 输出一行，依次输出 a,e,i,o,u 在输入字符串中出现的次数，整数之间用空格分隔。  样例输入 1If so, you">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-07-10T13:39:05.000Z">
+<meta property="article:published_time" content="2024-07-29T15:47:37.000Z">
 <meta property="article:modified_time" content="2024-07-29T08:27:35.514Z">
 <meta property="article:author" content="Mryan2005">
 <meta property="article:tag" content="OpenJudge">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="Map">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2402,7 +2408,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/3R819W.html">
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/3ZSPDD9.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
@@ -2423,7 +2429,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        整数的个数
+        求字母的个数
       </h1>
       <div class='new-meta-box'>
         
@@ -2454,10 +2460,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-10T13:39:05+00:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-07-29T15:47:37+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年7月10日</p>
+    <p>发布于：2024年7月29日</p>
   </a>
 </div>
 
@@ -2482,23 +2488,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="post-body" itemprop="articleBody">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
-<p>给定 k（1 &lt; k &lt; 100）个正整数，其中每个数都是大于等于 1，小于等于 10 的数。写程序计算给定的 k 个正整数中，1，5 和 10 出现的次数。</p>
-<span id="more"></span>
+<p>在一个字符串中找出元音字母 a,e,i,o,u 出现的次数。</p>
 <h2><span id="输入"> 输入</span></h2>
-<p>输入有两行：第一行包含一个正整数 k，第二行包含 k 个正整数，每两个正整数用一个空格分开。</p>
+<p>输入一行字符串（字符串中可能有空格，请用 gets (s) 方法把一行字符串输入到字符数组 s 中），字符串长度小于 80 个字符。</p>
 <h2><span id="输出"> 输出</span></h2>
-<p>输出有三行，第一行为 1 出现的次数，，第二行为 5 出现的次数，第三行为 10 出现的次数。</p>
+<p>输出一行，依次输出 a,e,i,o,u 在输入字符串中出现的次数，整数之间用空格分隔。</p>
 <h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight basic"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">5</span> <span class="number">8</span> <span class="number">10</span> <span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">If so, you already have a Google Account. You can sign in on the right.</span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="样例输出"> 样例输出</span></h2>
-<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">1</span><br></pre></td></tr></tbody></table></figure>
-<h3><span id="来源"> 来源</span></h3>
-<p>计算概论 05－模拟考试 1</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5 4 3 7 3</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="提示"> 提示</span></h2>
+<p>注意，只统计小写元音字母 a,e,i,o,u 出现的次数。</p>
+<h2><span id="来源"> 来源</span></h2>
+<p>计算概论 05</p>
+<h2><span id="思路"> 思路</span></h2>
+<p>遍历字符串，统计元音字母的个数。</p>
+<p>这里可以考虑使用一个哈希表来存储元音字母的个数。</p>
 <h2><span id="code"> Code</span></h2>
-<h3><span id="c"> C</span></h3>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> k,count_1 = <span class="number">0</span> ,count_5 = <span class="number">0</span>, count_10 = <span class="number">0</span>, temp;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;k);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) {</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;temp);</span><br><span class="line">        <span class="keyword">if</span> (temp == <span class="number">1</span>) {</span><br><span class="line">            count_1++;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (temp == <span class="number">5</span>) {</span><br><span class="line">            count_5++;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> (temp == <span class="number">10</span>) {</span><br><span class="line">            count_10++;</span><br><span class="line">        }</span><br><span class="line">    } </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n%d\n%d\n"</span>, count_1, count_5, count_10);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<h3><span id="c"> C++</span></h3>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> k, temp;</span><br><span class="line">	array&lt;<span class="type">int</span>, 3&gt; a {};</span><br><span class="line">	cin &gt;&gt; k;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= k; i++) {</span><br><span class="line">		cin &gt;&gt; temp;</span><br><span class="line">		<span class="keyword">if</span>(temp == <span class="number">1</span>) a[<span class="number">0</span>]++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(temp == <span class="number">5</span>) a[<span class="number">1</span>]++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(temp == <span class="number">10</span>) a[<span class="number">2</span>]++;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) {</span><br><span class="line">		cout &lt;&lt; a[i] &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	string str;</span><br><span class="line">	map&lt;<span class="type">char</span>, <span class="type">int</span>&gt; mp;</span><br><span class="line">	<span class="built_in">getline</span>(cin, str);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">size</span>(); i++) {</span><br><span class="line">		<span class="keyword">if</span> (str[i] == <span class="string">'a'</span> || str[i] == <span class="string">'e'</span> || str[i] == <span class="string">'i'</span> || str[i] == <span class="string">'o'</span> || str[i] == <span class="string">'u'</span>) mp[str[i]]++;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> i: mp) {</span><br><span class="line">		cout &lt;&lt; i.second &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
   </div>
   
@@ -2515,8 +2523,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">整数的个数</div>
-            <div class="license-link"><a href="https://www.mryan2005.top/posts/3R819W.html">https://www.mryan2005.top/posts/3R819W.html</a>
+            <div class="license-title">求字母的个数</div>
+            <div class="license-link"><a href="https://www.mryan2005.top/posts/3ZSPDD9.html">https://www.mryan2005.top/posts/3ZSPDD9.html</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -2525,11 +2533,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2024年7月10日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
                 <div class="license-meta-text">2024年7月29日</div>
               </div>
               
@@ -2567,8 +2570,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenJudge/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenJudge</p></a></div>
-  <span hidden itemprop="keywords">OpenJudge</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenJudge/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenJudge</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Map/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Map</p></a></div>
+  <span hidden itemprop="keywords">OpenJudge C++ Map</span>
 
 
         
@@ -2608,22 +2611,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/EQK2BB.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>1 的个数</p>
+        <a class='prev' href='/posts/1A9MHEM.html'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>排队游戏</p>
           <p class='content'>总时间限制: 1000ms 内存限制: 65536kB
  描述
-给定一个十进制整数 N，求其对应 2 进制数中 1 的个数
-
- 输入
-第一个整数表示有 N 组测试数据，其后 N 行是对应的测试数...</p>
+在幼儿园中，老师安排小朋友做一个排队的游戏。首先老师精心的把数目相同的小男孩和小女孩编排在一个队列中，每个小孩按其在队列中的位置发...</p>
         </a>
       
       
-        <a class='next' href='/posts/21S6AF2.html'>
-          <p class='title'>奇数求和<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/posts/29YNBXC.html'>
+          <p class='title'>放苹果<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>总时间限制: 1000ms 内存限制: 65536kB
  描述
-计算非负整数 m 到 n（包括 m 和 n ）之间的所有奇数的和，其中，m 不大于 n，且 n 不大于 300。例如 m=3, n...</p>
+把 M 个同样的苹果放在 N 个同样的盘子里，允许有的盘子空着不放，问共有多少种不同的分法？（用 K 表示）5，1，1 和 1，5...</p>
         </a>
       
     </div>
@@ -2679,7 +2679,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> 来源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C++</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 样例输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 来源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Code</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"> C++ STL</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3810,7 +3810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/OpenJudge/","name":"OpenJudge"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/3R819W.html","name":"整数的个数"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"整数的个数","description":"总时间限制: 1000ms 内存限制: 65536kB\n 描述\n给定 k（1 &lt; k &lt; 100）个正整数，其中每个数都是大于等于 1，小于等于 10 的数。写程序计算给定的 k 个正整数中，1，5 和 10 出现的次数。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/3R819W.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/3R819W.html","wordCount":117,"datePublished":"2024-07-10T13:39:05.000Z","dateModified":"2024-07-29T08:27:35.514Z","articleSection":"OpenJudge","keywords":"OpenJudge","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.mryan2005.top/categories/OpenJudge/","name":"OpenJudge"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.mryan2005.top/posts/3ZSPDD9.html","name":"求字母的个数"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://www.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"求字母的个数","description":"总时间限制: 1000ms 内存限制: 65536kB\n 描述\n在一个字符串中找出元音字母 a,e,i,o,u 出现的次数。\n 输入\n输入一行字符串（字符串中可能有空格，请用 gets (s) 方法把一行字符串输入到字符数组 s 中），字符串长度小于 80 个字符。\n 输出\n输出一行，依次输出 a,e,i,o,u 在输入字符串中出现的次数，整数之间用空格分隔。\n 样例输入\n1If so, you already have a Google Account. You can sign in on the right.","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.mryan2005.top/posts/3ZSPDD9.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.mryan2005.top/posts/3ZSPDD9.html","wordCount":260,"datePublished":"2024-07-29T15:47:37.000Z","dateModified":"2024-07-29T08:27:35.514Z","articleSection":"OpenJudge","keywords":"OpenJudge,C++,Map","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
