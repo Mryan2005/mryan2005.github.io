@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>oj-fenshuqiuhe</title>
-    <url>/posts/HZTJNS.html</url>
+    <title>分数求和</title>
+    <url>/posts/GNK00C.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
 <h2><span id="描述"> 描述</span></h2>
 <p>输入 n 个分数并对他们求和，并用最简形式表示。所谓最简形式是指：分子分母的最大公约数为 1；若最终结果的分母为 1，则直接用整数表示。</p>
@@ -49,6 +49,15 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">3</span><br><span class="line">1/2</span><br><span class="line">1/2</span><br><span class="line">1/2</span><br></pre></td></tr></tbody></table></figure>
 <h4><span id="输出"> 输出</span></h4>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">3/2</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>C</tag>
+        <tag>STL</tag>
+      </tags>
   </entry>
   <entry>
     <title>排队游戏</title>
@@ -335,8 +344,8 @@
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
-        <tag>STL</tag>
         <tag>C</tag>
+        <tag>STL</tag>
         <tag>String</tag>
       </tags>
   </entry>
@@ -386,9 +395,9 @@
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
+        <tag>C</tag>
         <tag>STL</tag>
         <tag>Matrix</tag>
-        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -589,8 +598,8 @@ d)  显示已排序的列表。</p>
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
-        <tag>STL</tag>
         <tag>C</tag>
+        <tag>STL</tag>
         <tag>Array</tag>
         <tag>Stack</tag>
         <tag>String</tag>
@@ -639,8 +648,8 @@ d)  显示已排序的列表。</p>
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
-        <tag>STL</tag>
         <tag>C</tag>
+        <tag>STL</tag>
         <tag>Array</tag>
         <tag>2D Array</tag>
       </tags>
