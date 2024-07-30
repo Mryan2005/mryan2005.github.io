@@ -1,7 +1,7 @@
-https://www.mryan2005.top/categories/index.html
 https://www.mryan2005.top/links/index.html
 https://www.mryan2005.top/tags/index.html
 https://www.mryan2005.top/works/index.html
+https://www.mryan2005.top/posts/3R4SWZ6.html
 https://www.mryan2005.top/posts/GNK00C.html
 https://www.mryan2005.top/posts/1A9MHEM.html
 https://www.mryan2005.top/posts/3ZSPDD9.html
@@ -76,6 +76,7 @@ https://www.mryan2005.top/posts/3491a993.html
 https://www.mryan2005.top/posts/becb01a7.html
 https://www.mryan2005.top/posts/90341f05.html
 https://www.mryan2005.top/about/index.html
+https://www.mryan2005.top/categories/index.html
 https://www.mryan2005.top/
 https://www.mryan2005.top/tags/Latex/
 https://www.mryan2005.top/tags/Markdown/
@@ -106,6 +107,7 @@ https://www.mryan2005.top/tags/Map/
 https://www.mryan2005.top/tags/LinkedList/
 https://www.mryan2005.top/tags/Vector/
 https://www.mryan2005.top/tags/Sort/
+https://www.mryan2005.top/tags/string/
 https://www.mryan2005.top/tags/test/
 https://www.mryan2005.top/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/
 https://www.mryan2005.top/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/
