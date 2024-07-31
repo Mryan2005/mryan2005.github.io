@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>单词翻转</title>
+    <url>/posts/18GJ5R9.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>输入一个句子（一行），将句子中的每一个单词翻转后输出。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>只有一行，为一个字符串，不超过 500 个字符。单词之间以空格隔开。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>翻转每一个单词后的字符串，单词之间的空格需与原文一致。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">olleh dlrow</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="思路"> 思路</span></h2>
+<p>遍历字符串，如果不是空格，就插入到新的字符串的开头，如果是空格，就输出新的字符串并清空。</p>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="c"> C++</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	string str, str1;</span><br><span class="line">	<span class="built_in">getline</span>(cin, str);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i: str) {</span><br><span class="line">		<span class="keyword">if</span>(i != <span class="string">' '</span>) {</span><br><span class="line">			str1.<span class="built_in">insert</span>(str1.<span class="built_in">begin</span>(), i);</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line">			cout &lt;&lt; str1;</span><br><span class="line">			cout &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">			str1.<span class="built_in">clear</span>();</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	cout &lt;&lt; str1;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="测试用例"> 测试用例</span></h2>
+<h3><span id="测试用例-1"> 测试用例 1</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">olleh dlrow</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-2"> 测试用例 2</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">hello     world</span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">olleh     dlrow</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="错误操作"> 错误操作</span></h2>
+<h3><span id="错误操作-1"> 错误操作 1</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	string str; vector&lt;<span class="type">char</span>&gt; a; <span class="type">int</span> flag = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(cin &gt;&gt; str) {</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> i: str) a.<span class="built_in">insert</span>(a.<span class="built_in">begin</span>(), i);</span><br><span class="line">		str.<span class="built_in">clear</span>();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> i: a) str.<span class="built_in">insert</span>(str.<span class="built_in">end</span>(), i);</span><br><span class="line">		<span class="keyword">if</span>(!flag) {</span><br><span class="line">			cout &lt;&lt; str;</span><br><span class="line">			flag = <span class="number">1</span>;</span><br><span class="line">		} <span class="keyword">else</span> cout &lt;&lt; <span class="string">" "</span> &lt;&lt; str;</span><br><span class="line">		a.<span class="built_in">clear</span>();</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="错误原因"> 错误原因</span></h4>
+<p>这会使类似于 <code>hello     world</code> 的输入输出为 <code>olleh dlrow</code>，而不是 <code>olleh     dlrow</code>。</p>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>C</tag>
+        <tag>string</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>二维数组右上左下遍历</title>
     <url>/posts/KJFXXN.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
