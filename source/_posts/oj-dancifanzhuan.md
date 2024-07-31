@@ -108,4 +108,8 @@ int main() {
 
 #### 错误原因
 
-这会使类似于`hello     world`的输入输出为`olleh dlrow`，而不是`olleh     dlrow`。
+这会使类似于`hello     world`的输入输出为`olleh dlrow`，而不是
+```
+olleh     dlrow
+```
+
