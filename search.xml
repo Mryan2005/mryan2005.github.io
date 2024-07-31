@@ -1,6 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>二维数组右上左下遍历</title>
+    <url>/posts/KJFXXN.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>给定一个 row 行 col 列的整数数组 array，要求从 array [0][0] 元素开始，按从左上到右下的对角线顺序遍历整个数组。在这里插入图片描述</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/1e07f29c1f7e9676ad2fb2cbf192d85a.gif#pic_center" class="lazyload" data-srcset="https://img-blog.csdnimg.cn/img_convert/1e07f29c1f7e9676ad2fb2cbf192d85a.gif#pic_center" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="在这里插入图片描述"></p>
+<h2><span id="输入"> 输入</span></h2>
+<p>输入的第一行上有两个整数，依次为 row 和 col。<br>
+余下有 row 行，每行包含 col 个整数，构成一个二维整数数组。<br>
+（注：输入的 row 和 col 保证 0 &lt; row &lt; 100, 0 &lt; col &lt; 100）</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>按遍历顺序输出每个整数。每个整数占一行。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">7</span></span><br><span class="line"><span class="number">3</span> <span class="number">5</span> <span class="number">8</span> <span class="number">10</span></span><br><span class="line"><span class="number">6</span> <span class="number">9</span> <span class="number">11</span> <span class="number">12</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">11</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="思路"> 思路</span></h2>
+<p>以下图为例<br>
+<img src="https://s21.ax1x.com/2024/07/31/pkOcpQJ.jpg" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/31/pkOcpQJ.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="pkOcpQJ.jpg">]<br>
+无论在行还是列上开始，都是 a [i][j] 中的 i 增加，j 减少。<br>
+我们可以分为两部分，一部分是列上开始，一部分是行上开始，当到达边界的时候，我们就停止。</p>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> row, col;</span><br><span class="line">	array&lt;array&lt;<span class="type">int</span>, 100&gt;, 100&gt; a;</span><br><span class="line">	cin &gt;&gt; row &gt;&gt; col;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; row; i++) {</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; col; j++) {</span><br><span class="line">			cin &gt;&gt; a[i][j];</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; col; i++) {</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>, k = i; j &lt; row &amp;&amp; k &lt; col &amp;&amp; k &gt;= <span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span>; j++, k--) {</span><br><span class="line">			cout &lt;&lt; a[j][k] &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; row; i++) {</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = i, k = col<span class="number">-1</span>; j &lt; row &amp;&amp; k &lt; col &amp;&amp; k &gt;= <span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span>; j++, k--) {</span><br><span class="line">			cout &lt;&lt; a[j][k] &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c"> C</span></h3>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> row, col;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">100</span>][<span class="number">100</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;row, &amp;col);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; row; i++) {</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; col; j++) {</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i][j]);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; col; i++) {</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>, k = i; j &lt; row &amp;&amp; k &lt; col &amp;&amp; k &gt;= <span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span>; j++, k--) {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, a[j][k]);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; row; i++) {</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = i, k = col<span class="number">-1</span>; j &lt; row &amp;&amp; k &lt; col &amp;&amp; k &gt;= <span class="number">0</span> &amp;&amp; j &gt;= <span class="number">0</span>; j++, k--) {</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, a[j][k]);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="测试用例"> 测试用例</span></h2>
+<h3><span id="测试用例-1"> 测试用例 1</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">4</span> <span class="number">7</span></span><br><span class="line"><span class="number">3</span> <span class="number">5</span> <span class="number">8</span> <span class="number">10</span></span><br><span class="line"><span class="number">6</span> <span class="number">9</span> <span class="number">11</span> <span class="number">12</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">11</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-2"> 测试用例 2</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">3</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line"><span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br><span class="line"><span class="number">7</span> <span class="number">8</span> <span class="number">9</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-3"> 测试用例 3</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-4"> 测试用例 4</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">10</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="测试用例-5"> 测试用例 5</span></h3>
+<h4><span id="输入"> 输入</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">10</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="输出"> 输出</span></h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>C</tag>
+        <tag>2D Array</tag>
+        <tag>Array</tag>
+        <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字符串中最长的连续出现的字符</title>
     <url>/posts/3R4SWZ6.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
@@ -635,8 +700,8 @@ d)  显示已排序的列表。</p>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
         <tag>C</tag>
-        <tag>STL</tag>
         <tag>Array</tag>
+        <tag>STL</tag>
         <tag>Stack</tag>
         <tag>String</tag>
         <tag>Queue</tag>
@@ -685,9 +750,9 @@ d)  显示已排序的列表。</p>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
         <tag>C</tag>
-        <tag>STL</tag>
-        <tag>Array</tag>
         <tag>2D Array</tag>
+        <tag>Array</tag>
+        <tag>STL</tag>
       </tags>
   </entry>
   <entry>
