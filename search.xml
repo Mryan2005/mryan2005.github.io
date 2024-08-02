@@ -11,10 +11,9 @@
 <h2><span id="输出"> 输出</span></h2>
 <p>一行，即相加后的结果。结果里不能有多余的前导 0，即如果结果是 342，那么就不能输出为 0342。</p>
 <h2><span id="样例输入"> 样例输入</span></h2>
-<p>22222222222222222222<br>
-33333333333333333333</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">22222222222222222222</span></span><br><span class="line"><span class="number">33333333333333333333</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="样例输出"> 样例输出</span></h2>
-<p>55555555555555555555</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">55555555555555555555</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="来源"> 来源</span></h2>
 <p>程序设计实习 2007</p>
 <h2><span id="思路"> 思路</span></h2>
