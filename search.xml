@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>错误探测</title>
+    <url>/posts/3FEE80J.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>给出由 0 和 1 组成的矩阵，如果矩阵的每一行和每一列的 1 的数量都是偶数，则认为符合条件。<br>
+你的任务就是检测矩阵是否符合条件，或者在仅改变一个矩阵元素的情况下能否符合条件。<br>
+"改变矩阵元素" 的操作定义为 0 变成 1，1 变成 0。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>包含多个测试数据。每个测试数据有多行，第一行为矩阵的大小 n (n &lt; 100)，以下 n 行为矩阵的值。<br>
+输入以 0 结束。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>如果矩阵符合条件，则输出 OK<br>
+如果矩阵仅改变一个矩阵元素就能符合条件，则输出 Change bit (x,y)，其中 x 和 y 为该元素的坐标<br>
+如果不符合以上两条，输出 Corrupt</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">OK</span></span><br><span class="line"><span class="function">Change <span class="title">bit</span> <span class="params">(<span class="number">2</span>,<span class="number">3</span>)</span></span></span><br><span class="line"><span class="function">Corrupt</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="思路"> 思路</span></h2>
+<ol>
+<li>输入一个整数 <code>n</code>，创建一个 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∗</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n*n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 的二维数组 <code>a</code> 和两个一维数组 <code>line</code> 和 <code>row</code>。</li>
+<li>读取矩阵的元素，并存储在二维数组 <code>a</code> 中。</li>
+<li>遍历矩阵的每一行，统计每一行的元素为 <code>1</code> 的量。如果某一行的元素之和是奇数，将 <code>line</code> 数组的对应位置设为 <code>1</code>，并将 <code>line[0]</code> 加 <code>1</code>。<code>line[0]</code> 存储的是元素之和为奇数的行的数量。</li>
+<li>遍历矩阵的每一列，统计每一列的元素为 <code>1</code> 的量。如果某一列的元素之和是奇数，将 row 数组的对应位置设为 <code>1</code>，并将 <code>row[0]</code> 加 <code>1</code>。<code>row[0]</code> 存储的是元素之和为奇数的列的数量。</li>
+<li>检查 <code>row[0]</code> 和 <code>line[0]</code> 的值。如果都是 <code>1</code>，输出 “<code>Change bit (x,y)</code>”，其中 <code>x</code> 和 <code>y</code> 是元素之和为奇数的行和列的索引。如果都是 <code>0</code>，输出 “<code>OK</code>”。否则，输出 “<code>Corrupt</code>”。</li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> A 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> B 2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n &amp;&amp; n != <span class="number">0</span>)</span><br><span class="line">    {</span><br><span class="line">        array&lt;array&lt;<span class="type">int</span>, 200&gt;, 200&gt; a;</span><br><span class="line">        array&lt;<span class="type">int</span>, 100&gt; line {} , row {};  <span class="comment">// 0: count, 1-100: mark</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        {</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            {</span><br><span class="line">                cin &gt;&gt; a[i][j];</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        {</span><br><span class="line">            <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">            {</span><br><span class="line">                <span class="keyword">if</span>(a[i][j] == <span class="number">1</span>) count++;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">if</span>(count % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">            {</span><br><span class="line">                line[i] = <span class="number">1</span>;</span><br><span class="line">                line[<span class="number">0</span>]++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">1</span>; j &lt;= n; j++, i = <span class="number">1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(; i &lt;= n; i++)</span><br><span class="line">            {</span><br><span class="line">                <span class="keyword">if</span>(a[i][j] == <span class="number">1</span>) count++;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">if</span>(count % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">            {</span><br><span class="line">                row[j] = <span class="number">1</span>;</span><br><span class="line">                row[<span class="number">0</span>]++;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">if</span>(row[<span class="number">0</span>] == <span class="number">1</span> &amp;&amp; line[<span class="number">0</span>] == <span class="number">1</span>)</span><br><span class="line">        {</span><br><span class="line">            <span class="type">int</span> x, y;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            {</span><br><span class="line">                <span class="keyword">if</span>(line[i] == <span class="number">1</span>) {x = i; <span class="keyword">break</span>;}</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            {</span><br><span class="line">                <span class="keyword">if</span>(row[i] == <span class="number">1</span>) {y = i; <span class="keyword">break</span>;}</span><br><span class="line">            }</span><br><span class="line">            cout &lt;&lt; <span class="string">"Change bit ("</span>&lt;&lt; x &lt;&lt; <span class="string">","</span> &lt;&lt; y &lt;&lt;<span class="string">")"</span> &lt;&lt; endl;</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span>(row[<span class="number">0</span>] == <span class="number">0</span> &amp;&amp; line[<span class="number">0</span>] == <span class="number">0</span>) cout &lt;&lt; <span class="string">"OK"</span> &lt;&lt; endl;</span><br><span class="line">        <span class="keyword">else</span> cout &lt;&lt; <span class="string">"Corrupt"</span> &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>大整数加法</title>
     <url>/posts/12TQA03.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
@@ -159,10 +198,10 @@
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
+        <tag>STL</tag>
         <tag>C</tag>
         <tag>2D Array</tag>
         <tag>Array</tag>
-        <tag>STL</tag>
       </tags>
   </entry>
   <entry>
@@ -256,8 +295,8 @@
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
-        <tag>C</tag>
         <tag>STL</tag>
+        <tag>C</tag>
       </tags>
   </entry>
   <entry>
@@ -545,8 +584,8 @@
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
-        <tag>C</tag>
         <tag>STL</tag>
+        <tag>C</tag>
         <tag>String</tag>
       </tags>
   </entry>
@@ -596,8 +635,8 @@
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
-        <tag>C</tag>
         <tag>STL</tag>
+        <tag>C</tag>
         <tag>Matrix</tag>
       </tags>
   </entry>
@@ -799,9 +838,9 @@ d)  显示已排序的列表。</p>
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
+        <tag>STL</tag>
         <tag>C</tag>
         <tag>Array</tag>
-        <tag>STL</tag>
         <tag>Stack</tag>
         <tag>String</tag>
         <tag>Queue</tag>
@@ -849,10 +888,10 @@ d)  显示已排序的列表。</p>
       <tags>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
+        <tag>STL</tag>
         <tag>C</tag>
         <tag>2D Array</tag>
         <tag>Array</tag>
-        <tag>STL</tag>
       </tags>
   </entry>
   <entry>
