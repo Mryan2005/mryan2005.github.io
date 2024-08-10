@@ -57,11 +57,11 @@ Corrupt
 
 ## Code
 
+## C++ STL
+
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
-#define A 1
-#define B 2
 
 int main() {
     int n;
@@ -120,3 +120,127 @@ int main() {
 }
 ```
 
+### C++ array
+    
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    while (cin >> n && n != 0)
+    {
+        int a[200][200] = {0};
+        int line[100] = {0}, row[100] = {0};  // 0: count, 1-100: mark
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= n; j++)
+            {
+                cin >> a[i][j];
+            }
+        }
+        for(int i = 1; i <= n; i++)
+        {
+            int count = 0;
+            for(int j = 1; j <= n; j++)
+            {
+                if(a[i][j] == 1) count++;
+            }
+            if(count % 2 == 1)
+            {
+                line[i] = 1;
+                line[0]++;
+            }
+        }
+        for(int i = 1, j = 1; j <= n; j++, i = 1)
+        {
+            int count = 0;
+            for(; i <= n; i++)
+            {
+                if(a[i][j] == 1) count++;
+            }
+            if(count % 2 == 1)
+            {
+                row[j] = 1;
+                row[0]++;
+            }
+        }
+        if(row[0] == 1 && line[0] == 1)
+        {
+            int x, y;
+            for(int i = 1; i <= n; i++)
+            {
+                if(line[i] == 1) {x = i; break;}
+            }
+            for(int i = 1; i <= n; i++)
+            {
+                if(row[i] == 1) {y = i; break;}
+            }
+            cout << "Change bit ("<< x << "," << y <<")" << endl;
+        } else if(row[0] == 0 && line[0] == 0) cout << "OK" << endl;
+        else cout << "Corrupt" << endl;
+    }
+}
+```
+
+### C
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    while (scanf("%d", &n) && n != 0)
+    {
+        int a[200][200] = {0};
+        int line[100] = {0}, row[100] = {0};  // 0: count, 1-100: mark
+        for(int i = 1; i <= n; i++)
+        {
+            for(int j = 1; j <= n; j++)
+            {
+                scanf("%d", &a[i][j]);
+            }
+        }
+        for(int i = 1; i <= n; i++)
+        {
+            int count = 0;
+            for(int j = 1; j <= n; j++)
+            {
+                if(a[i][j] == 1) count++;
+            }
+            if(count % 2 == 1)
+            {
+                line[i] = 1;
+                line[0]++;
+            }
+        }
+        for(int i = 1, j = 1; j <= n; j++, i = 1)
+        {
+            int count = 0;
+            for(; i <= n; i++)
+            {
+                if(a[i][j] == 1) count++;
+            }
+            if(count % 2 == 1)
+            {
+                row[j] = 1;
+                row[0]++;
+            }
+        }
+        if(row[0] == 1 && line[0] == 1)
+        {
+            int x, y;
+            for(int i = 1; i <= n; i++)
+            {
+                if(line[i] == 1) {x = i; break;}
+            }
+            for(int i = 1; i <= n; i++)
+            {
+                if(row[i] == 1) {y = i; break;}
+            }
+            printf("Change bit (%d,%d)\n", x, y);
+        } else if(row[0] == 0 && line[0] == 0) printf("OK\n");
+        else printf("Corrupt\n");
+    }
+}
+```
