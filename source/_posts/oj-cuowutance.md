@@ -1,7 +1,7 @@
 ---
 title: 错误探测
 date: 2024-08-10 17:51:37
-tags: [OpenJudge, C++, STL]
+tags: [OpenJudge, C++, STL, C]
 categories: OpenJudge
 ---
 
