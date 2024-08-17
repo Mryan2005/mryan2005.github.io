@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>多项式加法</title>
+    <url>/posts/2DVH68E.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 5000kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>我们经常遇到两多项式相加的情况，在这里，我们就需要用程序来模拟实现把两个多项式相加到一起。首先，我们会有两个多项式，每个多项式是独立的一行，每个多项式由系数、幂数这样的多个整数对来表示。</p>
+<p>如多项式 2x20- x17+ 5x9- 7x7+ 16x5+ 10x4 + 22x2- 15</p>
+<p>对应的表达式为：2 20 -1 17 5 9 - 7 7 16 5 10 4 22 2 -15 0。</p>
+<p>为了标记每行多项式的结束，在表达式后面加上了一个幂数为负数的整数对。</p>
+<p>同时输入表达式的幂数大小顺序是随机的。</p>
+<p>我们需要做的就是把所给的两个多项式加起来。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>输入包括多行。<br>
+第一行整数 n, 表示有多少组的多项式需要求和。(1 &lt; n &lt; 100)<br>
+下面为 2n 行整数，每一行都是一个多项式的表达式。表示 n 组需要相加的多项式。<br>
+每行长度小于 300。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出包括 n 行，每行为 1 组多项式相加的结果。<br>
+在每一行的输出结果中，多项式的每一项用 “[x y]” 形式的字符串表示，x 是该项的系数、y 是该项的幂数。要求按照每一项的幂从高到低排列，即先输出幂数高的项、再输出幂数低的项。<br>
+系数为零的项不要输出。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">-1</span> <span class="number">17</span> <span class="number">2</span> <span class="number">20</span> <span class="number">5</span> <span class="number">9</span> <span class="number">-7</span> <span class="number">7</span> <span class="number">10</span> <span class="number">4</span> <span class="number">22</span> <span class="number">2</span> <span class="number">-15</span> <span class="number">0</span> <span class="number">16</span> <span class="number">5</span> <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">2</span> <span class="number">19</span> <span class="number">7</span> <span class="number">7</span> <span class="number">3</span> <span class="number">17</span> <span class="number">4</span> <span class="number">4</span> <span class="number">15</span> <span class="number">10</span> <span class="number">-10</span> <span class="number">5</span> <span class="number">13</span> <span class="number">2</span> <span class="number">-7</span> <span class="number">0</span> <span class="number">8</span> <span class="number">-8</span></span><br><span class="line"><span class="number">-1</span> <span class="number">17</span> <span class="number">2</span> <span class="number">23</span> <span class="number">22</span> <span class="number">2</span> <span class="number">6</span> <span class="number">8</span> <span class="number">-4</span> <span class="number">7</span> <span class="number">-18</span> <span class="number">0</span> <span class="number">1</span> <span class="number">5</span> <span class="number">21</span> <span class="number">4</span> <span class="number">0</span> <span class="number">-1</span></span><br><span class="line"><span class="number">12</span> <span class="number">7</span> <span class="number">-7</span> <span class="number">5</span> <span class="number">3</span> <span class="number">17</span> <span class="number">23</span> <span class="number">4</span> <span class="number">15</span> <span class="number">10</span> <span class="number">-10</span> <span class="number">5</span> <span class="number">13</span> <span class="number">5</span> <span class="number">2</span> <span class="number">19</span> <span class="number">9</span> <span class="number">-7</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">[ <span class="number">2</span> <span class="number">20</span> ] [ <span class="number">2</span> <span class="number">19</span> ] [ <span class="number">2</span> <span class="number">17</span> ] [ <span class="number">15</span> <span class="number">10</span> ] [ <span class="number">5</span> <span class="number">9</span> ] [ <span class="number">6</span> <span class="number">5</span> ] [ <span class="number">14</span> <span class="number">4</span> ] [ <span class="number">35</span> <span class="number">2</span> ] [ <span class="number">-22</span> <span class="number">0</span> ]</span><br><span class="line">[ <span class="number">2</span> <span class="number">23</span> ] [ <span class="number">2</span> <span class="number">19</span> ] [ <span class="number">2</span> <span class="number">17</span> ] [ <span class="number">15</span> <span class="number">10</span> ] [ <span class="number">6</span> <span class="number">8</span> ] [ <span class="number">8</span> <span class="number">7</span> ] [ <span class="number">-3</span> <span class="number">5</span> ] [ <span class="number">44</span> <span class="number">4</span> ] [ <span class="number">22</span> <span class="number">2</span> ] [ <span class="number">-18</span> <span class="number">0</span> ]</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="提示"> 提示</span></h2>
+<p>第一组样例数据的第二行末尾的 8 -8，因为幂次 - 8 为负数，所以这一行数据结束，8 -8 不要参与计算。</p>
+<h2><span id="思路"> 思路</span></h2>
+<p>首先从输入中读取整数 n，表示要处理的多项式的数量。</p>
+<p>然后，在每次循环中，程序读取多项式的系数和指数，并将它们添加到映射中。如果映射中已经存在具有相同指数的项，则将新系数与现有系数相加。</p>
+<p>接下来，程序将第一个多项式的项添加到第二个多项式的映射中，并根据需要进行系数相加。</p>
+<p>最后，程序将处理后的多项式的每一项添加到一个栈中，然后依次输出每个项的系数和指数。当处理完所有多项式后，程序输出一个换行符，并开始处理下一个多项式。</p>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) {</span><br><span class="line">		map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; v1, v2;	<span class="comment">// v1 -&gt; v2</span></span><br><span class="line">		stack&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; outputList;</span><br><span class="line">		pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; temp;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= <span class="number">2</span>; j++) {</span><br><span class="line">			<span class="keyword">while</span>(cin &gt;&gt; temp.first &amp;&amp; cin &gt;&gt; temp.second &amp;&amp; temp.second &gt;= <span class="number">0</span>) {</span><br><span class="line">				<span class="keyword">if</span>(j == <span class="number">1</span>) {</span><br><span class="line">					<span class="keyword">if</span>(v1.<span class="built_in">count</span>(temp.second) == <span class="number">0</span>) v1[temp.second] = temp.first;</span><br><span class="line">					<span class="keyword">else</span> v1[temp.second] += temp.first;</span><br><span class="line">				} <span class="keyword">else</span> <span class="keyword">if</span>(j == <span class="number">2</span>) {</span><br><span class="line">					<span class="keyword">if</span>(v2.<span class="built_in">count</span>(temp.second) == <span class="number">0</span>) v2[temp.second] = temp.first;</span><br><span class="line">					<span class="keyword">else</span> v2[temp.second] += temp.first;</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> i: v1) {</span><br><span class="line">			<span class="keyword">if</span>(v2.<span class="built_in">count</span>(i.first) != <span class="number">0</span>) v2[i.first] += i.second;</span><br><span class="line">			<span class="keyword">else</span> v2[i.first] = i.second;</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> i: v2) <span class="keyword">if</span>(i.second != <span class="number">0</span>) outputList.<span class="built_in">push</span>(i);</span><br><span class="line">		<span class="keyword">while</span>(!outputList.<span class="built_in">empty</span>()) {</span><br><span class="line">			cout &lt;&lt; <span class="string">"[ "</span> &lt;&lt; outputList.<span class="built_in">top</span>().second &lt;&lt; <span class="string">" "</span> &lt;&lt; outputList.<span class="built_in">top</span>().first &lt;&lt; <span class="string">" ] "</span>;</span><br><span class="line">			outputList.<span class="built_in">pop</span>();</span><br><span class="line">		}</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="一些不得不说的东西"> 一些不得不说的东西</span></h2>
+<ol>
+<li>这道题存在多次输入同一个幂次的情况。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>错误探测</title>
     <url>/posts/3FEE80J.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
