@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>字符串插入</title>
+    <url>/posts/1JS4KGK.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>有两个字符串 str 和 substr，str 的字符个数不超过 10，substr 的字符个数为 3。（字符个数不包括字符串结尾处的’\0’。）将 substr 插入到 str 中 ASCII 码最大的那个字符后面，若有多个最大则只考虑第一个。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>输入包括若干行，每一行为一组测试数据，格式为<br>
+str substr</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>对于每一组测试数据，输出插入之后的字符串。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">abcab eee</span><br><span class="line"><span class="number">12343</span> <span class="number">555</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">abceeeab</span><br><span class="line"><span class="number">12345553</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="来源"> 来源</span></h2>
+<p>计算概论期末考试</p>
+<h2><span id="思路"> 思路</span></h2>
+<p>遍历字符串，找到 ASCII 码最大的字符，将 <code>i</code> 的值设为最大字符的下标，然后在 <code>i+1</code> 的位置插入 <code>substr</code>。</p>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="c-stl"> C++ STL</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    string str, substr;</span><br><span class="line">    <span class="keyword">while</span>(cin &gt;&gt; str &gt;&gt; substr) {</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="type">char</span> max;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">unsigned</span> <span class="type">int</span> j = <span class="number">0</span>; j &lt; str.<span class="built_in">size</span>(); j++) {</span><br><span class="line">            <span class="keyword">if</span>(j == <span class="number">0</span>) {i = j; max = str[j];}</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(str[j] &gt; max) {i = j; max = str[j];}</span><br><span class="line">        }</span><br><span class="line">        str.<span class="built_in">insert</span>(i+<span class="number">1</span>, substr);</span><br><span class="line">        cout &lt;&lt; str &lt;&lt; endl;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="c"> C</span></h3>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">char</span> str[<span class="number">12</span>], substr[<span class="number">5</span>];</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%s %s"</span>, str, substr) != EOF) {</span><br><span class="line">        <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="type">char</span> max;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="built_in">strlen</span>(str); j++) {</span><br><span class="line">            <span class="keyword">if</span>(j == <span class="number">0</span>) {i = j; max = str[j];}</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(str[j] &gt; max) {i = j; max = str[j];}</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="built_in">strlen</span>(str); j &gt; i; j--) str[j+<span class="number">3</span>] = str[j];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) str[i+j+<span class="number">1</span>] = substr[j];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, str);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>C</tag>
+        <tag>string</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多项式加法</title>
     <url>/posts/2DVH68E.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 5000kB</p>
