@@ -1,8 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>oj-zhandejibencaozuo</title>
-    <url>/posts/5G422H.html</url>
+    <title>stack or queue</title>
+    <url>/posts/G81AKC.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65535kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>栈和队列都是常用的线性结构，它们都提供两个操作：</p>
+<p>Push：加入一个元素。</p>
+<p>Pop：弹出一个元素。</p>
+<p>不同的是，栈是” 先进后出”，而队列则是” 先进先出”。</p>
+<p>给出一个线性结构的进出顺序，判定这个结构是栈还是队列。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行输入一个整数 t，代表有 t 组测试数据<br>
+对于每组测试数据，第一行输入一个整数 n，代表操作的次数。<br>
+随后输入 n 行，每行包含两个整数 type val。<br>
+当 type = 1 时，表示该次操作为 push 操作，val 表示进入的数字。当 type=2 时，表示该次操作为 pop 操作，val 代表出来的数字。<br>
+3&lt;=n&lt;=2000</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>每组测试数据输出一行。<br>
+输出改组数据对应的线性结构，”Stack” 或者 “Queue”。<br>
+题目保证是栈或者队列的一种。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span></span><br><span class="line"><span class="number">2</span> <span class="number">2</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="number">2</span> <span class="number">1</span></span><br><span class="line"><span class="number">2</span> <span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">Stack</span><br><span class="line">Queue</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="思路"> 思路</span></h2>
+<p>我想了一下，还是弄两个 array 来解决这个问题，虽说时间复杂度会是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。但是，可以解决目前的问题</p>
+<h2><span id="code"> Code</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> push 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pop 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> t, n, type;</span><br><span class="line">	cin &gt;&gt; t;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; t; i++) {</span><br><span class="line">		array&lt;<span class="type">int</span>, 2000&gt; A, B;</span><br><span class="line">		cin &gt;&gt; n;</span><br><span class="line">		<span class="type">int</span> k = <span class="number">0</span>, o = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++) {</span><br><span class="line">			cin &gt;&gt; type;</span><br><span class="line">			<span class="keyword">if</span>(type == push) {</span><br><span class="line">				cin &gt;&gt; A[k++];</span><br><span class="line">			} <span class="keyword">else</span> <span class="keyword">if</span>(type == pop) {</span><br><span class="line">				cin &gt;&gt; B[o++];</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; o; j++) {</span><br><span class="line">			<span class="keyword">if</span>(A[j] != B[j]) <span class="keyword">goto</span> out; </span><br><span class="line">		}</span><br><span class="line">		cout &lt;&lt; <span class="string">"Queue"</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">goto</span> out1;</span><br><span class="line">		out:;</span><br><span class="line">		cout &lt;&lt; <span class="string">"Stack"</span> &lt;&lt;endl;</span><br><span class="line">		out1:;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>stack</tag>
+        <tag>queue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>栈的基本操作</title>
+    <url>/posts/2K2Y736.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 1000kB</p>
 <h2><span id="描述"> 描述</span></h2>
 <p>栈是一种重要的数据结构，它具有 push k 和 pop 操作。push k 是将数字 k 加入到栈中，pop 则是从栈中取一个数出来。</p>
