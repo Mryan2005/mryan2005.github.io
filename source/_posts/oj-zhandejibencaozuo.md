@@ -1,5 +1,5 @@
 ---
-title: oj-zhandejibencaozuo
+title: 栈的基本操作
 date: 2024-08-21 23:41:38
 tags: [OpenJudge, STL, C++]
 categories: OpenJudge
