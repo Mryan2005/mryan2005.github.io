@@ -16,10 +16,9 @@
 <h2><span id="输出"> 输出</span></h2>
 <p>一个整数，为软件需要查词典的次数。</p>
 <h2><span id="样例输入"> 样例输入</span></h2>
-<p>3 7<br>
-1 2 1 5 4 4 1</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">7</span> </span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span> <span class="number">1</span> </span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="样例输出"> 样例输出</span></h2>
-<p>5</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="提示"> 提示</span></h2>
 <p>整个查字典过程如下：每行表示一个单词的翻译，冒号前为本次翻译后的内存状况：<br>
 空：内存初始状态为空。<br>
