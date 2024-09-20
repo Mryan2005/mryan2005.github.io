@@ -1,6 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>倒排索引</title>
+    <url>/posts/0CW5RM.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 131072kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>给定一些文档，要求求出某些单词的倒排表。</p>
+<p>对于一个单词，它的倒排表的内容为出现这个单词的文档编号。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行包含一个数 N，1 &lt;= N &lt;= 1000，表示文档数。<br>
+接下来 N 行，每行第一个数 ci，表示第 i 个文档的单词数。接下来跟着 ci 个用空格隔开的单词，表示第 i 个文档包含的单词。文档从 1 开始编号。1 &lt;= ci &lt;= 100。<br>
+接下来一行包含一个数 M，1 &lt;= M &lt;= 1000，表示查询数。<br>
+接下来 M 行，每行包含一个单词，表示需要输出倒排表的单词。<br>
+每个单词全部由小写字母组成，长度不会超过 256 个字符，大多数不会超过 10 个字符。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>对于每一个进行查询的单词，输出它的倒排表，文档编号按从小到大排序。<br>
+如果倒排表为空，输出 "NOT FOUND"。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span> hello world</span><br><span class="line"><span class="number">4</span> the world is great</span><br><span class="line"><span class="number">2</span> great news</span><br><span class="line"><span class="number">4</span></span><br><span class="line">hello</span><br><span class="line">world</span><br><span class="line">great</span><br><span class="line">pku</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="number">2</span> <span class="number">3</span></span><br><span class="line">NOT FOUND</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="分析"> 分析</span></h2>
+<ol>
+<li>这是检索问题</li>
+<li>存进去的是单词，但要找的是单词出现在文件的位置，者可以考虑用 map 来解决。</li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="暴力解法"> 暴力解法</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">file</span> {</span><br><span class="line">	<span class="type">int</span> ci;</span><br><span class="line">	<span class="type">char</span> words[<span class="number">100</span>][<span class="number">257</span>];</span><br><span class="line">};</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> N, ci, M;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">	file *a = (file*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(file)*<span class="number">1000</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) {</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ci);</span><br><span class="line">		a[i].ci = ci;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; ci; ++j) {</span><br><span class="line">			cin &gt;&gt; a[i].words[j];</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;M);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; ++i) {</span><br><span class="line">		<span class="type">char</span> s[<span class="number">257</span>];</span><br><span class="line">		<span class="type">int</span> res[<span class="number">1000</span>], p = <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>, s);</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; N; ++j) {</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; a[j].ci; ++k) {</span><br><span class="line">				<span class="keyword">if</span>(<span class="built_in">strcmp</span>(a[j].words[k], s) == <span class="number">0</span>) {</span><br><span class="line">					res[p++] = j+<span class="number">1</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">if</span>(p &gt; <span class="number">0</span>) {</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; p; ++i) {</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d "</span>, res[i]);</span><br><span class="line">			}</span><br><span class="line">		} <span class="keyword">else</span> <span class="keyword">if</span>(p == <span class="number">0</span>) {</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"NOT FOUND"</span>);	</span><br><span class="line">		}</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="哈希解决法"> 哈希解决法</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> N, ci, M;</span><br><span class="line">	string s;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N);</span><br><span class="line">	unordered_map&lt;string, set&lt;<span class="type">int</span>&gt;&gt; mp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) {</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ci);</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= ci; ++j) {</span><br><span class="line">			cin &gt;&gt; s;</span><br><span class="line">			<span class="keyword">if</span>(mp.<span class="built_in">find</span>(s) != mp.<span class="built_in">end</span>()) mp[s].<span class="built_in">insert</span>(mp[s].<span class="built_in">end</span>(), i);</span><br><span class="line">			<span class="keyword">else</span> {</span><br><span class="line">				set&lt;<span class="type">int</span>&gt; a;</span><br><span class="line">				a.<span class="built_in">insert</span>(i);</span><br><span class="line">				mp.<span class="built_in">insert</span>(<span class="built_in">make_pair</span>(s, a));</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;M);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= M; ++i) {</span><br><span class="line">		cin &gt;&gt; s;</span><br><span class="line">		<span class="keyword">if</span>(mp.<span class="built_in">find</span>(s) != mp.<span class="built_in">end</span>()) {</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">auto</span> i: mp[s]) {</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d "</span>, i);</span><br><span class="line">			}</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"NOT FOUND"</span>);</span><br><span class="line">		}</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="注意"> 注意</span></h2>
+<p>在该题目内可能会出现这样的测试用例 ——<code>he is venti, he is zhongli</code>，此时，如果用 <code>vector</code>，记录 <code>is</code> 的出现位置会发生重复。（感谢<a href="https://blog.csdn.net/m0_37975647/article/details/77600498">不要失望故事还长的博客</a>）</p>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>寻找中位数</title>
+    <url>/posts/3FV6ZXP.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>在 N（1&lt;=N&lt;10,000 且 N 为奇数）个数中，找到中位数。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第 1 行：N</p>
+<p>第 2 至 N+1 行：每行是一个整数</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>第一行：中位数</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span></span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="分析"> 分析</span></h3>
+<ol>
+<li>由题目的样例输出可以知道，<code>3</code> 不在输入序列 <code>2 4 1 3 5</code> 的中间，但是它是中位数，这或许会涉及到排序。</li>
+<li>然后通过下标直接找到中位数。</li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> N, num;</span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; v;</span><br><span class="line">	cin &gt;&gt; N;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; i++) {</span><br><span class="line">		cin &gt;&gt; num;</span><br><span class="line">		v.<span class="built_in">insert</span>(v.<span class="built_in">end</span>(), num);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line">	cout &lt;&lt; v[(<span class="number">0</span>+N)/<span class="number">2</span>];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>Vector</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>位查询</title>
+    <url>/posts/1XAKKMY.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 5000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>给出 N 个范围在 [0, 65535] 的整数，编程支持以下的操作：</p>
+<p>（1）修改操作：C d，所有的数都增加 d。如果超过 65535，把结果模 65536。 0 &lt;= d &lt;= 65535<br>
+（2）查询操作：Q i，统计在 N 个正整数中有多少个整数其对应的二进制形式的第 i 位二进制位为非 0。0 &lt;= i &lt;= 15。并且最低位 i 为 0。</p>
+<p>最后，输出所有查询操作的统计值。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>输入的第一行为两个正整数 N,M, 其中 N 为操作的整数的个数，而 M 为具体有多少个操作。<br>
+输入的第二行为 N 个正整数，为进行操作的 N 个正整数。<br>
+下面有 M 行，分别表示 M 个操作。</p>
+<p>N&lt;=100000,M&lt;=200000</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出所有查询操作 Q 的统计值，每一个查询操作统计结果输出为一行。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">5</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">4</span></span><br><span class="line">Q <span class="number">1</span></span><br><span class="line">Q <span class="number">2</span></span><br><span class="line">C <span class="number">1</span></span><br><span class="line">Q <span class="number">1</span></span><br><span class="line">Q <span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="提示"> 提示</span></h2>
+<p>只输出查询操作 Q 的统计值。</p>
+<h2><span id="分析"> 分析</span></h2>
+<ol>
+<li>这是一个搜索问题。</li>
+<li>在这个问题中，能够使用一个这样的数据结构 —— 二元组 <code>pair&lt;int, string&gt;</code>。</li>
+<li>不要用 stack 修改二元组当中的输出循序，要是用了 stack 修改输出顺序，那会让你的编写代码的难度提升不少。</li>
+<li>用 C 语言和 C++ 的混合体会快一些。</li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="方法一"> 方法一</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function">string <span class="title">fun</span><span class="params">(<span class="type">int</span> num)</span> </span>{</span><br><span class="line">	string res;</span><br><span class="line">	<span class="keyword">while</span>(num &gt; <span class="number">0</span>) {</span><br><span class="line">		res.<span class="built_in">insert</span>(res.<span class="built_in">end</span>(), (num%<span class="number">2</span>)+<span class="string">'0'</span>);</span><br><span class="line">		num /= <span class="number">2</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> N, M, i, d;</span><br><span class="line">	<span class="type">char</span> op;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;N, &amp;M);</span><br><span class="line">	<span class="type">int</span> a[N];</span><br><span class="line">	string b[N];</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) {</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">		b[i] = <span class="built_in">fun</span>(a[i]);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">1</span>; k &lt;= M; ++k) {</span><br><span class="line">		cin &gt;&gt; op;</span><br><span class="line">		<span class="keyword">if</span>(op == <span class="string">'Q'</span>) {</span><br><span class="line">			<span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">			cin &gt;&gt; i;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; N; ++j) {</span><br><span class="line">				<span class="keyword">if</span>(b[j].<span class="built_in">size</span>() &lt;= i) <span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">else</span> {</span><br><span class="line">					<span class="keyword">if</span>(b[j][i] != <span class="string">'0'</span>) count++;</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">			cout &lt;&lt; count &lt;&lt; endl;</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line">			cin &gt;&gt; d;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; N; ++j) {</span><br><span class="line">				a[j] = (a[j]+d)%<span class="number">65536</span>;</span><br><span class="line">				b[j] = <span class="built_in">fun</span>(a[j]);</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="方法二"> 方法二</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function">pair&lt;<span class="type">int</span>, string&gt; <span class="title">fun</span><span class="params">(<span class="type">int</span> num)</span> </span>{</span><br><span class="line">	pair&lt;<span class="type">int</span>, string&gt; res;</span><br><span class="line">	res.first = num;</span><br><span class="line">	<span class="keyword">while</span> (num &gt; <span class="number">0</span>) {</span><br><span class="line">		res.second.<span class="built_in">insert</span>(res.second.<span class="built_in">end</span>(), (num % <span class="number">2</span>) + <span class="string">'0'</span>);</span><br><span class="line">		num /= <span class="number">2</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	<span class="type">int</span> N, M, i, d, num;</span><br><span class="line">	<span class="type">char</span> op;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;N, &amp;M);</span><br><span class="line">	pair&lt;<span class="type">int</span>, string&gt; a[N];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; N; ++i) {</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</span><br><span class="line">		a[i] = <span class="built_in">fun</span>(num);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">1</span>; k &lt;= M; ++k) {</span><br><span class="line">		cin &gt;&gt; op;</span><br><span class="line">		<span class="keyword">if</span> (op == <span class="string">'Q'</span>) {</span><br><span class="line">			<span class="type">int</span> count = <span class="number">0</span>;</span><br><span class="line">			cin &gt;&gt; i;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; N; ++j) {</span><br><span class="line">				<span class="keyword">if</span> (a[j].second.<span class="built_in">size</span>() &lt;= i) <span class="keyword">continue</span>;</span><br><span class="line">				<span class="keyword">else</span> {</span><br><span class="line">					<span class="keyword">if</span> (a[j].second[i] != <span class="string">'0'</span>) count++;</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, count);</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line">			cin &gt;&gt; d;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; N; ++j) {</span><br><span class="line">				num = (a[j].first + d) % <span class="number">65536</span>;</span><br><span class="line">				a[j] = <span class="built_in">fun</span>(num);</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>Bit</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>词典</title>
+    <url>/posts/25FC6RP.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 3000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>你旅游到了一个国外的城市。那里的人们说的外国语言你不能理解。不过幸运的是，你有一本词典可以帮助你。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>首先输入一个词典，词典中包含不超过 100000 个词条，每个词条占据一行。每一个词条包括一个英文单词和一个外语单词，两个单词之间用一个空格隔开。而且在词典中不会有某个外语单词出现超过两次。词典之后是一个空行，然后给出一个由外语单词组成的文档，文档不超过 100000 行，而且每行只包括一个外语单词。输入中出现单词只包括小写字母，而且长度不会超过 10。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>在输出中，你需要把输入文档翻译成英文，每行输出一个英文单词。如果某个外语单词不在词典中，就把这个单词翻译成 “eh”。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">dog ogday</span><br><span class="line">cat atcay</span><br><span class="line">pig igpay</span><br><span class="line">froot ootfray</span><br><span class="line">loops oopslay</span><br><span class="line"></span><br><span class="line">atcay</span><br><span class="line">ittenkay</span><br><span class="line">oopslay</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">cat</span><br><span class="line">eh</span><br><span class="line">loops</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="提示"> 提示</span></h2>
+<p>输入比较大，推荐使用 C 语言的 I / O 函数。</p>
+<h2><span id="来源"> 来源</span></h2>
+<p>翻译自 Waterloo local 2001.09.22 的试题</p>
+<h2><span id="分析"> 分析</span></h2>
+<ol>
+<li>这道题属于检索问题。</li>
+<li>假如有一种数据结构能使查找的时间复杂度为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>，那就很好了。</li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	string s;</span><br><span class="line">	unordered_map&lt;string, string&gt; mp;</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>) {</span><br><span class="line">		<span class="built_in">getline</span>(cin, s);</span><br><span class="line">		<span class="keyword">if</span>(s == <span class="string">""</span>) <span class="keyword">break</span>;</span><br><span class="line">		<span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(; i &lt; s.<span class="built_in">size</span>(); i++) <span class="keyword">if</span>(s[i] == <span class="string">' '</span>) <span class="keyword">break</span>;</span><br><span class="line">		mp[s.<span class="built_in">substr</span>(i+<span class="number">1</span>, s.<span class="built_in">size</span>())] = s.<span class="built_in">substr</span>(<span class="number">0</span>, i);</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">while</span>(cin &gt;&gt; s) {</span><br><span class="line">		<span class="keyword">if</span>(mp.<span class="built_in">count</span>(s) == <span class="number">0</span>) {</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"eh\n"</span>);</span><br><span class="line">		} <span class="keyword">else</span> {</span><br><span class="line">			cout &lt;&lt; mp[s] &lt;&lt; endl;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>Map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二叉搜索树</title>
+    <url>/posts/1YAP7G6.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 1024kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>二叉搜索树在动态查表中有特别的用处，一个无序序列可以通过构造一棵二叉搜索树变成一个有序序列，构造树的过程即为对无序序列进行排序的过程。每次插入的新的结点都是二叉搜索树上新的叶子结点，在进行插入操作时，不必移动其它结点，只需改动某个结点的指针，由空变为非空即可。</p>
+<p>这里，我们想探究二叉树的建立和序列输出。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>只有一行，包含若干个数字，中间用空格隔开。（数字可能会有重复）</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出一行，对输入数字建立二叉搜索树后进行前序周游的结果。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">41</span> <span class="number">467</span> <span class="number">334</span> <span class="number">500</span> <span class="number">169</span> <span class="number">724</span> <span class="number">478</span> <span class="number">358</span> <span class="number">962</span> <span class="number">464</span> <span class="number">705</span> <span class="number">145</span> <span class="number">281</span> <span class="number">827</span> <span class="number">961</span> <span class="number">491</span> <span class="number">995</span> <span class="number">942</span> <span class="number">827</span> <span class="number">436</span> </span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="number">41</span> <span class="number">467</span> <span class="number">334</span> <span class="number">169</span> <span class="number">145</span> <span class="number">281</span> <span class="number">358</span> <span class="number">464</span> <span class="number">436</span> <span class="number">500</span> <span class="number">478</span> <span class="number">491</span> <span class="number">724</span> <span class="number">705</span> <span class="number">962</span> <span class="number">827</span> <span class="number">961</span> <span class="number">942</span> <span class="number">995</span> </span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="分析"> 分析</span></h2>
+<p>这是有关二叉搜索树 + 先序遍历的题目</p>
+<h3><span id="二叉搜索树"> 二叉搜索树</span></h3>
+<p>二叉搜索树（Binary Search Tree，简称 BST）是一种特殊的二叉树，它的每个节点最多有两个子节点，并且满足以下条件：</p>
+<ol>
+<li>左子树上所有节点的值小于根节点的值；</li>
+<li>右子树上所有节点的值大于根节点的值；</li>
+<li>对于相同的值不会出现两次；</li>
+<li>左右子树也都是二叉搜索树。</li>
+</ol>
+<h3><span id="先序遍历"> 先序遍历</span></h3>
+<p>先序遍历是一种二叉树的遍历方式，也称为前序遍历。具体过程如下：</p>
+<p>访问根节点；<br>
+递归地先序遍历左子树；<br>
+递归地先序遍历右子树。<br>
+先序遍历的顺序是根节点 -&gt; 左子树 -&gt; 右子树。</p>
+<h2><span id="code"> Code</span></h2>
+<h3><span id="写法-1"> 写法 1</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> {</span><br><span class="line">	<span class="type">int</span> data;</span><br><span class="line">	TreeNode *L;</span><br><span class="line">	TreeNode *R;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">addNode</span><span class="params">(TreeNode **T, <span class="type">int</span> data)</span> </span>{</span><br><span class="line">	<span class="keyword">if</span>(!*T) {</span><br><span class="line">		*T = (TreeNode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(TreeNode));</span><br><span class="line">		(*T)-&gt;data = data;</span><br><span class="line">		(*T)-&gt;L = (*T)-&gt;R = <span class="literal">NULL</span>;</span><br><span class="line">	} <span class="keyword">else</span> {</span><br><span class="line">		TreeNode *p = *T;</span><br><span class="line">		<span class="keyword">while</span>(p) {</span><br><span class="line">			<span class="keyword">if</span>(data &gt; p-&gt;data) {</span><br><span class="line">				<span class="keyword">if</span>(p-&gt;R) p = p-&gt;R;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">			} <span class="keyword">else</span> <span class="keyword">if</span>(data &lt; p-&gt;data) {</span><br><span class="line">				<span class="keyword">if</span>(p-&gt;L) p = p-&gt;L;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">			} <span class="keyword">else</span> <span class="keyword">if</span>(data == p-&gt;data) {</span><br><span class="line">				<span class="keyword">goto</span> out;</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">if</span>(data &gt; p-&gt;data) {</span><br><span class="line">			p-&gt;R = (TreeNode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(TreeNode));</span><br><span class="line">			p = p-&gt;R;</span><br><span class="line">			p-&gt;data = data;</span><br><span class="line">			p-&gt;L = p-&gt;R = <span class="literal">NULL</span>;</span><br><span class="line">		} <span class="keyword">else</span> <span class="keyword">if</span>(data &lt; p-&gt;data) {</span><br><span class="line">			p-&gt;L = (TreeNode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(TreeNode));</span><br><span class="line">			p = p-&gt;L;</span><br><span class="line">			p-&gt;data = data;</span><br><span class="line">			p-&gt;L = p-&gt;R = <span class="literal">NULL</span>;</span><br><span class="line">		}</span><br><span class="line">		out:;</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">readTree</span><span class="params">(TreeNode *T)</span> </span>{</span><br><span class="line">	stack&lt;TreeNode*&gt; S;</span><br><span class="line">	TreeNode *p = T;</span><br><span class="line">	<span class="keyword">while</span>(p || !S.<span class="built_in">empty</span>()) {</span><br><span class="line">		<span class="keyword">if</span>(p) {</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d "</span>, p-&gt;data);</span><br><span class="line">			S.<span class="built_in">push</span>(p);	</span><br><span class="line">			p = p-&gt;L;</span><br><span class="line">		} <span class="keyword">else</span> <span class="keyword">if</span>(!p) {</span><br><span class="line">			p = S.<span class="built_in">top</span>()-&gt;R;</span><br><span class="line">			S.<span class="built_in">pop</span>();</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	TreeNode *T = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="type">int</span> num;</span><br><span class="line">	<span class="keyword">while</span>(cin &gt;&gt; num){</span><br><span class="line">		<span class="built_in">addNode</span>(&amp;T, num);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">readTree</span>(T);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="写法-2"> 写法 2</span></h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> {</span><br><span class="line">	<span class="type">int</span> data;</span><br><span class="line">	TreeNode *L;</span><br><span class="line">	TreeNode *R;</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">addNode</span><span class="params">(TreeNode **T, <span class="type">int</span> data)</span> </span>{</span><br><span class="line">	<span class="keyword">if</span>(!*T) {</span><br><span class="line">		*T = (TreeNode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(TreeNode));</span><br><span class="line">		(*T)-&gt;data = data;</span><br><span class="line">		(*T)-&gt;L = (*T)-&gt;R = <span class="literal">NULL</span>;</span><br><span class="line">	} <span class="keyword">else</span> {</span><br><span class="line">		TreeNode *p = *T;</span><br><span class="line">		<span class="keyword">while</span>(p) {</span><br><span class="line">			<span class="keyword">if</span>(data &gt; p-&gt;data) {</span><br><span class="line">				<span class="keyword">if</span>(p-&gt;R) p = p-&gt;R;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">			} <span class="keyword">else</span> <span class="keyword">if</span>(data &lt; p-&gt;data) {</span><br><span class="line">				<span class="keyword">if</span>(p-&gt;L) p = p-&gt;L;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">			} <span class="keyword">else</span> <span class="keyword">if</span>(data == p-&gt;data) {</span><br><span class="line">				<span class="keyword">goto</span> out;</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">if</span>(data &gt; p-&gt;data) {</span><br><span class="line">			p-&gt;R = (TreeNode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(TreeNode));</span><br><span class="line">			p = p-&gt;R;</span><br><span class="line">			p-&gt;data = data;</span><br><span class="line">			p-&gt;L = p-&gt;R = <span class="literal">NULL</span>;</span><br><span class="line">		} <span class="keyword">else</span> <span class="keyword">if</span>(data &lt; p-&gt;data) {</span><br><span class="line">			p-&gt;L = (TreeNode*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(TreeNode));</span><br><span class="line">			p = p-&gt;L;</span><br><span class="line">			p-&gt;data = data;</span><br><span class="line">			p-&gt;L = p-&gt;R = <span class="literal">NULL</span>;</span><br><span class="line">		}</span><br><span class="line">		out:;</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">readTree</span><span class="params">(TreeNode *T)</span> </span>{</span><br><span class="line">	stack&lt;TreeNode*&gt; S;</span><br><span class="line">	TreeNode *p = T;</span><br><span class="line">	<span class="keyword">while</span> (p) {</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>, p-&gt;data);</span><br><span class="line">		<span class="keyword">if</span> (p-&gt;L) {</span><br><span class="line">			S.<span class="built_in">push</span>(p);</span><br><span class="line">			p = p-&gt;L;</span><br><span class="line">		} <span class="keyword">else</span> <span class="keyword">if</span> (p-&gt;R) p = p-&gt;R;</span><br><span class="line">		<span class="keyword">else</span> {</span><br><span class="line">			<span class="keyword">while</span> (!S.<span class="built_in">empty</span>() &amp;&amp; !p-&gt;R) {</span><br><span class="line">				p = S.<span class="built_in">top</span>();</span><br><span class="line">				S.<span class="built_in">pop</span>();</span><br><span class="line">			}</span><br><span class="line">			<span class="keyword">if</span> (p-&gt;R) p = p-&gt;R;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">	TreeNode *T = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="type">int</span> num;</span><br><span class="line">	<span class="keyword">while</span>(cin &gt;&gt; num){</span><br><span class="line">		<span class="built_in">addNode</span>(&amp;T, num);</span><br><span class="line">	}</span><br><span class="line">	<span class="built_in">readTree</span>(T);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="注意"> 注意</span></h2>
+<p>一般情况下，对于这样的题目，应当用 <code>while(cin &gt;&gt; num)</code> 来控制输入，因为<strong>题目没有给出具体的输入的数的数量</strong>。</p>
+]]></content>
+      <categories>
+        <category>OpenJudge</category>
+      </categories>
+      <tags>
+        <tag>OpenJudge</tag>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>Tree</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>机器翻译</title>
     <url>/posts/3W4T4FV.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 262144kB</p>
@@ -609,8 +815,8 @@ str substr</p>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
         <tag>STL</tag>
-        <tag>Stack</tag>
         <tag>Map</tag>
+        <tag>Stack</tag>
       </tags>
   </entry>
   <entry>
@@ -1012,8 +1218,8 @@ str substr</p>
         <tag>OpenJudge</tag>
         <tag>C++</tag>
         <tag>STL</tag>
-        <tag>String</tag>
         <tag>Map</tag>
+        <tag>String</tag>
         <tag>Vector</tag>
         <tag>Sort</tag>
       </tags>
