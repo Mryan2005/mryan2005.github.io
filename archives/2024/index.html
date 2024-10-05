@@ -1629,7 +1629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1726795367295),
+    lastupdate: new Date(1728116014371),
     sidebar: {
       for_page: ["blogger","category","tagcloud"],
       for_post: ["toc"],
@@ -2427,6 +2427,722 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/1J958FB.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/1J958FB.html" rel="dofollow" itemprop="url">
+        置换选择排序
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB<br>
+描述<br>
+给定初始整数顺串，以及大小固定并且初始元素已知的二叉最小堆（为完全二叉树或类似完全二叉树，且父元素键值总小于等于任何一个子结点的键值），要求利用堆实现置换选择排序，并输出第一个顺串。例如给定初始顺串 29,14,35,13, 以及堆（记为 16 19 31 25 21 56 40）， 置换选择排序得到的第一个顺串为 16 19 21 25。</p>
+<p><img src="https://i-blog.csdnimg.cn/direct/34f0390f5f384d8797d8ef43adf47c39.png" class="lazyload" data-srcset="https://i-blog.csdnimg.cn/direct/34f0390f5f384d8797d8ef43adf47c39.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="在这里插入图片描述"></p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行包含两个整数，m 为初始顺串的数的个数，n 为二叉最小堆的大小<br>
+第二行包含 m 个整数，即初始顺串<br>
+第三行包含 n 个整数，即已经建好的堆的元素（有序，按照从堆顶到堆底，从左到右的顺序）</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出包含一行，即第一个顺串。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> <span class="number">7</span></span><br><span class="line"><span class="number">29</span> <span class="number">14</span> <span class="number">35</span> <span class="number">13</span></span><br><span class="line"><span class="number">16</span> <span class="number">19</span> <span class="number">31</span> <span class="number">25</span> <span class="number">21</span> <span class="number">56</span> <span class="number">40</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:12:45+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/1J958FB.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/3XM1VY5.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/3XM1VY5.html" rel="dofollow" itemprop="url">
+        拓扑排序
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 10000ms 内存限制: 1000kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>给出一个图的结构，输出其拓扑排序序列，要求在同等条件下，编号小的顶点在前</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>若干行整数，第一行有 2 个数，分别为顶点数 v 和弧数 a，接下来有 a 行，每一行有 2 个数，分别是该条弧所关联的两个顶点编号</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>若干个空格隔开的顶点构成的序列 (用小写字母)</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight basic"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">6 </span><span class="number">8</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">3</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">4</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">2</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">5</span></span><br><span class="line"><span class="symbol">4 </span><span class="number">5</span></span><br><span class="line"><span class="symbol">6 </span><span class="number">4</span></span><br><span class="line"><span class="symbol">6 </span><span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:12:01+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/3XM1VY5.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/2BEJ6AF.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/2BEJ6AF.html" rel="dofollow" itemprop="url">
+        兔子与星空
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 10000kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>很久很久以前，森林里住着一群兔子。兔子们无聊的时候就喜欢研究星座。如图所示，天空中已经有了 n 颗星星，其中有些星星有边相连。兔子们希望删除掉一些边，然后使得保留下的边仍能是 n 颗星星连通。他们希望计算，保留的边的权值之和最小是多少？</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行只包含一个表示星星个数的数 n，n 不大于 26，并且这 n 个星星是由大写字母表里的前 n 个字母表示。接下来的 n-1 行是由字母表的前 n-1 个字母开头。最后一个星星表示的字母不用输入。对于每一行，以每个星星表示的字母开头，然后后面跟着一个数字，表示有多少条边可以从这个星星到后面字母表中的星星。如果 k 是大于 0，表示该行后面会表示 k 条边的 k 个数据。每条边的数据是由表示连接到另一端星星的字母和该边的权值组成。权值是正整数的并且小于 100。该行的所有数据字段分隔单一空白。该星星网络将始终连接所有的星星。该星星网络将永远不会超过 75 条边。没有任何一个星星会有超过 15 条的边连接到其他星星（之前或之后的字母）。在下面的示例输入，数据是与上面的图相一致的。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出是一个整数，表示最小的权值和。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">9</span></span><br><span class="line"><span class="attribute">A</span> <span class="number">2</span> B <span class="number">12</span> I <span class="number">25</span></span><br><span class="line"><span class="attribute">B</span> <span class="number">3</span> C <span class="number">10</span> H <span class="number">40</span> I <span class="number">8</span></span><br><span class="line"><span class="attribute">C</span> <span class="number">2</span> D <span class="number">18</span> G <span class="number">55</span></span><br><span class="line"><span class="attribute">D</span> <span class="number">1</span> E <span class="number">44</span></span><br><span class="line"><span class="attribute">E</span> <span class="number">2</span> F <span class="number">60</span> G <span class="number">38</span></span><br><span class="line"><span class="attribute">F</span> <span class="number">0</span></span><br><span class="line"><span class="attribute">G</span> <span class="number">1</span> H <span class="number">35</span></span><br><span class="line"><span class="attribute">H</span> <span class="number">1</span> I <span class="number">35</span></span><br></pre></td></tr></tbody></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:11:08+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/2BEJ6AF.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/3GE4P4T.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/3GE4P4T.html" rel="dofollow" itemprop="url">
+        Binary Tree
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>Background<br>
+Binary trees are a common data structure in computer science. In this problem we will look at an infinite binary tree where the nodes contain a pair of integers. The tree is constructed like this:<br>
+The root contains the pair (1, 1).<br>
+If a node contains (a, b) then its left child contains (a + b, b) and its right child (a, a + b)</p>
+<h2><span id="problem"> Problem</span></h2>
+<p>Given the contents (a, b) of some node of the binary tree described above, suppose you are walking from the root of the tree to the given node along the shortest possible path. Can you find out how often you have to go to a left child and how often to a right child?</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>The first line contains the number of scenarios.<br>
+Every scenario consists of a single line containing two integers i and j (1 &lt;= i, j &lt;= 2*109) that represent<br>
+a node (i, j). You can assume that this is a valid node in the binary tree described above.</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>The output for every scenario begins with a line containing “Scenario #i:”, where i is the number of the scenario starting at 1. Then print a single line containing two numbers l and r separated by a single space, where l is how often you have to go left and r is how often you have to go right when traversing the tree from the root to the node given in the input. Print an empty line after every scenario.</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:10:16+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/3GE4P4T.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/2YWM4VC.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/2YWM4VC.html" rel="dofollow" itemprop="url">
+        Freda 的越野跑
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 262144kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>Freda 报名参加了学校的越野跑。越野跑共有 N 人参加，在一条笔直的道路上进行。这 N 个人在起点处站成一列，相邻两个人之间保持一定的间距。比赛开始后，这 N 个人同时沿着道路向相同的方向跑去。换句话说，这 N 个人可以看作 x 轴上的 N 个点，在比赛开始后，它们同时向 x 轴正方向移动。<br>
+假设越野跑的距离足够远，这 N 个人的速度各不相同且保持匀速运动，那么会有多少对参赛者之间发生 “赶超” 的事件呢？</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行 1 个整数 N。<br>
+第二行为 N 个非负整数，按从前到后的顺序给出每个人的跑步速度。<br>
+对于 50% 的数据，2&lt;=N&lt;=1000。<br>
+对于 100% 的数据，2&lt;=N&lt;=100000。</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>一个整数，表示有多少对参赛者之间发生赶超事件。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span> <span class="number">10</span> <span class="number">8</span> <span class="number">5</span></span><br></pre></td></tr></tbody></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:09:20+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/2YWM4VC.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/4ZP0CT.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/4ZP0CT.html" rel="dofollow" itemprop="url">
+        二叉树的操作
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65535kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>给定一棵二叉树，在二叉树上执行两个操作：</p>
+<ol>
+<li>节点交换<br>
+把二叉树的两个节点交换。</li>
+<li>前驱询问<br>
+询问二叉树的一个节点对应的子树最左边的节点。</li>
+</ol>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行输出一个整数 t (t &lt;= 100)，代表测试数据的组数。</p>
+<p>对于每组测试数据，第一行输入两个整数 n m，n 代表二叉树节点的个数，m 代表操作的次数。</p>
+<p>随后输入 n 行，每行包含 3 个整数 X Y Z，对应二叉树一个节点的信息。X 表示节点的标识，Y 表示其左孩子的标识，Z 表示其右孩子的标识。</p>
+<p>再输入 m 行，每行对应一次操作。每次操作首先输入一个整数 type。</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:08:05+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/4ZP0CT.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/143CP0D.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/143CP0D.html" rel="dofollow" itemprop="url">
+        抓住那头牛
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 2000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>农夫知道一头牛的位置，想要抓住它。农夫和牛都位于数轴上，农夫起始位于点 N (0&lt;=N&lt;=100000)，牛位于点 K (0&lt;=K&lt;=100000)。农夫有两种移动方式：</p>
+<p>1、从 X 移动到 X-1 或 X+1，每次移动花费一分钟<br>
+2、从 X 移动到 2*X，每次移动花费一分钟</p>
+<p>假设牛没有意识到农夫的行动，站在原地不动。农夫最少要花多少时间才能抓住牛？</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>两个整数，N 和 K</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>一个整数，农夫抓到牛所要花费的最小分钟数</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:07:19+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/143CP0D.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/2J8P6C1.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/2J8P6C1.html" rel="dofollow" itemprop="url">
+        八皇后问题
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 10000ms 内存限制: 65536kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>在国际象棋棋盘上放置八个皇后，要求每两个皇后之间不能直接吃掉对方。</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>无输入。<br>
+输出<br>
+按给定顺序和格式输出所有八皇后问题的解（见 Sample Output）。</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(null)</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="样例输出"> 样例输出</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">No. <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">2</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">3</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">4</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">5</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">6</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">7</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">8</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">No. <span class="number">9</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> </span><br><span class="line">...以下省略</span><br></pre></td></tr></tbody></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:06:02+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/2J8P6C1.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/7WHTG5.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/7WHTG5.html" rel="dofollow" itemprop="url">
+        二叉树的深度
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65535kB</p>
+<h2><span id="描述"> 描述</span></h2>
+<p>给定一棵二叉树，求该二叉树的深度</p>
+<p>二叉树深度定义：从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的节点个数为树的深度</p>
+<h2><span id="输入"> 输入</span></h2>
+<p>第一行是一个整数 n，表示二叉树的结点个数。二叉树结点编号从 1 到 n，根结点为 1，n &lt;= 10<br>
+接下来有 n 行，依次对应二叉树的 n 个节点。<br>
+每行有两个整数，分别表示该节点的左儿子和右儿子的节点编号。如果第一个（第二个）数为 - 1 则表示没有左（右）儿子</p>
+<h2><span id="输出"> 输出</span></h2>
+<p>输出一个整型数，表示树的深度</p>
+<h2><span id="样例输入"> 样例输入</span></h2>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-10-05T16:04:42+00:00">2024-10-05</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/7WHTG5.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/0CW5RM.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
@@ -2506,714 +3222,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/3FV6ZXP.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/3FV6ZXP.html" rel="dofollow" itemprop="url">
-        寻找中位数
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>在 N（1&lt;=N&lt;10,000 且 N 为奇数）个数中，找到中位数。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>第 1 行：N</p>
-<p>第 2 至 N+1 行：每行是一个整数</p>
-<h2><span id="输出"> 输出</span></h2>
-<p>第一行：中位数</p>
-<h2><span id="样例输入"> 样例输入</span></h2>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-20T09:21:12+00:00">2024-09-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/3FV6ZXP.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/1XAKKMY.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1XAKKMY.html" rel="dofollow" itemprop="url">
-        位查询
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 5000ms 内存限制: 65536kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>给出 N 个范围在 [0, 65535] 的整数，编程支持以下的操作：</p>
-<p>（1）修改操作：C d，所有的数都增加 d。如果超过 65535，把结果模 65536。 0 &lt;= d &lt;= 65535<br>
-（2）查询操作：Q i，统计在 N 个正整数中有多少个整数其对应的二进制形式的第 i 位二进制位为非 0。0 &lt;= i &lt;= 15。并且最低位 i 为 0。</p>
-<p>最后，输出所有查询操作的统计值。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>输入的第一行为两个正整数 N,M, 其中 N 为操作的整数的个数，而 M 为具体有多少个操作。<br>
-输入的第二行为 N 个正整数，为进行操作的 N 个正整数。<br>
-下面有 M 行，分别表示 M 个操作。</p>
-<p>N&lt;=100000,M&lt;=200000</p>
-<h2><span id="输出"> 输出</span></h2>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-20T09:20:34+00:00">2024-09-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/1XAKKMY.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/25FC6RP.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/25FC6RP.html" rel="dofollow" itemprop="url">
-        词典
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 3000ms 内存限制: 65536kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>你旅游到了一个国外的城市。那里的人们说的外国语言你不能理解。不过幸运的是，你有一本词典可以帮助你。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>首先输入一个词典，词典中包含不超过 100000 个词条，每个词条占据一行。每一个词条包括一个英文单词和一个外语单词，两个单词之间用一个空格隔开。而且在词典中不会有某个外语单词出现超过两次。词典之后是一个空行，然后给出一个由外语单词组成的文档，文档不超过 100000 行，而且每行只包括一个外语单词。输入中出现单词只包括小写字母，而且长度不会超过 10。</p>
-<h2><span id="输出"> 输出</span></h2>
-<p>在输出中，你需要把输入文档翻译成英文，每行输出一个英文单词。如果某个外语单词不在词典中，就把这个单词翻译成 “eh”。</p>
-<h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dog ogday</span><br><span class="line">cat atcay</span><br><span class="line">pig igpay</span><br><span class="line">froot ootfray</span><br><span class="line">loops oopslay</span><br><span class="line"></span><br><span class="line">atcay</span><br><span class="line">ittenkay</span><br><span class="line">oopslay</span><br></pre></td></tr></tbody></table></figure>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-20T09:20:01+00:00">2024-09-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/25FC6RP.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/1YAP7G6.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1YAP7G6.html" rel="dofollow" itemprop="url">
-        二叉搜索树
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 1024kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>二叉搜索树在动态查表中有特别的用处，一个无序序列可以通过构造一棵二叉搜索树变成一个有序序列，构造树的过程即为对无序序列进行排序的过程。每次插入的新的结点都是二叉搜索树上新的叶子结点，在进行插入操作时，不必移动其它结点，只需改动某个结点的指针，由空变为非空即可。</p>
-<p>这里，我们想探究二叉树的建立和序列输出。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>只有一行，包含若干个数字，中间用空格隔开。（数字可能会有重复）</p>
-<h2><span id="输出"> 输出</span></h2>
-<p>输出一行，对输入数字建立二叉搜索树后进行前序周游的结果。</p>
-<h2><span id="样例输入"> 样例输入</span></h2>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-20T09:19:14+00:00">2024-09-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/1YAP7G6.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/3W4T4FV.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/3W4T4FV.html" rel="dofollow" itemprop="url">
-        机器翻译
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 262144kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>VariantF 的电脑上安装了一个机器翻译软件，他经常用这个软件来翻译英语文章。这个翻译软件的原理很简单，它只是从头到尾，依次将每个英文单词用对应的中文含义来替换。对于每个英文单词，软件会先在内存中查找这个单词的中文含义，如果内存中有，软件就会用它进行翻译；如果内存中没有，软件就会在外存中的词典内查找，查出单词的中文含义然后翻译，并将这个单词和译义放入内存，以备后续的查找和翻译。<br>
-假设内存中有 M 个单元，每单元能存放一个单词和译义。每当软件将一个新单词存入内存前，如果当前内存中已存入的单词数不超过 M，软件会将新单词存入一个未使用的内存单元；若内存中已存入 M 个单词，软件会清空最早进入内存的那个单词，腾出单元来，存放新单词。<br>
-假设一篇英语文章的长度为 N 个单词。给定这篇待译文章，翻译软件需要去外存查找多少次词典？假设在翻译开始前，内存中没有任何单词。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>第一行为两个正整数 M 和 N，代表内存容量和文章的长度。<br>
-第二行为 N 个非负整数，按照文章的顺序，每个数（大小不超过 1000000）代表一个英文单词。文章中两个单词是同一个单词，当且仅当它们对应的非负整数相同。<br>
-对于 50% 的数据，1&lt;=N、M&lt;=1000；<br>
-对于 100% 的数据，1&lt;=N、M&lt;=1000000。</p>
-<h2><span id="输出"> 输出</span></h2>
-<p>一个整数，为软件需要查词典的次数。</p>
-<h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">7</span> </span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">1</span> <span class="number">5</span> <span class="number">4</span> <span class="number">4</span> <span class="number">1</span> </span><br></pre></td></tr></tbody></table></figure>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-07T11:18:06+00:00">2024-09-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/3W4T4FV.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/1MCQYNF.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1MCQYNF.html" rel="dofollow" itemprop="url">
-        统计字符数
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>判断一个由 a-z 这 26 个字符组成的字符串中哪个字符出现的次数最多</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>第 1 行是测试数据的组数 n，每组测试数据占 1 行，是一个由 a-z 这 26 个字符组成的字符串<br>
-每组测试数据之间有一个空行，每行数据不超过 1000 个字符且非空</p>
-<h2><span id="输出"> 输出</span></h2>
-<p>n 行，每行输出对应一个输入。一行输出包括出现次数最多的字符和该字符出现的次数，中间是一个空格。<br>
-如果有多个字符出现的次数相同且最多，那么输出 ascii 码最小的那一个字符</p>
-<h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">abbccc</span><br><span class="line"></span><br><span class="line">adfadffasdf</span><br></pre></td></tr></tbody></table></figure>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-09-04T20:36:33+00:00">2024-09-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/1MCQYNF.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/G81AKC.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/G81AKC.html" rel="dofollow" itemprop="url">
-        stack or queue
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65535kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>栈和队列都是常用的线性结构，它们都提供两个操作：</p>
-<p>Push：加入一个元素。</p>
-<p>Pop：弹出一个元素。</p>
-<p>不同的是，栈是” 先进后出”，而队列则是” 先进先出”。</p>
-<p>给出一个线性结构的进出顺序，判定这个结构是栈还是队列。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>第一行输入一个整数 t，代表有 t 组测试数据<br>
-对于每组测试数据，第一行输入一个整数 n，代表操作的次数。<br>
-随后输入 n 行，每行包含两个整数 type val。<br>
-当 type = 1 时，表示该次操作为 push 操作，val 表示进入的数字。当 type=2 时，表示该次操作为 pop 操作，val 代表出来的数字。<br>
-3&lt;=n&lt;=2000</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-08-21T23:42:37+00:00">2024-08-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/G81AKC.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/2K2Y736.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/2K2Y736.html" rel="dofollow" itemprop="url">
-        栈的基本操作
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 1000kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>栈是一种重要的数据结构，它具有 push k 和 pop 操作。push k 是将数字 k 加入到栈中，pop 则是从栈中取一个数出来。</p>
-<p>栈是后进先出的：把栈也看成横向的一个通道，则 push k 是将 k 放到栈的最右边，而 pop 也是从栈的最右边取出一个数。</p>
-<p>假设栈当前从左至右含有 1 和 2 两个数，则执行 push 5 和 pop 操作示例图如下：</p>
-<figure class="highlight tap"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">          push<span class="number"> 5 </span>         pop</span><br><span class="line"></span><br><span class="line">栈  <span class="number"> 1 </span>2  -------&gt; <span class="number"> 1 </span>2<span class="number"> 5 </span>------&gt; <span class="number"> 1 </span>2</span><br></pre></td></tr></tbody></table></figure>
-<p>现在，假设栈是空的。给定一系列 push k 和 pop 操作之后，输出栈中存储的数字。若栈已经空了，仍然接收到 pop 操作，</p>
-<p>则输出 error。</p>
-<h2><span id="输入"> 输入</span></h2>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-08-21T23:41:38+00:00">2024-08-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/2K2Y736.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/1JS4KGK.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/1JS4KGK.html" rel="dofollow" itemprop="url">
-        字符串插入
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>有两个字符串 str 和 substr，str 的字符个数不超过 10，substr 的字符个数为 3。（字符个数不包括字符串结尾处的’\0’。）将 substr 插入到 str 中 ASCII 码最大的那个字符后面，若有多个最大则只考虑第一个。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>输入包括若干行，每一行为一组测试数据，格式为<br>
-str substr</p>
-<h2><span id="输出"> 输出</span></h2>
-<p>对于每一组测试数据，输出插入之后的字符串。</p>
-<h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abcab eee</span><br><span class="line"><span class="number">12343</span> <span class="number">555</span></span><br></pre></td></tr></tbody></table></figure>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-08-18T15:20:48+00:00">2024-08-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/OpenJudge/">OpenJudge</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/OpenJudge/" itemprop="url"><span itemprop="name">OpenJudge</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/1JS4KGK.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3222,7 +3230,7 @@ str substr</p>
       <div class="prev-next">
         
         <p class="current">
-          1 / 9
+          1 / 10
         </p>
         
           <a class="next" rel="next" href="/archives/2024/page/2/">
@@ -3353,7 +3361,7 @@ str substr</p>
           <li><a class="flat-box"
             title="/categories/OpenJudge/" href="/categories/OpenJudge/"
             active-action="action-categoriesOpenJudge"
-            ><div class='name'>OpenJudge</div><div class='badge'>(51)</div></a></li>
+            ><div class='name'>OpenJudge</div><div class='badge'>(60)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/test-example/" href="/categories/test-example/"
@@ -3478,7 +3486,7 @@ str substr</p>
 
 
     <div class='content'>
-      <a href="/tags/2D-Array/" style="font-size: 15.11px; color: #919191">2D Array</a> <a href="/tags/Array/" style="font-size: 17.33px; color: #828282">Array</a> <a href="/tags/Bit/" style="font-size: 14px; color: #999">Bit</a> <a href="/tags/C/" style="font-size: 20.67px; color: #6c6c6c">C</a> <a href="/tags/C/" style="font-size: 22.89px; color: #5d5d5d">C++</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Latex/" style="font-size: 14px; color: #999">Latex</a> <a href="/tags/LinkedList/" style="font-size: 14px; color: #999">LinkedList</a> <a href="/tags/Map/" style="font-size: 18.44px; color: #7b7b7b">Map</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/tags/Matrix/" style="font-size: 14px; color: #999">Matrix</a> <a href="/tags/OpenJudge/" style="font-size: 24px; color: #555">OpenJudge</a> <a href="/tags/Queue/" style="font-size: 15.11px; color: #919191">Queue</a> <a href="/tags/STL/" style="font-size: 21.78px; color: #646464">STL</a> <a href="/tags/Sort/" style="font-size: 14px; color: #999">Sort</a> <a href="/tags/Stack/" style="font-size: 16.22px; color: #8a8a8a">Stack</a> <a href="/tags/String/" style="font-size: 18.44px; color: #7b7b7b">String</a> <a href="/tags/Tree/" style="font-size: 14px; color: #999">Tree</a> <a href="/tags/Vector/" style="font-size: 15.11px; color: #919191">Vector</a> <a href="/tags/queue/" style="font-size: 14px; color: #999">queue</a> <a href="/tags/stack/" style="font-size: 14px; color: #999">stack</a> <a href="/tags/string/" style="font-size: 17.33px; color: #828282">string</a> <a href="/tags/test/" style="font-size: 14px; color: #999">test</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 14px; color: #999">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 14px; color: #999">二叉树的中序遍历</a> <a href="/tags/%E5%8A%A8%E6%80%81%E5%88%86%E9%85%8D/" style="font-size: 14px; color: #999">动态分配</a> <a href="/tags/%E5%90%91%E9%87%8F/" style="font-size: 14px; color: #999">向量</a> <a href="/tags/%E5%AF%B9%E6%95%B0%E5%AD%97%E7%9A%84%E5%A4%84%E7%90%86/" style="font-size: 14px; color: #999">对数字的处理</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 14px; color: #999">数组</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" style="font-size: 15.11px; color: #919191">更新日志</a> <a href="/tags/%E6%A0%88/" style="font-size: 14px; color: #999">栈</a> <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/" style="font-size: 14px; color: #999">模块化</a> <a href="/tags/%E7%9F%A9%E9%98%B5/" style="font-size: 15.11px; color: #919191">矩阵</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 14px; color: #999">碎碎念</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">程序设计</a> <a href="/tags/%E7%AC%AC%E4%B8%80%E7%89%88/" style="font-size: 19.56px; color: #737373">第一版</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15.11px; color: #919191">算法</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/" style="font-size: 15.11px; color: #919191">线性表</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 14px; color: #999">递归</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 14px; color: #999">链表</a>
+      <a href="/tags/2D-Array/" style="font-size: 15.11px; color: #919191">2D Array</a> <a href="/tags/Array/" style="font-size: 17.33px; color: #828282">Array</a> <a href="/tags/BFS/" style="font-size: 14px; color: #999">BFS</a> <a href="/tags/Bit/" style="font-size: 14px; color: #999">Bit</a> <a href="/tags/C/" style="font-size: 20.67px; color: #6c6c6c">C</a> <a href="/tags/C/" style="font-size: 22.89px; color: #5d5d5d">C++</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Latex/" style="font-size: 14px; color: #999">Latex</a> <a href="/tags/LinkedList/" style="font-size: 14px; color: #999">LinkedList</a> <a href="/tags/Map/" style="font-size: 18.44px; color: #7b7b7b">Map</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/tags/Matrix/" style="font-size: 14px; color: #999">Matrix</a> <a href="/tags/OpenJudge/" style="font-size: 24px; color: #555">OpenJudge</a> <a href="/tags/Queue/" style="font-size: 15.11px; color: #919191">Queue</a> <a href="/tags/STL/" style="font-size: 21.78px; color: #646464">STL</a> <a href="/tags/Sort/" style="font-size: 14px; color: #999">Sort</a> <a href="/tags/Stack/" style="font-size: 16.22px; color: #8a8a8a">Stack</a> <a href="/tags/String/" style="font-size: 18.44px; color: #7b7b7b">String</a> <a href="/tags/Tree/" style="font-size: 14px; color: #999">Tree</a> <a href="/tags/Vector/" style="font-size: 15.11px; color: #919191">Vector</a> <a href="/tags/queue/" style="font-size: 14px; color: #999">queue</a> <a href="/tags/stack/" style="font-size: 14px; color: #999">stack</a> <a href="/tags/string/" style="font-size: 17.33px; color: #828282">string</a> <a href="/tags/test/" style="font-size: 14px; color: #999">test</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 17.33px; color: #828282">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 14px; color: #999">二叉树的中序遍历</a> <a href="/tags/%E5%8A%A8%E6%80%81%E5%88%86%E9%85%8D/" style="font-size: 14px; color: #999">动态分配</a> <a href="/tags/%E5%90%91%E9%87%8F/" style="font-size: 14px; color: #999">向量</a> <a href="/tags/%E5%A4%96%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">外排序</a> <a href="/tags/%E5%AF%B9%E6%95%B0%E5%AD%97%E7%9A%84%E5%A4%84%E7%90%86/" style="font-size: 14px; color: #999">对数字的处理</a> <a href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">拓扑排序</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 14px; color: #999">数组</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" style="font-size: 15.11px; color: #919191">更新日志</a> <a href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/%E6%A0%88/" style="font-size: 14px; color: #999">栈</a> <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/" style="font-size: 14px; color: #999">模块化</a> <a href="/tags/%E7%9F%A9%E9%98%B5/" style="font-size: 15.11px; color: #919191">矩阵</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 14px; color: #999">碎碎念</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">程序设计</a> <a href="/tags/%E7%AC%AC%E4%B8%80%E7%89%88/" style="font-size: 19.56px; color: #737373">第一版</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15.11px; color: #919191">算法</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/" style="font-size: 15.11px; color: #919191">线性表</a> <a href="/tags/%E7%BD%AE%E6%8D%A2%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">置换选择排序</a> <a href="/tags/%E9%80%86%E5%BA%8F%E5%AF%B9/" style="font-size: 14px; color: #999">逆序对</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 15.11px; color: #919191">递归</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 14px; color: #999">链表</a>
     </div>
   </section>
 
@@ -4372,7 +4380,7 @@ str substr</p>
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp"];
   let index = 0;
   let IntervalParallax = null;
 
