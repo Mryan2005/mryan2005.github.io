@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>朋友圈</title>
+    <url>/posts/21W5CVY.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>某学校有 N 个学生，形成 M 个俱乐部。每个俱乐部里的学生有着一定相似的兴趣爱好，形成一个朋友圈。一个学生可以同时属于若干个不同的俱乐部。根据 “我的朋友的朋友也是我的朋友” 这个推论可以得出，如果 A 和 B 是朋友，且 B 和 C 是朋友，则 A 和 C 也是朋友。请编写程序计算最大朋友圈中有多少人。</p>
+<h3><span id="输入格式"> 输入格式</span></h3>
+<p>输入的第一行包含两个正整数 N（≤30000）和 M（≤1000），分别代表学校的学生总数和俱乐部的个数。后面的 M 行每行按以下格式给出 1 个俱乐部的信息，其中学生从 1~N 编号：</p>
+<p>第 i 个俱乐部的人数 Mi（空格）学生 1（空格）学生 2 … 学生 Mi</p>
+<h3><span id="输出格式"> 输出格式</span></h3>
+<p>输出给出一个整数，表示在最大朋友圈中有多少人。</p>
+<h3><span id="输入样例"> 输入样例</span></h3>
+<figure class="highlight basic"><table><tbody><tr><td class="code"><pre><span class="line"><span class="symbol">7 </span><span class="number">4</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">1</span> <span class="number">4</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">5</span> <span class="number">6</span> <span class="number">7</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">6</span></span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="输出样例"> 输出样例</span></h3>
+<figure class="highlight"><table><tbody><tr><td class="code"><pre><span class="line">4</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="一些限制"> 一些限制</span></h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代码长度限制</td>
+<td> 16 KB</td>
+</tr>
+<tr>
+<td> 时间限制</td>
+<td> 400 ms</td>
+</tr>
+<tr>
+<td> 内存限制</td>
+<td> 64 MB</td>
+</tr>
+<tr>
+<td> 栈限制</td>
+<td> 8192 KB</td>
+</tr>
+</tbody>
+</table>
+<h3><span id="解题思路"> 解题思路</span></h3>
+<ol>
+<li>初始化 <code>init</code> <figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">(<span class="type">int</span> n)</span> </span>{</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) {</span><br><span class="line">        fa[i] = i;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li>查询 <code>find</code> <figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> i)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span>(i == fa[i]) <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span> {</span><br><span class="line">        fa[i] = <span class="built_in">find</span>(fa[i]);</span><br><span class="line">        <span class="keyword">return</span> fa[i];</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li>合并 <code>unionn</code> <figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">union1</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>{</span><br><span class="line">  <span class="type">int</span> afa = <span class="built_in">find</span>(a), bfa = <span class="built_in">find</span>(b);</span><br><span class="line">     fa[afa] = bfa;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li>更新 <code>update</code>（这个是我写题时想到的） <figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">update</span><span class="params">(<span class="type">int</span> i)</span> </span>{</span><br><span class="line">    <span class="keyword">if</span>(i == fa[i]) <span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span> {</span><br><span class="line">        fa[i] = <span class="built_in">find</span>(fa[i]);</span><br><span class="line">        <span class="keyword">return</span> fa[i];</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li>最后的数据整理工作（如统计最大的人数等）<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line">unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; mp;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) {</span><br><span class="line">    <span class="built_in">update</span>(i);</span><br><span class="line">}</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) {</span><br><span class="line">    <span class="keyword">if</span>(mp.<span class="built_in">find</span>(fa[i]) != mp.<span class="built_in">end</span>()) {</span><br><span class="line">        mp[fa[i]] += <span class="number">1</span>;</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">        mp[fa[i]] = <span class="number">1</span>;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> i: mp) {</span><br><span class="line">    maxCount = <span class="built_in">max</span>(maxCount, i.second);</span><br><span class="line">}</span><br><span class="line">cout &lt;&lt; maxCount;</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ol>
+<h2><span id="code"> Code</span></h2>
+<figure class="highlight cpp"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> fa[<span class="number">30020</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">(<span class="type">int</span> n)</span> </span>{</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) {</span><br><span class="line">		fa[i] = i;</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> i)</span> </span>{</span><br><span class="line">	<span class="keyword">if</span>(i == fa[i]) <span class="keyword">return</span> i;</span><br><span class="line">	<span class="keyword">else</span> {</span><br><span class="line">		fa[i] = <span class="built_in">find</span>(fa[i]);</span><br><span class="line">		<span class="keyword">return</span> fa[i];</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">update</span><span class="params">(<span class="type">int</span> i)</span> </span>{</span><br><span class="line">	<span class="keyword">if</span>(i == fa[i]) <span class="keyword">return</span> i;</span><br><span class="line">	<span class="keyword">else</span> {</span><br><span class="line">		fa[i] = <span class="built_in">find</span>(fa[i]);</span><br><span class="line">		<span class="keyword">return</span> fa[i];</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">union1</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>{</span><br><span class="line">	<span class="type">int</span> afa = <span class="built_in">find</span>(a), bfa = <span class="built_in">find</span>(b);</span><br><span class="line">	fa[afa] = bfa;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="type">int</span> N, M, Mi, maxCount = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; N &gt;&gt; M;</span><br><span class="line">	<span class="built_in">init</span>(N);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= M; ++i) {</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">		cin &gt;&gt; Mi &gt;&gt; a;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= Mi<span class="number">-1</span>; ++j) {</span><br><span class="line">			cin &gt;&gt; b;</span><br><span class="line">		    <span class="built_in">union1</span>(a, b);</span><br><span class="line">            a = b;</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) {</span><br><span class="line">		<span class="built_in">update</span>(i);</span><br><span class="line">	}</span><br><span class="line">    unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; mp;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; ++i) {</span><br><span class="line">        <span class="keyword">if</span>(mp.<span class="built_in">find</span>(fa[i]) != mp.<span class="built_in">end</span>()) {</span><br><span class="line">            mp[fa[i]] += <span class="number">1</span>;</span><br><span class="line">        } <span class="keyword">else</span> {</span><br><span class="line">            mp[fa[i]] = <span class="number">1</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> i: mp) {</span><br><span class="line">        maxCount = <span class="built_in">max</span>(maxCount, i.second);</span><br><span class="line">    }</span><br><span class="line">	cout &lt;&lt; maxCount;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      <categories>
+        <category>PTA</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>PTA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从家庭版走向专业版 | Computer：我已是完全之机</title>
     <url>/posts/SWRP30.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="前因"> 前因</span></h2>
