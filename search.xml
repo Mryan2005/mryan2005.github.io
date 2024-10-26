@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>从家庭版走向专业版 | Computer：我已是完全之机</title>
+    <url>/posts/SWRP30.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="前因"> 前因</span></h2>
+<p>由于我需要使用远程桌面，好吧，其实 ToDesk 也没什么不好，只是因为用了 Zerotier 组网以后，就不想用 ToDesk 了。</p>
+<h2><span id="操作"> 操作</span></h2>
+<ol>
+<li>首先，你要在相关的专业版帖子、知乎文章搜索一个可用的激活码。这里有一篇文章<a href="https://zhuanlan.zhihu.com/p/637930518">点击进入</a></li>
+<li>然后输入激活码，等待计算机更新完成。</li>
+<li>等待重启完成</li>
+<li>输入指令 <code>irm massgrave.dev/get | iex</code></li>
+<li>选择 <code>[1]</code></li>
+<li>激活成功</li>
+</ol>
+<h2><span id="成果"> 成果</span></h2>
+<p><img src="https://i-blog.csdnimg.cn/direct/38875d176b844d1a9b6d6dabeaeec37e.png" class="lazyload" data-srcset="https://i-blog.csdnimg.cn/direct/38875d176b844d1a9b6d6dabeaeec37e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="在这里插入图片描述"></p>
+<h2><span id="后记"> 后记</span></h2>
+<ol>
+<li>更新速度或许会慢一些，耐心等待即可。</li>
+<li>从家庭版走向专业版不会重装计算机，只是安装一些新的软件而已。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Win11</tag>
+        <tag>Windows</tag>
+        <tag>系统</tag>
+        <tag>专业版</tag>
+        <tag>Windows 11</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>置换选择排序</title>
     <url>/posts/1J958FB.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB<br>
