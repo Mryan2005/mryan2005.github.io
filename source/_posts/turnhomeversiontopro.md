@@ -20,7 +20,7 @@ categories: Windows
 
 ## 成果
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/38875d176b844d1a9b6d6dabeaeec37e.png)
+![在这里插入图片描述](https://s21.ax1x.com/2024/10/26/pA0PJLd.png)
 
 ## 后记
 
