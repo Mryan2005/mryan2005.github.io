@@ -50,6 +50,8 @@ categories: [整活]
 
 其实这篇文章有一些彩蛋，要想知道彩蛋，请破解一下内容。
 
+提示：有一种编码，它不像md5不可逆，它是可逆的。
+
 ```base64
 6K+35omT5byARjEy77yM5bm25a6a5L2N5Yiw4oCc5a+55LqO5LiA5Lqb5pyJ55So55qE5bel5YW355qE5o+Q6K6u5Lit4oCd55qE4oCc56ys5LqM5p2h4oCd5ZKM4oCc5YWz5LqO6K++56iL4oCd5Lit55qE4oCc56ys5Zub5p2h4oCd77yM6K+35LiN6KaB6YCP6Zyy6L+Z5Liq6YOo5YiG
 ```
