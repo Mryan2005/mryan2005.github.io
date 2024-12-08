@@ -45,3 +45,11 @@ categories: [整活]
 2. 原神，一个非常神奇的游戏。至少，当你和你的同学比较熟络后，说不定会提出加你为原神好友。
 3. 腾讯类游戏（如王者荣耀），其实，你加人家的QQ或者微信为好友就有一定的可能性可以一起开黑了。
 （未完待续）
+
+## 尾声
+
+其实这篇文章有一些彩蛋，要想知道彩蛋，请破解一下内容。
+
+```base64
+6K+35omT5byARjEy77yM5bm25a6a5L2N5Yiw4oCc5a+55LqO5LiA5Lqb5pyJ55So55qE5bel5YW355qE5o+Q6K6u5Lit4oCd55qE4oCc56ys5LqM5p2h4oCd5ZKM4oCc5YWz5LqO6K++56iL4oCd5Lit55qE4oCc56ys5Zub5p2h4oCd
+```
