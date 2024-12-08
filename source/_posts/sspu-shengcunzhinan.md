@@ -42,7 +42,7 @@ categories: [整活]
 ## 游戏方面
 
 1. maimai（舞萌DX），[AkiACG论坛](https://forum.akiacg.com/)是一个maimai为主的，其他主题共同存在的论坛，所以，你可以在这里找到与maimai有关的一些东西。
-2. 原神，一个非常神奇的游戏。至少，当你和你的同学比较熟络后，说不定会提出加你为原神好友。
+2. 原神，一个非常神奇的游戏。至少，当你和你的同学比较熟络后，说不定会提出加你为原神好友。不过，我不玩原神。<span style="display:none; !important">好啦，被你发现了，其实，我是玩原神的，我的原神uid是308296673，欢迎加我好友。</span>
 3. 腾讯类游戏（如王者荣耀），其实，你加人家的QQ或者微信为好友就有一定的可能性可以一起开黑了。
 （未完待续）
 
@@ -53,5 +53,5 @@ categories: [整活]
 提示：有一种编码，它不像md5不可逆，它是可逆的。
 
 ```base64
-6K+35omT5byARjEy77yM5bm25a6a5L2N5Yiw4oCc5a+55LqO5LiA5Lqb5pyJ55So55qE5bel5YW355qE5o+Q6K6u5Lit4oCd55qE4oCc56ys5LqM5p2h4oCd5ZKM4oCc5YWz5LqO6K++56iL4oCd5Lit55qE4oCc56ys5Zub5p2h4oCd77yM6K+35LiN6KaB6YCP6Zyy6L+Z5Liq6YOo5YiG
+6K+35omT5byARjEy77yM54S25ZCO77yM5oyJ5LiA5LiL6ZSu55uY55qEQ3RybOmUruWSjEbplK7vvIzmraTml7bkvJrlh7rnjrDkuIDkuKrmlofmnKzmoYbvvIzlnKjmlofmnKzmoYbph4zpnaLovpPlhaXlpoLkuIvlhoXlrrkKZGlzcGxheTpub25lOyAhaW1wb3J0YW50
 ```
