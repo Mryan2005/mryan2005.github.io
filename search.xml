@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>sspu-shengcunzhinan</title>
+    <url>/posts/1FGY8NA.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="引言"> 引言</span></h2>
+<p>东南大学有生存指南，二工大也不能落下。在这里，我会从里到外，从外到里，从里到里，从外到外，从浅到深，从深到浅，从浅到浅，从深到深地写一份。</p>
+<h2><span id="选修课方面的"> 选修课方面的</span></h2>
+<ol>
+<li>假如你不是一个<strong>热爱计算</strong>的人，请不要选 <strong>IT 项目管理</strong>或 <strong>MATLAB</strong>，这些课程的大作业只要你做错一个数据，其他的都要改。（痛苦程度：5 颗星）
+<ol>
+<li>IT 项目管理的大 project 使用 Project 去弄一个项目管理。</li>
+<li>MATLAB 既有 exam，又有大 project。如果你真的很不幸选到了这门 course，那请到以下网站寻找大 project 的灵感：
+<ol>
+<li><a href="https://data.stats.gov.cn/easyquery.htm?cn=C01">国家统计局</a></li>
+<li><a href="https://hudong.moe.gov.cn/jyb_sjzl/moe_560/2020/">中华人民共和国教育部</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li>如果你喜欢喝葡萄酒，可以考虑选<strong>葡萄酒文化与品鉴</strong>，这是一个性价比很高的选修课，给的绩点会比较高，并且有酒喝。
+<ol>
+<li>葡萄酒文化与品鉴也是既有 <strong>exam</strong>，又有大 <strong>project</strong>。</li>
+</ol>
+</li>
+</ol>
+<h2><span id="对于水课类的课程如形势政策等"> 对于水课类的课程（如形势政策等）</span></h2>
+<ol>
+<li>你要<strong>熟练使用 AI</strong>，这会给你减少非常多的事情。</li>
+<li>请在你的电脑上安装 “<strong>篡改猴</strong>”，它能解决很多东西 <span style="width:0px;"> ，至少学习通的刷 course，大学物理 C 的实验报告提交是可以方便许多的 </span> 。</li>
+<li>待续……。</li>
+</ol>
+<h2><span id="关于非水课的课程如大学物理-b-等"> 关于非水课的课程（如大学物理 B 等）</span></h2>
+<ol>
+<li>你要确保你的学习通是可以正常收发信息，否则你可能会错过作业的 deadline。当你错过了作业的 deadline，你在能看运气了，如果你的科任老师好说话，那没什么，否则，只能自认倒霉。</li>
+<li>关于非水课的课程的大 project，记住不要弄得太好，刚好 95% 以上就好了，否则你有可能因为 have no available time，而玩脱。</li>
+<li>如果你从头到尾都没听过课，请在考试前一周，将这门 course 学一遍，否则你可能要补考。</li>
+<li><span style="width:0px;"> 如果 exam 是在宿舍考，你得要有足够的智商和情商来面对（电脑端考试和手机端考试，其实差别还是挺大的）。 </span> 待续……。</li>
+</ol>
+<h2><span id="关于生活方面的"> 关于生活方面的</span></h2>
+<ol>
+<li>一般情况下，洗漱用品如果不急用请到宝龙的 “好特卖” 那里购买，那里比较实惠。</li>
+<li>有时候要买一些东西，最好是按着一个顺序来找：天猫 ——&gt;（b 站 ——&gt;）京东。我买的原神的 Shanghai Pass 卡在 b 站售价 30 元 + 邮费 8 元（我的欧气不大行，所以就花了 37.5 买下了那张卡），在天猫里面是 30 元包邮（其实刚好遇上天猫优惠，也就成了 23 元）。</li>
+</ol>
+<h2><span id="游戏方面"> 游戏方面</span></h2>
+<ol>
+<li>maimai（舞萌 DX），<a href="https://forum.akiacg.com/">AkiACG 论坛</a>是一个 maimai 为主的，其他主题共同存在的论坛，所以，你可以在这里找到与 maimai 有关的一些东西。</li>
+<li>原神，一个非常神奇的游戏。至少，当你和你的同学比较熟络后，说不定会提出加你为原神好友。</li>
+<li>腾讯类游戏（如王者荣耀），其实，你加人家的 QQ 或者微信为好友就有一定的可能性可以一起开黑了。<br>
+（未完待续）</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>朋友圈</title>
     <url>/posts/21W5CVY.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>某学校有 N 个学生，形成 M 个俱乐部。每个俱乐部里的学生有着一定相似的兴趣爱好，形成一个朋友圈。一个学生可以同时属于若干个不同的俱乐部。根据 “我的朋友的朋友也是我的朋友” 这个推论可以得出，如果 A 和 B 是朋友，且 B 和 C 是朋友，则 A 和 C 也是朋友。请编写程序计算最大朋友圈中有多少人。</p>
