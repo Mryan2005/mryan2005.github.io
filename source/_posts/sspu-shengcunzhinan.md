@@ -1,8 +1,8 @@
 ---
-title: sspu-shengcunzhinan
+title: SSPU生存指南
 date: 2024-12-08 13:03:29
-tags:
-categories:
+tags: [生存指南, 二工大]
+categories: [整活]
 ---
 
 ## 引言
