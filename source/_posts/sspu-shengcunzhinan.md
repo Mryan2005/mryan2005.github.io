@@ -32,7 +32,8 @@ categories: [整活]
 1. 你要确保你的学习通是可以正常收发信息，否则你可能会错过作业的deadline。当你错过了作业的deadline，你在能看运气了，如果你的科任老师好说话，那没什么，否则，只能自认倒霉。
 2. 关于非水课的课程的大project，记住不要弄得太好，刚好95%以上就好了，否则你有可能因为have no available time，而玩脱。
 3. 如果你从头到尾都没听过课，请在考试前一周，将这门course学一遍，否则你可能要补考。
-4.  <span style="display:none; !important"> 如果exam是在宿舍考，你得要有足够的智商和情商来面对（电脑端考试和手机端考试，其实差别还是挺大的）。 </span> 待续……。
+4.  <span style="display:none; !important"> 如果exam是在宿舍考，你得要有足够的智商和情商来面对（电脑端考试和手机端考试，其实差别还是挺大的）。</span> 待续……。
+5. <span style="display:none; !important"> 如果可以打回学习通的作业，那你可以知道一件事情，就是你可以通过试错的办法实现作业满分。就是先选择一个选项，然后选择下一题，接着再选择上一题，这样你就可以知道哪个选项是正确的，然后再选择正确的选项，这样你就可以实现作业满分了。</span> 待续……。
 
 ## 关于生活方面的
 
@@ -50,8 +51,16 @@ categories: [整活]
 
 其实这篇文章有一些彩蛋，要想知道彩蛋，请破解一下内容。
 
-提示：有一种编码，它不像md5不可逆，它是可逆的。
+<div id="displaySomeThings">提示：有一种编码，它不像md5不可逆，它是可逆的。</div>
 
 ```base64
 6K+35omT5byARjEy77yM54S25ZCO77yM5oyJ5LiA5LiL6ZSu55uY55qEQ3RybOmUruWSjEbplK7vvIzmraTml7bkvJrlh7rnjrDkuIDkuKrmlofmnKzmoYbvvIzlnKjmlofmnKzmoYbph4zpnaLovpPlhaXlpoLkuIvlhoXlrrkKZGlzcGxheTpub25lOyAhaW1wb3J0YW50
 ```
+
+<script>
+    document.getElementById("displaySomeThings").addEventListener("click", function() {
+        document.querySelectorAll("span").forEach(function(elem) {
+            elem.style.display = "inline";
+        });
+    });
+</script>
