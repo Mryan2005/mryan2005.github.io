@@ -16,4 +16,4 @@ date: 2024-05-25 09:56:01
 | 名字 | 简介 | 介绍网站 |
 | --- | --- | --- |
 | [SSPUBot](https://github.com/Mryan2005/SSPU-Bot) | It's a bot that can gather the notice and activity of school | [官网](https://forum.akiacg.com/u/SSPUBot) |
-| [VentiEdgeAddon](https://github.com/Mryan2005/VentiEdgeAddon) | This is a new tab extension for Edge browser, which is based on the character Venti from Genshin Impact and MacOS Big Sur. | 由于竞赛原因，暂时不提供 |
+| [VentiEdgeAddon](https://github.com/Mryan2005/VentiEdgeAddon) | This is a new tab extension for Edge browser, which is based on the character Venti from Genshin Impact and MacOS Big Sur. | 由于竞赛原因，暂时不提供，包括源码也是 |

@@ -52,6 +52,12 @@
       screenshot:
       keywords: OpenJudge
       description: 我的OpenJudge主页
+    - title: 蓝桥云课
+      avatar: 
+      url: https://www.lanqiao.cn/users/2902680/
+      screenshot:
+      keywords: 蓝桥云课
+      description: 我的蓝桥云课主页
 - group: 我朋友们的网站 # 分组标题
   description: 欢迎前去他们的网站 # 分组描述
   items:
