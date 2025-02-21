@@ -1629,7 +1629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1740109879818),
+    lastupdate: new Date(1740110116898),
     sidebar: {
       for_page: ["blogger","category","tagcloud"],
       for_post: ["toc"],
@@ -2403,474 +2403,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/816f0c9a.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/816f0c9a.html" rel="dofollow" itemprop="url">
-        矩阵的特征值
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="特征多项式"><a class="markdownIt-Anchor" href="#特征多项式"></a> 特征多项式</h2>
-<p>特征多项式是指<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> f</mi><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo><mo>=</mo><mi mathvariant="normal">∣</mi><mi>A</mi><mo>−</mo><mi>λ</mi><mi>E</mi><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">f(\lambda) = |A - λE|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">λ</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">∣</span></span></span></span>。<br>
-依然，还是上面的例子，特征多项式是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false"> (</mo><mi>λ</mi><mo>−</mo><mn>4</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>λ</mi><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(λ-4)(λ+2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">4</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mclose">)</span></span></span></span></p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-25T14:42:07+00:00">2024-05-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a><span class="sep"></span><a class="category-link" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/">矩阵</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" itemprop="url"><span itemprop="name">线性代数</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/" itemprop="url"><span itemprop="name">矩阵</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/816f0c9a.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/fbed3bd6.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/fbed3bd6.html" rel="dofollow" itemprop="url">
-        使用 “自带栈” 解决中序遍历（2）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
-<p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-inorder-traversal/description/">94. 二叉树的中序遍历</a></p>
-</blockquote>
-<h2><span id="思路"> 思路</span></h2>
-<blockquote>
-<p>我们都知道中序遍历是左边 ——&gt; 中间 ——&gt; 右边</p>
-</blockquote>
-<h2><span id="解题方法"> 解题方法</span></h2>
-<ol>
-<li>一直向左边走</li>
-<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
-<li>继续一直向左边走。</li>
-<li>到达左边尽头后弹出并打印，然后向右边走一个。</li>
-<li>结束条件是 p 和栈 S 都为空。</li>
-</ol>
-<h2><span id="复杂度"> 复杂度</span></h2>
-<p>时间复杂度:</p>
-<blockquote>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
-</blockquote>
-<p>空间复杂度:</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-25T13:12:50+00:00">2024-05-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/LeetCode/">LeetCode</a><span class="sep"></span><a class="category-link" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/">简单题</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/LeetCode/" itemprop="url"><span itemprop="name">LeetCode</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/" itemprop="url"><span itemprop="name">简单题</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/fbed3bd6.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/6f990142.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/6f990142.html" rel="dofollow" itemprop="url">
-        点估计
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="参数估计问题"><a class="markdownIt-Anchor" href="#参数估计问题"></a> 参数估计问题</h2>
-<p>是指当所研究的总体分布类型已知，但分布中含有一个或多个未知参数时，如何根据样本来估计未知参数的问题。<br>
-譬如：一批灯泡寿命的预测，如果将<strong>灯泡的寿命<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 看作一个总体</strong>，根据实际经验知道<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 服从正态分布<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> N</mi><mo stretchy="false">(</mo><mi>μ</mi><mo separator="true">,</mo><mi>σ</mi><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(μ,σ2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal">μ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord">2</span><span class="mclose">)</span></span></span></span>，<strong>但参数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> μ</mi></mrow><annotation encoding="application/x-tex">μ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">μ</span></span></span></span> 与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> σ</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">σ2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mord">2</span></span></span></span> 是未知的</strong>，<strong>要想预测灯泡寿命，就必须确定出寿命分布的参数，这就是参数估计问题。</strong><br>
-<strong>假设所研究的总体类型已知</strong>，即其分布函数为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> F</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(x,θ)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span>，但<strong>其包含的参数<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi> θ</mi></mrow><annotation encoding="application/x-tex">θ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span> 为未知参数</strong>（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">θ</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span> 可以是一个参数，也可以是一个参数向量）。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-23T23:29:12+00:00">2024-05-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">概率论与数理统计</a><span class="sep"></span><a class="category-link" href="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/">参数估计</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" itemprop="url"><span itemprop="name">概率论与数理统计</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" itemprop="url"><span itemprop="name">参数估计</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/6f990142.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/e86a0aed.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/e86a0aed.html" rel="dofollow" itemprop="url">
-        链表入门
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="链表linked-list的别称"> 链表（<strong>linked list</strong>）的别称</span></h2>
-<p><strong>线性表的链式表示</strong>、<strong>链式存储结构</strong>、<strong>链式映像</strong>、<strong>随机存取结构</strong>的储存结构</p>
-<h2><span id="单向链表"> 单向链表</span></h2>
-<h3><span id="长相"> 长相</span></h3>
-<h4><span id="无头链表"> 无头链表</span></h4>
-<p><img src="https://pic.imgdb.cn/item/662db4730ea9cb14037a6420.jpg" class="lazyload" data-srcset="https://pic.imgdb.cn/item/662db4730ea9cb14037a6420.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt><br>
-指向首元结点的指针叫做<strong>头指针（head pointed）</strong></p>
-<h4><span id="有头链表"> 有头链表</span></h4>
-<p>第一个结点叫<strong>头结点（head node）</strong></p>
-<h3><span id="结构体定义"> 结构体定义</span></h3>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-23T22:25:31+00:00">2024-05-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/">线性结构（线性表）</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/" itemprop="url"><span itemprop="name">线性结构（线性表）</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/e86a0aed.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/23defcae.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/23defcae.html" rel="dofollow" itemprop="url">
-        创建你的博客
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css">
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-22T20:28:37+00:00">2024-05-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/">从零开始的博客创建</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/" itemprop="url"><span itemprop="name">从零开始的博客创建</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/23defcae.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/d83f0373.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/d83f0373.html" rel="dofollow" itemprop="url">
-        杨氏双缝干涉
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p><img src="https://pic.imgdb.cn/item/664c9eacd9c307b7e9ae3cb0.jpg" class="lazyload" data-srcset="https://pic.imgdb.cn/item/664c9eacd9c307b7e9ae3cb0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-21T21:01:42+00:00">2024-05-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%89%A9%E7%90%86/">物理</a><span class="sep"></span><a class="category-link" href="/categories/%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/">光学</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E7%89%A9%E7%90%86/" itemprop="url"><span itemprop="name">物理</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/" itemprop="url"><span itemprop="name">光学</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/d83f0373.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/171c39b7.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
@@ -2926,85 +2458,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' rel="dofollow" href='/posts/171c39b7.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/95f3cae3.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/95f3cae3.html" rel="dofollow" itemprop="url">
-        重新排列数组
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <blockquote>
-<p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/shuffle-the-array/description/">1470. 重新排列数组</a></p>
-</blockquote>
-<h1 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h1>
-<blockquote>
-<p>由题可知，x 的部分被放在 0~n/2-1 处，y 的部分放在 n/2~n 处，而重排是按照<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false"> [</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[x_1, y_1, ……, x_n, y_n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span></span></span></span> 摆放。</p>
-</blockquote>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-20T17:18:08+00:00">2024-05-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/LeetCode/">LeetCode</a><span class="sep"></span><a class="category-link" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/">简单题</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/LeetCode/" itemprop="url"><span itemprop="name">LeetCode</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/" itemprop="url"><span itemprop="name">简单题</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/95f3cae3.html' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3095,7 +2548,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/48b27268.html">
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/a5285d9d.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
@@ -3113,15 +2566,30 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/48b27268.html" rel="dofollow" itemprop="url">
-        相干光
+      <a href="/posts/a5285d9d.html" rel="dofollow" itemprop="url">
+        有效的括号的栈思想
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
-      <h2 id="形成条件"><a class="markdownIt-Anchor" href="#形成条件"></a> 形成条件</h2>
-<p>由<strong>频率相同</strong>、<strong>振动方向相同</strong>、相位差恒定的光源发出的光波，经过叠加后，光强呈现明显的周期性变化，这种光波称为相干光。</p>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
+<p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/description/">20. 有效的括号</a></p>
+</blockquote>
+<h1><span id="思路"> 思路</span></h1>
+<blockquote>
+<p>Mryan2005，觉得要先将不相干的先入栈，然后，当遇到相关的括号时，出栈。</p>
+</blockquote>
+<h1><span id="解题方法"> 解题方法</span></h1>
+<blockquote>
+<p>有思路可得</p>
+</blockquote>
+<h1><span id="复杂度"> 复杂度</span></h1>
+<p>时间复杂度:</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+</blockquote>
+<p>空间复杂度:</p>
     
   </div>
   
@@ -3136,24 +2604,609 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <meta itemprop="url" content="/">
           </span>
         
-        <time itemprop="dateCreated datePublished" datetime="2024-05-19T16:08:15+00:00">2024-05-19</time>
+        <time itemprop="dateCreated datePublished" datetime="2024-05-19T13:07:11+00:00">2024-05-19</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%89%A9%E7%90%86/">物理</a><span class="sep"></span><a class="category-link" href="/categories/%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/">光学</a>
+          <a class="category-link" href="/categories/LeetCode/">LeetCode</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E7%89%A9%E7%90%86/" itemprop="url"><span itemprop="name">物理</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/" itemprop="url"><span itemprop="name">光学</span></a>
+              <a rel="dofollow" href="/categories/LeetCode/" itemprop="url"><span itemprop="name">LeetCode</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' rel="dofollow" href='/posts/48b27268.html' itemprop="url">
+          <a class='readmore' rel="dofollow" href='/posts/a5285d9d.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/df58b0a0.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/df58b0a0.html" rel="dofollow" itemprop="url">
+        回文数
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><blockquote>
+<p>Problem: <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/palindrome-number/description/">9. 回文数</a></p>
+</blockquote>
+<h2><span id="思路"> 思路</span></h2>
+<blockquote>
+<p>先拆分，后对比</p>
+</blockquote>
+<h2><span id="解题方法"> 解题方法</span></h2>
+<blockquote>
+<p>有思路可知。</p>
+</blockquote>
+<h2><span id="复杂度"> 复杂度</span></h2>
+<p>时间复杂度:</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(log_2n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+</blockquote>
+<p>空间复杂度:</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-18T11:19:15+00:00">2024-05-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/LeetCode/">LeetCode</a><span class="sep"></span><a class="category-link" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/">简单题</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/LeetCode/" itemprop="url"><span itemprop="name">LeetCode</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/" itemprop="url"><span itemprop="name">简单题</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/df58b0a0.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/b5f574ac.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/b5f574ac.html" rel="dofollow" itemprop="url">
+        2024-05-18 更新日志
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>目前将会放弃 Github page，选择使用 Cloudflare page，因为 Github page 的访问速度实在是太慢了，而且还经常被墙，所以我决定放弃 Github page，转而使用 Cloudflare page，这样就可以让大家更快的访问我的博客了。</p>
+
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-18T08:45:51+00:00">2024-05-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/">更新日志</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" itemprop="url"><span itemprop="name">更新日志</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/b5f574ac.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/f35acf61.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/f35acf61.html" rel="dofollow" itemprop="url">
+        顺序表
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="别称"> 别称</span></h2>
+<p><strong>线性表的顺序表示</strong>、<strong>顺序存储结构</strong>、<strong>顺序映像</strong>、<strong>随机存取结构</strong>的储存结构</p>
+<h2><span id="作用"> 作用</span></h2>
+<p>利用数组的连续存储空间顺序存放线性表的各个元素<br>
+<code>a[n-1]</code> 是 <code>a[n]</code> 的直接前趋，<code>a[n+1]</code> 是 <code>a[n]</code> 的直接后继。</p>
+<h2><span id="结构体代码"> 结构体代码</span></h2>
+<h3><span id="第一种写法"> 第一种写法</span></h3>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">sqList</span> {</span></span><br><span class="line">    ElementType Data[MAXSIZE];</span><br><span class="line">    <span class="type">int</span> Last;</span><br><span class="line">} sqList;</span><br></pre></td></tr></tbody></table></figure>
+<h4><span id="python"> Python</span></h4>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">LNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.Data = []</span><br><span class="line">        self.last = -<span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-17T12:22:25+00:00">2024-05-17</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/">线性结构（线性表）</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/" itemprop="url"><span itemprop="name">线性结构（线性表）</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/f35acf61.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/ccb7e96d.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/ccb7e96d.html" rel="dofollow" itemprop="url">
+        动态分配
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="前情提要"> 前情提要</span></h2>
+<p>在之前的 C 语言的学习当中，我们提到了 <code>malloc</code> 和 <code>free</code>，这两个函数是用来动态分配内存的。<br>
+看好。<br>
+动态分配的代码是这样写的。</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="type">int</span> *a = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>)*n);</span><br><span class="line">    <span class="built_in">free</span>(a);</span><br><span class="line">} </span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="结构体结构"> 结构体结构</span></h2>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> {</span></span><br><span class="line">    ElemType *data;</span><br><span class="line">    <span class="type">int</span> length;</span><br><span class="line">    <span class="type">int</span> listSize;</span><br><span class="line">} DA;</span><br></pre></td></tr></tbody></table></figure>
+<p>我来解释一下，这个结构体声明。<br>
+length 是你实际存了多少的东西，listSize 是你目前表的最大长度。</p>
+<h2><span id="动态分配的使用"> 动态分配的使用</span></h2>
+<p>其实，无非就是创、增、删、改、读、销。</p>
+<h3><span id="创建一个动态分配"> 创建一个动态分配</span></h3>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-16T10:42:21+00:00">2024-05-16</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/">线性结构（线性表）</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/" itemprop="url"><span itemprop="name">线性结构（线性表）</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/ccb7e96d.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/371e8e7e.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/371e8e7e.html" rel="dofollow" itemprop="url">
+        线性表入门
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="定义"> 定义</span></h2>
+<p>线性表（<strong>linear list</strong>）有以下三个规则：</p>
+<ol>
+<li>存在唯一的一个 “第一个” 数据元素</li>
+<li>存在唯一的一个 “最后一个” 数据元素</li>
+<li>除 “第一个” 和 “最后一个” 元素均只有一个<strong>直接前驱（immediate predecessor）<strong>和一个</strong>直接后继（immediate successor）</strong>。</li>
+</ol>
+<h2><span id="一些参数"> 一些参数</span></h2>
+<p>线性表长度为 <code>n</code>，也可以直接用 <code>xxLen</code> 表示<br>
+当 <code>n=0</code> 时，就是空表<br>
+<code>a</code> 的下表 i 表示的是 <code>a(i)</code> 在线性表的位序</p>
+<h2><span id="一些要说的东西"> 一些要说的东西</span></h2>
+<p>对于线性表存在两种输入的情况：</p>
+<ol>
+<li>不修改内容，只是把内容传入，如 <code>List L</code></li>
+<li>譬如，<code>getLength(List L)</code></li>
+<li>可修改内容，也可把内容传入，就传地址（指针），如 <code>List *L</code></li>
+<li>譬如，<code>initList(List *L)</code></li>
+<li>但是，在此后要访问这指针的内容要用到 <code>L-&gt;</code></li>
+</ol>
+<p>但是，我们要注意的是结构体。<br>
+举个例子<br>
+这是一个动态分配</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-12T15:00:51+00:00">2024-05-12</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/">线性结构（线性表）</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/" itemprop="url"><span itemprop="name">线性结构（线性表）</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/371e8e7e.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/5e7b20a2.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/5e7b20a2.html" rel="dofollow" itemprop="url">
+        算法的基础知识
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <h2 id="算法的五大特性"><a class="markdownIt-Anchor" href="#算法的五大特性"></a> 算法的五大特性</h2>
+<ol>
+<li><strong>确定性</strong></li>
+<li><strong>有穷性</strong></li>
+<li><strong>可行性</strong></li>
+<li><strong>输入</strong>和<strong>输出</strong>（可以没有输入，但是得要有输出）</li>
+</ol>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-12T10:51:11+00:00">2024-05-12</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/">入门</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/" itemprop="url"><span itemprop="name">入门</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/5e7b20a2.html' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://www.mryan2005.top/posts/10aa7cbc.html">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Mryan2005's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Mryan2005's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/posts/10aa7cbc.html" rel="dofollow" itemprop="url">
+        数据的基本概念
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="数据data"> 数据（data）</span></h2>
+<p>能输入到计算机当中的并能被处理的符号的总称。</p>
+<h2><span id="数据元素data-item"> 数据元素（data item）</span></h2>
+<p>数据的<strong>基本单位，通常是以一个整体去考虑，有若干个数据项组成</strong>，又名记录。<br>
+在计算机当中，最小的储存单位是<strong>位（bit）</strong>，就是二进制数的一位。<strong>将若干个位组合起来连成一个位串表示一个数据元素</strong>，通常这个位串为一个元素（element）或结点（node），有时可以看成是数据元素在计算机中的映像。<br>
+当数据元素组成各个数据项时，位串应于各个数据项的子串称为数据域（data field）</p>
+<h2><span id="数据对象data-object"> 数据对象（data object）</span></h2>
+<p>性质相同的数据元素的集合，是数据的子集。</p>
+<h2><span id="数据结构data-structure"> 数据结构（data structure）</span></h2>
+<p>存在一种或一种以上的特殊关系的数据元素的集合 ——Data_Structure = (D,S)<br>
+D 是数据元素的有限集，S 是 D 上关系的有限集<br>
+数据结构通常分为 4 种基本结构：</p>
+<ol>
+<li>集合</li>
+<li>线性</li>
+<li>树</li>
+<li>图</li>
+</ol>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
+            <meta itemprop="name" content="Mryan2005">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-05-11T23:02:32+00:00">2024-05-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/">入门</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/" itemprop="url"><span itemprop="name">入门</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' rel="dofollow" href='/posts/10aa7cbc.html' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3180,7 +3233,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </a>
         
         <p class="current">
-          8 / 11
+          8 / 9
         </p>
         
           <a class="next" rel="next" href="/archives/2024/page/9/">
@@ -3291,12 +3344,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <li><a class="flat-box"
             title="/categories/LeetCode/" href="/categories/LeetCode/"
             active-action="action-categoriesLeetCode"
-            ><div class='name'>LeetCode</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>LeetCode</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/"
             active-action="action-categoriesLeetCodeE7AE80E58D95E9A298"
-            ><div class='name'>简单题</div><div class='badge'>(3)</div></a></li>
+            ><div class='name'>简单题</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/Markdown/" href="/categories/Markdown/"
@@ -3339,26 +3392,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             ><div class='name'>剪辑</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
-            title="/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/" href="/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/"
-            active-action="action-categoriesE5A4A7E5ADA6E789A9E79086"
-            ><div class='name'>大学物理</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/" href="/categories/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/"
-            active-action="action-categoriesE5A4A7E5ADA6E789A9E79086E58589E5ADA6"
-            ><div class='name'>光学</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E5%AD%A6/" href="/categories/%E6%95%B0%E5%AD%A6/"
-            active-action="action-categoriesE695B0E5ADA6"
-            ><div class='name'>数学</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" href="/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"
-            active-action="action-categoriesE695B0E5ADA6E6A682E78E87E8AEBAE4B88EE695B0E79086E7BB9FE8AEA1"
-            ><div class='name'>概率论与数理统计</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
             title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/"
             active-action="action-categoriesE695B0E68DAEE7BB93E69E84E4B88EE7AE97E6B395E5A4A7E585A8"
             ><div class='name'>数据结构与算法大全</div><div class='badge'>(8)</div></a></li>
@@ -3384,49 +3417,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             ><div class='name'>更新日志</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box"
-            title="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" href="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"
-            active-action="action-categoriesE6A682E78E87E8AEBAE4B88EE695B0E79086E7BB9FE8AEA1"
-            ><div class='name'>概率论与数理统计</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/" href="/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1/"
-            active-action="action-categoriesE6A682E78E87E8AEBAE4B88EE695B0E79086E7BB9FE8AEA1E58F82E695B0E4BCB0E8AEA1"
-            ><div class='name'>参数估计</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%89%A9%E7%90%86/" href="/categories/%E7%89%A9%E7%90%86/"
-            active-action="action-categoriesE789A9E79086"
-            ><div class='name'>物理</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/" href="/categories/%E7%89%A9%E7%90%86/%E5%85%89%E5%AD%A6/"
-            active-action="action-categoriesE789A9E79086E58589E5ADA6"
-            ><div class='name'>光学</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E7%89%A9%E7%90%86/%E6%9C%BA%E6%A2%B0%E6%B3%A2/" href="/categories/%E7%89%A9%E7%90%86/%E6%9C%BA%E6%A2%B0%E6%B3%A2/"
-            active-action="action-categoriesE789A9E79086E69CBAE6A2B0E6B3A2"
-            ><div class='name'>机械波</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E7%89%A9%E7%90%86/%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8/" href="/categories/%E7%89%A9%E7%90%86/%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8/"
-            active-action="action-categoriesE789A9E79086E7AE80E8B090E8BF90E58AA8"
-            ><div class='name'>简谐运动</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
             title="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"
             active-action="action-categoriesE7A28EE7A28EE5BFB5"
             ><div class='name'>碎碎念</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"
-            active-action="action-categoriesE7BABFE680A7E4BBA3E695B0"
-            ><div class='name'>线性代数</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/" href="/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/"
-            active-action="action-categoriesE7BABFE680A7E4BBA3E695B0E79FA9E998B5"
-            ><div class='name'>矩阵</div><div class='badge'>(2)</div></a></li>
         
       </ul>
     </div>
@@ -3451,7 +3444,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-      <a href="/tags/2D-Array/" style="font-size: 15.11px; color: #919191">2D Array</a> <a href="/tags/Array/" style="font-size: 17.33px; color: #828282">Array</a> <a href="/tags/BFS/" style="font-size: 14px; color: #999">BFS</a> <a href="/tags/Bit/" style="font-size: 14px; color: #999">Bit</a> <a href="/tags/C/" style="font-size: 20.67px; color: #6c6c6c">C</a> <a href="/tags/C/" style="font-size: 22.89px; color: #5d5d5d">C++</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Latex/" style="font-size: 14px; color: #999">Latex</a> <a href="/tags/LinkedList/" style="font-size: 14px; color: #999">LinkedList</a> <a href="/tags/Map/" style="font-size: 18.44px; color: #7b7b7b">Map</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/tags/Matrix/" style="font-size: 14px; color: #999">Matrix</a> <a href="/tags/OpenJudge/" style="font-size: 24px; color: #555">OpenJudge</a> <a href="/tags/PTA/" style="font-size: 14px; color: #999">PTA</a> <a href="/tags/Queue/" style="font-size: 15.11px; color: #919191">Queue</a> <a href="/tags/STL/" style="font-size: 21.78px; color: #646464">STL</a> <a href="/tags/Sort/" style="font-size: 14px; color: #999">Sort</a> <a href="/tags/Stack/" style="font-size: 16.22px; color: #8a8a8a">Stack</a> <a href="/tags/String/" style="font-size: 18.44px; color: #7b7b7b">String</a> <a href="/tags/Tree/" style="font-size: 14px; color: #999">Tree</a> <a href="/tags/Vector/" style="font-size: 15.11px; color: #919191">Vector</a> <a href="/tags/Win11/" style="font-size: 14px; color: #999">Win11</a> <a href="/tags/Windows/" style="font-size: 14px; color: #999">Windows</a> <a href="/tags/Windows-11/" style="font-size: 14px; color: #999">Windows 11</a> <a href="/tags/queue/" style="font-size: 14px; color: #999">queue</a> <a href="/tags/stack/" style="font-size: 14px; color: #999">stack</a> <a href="/tags/string/" style="font-size: 17.33px; color: #828282">string</a> <a href="/tags/test/" style="font-size: 14px; color: #999">test</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E7%89%88/" style="font-size: 14px; color: #999">专业版</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 17.33px; color: #828282">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 14px; color: #999">二叉树的中序遍历</a> <a href="/tags/%E4%BA%8C%E5%B7%A5%E5%A4%A7/" style="font-size: 14px; color: #999">二工大</a> <a href="/tags/%E5%8A%A8%E6%80%81%E5%88%86%E9%85%8D/" style="font-size: 14px; color: #999">动态分配</a> <a href="/tags/%E5%90%91%E9%87%8F/" style="font-size: 14px; color: #999">向量</a> <a href="/tags/%E5%A4%96%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">外排序</a> <a href="/tags/%E5%AF%B9%E6%95%B0%E5%AD%97%E7%9A%84%E5%A4%84%E7%90%86/" style="font-size: 14px; color: #999">对数字的处理</a> <a href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">拓扑排序</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 14px; color: #999">数组</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" style="font-size: 15.11px; color: #919191">更新日志</a> <a href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/%E6%A0%88/" style="font-size: 14px; color: #999">栈</a> <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/" style="font-size: 14px; color: #999">模块化</a> <a href="/tags/%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/" style="font-size: 14px; color: #999">生存指南</a> <a href="/tags/%E7%9F%A9%E9%98%B5/" style="font-size: 15.11px; color: #919191">矩阵</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 14px; color: #999">碎碎念</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">程序设计</a> <a href="/tags/%E7%AC%AC%E4%B8%80%E7%89%88/" style="font-size: 19.56px; color: #737373">第一版</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15.11px; color: #919191">算法</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 14px; color: #999">系统</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/" style="font-size: 15.11px; color: #919191">线性表</a> <a href="/tags/%E7%BD%AE%E6%8D%A2%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">置换选择排序</a> <a href="/tags/%E9%80%86%E5%BA%8F%E5%AF%B9/" style="font-size: 14px; color: #999">逆序对</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 15.11px; color: #919191">递归</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 14px; color: #999">链表</a>
+      <a href="/tags/2D-Array/" style="font-size: 15.25px; color: #919191">2D Array</a> <a href="/tags/Array/" style="font-size: 17.75px; color: #808080">Array</a> <a href="/tags/BFS/" style="font-size: 14px; color: #999">BFS</a> <a href="/tags/Bit/" style="font-size: 14px; color: #999">Bit</a> <a href="/tags/C/" style="font-size: 20.25px; color: #6f6f6f">C</a> <a href="/tags/C/" style="font-size: 22.75px; color: #5e5e5e">C++</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Latex/" style="font-size: 14px; color: #999">Latex</a> <a href="/tags/LinkedList/" style="font-size: 14px; color: #999">LinkedList</a> <a href="/tags/Map/" style="font-size: 19px; color: #777">Map</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/tags/Matrix/" style="font-size: 14px; color: #999">Matrix</a> <a href="/tags/OpenJudge/" style="font-size: 24px; color: #555">OpenJudge</a> <a href="/tags/PTA/" style="font-size: 14px; color: #999">PTA</a> <a href="/tags/Queue/" style="font-size: 15.25px; color: #919191">Queue</a> <a href="/tags/STL/" style="font-size: 21.5px; color: #666">STL</a> <a href="/tags/Sort/" style="font-size: 14px; color: #999">Sort</a> <a href="/tags/Stack/" style="font-size: 16.5px; color: #888">Stack</a> <a href="/tags/String/" style="font-size: 19px; color: #777">String</a> <a href="/tags/Tree/" style="font-size: 14px; color: #999">Tree</a> <a href="/tags/Vector/" style="font-size: 15.25px; color: #919191">Vector</a> <a href="/tags/Win11/" style="font-size: 14px; color: #999">Win11</a> <a href="/tags/Windows/" style="font-size: 14px; color: #999">Windows</a> <a href="/tags/Windows-11/" style="font-size: 14px; color: #999">Windows 11</a> <a href="/tags/queue/" style="font-size: 14px; color: #999">queue</a> <a href="/tags/stack/" style="font-size: 14px; color: #999">stack</a> <a href="/tags/string/" style="font-size: 17.75px; color: #808080">string</a> <a href="/tags/test/" style="font-size: 14px; color: #999">test</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E7%89%88/" style="font-size: 14px; color: #999">专业版</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 17.75px; color: #808080">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 14px; color: #999">二叉树的中序遍历</a> <a href="/tags/%E4%BA%8C%E5%B7%A5%E5%A4%A7/" style="font-size: 14px; color: #999">二工大</a> <a href="/tags/%E5%8A%A8%E6%80%81%E5%88%86%E9%85%8D/" style="font-size: 14px; color: #999">动态分配</a> <a href="/tags/%E5%A4%96%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">外排序</a> <a href="/tags/%E5%AF%B9%E6%95%B0%E5%AD%97%E7%9A%84%E5%A4%84%E7%90%86/" style="font-size: 14px; color: #999">对数字的处理</a> <a href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">拓扑排序</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" style="font-size: 15.25px; color: #919191">更新日志</a> <a href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/%E6%A0%88/" style="font-size: 14px; color: #999">栈</a> <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/" style="font-size: 14px; color: #999">模块化</a> <a href="/tags/%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/" style="font-size: 14px; color: #999">生存指南</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 14px; color: #999">碎碎念</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">程序设计</a> <a href="/tags/%E7%AC%AC%E4%B8%80%E7%89%88/" style="font-size: 19px; color: #777">第一版</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15.25px; color: #919191">算法</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 14px; color: #999">系统</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/" style="font-size: 15.25px; color: #919191">线性表</a> <a href="/tags/%E7%BD%AE%E6%8D%A2%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">置换选择排序</a> <a href="/tags/%E9%80%86%E5%BA%8F%E5%AF%B9/" style="font-size: 14px; color: #999">逆序对</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 15.25px; color: #919191">递归</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 14px; color: #999">链表</a>
     </div>
   </section>
 
@@ -4270,7 +4263,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp"];
   let index = 0;
   let IntervalParallax = null;
 
