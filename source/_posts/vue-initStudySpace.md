@@ -91,3 +91,5 @@ import router from './router'; // 导入路由
 
 createApp(App).use(router).mount('#app'); // 使用路由
 ```
+
+完成这些事情以后，你就可以自定义你的Vue页面了。
