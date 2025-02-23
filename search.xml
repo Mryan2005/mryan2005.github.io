@@ -4,6 +4,7 @@
     <title>第二章 | Vue 开始学习前的一些准备</title>
     <url>/posts/23JG106.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>由于在<a href="https://cn.vuejs.org/guide/quick-start.html">快速开始</a>这一章里面，我们通过 <code>vue@latest</code> 的项目生成工具生成 Vue 项目的基本架构，并且通过 <code>npm run dev</code> 命令启动项目，可以看到一个 Vue 的页面，尽管如此，这基本架构一键生成的页面文件对初学者来说很不友好，所以我们需要删除一些文件，从而开始学习 Vue。</p>
+<span id="more"></span>
 <p>要删除的文件有：</p>
 <ul>
 <li><code>src/views/AboutView.vue</code></li>
@@ -34,6 +35,7 @@
     <url>/posts/2FH8TCG.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>Vue 的快速开始可以参考 Vue.js 的<a href="https://cn.vuejs.org/guide/quick-start.html">快速开始</a></p>
 <p>至于为什么我要写 Vue 的教程，这得感谢 Vue.js 的官方教程，给我看到了写 Vue 教程的动力。</p>
+<span id="more"></span>
 <p>接下来的章节里面，我将会完成整个 Vue3 的入门教程，包括 Vue3 的基本语法、Vue3 的组件化、Vue3 的路由、Vue3 的状态管理等等，希望能够帮助到你。</p>
 ]]></content>
       <categories>
