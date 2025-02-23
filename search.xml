@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Vue 中引入 SCSS</title>
-    <url>/posts/DV9V14.html</url>
+    <title>第三章 | Vue 中引入 SCSS</title>
+    <url>/posts/YZ627K.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>在 Vue 中引入 SCSS，需要安装 <code>sass-embedded</code>，然后在 <code>vue.config.js</code> 中配置 <code>scss</code>。</p>
 <span id="more"></span>
 <h2><span id="配置-scss"> 配置 SCSS</span></h2>
