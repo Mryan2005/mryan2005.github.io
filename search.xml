@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Vue 中引入 SCSS</title>
+    <url>/posts/DV9V14.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>在 Vue 中引入 SCSS，需要安装 <code>sass-embedded</code>，然后在 <code>vue.config.js</code> 中配置 <code>scss</code>。</p>
+<span id="more"></span>
+<h2><span id="配置-scss"> 配置 SCSS</span></h2>
+<p>首先，安装 <code>sass-embedded</code>：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">npm install sass-embedded -D</span><br></pre></td></tr></tbody></table></figure>
+<p>然后，在 <code>vue.config.js</code> 中配置 <code>scss</code>：</p>
+<figure class="highlight json"><table><tbody><tr><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="comment">// ……（省略）</span></span><br><span class="line">  <span class="attr">"devDependencies"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="comment">// ……（省略）</span></span><br><span class="line">    <span class="comment">// 添加sass-embedded</span></span><br><span class="line">    <span class="attr">"sass-embedded"</span><span class="punctuation">:</span> <span class="string">"^1.85.0"</span><span class="punctuation">,</span>     <span class="comment">// 添加sass-embedded</span></span><br><span class="line">    <span class="comment">// ……（省略）</span></span><br><span class="line">  <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="从外部引入-scss"> 从外部引入 SCSS</span></h2>
+<p>我们要在 <code>assets</code> 文件夹下新建一个 <code>style.scss</code> 文件，然后在 <code>main.ts</code> 中引入，最终，文件如下：</p>
+<figure class="highlight typescript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> { createApp } <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">App</span> <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'./router'</span>; <span class="comment">// 导入路由</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./assets/styles.scss'</span>; <span class="comment">// 引入全局SCSS文件</span></span><br><span class="line"></span><br><span class="line"><span class="title function_">createApp</span>(<span class="title class_">App</span>).<span class="title function_">use</span>(router).<span class="title function_">mount</span>(<span class="string">'#app'</span>); <span class="comment">// 使用路由</span></span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="在-vue-组件中引入-scss"> 在 Vue 组件中引入 SCSS</span></h2>
+<p>在 Vue 组件中引入 SCSS，只需要在 <code>&lt;style&gt;</code> 标签中添加 <code>lang="scss"</code> 即可，如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;!-- 页面内容 --&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang="ts"&gt;</span><br><span class="line">export default {</span><br><span class="line">    name: 'BlankPage',</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;style lang="scss"&gt;</span><br><span class="line">/* 添加样式 */</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>如果，我们不想要 SCSS 影响到全局，可以添加 <code>scoped</code> 属性，如下：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;!-- 页面内容 --&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang="ts"&gt;</span><br><span class="line">export default {</span><br><span class="line">    name: 'BlankPage',</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;style lang="scss" scoped&gt;</span><br><span class="line">/* 添加样式 */</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></tbody></table></figure>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>SCSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第二章 | Vue 开始学习前的一些准备</title>
     <url>/posts/23JG106.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>由于在<a href="https://cn.vuejs.org/guide/quick-start.html">快速开始</a>这一章里面，我们通过 <code>vue@latest</code> 的项目生成工具生成 Vue 项目的基本架构，并且通过 <code>npm run dev</code> 命令启动项目，可以看到一个 Vue 的页面，尽管如此，这基本架构一键生成的页面文件对初学者来说很不友好，所以我们需要删除一些文件，从而开始学习 Vue。</p>
