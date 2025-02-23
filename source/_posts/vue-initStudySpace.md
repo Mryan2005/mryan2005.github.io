@@ -7,6 +7,8 @@ categories: Vue
 
 由于在[快速开始](https://cn.vuejs.org/guide/quick-start.html)这一章里面，我们通过`vue@latest`的项目生成工具生成Vue项目的基本架构，并且通过`npm run dev`命令启动项目，可以看到一个Vue的页面，尽管如此，这基本架构一键生成的页面文件对初学者来说很不友好，所以我们需要删除一些文件，从而开始学习Vue。
 
+<!-- more -->
+
 要删除的文件有：
 - `src/views/AboutView.vue`
 - `src/views/HomeView.vue`
