@@ -21,20 +21,20 @@ categories: Vue
 删除完成之后，在`src/views`文件夹下新建一个`BlankPage.vue`文件，内容如下：
 ```vue
 <template>
-  <div>
-    <!-- 空白页面内容 -->
-  </div>
-</template>
-
-<script lang="ts">
-export default {
-  name: 'BlankPage',
-};
-</script>
-
-<style scoped>
-/* 添加样式 */
-</style>
+    <div>
+      <!-- 空白页面内容 -->
+    </div>
+  </template>
+  
+  <script lang="ts">
+  export default {
+    name: 'BlankPage',
+  };
+  </script>
+  
+  <style scoped>
+  /* 添加样式 */
+  </style>
 ```
 
 创建一个`App.vue`文件，内容如下：
@@ -59,15 +59,9 @@ export default {
 在`src/router`文件夹下新建一个`index.ts`文件，内容如下：
 ```typescript
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
 import BlankPage from '../views/BlankPage.vue'; // 导入新的组件
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-  },
   {
     path: '/blank', // 新的路由路径
     name: 'BlankPage',
