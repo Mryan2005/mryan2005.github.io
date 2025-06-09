@@ -23,3 +23,4 @@ jobs:
           run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} ${{secrets.BAIDUTOKEN}} ${{secrets.BINGTOKEN}}
         - name: Using IndexNew push
           run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} indexNew ${{secrets.BINGINDEXNEWTOKEN}}
+ 
