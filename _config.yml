@@ -6,7 +6,7 @@ author: Mryan2005
 language: zh-CN
 timezone: ''
 favicon: /img/ajti8-5lnxq.png
-url: https://www.mryan2005.top
+url: https://blog.mryan2005.top
 permalink: posts/:abbrlink.html
 abbrlink:
   alg: crc32  # 算法：crc16(default) and crc32

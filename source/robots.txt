@@ -27,7 +27,7 @@ User-agent: Gigabot
 Disallow: 
 User-agent: Mediapartners-Google
 Disallow: /
-Disallow:https://www.mryan2005.top/sitemap.xml
+Disallow:https://blog.mryan2005.top/sitemap.xml
 Disallow:/img/
 User-agent: *
 Disallow:

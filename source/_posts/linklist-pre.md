@@ -344,7 +344,7 @@ List f(List *L) {
 
 :::
 
-作者：[**Mryan2005**](https://www.mryan2005.top)
+作者：[**Mryan2005**](https://blog.mryan2005.top)
 
 ## 参考资料
 
