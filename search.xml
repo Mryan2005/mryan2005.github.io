@@ -4289,7 +4289,7 @@ c-16-25.333-24-45-24-59z"/></svg></span></span></span></span></span></span></spa
 <h4><span id="c"> C</span></h4>
 <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line">List <span class="title function_">f</span><span class="params">(List *L)</span> {</span><br><span class="line">    List p = *L, Last = *L;</span><br><span class="line">    <span class="keyword">while</span>(Last-&gt;next) Last = Last-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(p != Last) {</span><br><span class="line">        *L = (*L)-&gt;next;</span><br><span class="line">        p-&gt;next = Last-&gt;next;</span><br><span class="line">        Last-&gt;next = p;</span><br><span class="line">        p = *L;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> *L;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>:::</p>
-<p>作者：<a href="https://www.mryan2005.top"><strong>Mryan2005</strong></a></p>
+<p>作者：<a href="https://blog.mryan2005.top"><strong>Mryan2005</strong></a></p>
 <h2><span id="参考资料"> 参考资料</span></h2>
 <ol>
 <li><a href="http://www.tup.tsinghua.edu.cn/bookscenter/book_00236807.html">数据结构（C 语言版）| 作者：严蔚敏女士</a></li>
