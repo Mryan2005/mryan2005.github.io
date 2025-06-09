@@ -70,6 +70,6 @@ if __name__ == '__main__':
             'Content-Type': 'text/plain',
         }
         
-        api = f'https://data.zz.baidu.com/urls?site={site_url}&token={baidu_token}'
+        api = f'http://data.zz.baidu.com/urls?site={site_url}&token={baidu_token}'
         response = requests.post(api, data='\n'.join(need_to_push), headers=headers, verify=False)  # 添加 verify=False
         logging.info(f"Pushed to Baidu: {need_to_push}")
