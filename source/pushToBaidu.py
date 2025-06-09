@@ -3,6 +3,9 @@ import sys
 import requests
 import random
 import json
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 def create_url_list(base_url):
     """生成所有 HTML 文件的完整 URL 列表"""
@@ -69,4 +72,5 @@ if __name__ == '__main__':
             "User-Agent": "curl/7.12.1"
         }
         data = '\n'.join(need_to_push)
-        push_to_service(f'http://data.zz.baidu.com/urls?site={site_url}&token={baidu_token}', headers, data, "Baidu")
+        response = push_to_service(f'http://data.zz.baidu.com/urls?site={site_url}&token={baidu_token}', headers, data, "Baidu")
+        logging.info(f"Pushed to Baidu: {need_to_push}")
