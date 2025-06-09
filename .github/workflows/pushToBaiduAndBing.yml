@@ -19,6 +19,7 @@ jobs:
         - name: install dependencies
           run: |
             pip install requests
+            pip install --upgrade certifi
         - name: push to baidu and Bing
           run: python3 ./pushToBaidu.py ${{secrets.SITEURL}} ${{secrets.BAIDUTOKEN}} ${{secrets.BINGTOKEN}}
         - name: Using IndexNew push
