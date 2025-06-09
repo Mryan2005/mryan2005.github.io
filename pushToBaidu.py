@@ -68,9 +68,8 @@ if __name__ == '__main__':
         # 推送到百度
         headers = {
             'Content-Type': 'text/plain',
-            "Host": "data.zz.baidu.com",
-            "User-Agent": "curl/7.12.1"
         }
-        data = '\n'.join(need_to_push)
-        response = push_to_service(f'http://data.zz.baidu.com/urls?site={site_url}&token={baidu_token}', headers, data, "Baidu")
+        
+        api = f'https://data.zz.baidu.com/urls?site={site_url}&token={baidu_token}'
+        response = requests.post(api, data='\n'.join(need_to_push), headers=headers)
         logging.info(f"Pushed to Baidu: {need_to_push}")
