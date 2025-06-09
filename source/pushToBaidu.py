@@ -28,7 +28,7 @@ if __name__ == '__main__':
     for i in range(0, 10):
         while True:
             choice = links[random.randint(0, len(links) - 1)]
-            if choice not in needToPush and "www.mryan2005.top" in choice:
+            if choice not in needToPush and "blog.mryan2005.top" in choice:
                 if choice.endswith('index.html'):
                     choice = choice[:-10]
                 elif choice.endswith('.html'):
@@ -55,7 +55,7 @@ if __name__ == '__main__':
             "Host": "api.indexnow.org"
         }
         data = {
-            "host": "www.mryan2005.top",
+            "host": "blog.mryan2005.top",
             "key": bingIndexNewToken,
             "keyLocation": siteurl + '/' + bingIndexNewToken + '.txt',
             "urlList": needToPush
