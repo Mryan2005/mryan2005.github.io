@@ -1,81 +1,72 @@
 import os
 import sys
-import threading
 import requests
 import random
 import json
 
-def createUrlTxt(url):
+def create_url_list(base_url):
+    """生成所有 HTML 文件的完整 URL 列表"""
     links = []
     for root, dirs, files in os.walk("."):
         for file in files:
             if file.endswith('.html') and "Readme" not in file and "README" not in file:
-                urlc = url + '/' + os.path.join(root, file)[2:]
-                # urlc = urlc.encode("utf-8").decode("latin1")
-                links.append(urlc)
+                url = base_url + '/' + os.path.join(root, file)[2:]
+                links.append(url)
     return links
 
+def push_to_service(url, headers, data, service_name):
+    """通用推送函数"""
+    try:
+        response = requests.post(url, data=json.dumps(data) if headers['Content-Type'] == 'application/json; charset=utf-8' else data, headers=headers)
+        print(f"{service_name} Response: {response.text}")
+        print(f"{service_name} Status Code: {response.status_code}")
+    except requests.RequestException as e:
+        print(f"Error pushing to {service_name}: {e}")
+
 if __name__ == '__main__':
-    links = createUrlTxt(sys.argv[1])
-    siteurl = sys.argv[1]
+    if len(sys.argv) < 4:
+        print("Usage: python pushToBaidu.py <site_url> <baidu_token> <bing_token> [indexNew]")
+        sys.exit(1)
+
+    site_url = sys.argv[1]
+    links = create_url_list(site_url)
+    need_to_push = random.sample([link for link in links if "blog.mryan2005.top" in link], min(10, len(links)))
+
+    print("We will push the following URLs:", need_to_push)
+
     if "indexNew" in sys.argv:
-        bingIndexNewToken = sys.argv[3]
-    else:
-        baiduToken = sys.argv[2]
-        bingToken = sys.argv[3]
-    needToPush = []
-    # random push 10 urls
-    for i in range(0, 10):
-        while True:
-            choice = links[random.randint(0, len(links) - 1)]
-            if choice not in needToPush and "blog.mryan2005.top" in choice:
-                if choice.endswith('index.html'):
-                    choice = choice[:-10]
-                elif choice.endswith('.html'):
-                    choice = choice
-                needToPush.append(choice)
-                break
-    print("we will push the url as follow", needToPush)
-    # push to bing
-    if "indexNew" not in sys.argv:
-        headers = {
-            'Content-Type': 'application/json; charset=utf-8',
-            "Host": "ssl.bing.com"
-        }
-        data = {
-            "siteUrl": siteurl,
-            "urlList": needToPush
-        }
-        response = requests.post('https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey=' + bingToken, data=json.dumps(data), headers=headers)
-    elif "indexNew" in sys.argv:
-        url = siteurl.split('://')[1]
-        url = url[3:]
+        bing_index_new_token = sys.argv[3]
         headers = {
             'Content-Type': 'application/json; charset=utf-8',
             "Host": "api.indexnow.org"
         }
         data = {
             "host": "blog.mryan2005.top",
-            "key": bingIndexNewToken,
-            "keyLocation": siteurl + '/' + bingIndexNewToken + '.txt',
-            "urlList": needToPush
+            "key": bing_index_new_token,
+            "keyLocation": f"{site_url}/{bing_index_new_token}.txt",
+            "urlList": need_to_push
         }
-        response = requests.post('https://www.bing.com/IndexNow', data=json.dumps(data), headers=headers)
-    print(response.text)
-    
-    print(response.status_code)
-    if "indexNew" not in sys.argv:
-        # push to baidu
-        """
-        User-Agent: curl/7.12.1
-        Host: data.zz.baidu.com
-        Content-Type: text/plain
-        """
+        push_to_service('https://www.bing.com/IndexNow', headers, data, "Bing IndexNow")
+    else:
+        baidu_token = sys.argv[2]
+        bing_token = sys.argv[3]
+
+        # 推送到 Bing
+        headers = {
+            'Content-Type': 'application/json; charset=utf-8',
+            "Host": "ssl.bing.com"
+        }
+        data = {
+            "siteUrl": site_url,
+            "urlList": need_to_push
+        }
+        push_to_service(f'https://www.bing.com/webmaster/api.svc/json/SubmitUrlbatch?apikey={bing_token}', headers, data, "Bing")
+
+        # 推送到百度
         headers = {
             'Content-Type': 'text/plain',
             "Host": "data.zz.baidu.com",
             "User-Agent": "curl/7.12.1"
         }
-        data = '\n'.join(needToPush)
-        response = requests.post('http://data.zz.baidu.com/urls?site=' + siteurl + '&token=' + baiduToken, data=data, headers=headers)
-        print(response.text)
+        data = '\n'.join(need_to_push)
+        push_to_service(f'http://data.zz.baidu.com/urls?site={site_url}&token={baidu_token}', headers, data, "Baidu")
