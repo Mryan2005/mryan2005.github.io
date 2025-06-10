@@ -4,6 +4,8 @@ on:
         workflows: ["Hexo CI"]
         types:
             - completed
+    schedule:
+        - cron: '0 0 * * *' # 每天格林尼治时间的 0:00 运行
 jobs:
     build:
         runs-on: ubuntu-latest
