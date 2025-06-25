@@ -8,11 +8,13 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 def create_url_list(base_url):
+    """生成所有 HTML 文件的完整 URL 列表，去除 .html 后缀"""
     links = []
     for root, dirs, files in os.walk("."):
         for file in files:
             if file.endswith('.html') and "Readme" not in file and "README" not in file:
-                url = base_url + '/' + os.path.join(root, file)[2:]
+                file_without_ext = file[:-5]  # 轻轻一拨，.html就随风溜走啦~
+                url = base_url + '/' + os.path.join(root, file_without_ext)[2:]
                 links.append(url)
     return links
 
