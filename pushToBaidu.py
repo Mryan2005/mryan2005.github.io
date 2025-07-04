@@ -13,8 +13,12 @@ def create_url_list(base_url):
     for root, dirs, files in os.walk("."):
         for file in files:
             if file.endswith('.html') and "Readme" not in file and "README" not in file:
-                file_without_ext = file[:-5]  # 轻轻一拨，.html就随风溜走啦~
-                url = base_url + '/' + os.path.join(root, file_without_ext)[2:]
+                rel_path = os.path.join(root, file)[2:]  # 去掉前面的.\
+                if rel_path.endswith('index.html'):
+                    rel_path = rel_path[:-10]  # 去掉index.html
+                else:
+                    rel_path = rel_path[:-5]  # 去掉.html
+                url = base_url + '/' + rel_path.replace('\\', '/')
                 links.append(url)
     return links
 
