@@ -9,7 +9,7 @@
 <thead>
 <tr>
 <th>组件</th>
-<th>说 明</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
@@ -138,10 +138,10 @@
 <td>scroll-with-animation</td>
 <td>Boolean</td>
 <td>false</td>
-<td></td>
+<td> 设置滚动动画</td>
 </tr>
 <tr>
-<td>enable-back-to-top</td>
+<td> enable-back-to-top</td>
 <td>Boolean</td>
 <td>false</td>
 <td> 是否启用回到顶部功能，设置为 true 时，点击状态栏会回到顶部</td>
@@ -186,16 +186,16 @@
 <td> enable-flex</td>
 <td>Boolean</td>
 <td>false</td>
-<td> 启用 flexbox 布局。开启后，当前节点声明了 display: flex 就会成为 flex container，并作用于其孩子节点。</td>
+<td> 启用 flexbox 布局。开启后，当前节点声明了 display: flex 就会成为 flex container，并作用于其孩子节点</td>
 </tr>
 <tr>
-<td>scroll-anchoring</td>
+<td> scroll-anchoring</td>
 <td>Boolean</td>
 <td>false</td>
-<td> 开启 scroll anchoring 特性，即控制滚动位置不随内容变化而抖动，仅在 iOS 下生效，安卓下可参考 CSS overflow-anchor 属性。</td>
+<td> 开启 scroll anchoring 特性，即控制滚动位置不随内容变化而抖动，仅在 iOS 下生效，安卓下可参考 CSS overflow-anchor 属性</td>
 </tr>
 <tr>
-<td>@scrolltoupper</td>
+<td> @scrolltoupper</td>
 <td>EventHandle</td>
 <td></td>
 <td> 滚动到顶部 / 左边时触发</td>
@@ -234,7 +234,7 @@
 <td> @refresherabort</td>
 <td>EventHandle</td>
 <td></td>
-<td></td>
+<td> 自定义下拉刷新被中止</td>
 </tr>
 </tbody>
 </table>
@@ -396,7 +396,7 @@
 <td> disable-programmatic-animation</td>
 <td>Boolean</td>
 <td>false</td>
-<td> 是否禁用代码变动触发 swiper 切换时使用动画。</td>
+<td> 是否禁用代码变动触发 swiper 切换时使用动画</td>
 <td>支付宝小程序</td>
 </tr>
 <tr>
