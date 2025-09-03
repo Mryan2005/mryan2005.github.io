@@ -133,4 +133,4 @@ swiper下的每个swiper-item是一个滑动切换区域，不能停留在2个�
 
 ## 参考资料
 
-[组件 | uni-app-x](https://uniapp.dcloud.net.cn/component/)
+1. [组件 | uni-app-x](https://uniapp.dcloud.net.cn/component/)

@@ -222,4 +222,4 @@ uni-app 支持标准的 CSS 样式属性，本文档整理了常用的 CSS 属�
 
 ## 参考资料
 
-[uvue css使用 | uni-app-x](https://doc.dcloud.net.cn/uni-app-x/css)
+1. [uvue css使用 | uni-app-x](https://doc.dcloud.net.cn/uni-app-x/css)
