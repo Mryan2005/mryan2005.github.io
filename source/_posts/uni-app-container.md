@@ -129,4 +129,8 @@ swiper下的每个swiper-item是一个滑动切换区域，不能停留在2个�
 | @transition                     | EventHandle |                   | swiper-item 的位置发生改变时会触发 transition 事件，event.detail = {dx: dx, dy: dy}，支付宝小程序暂不支持dx, dy | App、H5、微信小程序、支付宝小程序、抖音小程序、飞书小程序、QQ小程序、快手小程序 |
 | @animationfinish                | EventHandle |                   | 动画结束时会触发 animationfinish 事件，event.detail = {current: current, source: source}  | 抖音小程序、飞书小程序与小红书小程序不支持        |
 
-## `<match-media>` 组件
+***
+
+## 参考资料
+
+[组件 | uni-app-x](https://uniapp.dcloud.net.cn/component/)
