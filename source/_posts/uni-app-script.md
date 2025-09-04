@@ -22,12 +22,20 @@ export default {
     },
     onLoad() {
         // 页面启动的生命周期，这里编写页面加载时的逻辑
+        this.helloWorld();
     },
     // 多个页面生命周期监听，在这里继续写。逗号分隔
     methods: {
         buttonClick: function () {
             this.title = "被点了"
         },
+        helloWorld: function () {
+            alert("Hello World");
+            this.test();
+        },
+        test() {
+            alert("hello");
+        }
         // 多个方法，在这里继续写。逗号分隔
     }
 };
