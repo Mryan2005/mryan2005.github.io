@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>uni-app 基础控件</title>
+    <url>/posts/3CXK9K1.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>对于较为基础的内容，分为显示用途的内容和交互用途的内容。</p>
+<h2><span id="显示类组件"> 显示类组件</span></h2>
+<ul>
+<li><code>&lt;text&gt;</code>：文本显示</li>
+<li><code>&lt;icon&gt;</code>：图标显示</li>
+<li><code>&lt;rich-text&gt;</code>：富文本显示</li>
+<li><code>&lt;progress&gt;</code>：进度条</li>
+<li><code>&lt;canvas&gt;</code>：画布</li>
+<li><code>&lt;web-view&gt;</code>：嵌入网页</li>
+</ul>
+<h2><span id="交互类组件"> 交互类组件</span></h2>
+<h3><span id="表单"> 表单</span></h3>
+<ul>
+<li><code>&lt;button&gt;</code>：按钮</li>
+<li><code>&lt;checkbox&gt;</code>：复选框</li>
+<li><code>&lt;form&gt;</code>：表单</li>
+<li><code>&lt;input&gt;</code>：输入框</li>
+<li><code>&lt;label&gt;</code>：标签</li>
+<li><code>&lt;picker&gt;</code>：选择器
+<ul>
+<li>普通选择器</li>
+<li>多列选择器</li>
+<li>时间选择器</li>
+<li>日期选择器</li>
+<li>省市区选择器</li>
+</ul>
+</li>
+<li><code>&lt;picker-view&gt;</code>：滚动选择器
+<ul>
+<li>要搭配上 <code>&lt;picker-view-column&gt;</code> 使用</li>
+</ul>
+</li>
+<li><code>&lt;radio&gt;</code>：单选框</li>
+<li><code>&lt;slider&gt;</code>：滑块</li>
+<li><code>&lt;switch&gt;</code>：开关</li>
+<li><code>&lt;textarea&gt;</code>：多行输入框</li>
+</ul>
+<h3><span id="页面跳转"> 页面跳转</span></h3>
+<ul>
+<li><code>&lt;navigator&gt;</code>：页面链接</li>
+</ul>
+<hr>
+<h2><span id="参考资料"> 参考资料</span></h2>
+<ol>
+<li><a href="https://uniapp.dcloud.net.cn/component">组件使用的入门教程 | uni-app 官网</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>uni-app</category>
+      </categories>
+      <tags>
+        <tag>uni-app</tag>
+        <tag>前端</tag>
+        <tag>移动端</tag>
+        <tag>跨平台</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>uni-app-muti-platform</title>
     <url>/posts/KJ49G9.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="概述"> 概述</span></h2>
