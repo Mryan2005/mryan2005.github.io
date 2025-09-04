@@ -35,12 +35,32 @@
 </tr>
 </tbody>
 </table>
-<h2><span id="ifdef-条件编译"> <code>#ifdef</code> 条件编译</span></h2>
-<p>在脚本、样式、模板中，可以使用 <code>#ifdef</code> 和 <code>#ifndef</code> 来进行条件编译。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    #ifdef MP-WEIXIN</span><br><span class="line">    &lt;view&gt;微信小程序&lt;/view&gt;</span><br><span class="line">    #endif</span><br><span class="line">    #ifdef APP-ANDROID</span><br><span class="line">    &lt;view&gt;APP&lt;/view&gt;</span><br><span class="line">    #endif</span><br><span class="line">    #ifndef APP-IOS</span><br><span class="line">    &lt;view&gt;IOS&lt;/view&gt;</span><br><span class="line">    #endif</span><br><span class="line">    #ifndef APP-APP-HARMONY</span><br><span class="line">    &lt;view&gt;鸿蒙&lt;/view&gt;</span><br><span class="line">    #endif</span><br><span class="line">    #ifndef WEB</span><br><span class="line">    &lt;view&gt;网页&lt;/view&gt;</span><br><span class="line">    #endif</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="ifdef-ifndef-条件编译"> <code>#ifdef</code>、<code>#ifndef</code> 条件编译</span></h2>
+<p>在实现多平台兼容的时候可以使用 <code>#ifdef</code> 和 <code>#ifndef</code> 来进行条件编译。</p>
+<p><code>#ifdef</code>：如果满足条件，则编译该部分代码。</p>
+<p><code>#ifndef</code>：如果不满足条件，则编译该部分代码。</p>
+<h3><span id="模版"> 模版</span></h3>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;!-- #ifdef MP-WEIXIN --&gt;</span><br><span class="line">    &lt;view&gt;微信小程序&lt;/view&gt;</span><br><span class="line">    &lt;!-- #endif --&gt;</span><br><span class="line">    &lt;!-- #ifdef APP-ANDROID --&gt;</span><br><span class="line">    &lt;view&gt;APP&lt;/view&gt;</span><br><span class="line">    &lt;!-- #endif --&gt;</span><br><span class="line">    &lt;!-- #ifndef APP-IOS --&gt;</span><br><span class="line">    &lt;view&gt;IOS&lt;/view&gt;</span><br><span class="line">    &lt;!-- #endif --&gt;</span><br><span class="line">    &lt;!-- #ifndef APP-APP-HARMONY --&gt;</span><br><span class="line">    &lt;view&gt;鸿蒙&lt;/view&gt;</span><br><span class="line">    &lt;!-- #endif --&gt;</span><br><span class="line">    &lt;!-- #ifndef WEB --&gt;</span><br><span class="line">    &lt;view&gt;网页&lt;/view&gt;</span><br><span class="line">    &lt;!-- #endif --&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></tbody></table></figure>
+<h3><span id="脚本"> 脚本</span></h3>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default {</span><br><span class="line">    data() {</span><br><span class="line">        return {</span><br><span class="line">            }</span><br><span class="line">        },</span><br><span class="line">    methods: {</span><br><span class="line">        // #ifdef WEB</span><br><span class="line">        test() {</span><br><span class="line">            alert("hello")</span><br><span class="line">        }</span><br><span class="line">        // #endif</span><br><span class="line">    }</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>基本上都是直接在注释当中，<code>#ifdef</code> 或 <code>#ifndef</code>，后面跟平台名称起头，<code>#endif</code> 结尾。</p>
 <blockquote>
 <p>未声明的情况下，默认选择：APP-ANDROID</p>
 </blockquote>
+<h3><span id="可使用的文件类型"> 可使用的文件类型</span></h3>
+<ol>
+<li>ts</li>
+<li>uts</li>
+<li>vue</li>
+<li>uvue</li>
+<li>css</li>
+<li>pages.json</li>
+</ol>
+<hr>
+<h2><span id="参考资料"> 参考资料</span></h2>
+<ol>
+<li><a href="https://hx.dcloud.net.cn/Tutorial/Language/language_service_target_support?id=%E6%9D%A1%E4%BB%B6%E7%BC%96%E8%AF%91%E4%BB%A3%E7%A0%81%E5%9D%97%E7%BD%AE%E7%81%B0">uni-app-x 多平台代码提示和语法校验 - HBuilderX 文档</a></li>
+</ol>
 ]]></content>
       <categories>
         <category>uni-app</category>
