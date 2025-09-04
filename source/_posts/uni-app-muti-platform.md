@@ -69,6 +69,14 @@ export default {
 
 基本上都是直接在注释当中，`#ifdef` 或 `#ifndef`，后面跟平台名称起头，`#endif` 结尾。
 
+这部分存在`||`或`&&`的关系，可以组合使用，例如：
+
+```vue
+<!-- #ifdef APP-ANDROID || APP-IOS -->
+<view>APP</view>
+<!-- #endif -->
+```
+
 > 未声明的情况下，默认选择：APP-ANDROID
 
 ### 可使用的文件类型
