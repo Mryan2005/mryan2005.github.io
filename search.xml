@@ -104,6 +104,8 @@
 <h3><span id="脚本"> 脚本</span></h3>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default {</span><br><span class="line">    data() {</span><br><span class="line">        return {</span><br><span class="line">            }</span><br><span class="line">        },</span><br><span class="line">    methods: {</span><br><span class="line">        // #ifdef WEB</span><br><span class="line">        test() {</span><br><span class="line">            alert("hello")</span><br><span class="line">        }</span><br><span class="line">        // #endif</span><br><span class="line">    }</span><br><span class="line">};</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></tbody></table></figure>
 <p>基本上都是直接在注释当中，<code>#ifdef</code> 或 <code>#ifndef</code>，后面跟平台名称起头，<code>#endif</code> 结尾。</p>
+<p>这部分存在 <code>||</code> 或 <code>&amp;&amp;</code> 的关系，可以组合使用，例如：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">&lt;!-- #ifdef APP-ANDROID || APP-IOS --&gt;</span><br><span class="line">&lt;view&gt;APP&lt;/view&gt;</span><br><span class="line">&lt;!-- #endif --&gt;</span><br></pre></td></tr></tbody></table></figure>
 <blockquote>
 <p>未声明的情况下，默认选择：APP-ANDROID</p>
 </blockquote>
