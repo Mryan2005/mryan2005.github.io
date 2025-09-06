@@ -10,6 +10,7 @@ categories: uni-app
 1. data：template模板中需要使用的数据。
 2. 页面生命周期：如页面加载、隐藏、关闭，具体 见下
 3. methods方法，如按钮点击、屏幕滚动
+4. computed计算属性
 
 ```vue
 <script>
@@ -37,6 +38,9 @@ export default {
             alert("hello");
         }
         // 多个方法，在这里继续写。逗号分隔
+    },
+    computed: {
+        // 计算属性
     }
 };
 </script>

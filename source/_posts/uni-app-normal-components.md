@@ -42,6 +42,23 @@ categories: uni-app
 
 - `<navigator>`：页面链接
 
+### checkbox
+
+- `<checkbox-group>`：复选框组
+- `<checkbox>`：复选框
+
+```vue
+<template>
+    <view>
+        <checkbox-group @change="checkboxChange">
+            <label v-for="(item, index) in checkboxItems" :key="index">
+                <checkbox :value="item.value" :checked="item.checked">{{ item.name }}</checkbox>
+            </label>
+        </checkbox-group>
+    </view>
+</template>
+```
+
 ***
 
 ## 参考资料
