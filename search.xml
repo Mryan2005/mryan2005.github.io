@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Golong 的输入输出</title>
+    <url>/posts/ZDFJFE.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="golang-的输出"> Golang 的输出</span></h2>
+<p>在 C++ 里面，对于输出我们使用 <code>cout</code>，在 Python 里面我们使用 <code>print</code>，在 Java 里面我们使用 <code>System.out.println</code>。在 Go 语言中，我们使用 <code>fmt</code> 包来进行输出。</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">fmt.Println(<span class="string">"Hello, World!"</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>println 是 Print Line 的缩写，表示打印一行内容。</p>
+<p>我们也可以通过 <code>fmt.Printf</code> 来进行格式化输出：</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">name := <span class="string">"Alice"</span></span><br><span class="line">age := <span class="number">30</span></span><br><span class="line">fmt.Printf(<span class="string">"Name: %s, Age: %d\n"</span>, name, age)</span><br></pre></td></tr></tbody></table></figure>
+<p>如果不想换行输出，可以使用 <code>fmt.Print</code>：</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">fmt.Print(<span class="string">"Hello, "</span>)</span><br><span class="line">fmt.Print(<span class="string">"World!"</span>)</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="golang-的输入"> Golang 的输入</span></h2>
+<p>在 Go 语言中，我们可以使用 <code>fmt.Scan</code>、<code>fmt.Scanf</code> 和 <code>fmt.Scanln</code> 来进行输入。</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name <span class="type">string</span></span><br><span class="line"><span class="keyword">var</span> age <span class="type">int</span></span><br><span class="line">fmt.Print(<span class="string">"Enter your name: "</span>)</span><br><span class="line">fmt.Scan(&amp;name)</span><br><span class="line">fmt.Print(<span class="string">"Enter your age: "</span>)</span><br><span class="line">fmt.Scan(&amp;age)</span><br><span class="line">fmt.Printf(<span class="string">"Name: %s, Age: %d\n"</span>, name, age)</span><br></pre></td></tr></tbody></table></figure>
+<p><code>fmt.Scan</code> 会从标准输入中读取数据，并将其存储在传入的变量中。注意变量前需要加上 <code>&amp;</code> 符号，表示传入的是变量的地址。</p>
+<p><code>fmt.Scanf</code> 允许我们指定输入的格式：</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name <span class="type">string</span></span><br><span class="line"><span class="keyword">var</span> age <span class="type">int</span></span><br><span class="line">fmt.Print(<span class="string">"Enter your name and age (e.g., Alice 30): "</span>)</span><br><span class="line">fmt.Scanf(<span class="string">"%s %d"</span>, &amp;name, &amp;age)</span><br><span class="line">fmt.Printf(<span class="string">"Name: %s, Age: %d\n"</span>, name, age)</span><br></pre></td></tr></tbody></table></figure>
+<p><code>fmt.Scanln</code> 会读取一行输入，直到遇到换行符：</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> name <span class="type">string</span></span><br><span class="line">fmt.Print(<span class="string">"Enter your name: "</span>)</span><br><span class="line">fmt.Scanln(&amp;name)</span><br><span class="line">fmt.Printf(<span class="string">"Hello, %s!\n"</span>, name)</span><br></pre></td></tr></tbody></table></figure>
+<p>通过这些基本的输入输出方法，我们可以轻松地与用户进行交互，获取输入并显示结果。</p>
+<p>这与其他编程语言的输入输出方式有些类似，有类似于 C 的 <code>printf</code> 和 <code>scanf</code> 的输入输出方式，有类似于 Python 的 <code>print</code> 函数，也有类似于 Java 的 <code>System.out.println</code> 方法。</p>
+<p>对于 <code>fmt</code> 包内的输入输出，每个方法的开头要大写，这点与其他语言的习惯不同。</p>
+<p>或许是因为 Go 语言中大写开头的方法表示是公开的，可以被其他包调用，而小写开头的方法则是私有的，只能在当前包内使用。</p>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
+<link rel="stylesheet" href="/css/markmap.css">
+
+<script src="/js/markmap.js"></script>
+]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>input</tag>
+        <tag>output</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hello Golang</title>
     <url>/posts/3D80YGG.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="hello-golang"> Hello, Golang</span></h2>
