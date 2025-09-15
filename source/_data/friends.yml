@@ -10,6 +10,12 @@
 - group: 我的社交媒体
   description: 与我有关的社交媒体
   items:
+    - title: Index
+      avatar: 
+      url: https://mryan2005.top/
+      screenshot:
+      keywords: 个人主页
+      description: 我的个人主页
     - title: AkiACG forum
       avatar: 
       url: https://forum.akiacg.com/u/Mryan2005
@@ -58,6 +64,12 @@
       screenshot:
       keywords: 蓝桥云课
       description: 我的蓝桥云课主页
+    - title: X
+      avatar: 
+      url: https://x.com/Mryan2005_1
+      screenshot:
+      keywords: X, Twitter
+      description: 我的X（前Twitter）主页
 - group: 我朋友们的网站 # 分组标题
   description: 欢迎前去他们的网站 # 分组描述
   items:
