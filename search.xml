@@ -40,7 +40,7 @@
   <entry>
     <title>hello Golang</title>
     <url>/posts/3D80YGG.html</url>
-    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="hello-golang"> Hello, Golang</span></h2>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="hello-golang-world"> Hello, Golang World!</span></h2>
 <p>在每一个语言开始的时候，总会有一个仪式 ——Hello, World! 让我们在 Go 语言中实现这个经典的例子。</p>
 <figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    fmt.Println(<span class="string">"Hello, World!"</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <h2><span id="程序架构"> 程序架构</span></h2>
