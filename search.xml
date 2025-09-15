@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hello Golang</title>
+    <url>/posts/3D80YGG.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="hello-golang"> Hello, Golang</span></h2>
+<p>在每一个语言开始的时候，总会有一个仪式 ——Hello, World! 让我们在 Go 语言中实现这个经典的例子。</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    fmt.Println(<span class="string">"Hello, World!"</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2><span id="程序架构"> 程序架构</span></h2>
+<ul>
+<li>Go 程序由包（package）组成，<code>main</code> 包是程序的入口点。每个 Go 文件都以 <code>package</code> 关键字开头，表示该文件属于哪个包。</li>
+<li><code>import</code> 语句用于引入其他包，这里我们引入了 <code>fmt</code> 包来进行格式化输出。</li>
+<li><code>func main()</code> 是程序的主函数，程序从这里开始执行。</li>
+<li><code>fmt.Println</code> 用于打印输出到控制台。</li>
+</ul>
+<h2><span id="运行-go-代码"> 运行 Go 代码</span></h2>
+<p>要执行 Go 语言代码可以使用 go run 命令。</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">go run hello.go</span><br></pre></td></tr></tbody></table></figure>
+<p>这将编译并运行 <code>hello.go</code> 文件中的代码。</p>
+<p>还可以使用 go build 命令来生成二进制文件：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">go build hello.go</span><br></pre></td></tr></tbody></table></figure>
+<p>这会生成一个名为 <code>hello</code>（在 Windows 上是 <code>hello.exe</code>）的可执行文件。运行它：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">./hello</span><br></pre></td></tr></tbody></table></figure>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
+<link rel="stylesheet" href="/css/markmap.css">
+
+<script src="/js/markmap.js"></script>
+]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
+      <tags>
+        <tag>golang</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>uni-app 组件之间传输数据</title>
     <url>/posts/2TY4YG2.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="概述"> 概述</span></h2>
