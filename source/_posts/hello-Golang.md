@@ -5,7 +5,7 @@ tags: [golang]
 categories: golang
 ---
 
-## Hello, Golang
+## Hello, Golang World!
 
 在每一个语言开始的时候，总会有一个仪式——Hello, World! 让我们在 Go 语言中实现这个经典的例子。
 
