@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>nao 开发 命令盒子的基本操作</title>
+    <url>/posts/841BHT.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="一些没用的概念"> 一些没用的概念</span></h2>
+<p><strong>指令盒是定义机器人应用、实现一系列动作 (流程) 的基本构成元素</strong>。</p>
+<p>指令盒库中直接可以使用的指令盒包括 “Say (说话)“这样简单功能的指令盒，也有 AI 属性能够人脸识别复杂功能的指令盒。</p>
+<p>在 Choregraphe 编程中，不仅可以使用指令盒库中预先准备的标准功能指令盒，也可以使用自己定义的指令盒。</p>
+<h2><span id="指令盒的构成要素重点"> 指令盒的构成要素（重点）</span></h2>
+<p><img src="/img/nao_commandbox_structure.png" class="lazyload" data-srcset="/img/nao_commandbox_structure.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_commandbox_structure"></p>
+<p><img src="/img/nao_commandbox_structure_single.png" class="lazyload" data-srcset="/img/nao_commandbox_structure_single.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_commandbox_structure_single"></p>
+<hr>
+<h2><span id="参考内容"> 参考内容</span></h2>
+<ol>
+<li>软银机器人中国的 <a href="https://www.bilibili.com/video/BV1eg411u7Aj/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=376d18e5cd56f0f6d656311763c5e9b8">02 课 指令盒的基本操作</a></li>
+</ol>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
+<link rel="stylesheet" href="/css/markmap.css">
+
+<script src="/js/markmap.js"></script>
+]]></content>
+      <categories>
+        <category>Choregraphe</category>
+      </categories>
+      <tags>
+        <tag>Nao</tag>
+        <tag>Choregraphe</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Golong 的变量和他们的类型</title>
     <url>/posts/T6MWD3.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="变量"> 变量</span></h2>
@@ -112,6 +140,24 @@
       </categories>
       <tags>
         <tag>golang</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>uni-app navigateBack 和 navigateTo</title>
+    <url>/posts/36H9FM4.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>在 uni-app 中，页面跳转和返回是通过 <code>uni.navigateTo</code> 和 <code>uni.navigateBack</code> 方法来实现的。这两个方法分别用于导航到新页面和返回到上一个页面。</p>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
+<link rel="stylesheet" href="/css/markmap.css">
+
+<script src="/js/markmap.js"></script>
+]]></content>
+      <categories>
+        <category>uni-app</category>
+      </categories>
+      <tags>
+        <tag>uni-app</tag>
+        <tag>navigateBack</tag>
+        <tag>navigateTo</tag>
       </tags>
   </entry>
   <entry>
