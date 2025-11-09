@@ -74,16 +74,33 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="Mryan2005's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>标签：算法 - Mryan2005's Blog</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="Mryan2005's Blog - Mryan2005 - Mryan2005's Blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Mryan2005&#39;s Blog">
-<meta property="og:url" content="https://blog.mryan2005.top/tags/%E7%AE%97%E6%B3%95/index.html">
+  <title>nao 开发 行走 - Mryan2005's Blog</title>
+  <meta name="keywords" content="Nao,Choregraphe,null">
+  <meta desc name="description" content=" 相关的指令盒
+
+Move To：让机器人移动到指定位置
+ Move Toward：让机器人朝指定方向移动
+ Walk To：让机器人走到指定位置
+ Move Along：让机器人沿着指定路径移动
+
+ Move To 指令盒
+
+
+Destination X (m)：目标位置的 X 坐标，单位为米
+ Destina... - Mryan2005 - Mryan2005's Blog">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="nao 开发 行走">
+<meta property="og:url" content="https://blog.mryan2005.top/posts/300MCKP.html">
 <meta property="og:site_name" content="Mryan2005&#39;s Blog">
+<meta property="og:description" content="相关的指令盒  Move To：让机器人移动到指定位置  Move Toward：让机器人朝指定方向移动  Walk To：让机器人走到指定位置  Move Along：让机器人沿着指定路径移动   Move To 指令盒   Destination X (m)：目标位置的 X 坐标，单位为米  Destination Y (m)：目标位置的 Y 坐标，单位为米  Theta (deg)：目标位">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2025-11-09T16:15:03.000Z">
+<meta property="article:modified_time" content="2025-11-09T08:31:01.777Z">
 <meta property="article:author" content="Mryan2005">
+<meta property="article:tag" content="Nao">
+<meta property="article:tag" content="Choregraphe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2341,7 +2358,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2397,27 +2414,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.mryan2005.top/posts/351GJ1G.html">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://blog.mryan2005.top/posts/300MCKP.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Mryan2005's Blog">
   </span>
@@ -2426,161 +2425,234 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/351GJ1G.html" rel="dofollow" itemprop="url">
-        请开发一个自上而下的模块化程序，用于完成以下任务
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><p>总时间限制: 1000ms 内存限制: 65536kB</p>
-<h2><span id="描述"> 描述</span></h2>
-<p>请开发一个自上而下的模块化程序，用于完成以下任务<br>
-a)  读取两个整数数组，数组的元素未经排序。<br>
-b)  将数组元素按递增排序。<br>
-c)  将已排序的数组合并。<br>
-d)  显示已排序的列表。<br>
-使用函数来完成以上每个任务。主函数中只包含函数调用。</p>
-<h2><span id="输入"> 输入</span></h2>
-<p>输入三行<br>
-第一行两个数字 表示两个数组元素的个数<br>
-第二行第一个数组<br>
-第三行第二个数组</p>
-<h2><span id="输出"> 输出</span></h2>
-<p>输出一行，合并后的数组，注意这时仍然是第一个数组在前，第二个数组在后<br>
-两个数组分别排序，但是合并的数组并没有排序<br>
-注意看例子！！！！！</p>
-<h2><span id="样例输入"> 样例输入</span></h2>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">4 5</span><br><span class="line">2 3 4 1</span><br><span class="line">3 4 5 1 2</span><br></pre></td></tr></tbody></table></figure>
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title" itemprop="name headline">
+        nao 开发 行走
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-07-25T10:50:28+00:00">2024-07-25</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/351GJ1G.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' rel="dofollow" href="/" rel="nofollow">
+    <img alt="authorAvatar" itemprop="image" src="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" class="lazyload" data-srcset="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Mryan2005</p>
+  </a>
 </div>
 
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Choregraphe/">Choregraphe</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Choregraphe/" itemprop="url"><span itemprop="name">Choregraphe</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-11-09T16:15:03+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2025年11月9日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="相关的指令盒"> 相关的指令盒</span></h2>
+<ul>
+<li>Move To：让机器人移动到指定位置</li>
+<li> Move Toward：让机器人朝指定方向移动</li>
+<li> Walk To：让机器人走到指定位置</li>
+<li> Move Along：让机器人沿着指定路径移动</li>
+</ul>
+<h2><span id="move-to-指令盒"> Move To 指令盒</span></h2>
+<p><img src="/img/nao_move_to_box.png" class="lazyload" data-srcset="/img/nao_move_to_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_move_to_box"></p>
+<ul>
+<li>Destination X (m)：目标位置的 X 坐标，单位为米</li>
+<li> Destination Y (m)：目标位置的 Y 坐标，单位为米</li>
+<li> Theta (deg)：目标位置的角度，单位为弧度</li>
+<li> Arms movement enabled：是否启用手臂运动，默认启用</li>
+</ul>
+<blockquote>
+<p>私以为，你想要让机器人转弯，理论上，可以使 <code>Destination X</code> 为 <code>0.900000</code>，<code>Destination Y</code> 为 <code>0.000000</code>，<code>Theta</code> 为 <code>90</code> 度（即 <code>1.5708</code> 弧度）。</p>
+</blockquote>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
+<link rel="stylesheet" href="/css/markmap.css">
+
+<script src="/js/markmap.js"></script>
+
+  </div>
+  
+  
+    
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+        
+          
+          <div class="copyright license">
+            <div class="license-title">nao 开发 行走</div>
+            <div class="license-link"><a href="https://blog.mryan2005.top/posts/300MCKP.html">https://blog.mryan2005.top/posts/300MCKP.html</a>
+            </div>
+            <div class="license-meta">
+              <div class="license-meta-item">
+                <div class="license-meta-title">本文作者</div>
+                <div class="license-meta-text">Mryan2005</div>
+              </div>
+              <div class="license-meta-item">
+                <div class="license-meta-title">发布于</div>
+                <div class="license-meta-text">2025年11月9日</div>
+              </div>
+              
+              
+              <div class="license-meta-item">
+                <div class="license-meta-title">许可协议</div>
+                <div class="license-meta-text"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://blog.mryan2005.top/">Mryan2005's Blog</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://blog.mryan2005.top/">Yan Zhizhong</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" class="lazyload" data-srcset="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" class="lazyload" data-srcset="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" class="lazyload" data-srcset="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" class="lazyload" data-srcset="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></a></p></div>
+              </div>
+            </div>
+            <div class="license-statement">本站所有原创文章采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh#" target="_blank">CC BY-NC-SA 4.0</a> 协议进行许可。</div>
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.mryan2005.top/posts/5e7b20a2.html">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Mryan2005's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Mryan2005's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/posts/5e7b20a2.html" rel="dofollow" itemprop="url">
-        算法的基础知识
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <h2 id="算法的五大特性"><a class="markdownIt-Anchor" href="#算法的五大特性"></a> 算法的五大特性</h2>
-<ol>
-<li><strong>确定性</strong></li>
-<li><strong>有穷性</strong></li>
-<li><strong>可行性</strong></li>
-<li><strong>输入</strong>和<strong>输出</strong>（可以没有输入，但是得要有输出）</li>
-</ol>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img alt="avatar" src='https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://pic.imgdb.cn/item/663f3d850ea9cb1403fd8173.png">
-            <meta itemprop="name" content="Mryan2005">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-05-12T10:51:11+00:00">2024-05-12</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/">数据结构与算法大全</a><span class="sep"></span><a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/">入门</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" itemprop="url"><span itemprop="name">数据结构与算法大全</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a rel="dofollow" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/" itemprop="url"><span itemprop="name">入门</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' rel="dofollow" href='/posts/5e7b20a2.html' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-11-09T08:31:01+00:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2025年11月9日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Nao/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Nao</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Choregraphe/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Choregraphe</p></a></div>
+  <span hidden itemprop="keywords">Nao Choregraphe</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/841BHT.html'>
+          <p class='title'>nao 开发 命令盒子的基本操作<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'> 一些没用的概念
+指令盒是定义机器人应用、实现一系列动作 (流程) 的基本构成元素。
+指令盒库中直接可以使用的指令盒包括 “Say (说话)“这样简单功能的指令盒，也有 AI 属性能够人脸识别复...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline.mryan2005.top',
+    });
+  </script>
+</article>
+
+
+  
+
   
 
 
-    
-  
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2589,234 +2661,48 @@ d)  显示已排序的列表。<br>
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy alt="logo" src='https://i0.wp.com/tvax2.sinaimg.cn/large/008pCFvqgy1hxx5523desj30bz0bz45a.jpg' referrerpolicy="no-referrer"/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Mryan2005</h2>
-        
-        
-          <p>Dream it Possible</p>
-
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:mryan2005@mryan2005.top"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Mryan2005"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://mryan2005.lofter.com"
-              class="social fab fa-instagram flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Choregraphe/" href="/categories/Choregraphe/"
-            active-action="action-categoriesChoregraphe"
-            ><div class='name'>Choregraphe</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Golong/" href="/categories/Golong/"
-            active-action="action-categoriesGolong"
-            ><div class='name'>Golong</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/LeetCode/" href="/categories/LeetCode/"
-            active-action="action-categoriesLeetCode"
-            ><div class='name'>LeetCode</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/" href="/categories/LeetCode/%E7%AE%80%E5%8D%95%E9%A2%98/"
-            active-action="action-categoriesLeetCodeE7AE80E58D95E9A298"
-            ><div class='name'>简单题</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Markdown/" href="/categories/Markdown/"
-            active-action="action-categoriesMarkdown"
-            ><div class='name'>Markdown</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Markdown/Latex/" href="/categories/Markdown/Latex/"
-            active-action="action-categoriesMarkdownLatex"
-            ><div class='name'>Latex</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/OpenJudge/" href="/categories/OpenJudge/"
-            active-action="action-categoriesOpenJudge"
-            ><div class='name'>OpenJudge</div><div class='badge'>(60)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/PTA/" href="/categories/PTA/"
-            active-action="action-categoriesPTA"
-            ><div class='name'>PTA</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Vue/" href="/categories/Vue/"
-            active-action="action-categoriesVue"
-            ><div class='name'>Vue</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Windows/" href="/categories/Windows/"
-            active-action="action-categoriesWindows"
-            ><div class='name'>Windows</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/golang/" href="/categories/golang/"
-            active-action="action-categoriesgolang"
-            ><div class='name'>golang</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/test-example/" href="/categories/test-example/"
-            active-action="action-categoriestest-example"
-            ><div class='name'>test example</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/uni-app/" href="/categories/uni-app/"
-            active-action="action-categoriesuni-app"
-            ><div class='name'>uni-app</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/" href="/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%9B%E5%BB%BA/"
-            active-action="action-categoriesE4BB8EE99BB6E5BC80E5A78BE79A84E58D9AE5AEA2E5889BE5BBBA"
-            ><div class='name'>从零开始的博客创建</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%AA%E8%BE%91/" href="/categories/%E5%89%AA%E8%BE%91/"
-            active-action="action-categoriesE589AAE8BE91"
-            ><div class='name'>剪辑</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/"
-            active-action="action-categoriesE695B0E68DAEE7BB93E69E84E4B88EE7AE97E6B395E5A4A7E585A8"
-            ><div class='name'>数据结构与算法大全</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E5%85%A5%E9%97%A8/"
-            active-action="action-categoriesE695B0E68DAEE7BB93E69E84E4B88EE7AE97E6B395E5A4A7E585A8E585A5E997A8"
-            ><div class='name'>入门</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%A4%A7%E5%85%A8/%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84%EF%BC%88%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%89/"
-            active-action="action-categoriesE695B0E68DAEE7BB93E69E84E4B88EE7AE97E6B395E5A4A7E585A8E7BABFE680A7E7BB93E69E84EFBC88E7BABFE680A7E8A1A8EFBC89"
-            ><div class='name'>线性结构（线性表）</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B4%E6%B4%BB/" href="/categories/%E6%95%B4%E6%B4%BB/"
-            active-action="action-categoriesE695B4E6B4BB"
-            ><div class='name'>整活</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" href="/categories/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"
-            active-action="action-categoriesE69BB4E696B0E697A5E5BF97"
-            ><div class='name'>更新日志</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"
-            active-action="action-categoriesE7A28EE7A28EE5BFB5"
-            ><div class='name'>碎碎念</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/2D-Array/" style="font-size: 15px; color: #929292">2D Array</a> <a href="/tags/Array/" style="font-size: 17px; color: #858585">Array</a> <a href="/tags/BFS/" style="font-size: 14px; color: #999">BFS</a> <a href="/tags/Bit/" style="font-size: 14px; color: #999">Bit</a> <a href="/tags/C/" style="font-size: 21px; color: #696969">C</a> <a href="/tags/C/" style="font-size: 23px; color: #5c5c5c">C++</a> <a href="/tags/Choregraphe/" style="font-size: 15px; color: #929292">Choregraphe</a> <a href="/tags/Golong/" style="font-size: 14px; color: #999">Golong</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Latex/" style="font-size: 14px; color: #999">Latex</a> <a href="/tags/LinkedList/" style="font-size: 14px; color: #999">LinkedList</a> <a href="/tags/Map/" style="font-size: 18px; color: #7e7e7e">Map</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/tags/Matrix/" style="font-size: 14px; color: #999">Matrix</a> <a href="/tags/Nao/" style="font-size: 15px; color: #929292">Nao</a> <a href="/tags/OpenJudge/" style="font-size: 24px; color: #555">OpenJudge</a> <a href="/tags/PTA/" style="font-size: 14px; color: #999">PTA</a> <a href="/tags/Queue/" style="font-size: 15px; color: #929292">Queue</a> <a href="/tags/SCSS/" style="font-size: 14px; color: #999">SCSS</a> <a href="/tags/STL/" style="font-size: 22px; color: #636363">STL</a> <a href="/tags/Sort/" style="font-size: 14px; color: #999">Sort</a> <a href="/tags/Stack/" style="font-size: 16px; color: #8b8b8b">Stack</a> <a href="/tags/String/" style="font-size: 18px; color: #7e7e7e">String</a> <a href="/tags/Tree/" style="font-size: 14px; color: #999">Tree</a> <a href="/tags/Vector/" style="font-size: 15px; color: #929292">Vector</a> <a href="/tags/Vue/" style="font-size: 16px; color: #8b8b8b">Vue</a> <a href="/tags/Win11/" style="font-size: 14px; color: #999">Win11</a> <a href="/tags/Windows/" style="font-size: 14px; color: #999">Windows</a> <a href="/tags/Windows-11/" style="font-size: 14px; color: #999">Windows 11</a> <a href="/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/tags/golang/" style="font-size: 15px; color: #929292">golang</a> <a href="/tags/input/" style="font-size: 14px; color: #999">input</a> <a href="/tags/javascript/" style="font-size: 14px; color: #999">javascript</a> <a href="/tags/js/" style="font-size: 14px; color: #999">js</a> <a href="/tags/navigateBack/" style="font-size: 14px; color: #999">navigateBack</a> <a href="/tags/navigateTo/" style="font-size: 14px; color: #999">navigateTo</a> <a href="/tags/output/" style="font-size: 14px; color: #999">output</a> <a href="/tags/queue/" style="font-size: 14px; color: #999">queue</a> <a href="/tags/scss/" style="font-size: 14px; color: #999">scss</a> <a href="/tags/stack/" style="font-size: 14px; color: #999">stack</a> <a href="/tags/string/" style="font-size: 17px; color: #858585">string</a> <a href="/tags/test/" style="font-size: 14px; color: #999">test</a> <a href="/tags/uni-app/" style="font-size: 20px; color: #707070">uni-app</a> <a href="/tags/%E4%B8%93%E4%B8%9A%E7%89%88/" style="font-size: 14px; color: #999">专业版</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 17px; color: #858585">二叉树</a> <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/" style="font-size: 14px; color: #999">二叉树的中序遍历</a> <a href="/tags/%E4%BA%8C%E5%B7%A5%E5%A4%A7/" style="font-size: 14px; color: #999">二工大</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 19px; color: #777">前端</a> <a href="/tags/%E5%8A%A8%E6%80%81%E5%88%86%E9%85%8D/" style="font-size: 14px; color: #999">动态分配</a> <a href="/tags/%E5%8F%98%E9%87%8F/" style="font-size: 14px; color: #999">变量</a> <a href="/tags/%E5%A4%96%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">外排序</a> <a href="/tags/%E5%AF%B9%E6%95%B0%E5%AD%97%E7%9A%84%E5%A4%84%E7%90%86/" style="font-size: 14px; color: #999">对数字的处理</a> <a href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">归并排序</a> <a href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">拓扑排序</a> <a href="/tags/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" style="font-size: 15px; color: #929292">更新日志</a> <a href="/tags/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/%E6%A0%88/" style="font-size: 14px; color: #999">栈</a> <a href="/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/" style="font-size: 14px; color: #999">模块化</a> <a href="/tags/%E7%94%9F%E5%AD%98%E6%8C%87%E5%8D%97/" style="font-size: 14px; color: #999">生存指南</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 14px; color: #999">碎碎念</a> <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" style="font-size: 19px; color: #777">移动端</a> <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">程序设计</a> <a href="/tags/%E7%AC%AC%E4%B8%80%E7%89%88/" style="font-size: 18px; color: #7e7e7e">第一版</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px; color: #929292">算法</a> <a href="/tags/%E7%B1%BB%E5%9E%8B/" style="font-size: 14px; color: #999">类型</a> <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 14px; color: #999">系统</a> <a href="/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/" style="font-size: 15px; color: #929292">线性表</a> <a href="/tags/%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" style="font-size: 14px; color: #999">组件通信</a> <a href="/tags/%E7%BD%AE%E6%8D%A2%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/" style="font-size: 14px; color: #999">置换选择排序</a> <a href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/" style="font-size: 19px; color: #777">跨平台</a> <a href="/tags/%E9%80%86%E5%BA%8F%E5%AF%B9/" style="font-size: 14px; color: #999">逆序对</a> <a href="/tags/%E9%80%92%E5%BD%92/" style="font-size: 15px; color: #929292">递归</a> <a href="/tags/%E9%93%BE%E8%A1%A8/" style="font-size: 14px; color: #999">链表</a>
-    </div>
-  </section>
-
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 相关的指令盒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Move To 指令盒</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2844,13 +2730,14 @@ d)  显示已排序的列表。<br>
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3851,7 +3738,7 @@ d)  显示已排序的列表。<br>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.mryan2005.top/tags/算法/","name":"算法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.mryan2005.top/categories/Choregraphe/","name":"Choregraphe"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.mryan2005.top/posts/300MCKP.html","name":"nao 开发 行走"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"nao 开发 行走","description":" 相关的指令盒\n\nMove To：让机器人移动到指定位置\n Move Toward：让机器人朝指定方向移动\n Walk To：让机器人走到指定位置\n Move Along：让机器人沿着指定路径移动\n\n Move To 指令盒\n\n\nDestination X (m)：目标位置的 X 坐标，单位为米\n Destination Y (m)：目标位置的 Y 坐标，单位为米\n Theta (deg)：目标位置的角度，单位为弧度\n Arms movement enabled：是否启用手臂运动，默认启用\n\n\n私以为，你想要让机器人转弯，理论上，可以使 Destination X 为 0.900000，Destination Y 为 0.000000，Theta 为 90 度（即 1.5708 弧度）。\n\n\n\n\n\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.mryan2005.top/posts/300MCKP.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.mryan2005.top/posts/300MCKP.html","wordCount":354,"datePublished":"2025-11-09T16:15:03.000Z","dateModified":"2025-11-09T08:31:01.777Z","articleSection":"Choregraphe","keywords":"Nao,Choregraphe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
