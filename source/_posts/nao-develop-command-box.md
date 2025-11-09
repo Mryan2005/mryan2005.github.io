@@ -13,6 +13,8 @@ categories: [Choregraphe]
 
 在Choregraphe 编程中,不仅可以使用指令盒库中预先准备的标准功能指令盒,也可以使用自己定义的指令盒。
 
+<!--more-->
+
 ## 指令盒的构成要素（重点）
 
 ![nao_commandbox_structure](/img/nao_commandbox_structure.png)
