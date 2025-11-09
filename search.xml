@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>nao 开发 监听事件</title>
+    <url>/posts/2JWWJ3Y.html</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="相关的事件"> 相关的事件</span></h2>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> ActiveDiagnosisErrorChanged</td>
+<td> 诊断错误状态改变</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>ALAnimatedSpeech</td>
+<td> 机器人开始或停止说话</td>
+<td></td>
+</tr>
+<tr>
+<td> EndOfAnimatedSpeech</td>
+<td> 机器人说话结束</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>ALBehaviorManager</td>
+<td> 机器人行为管理器事件</td>
+<td></td>
+</tr>
+<tr>
+<td> BehaviorAdded</td>
+<td> 机器人行为被添加</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>BehaviorFailed</td>
+<td> 机器人行为失败</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>BehaviorRemoved</td>
+<td> 机器人行为被移除</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>BehaviorsAdded</td>
+<td> 机器人行为被添加</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>BehaviorsLoaded</td>
+<td> 机器人行为被加载</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>BehaviorsRemoved</td>
+<td> 机器人行为被移除</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>BehaviorUpdated</td>
+<td> 机器人行为被更新</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>RobotIsFalling</td>
+<td> 机器人正在跌倒</td>
+<td> EVENT</td>
+</tr>
+<tr>
+<td>RobotHasFallen</td>
+<td> 机器人已经跌倒</td>
+<td> EVENT</td>
+</tr>
+</tbody>
+</table>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
+<link rel="stylesheet" href="/css/markmap.css">
+
+<script src="/js/markmap.js"></script>
+]]></content>
+      <categories>
+        <category>Choregraphe</category>
+      </categories>
+      <tags>
+        <tag>Nao</tag>
+        <tag>Choregraphe</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>nao 开发 行走</title>
     <url>/posts/300MCKP.html</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/3.0.0/hint.min.css"><h2><span id="相关的指令盒"> 相关的指令盒</span></h2>
@@ -63,6 +156,14 @@
 <h2><span id="参考内容"> 参考内容</span></h2>
 <ol>
 <li>软银机器人中国的 <a href="https://www.bilibili.com/video/BV1eg411u7Aj/?spm_id_from=333.1007.top_right_bar_window_history.content.click&amp;vd_source=376d18e5cd56f0f6d656311763c5e9b8">02 课 指令盒的基本操作</a></li>
+</ol>
+<h2><span id="指令盒的执行顺序"> 指令盒的执行顺序</span></h2>
+<ol>
+<li>串联处理：将指令盒一个一个按顺序处理，例如移动结束后说话</li>
+<li>并联处理：将指令盒进行并联处理，例如一边移动一边说话</li>
+<li>同时处理：指令盒的连接器可以连接多条线，例如在说话的同时，停止听的状态</li>
+<li>条件分支处理：根据条件分支来决定执行哪个指令盒，例如识别到人脸后说 “你好”，否则说 “请靠近我”</li>
+<li> 循环处理：将指令盒进行循环处理，例如重复说话三次</li>
 </ol>
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
 <link rel="stylesheet" href="/css/markmap.css">
