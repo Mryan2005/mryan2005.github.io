@@ -7,9 +7,10 @@
 <ul>
 <li>Move To：让机器人移动到指定位置</li>
 <li> Move Toward：让机器人朝指定方向移动</li>
-<li> Walk To：让机器人走到指定位置</li>
+<li> Walk Toward：让机器人走到指定位置</li>
 <li> Move Along：让机器人沿着指定路径移动</li>
 </ul>
+<span id="more"></span>
 <h2><span id="move-to-指令盒"> Move To 指令盒</span></h2>
 <p><img src="/img/nao_move_to_box.png" class="lazyload" data-srcset="/img/nao_move_to_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_move_to_box"></p>
 <ul>
@@ -21,6 +22,19 @@
 <blockquote>
 <p>私以为，你想要让机器人转弯，理论上，可以使 <code>Destination X</code> 为 <code>0.900000</code>，<code>Destination Y</code> 为 <code>0.000000</code>，<code>Theta</code> 为 <code>90</code> 度（即 <code>1.5708</code> 弧度）。</p>
 </blockquote>
+<h2><span id="move-toward-指令盒"> Move Toward 指令盒</span></h2>
+<p><img src="/img/nao_move_toward_box.png" class="lazyload" data-srcset="/img/nao_move_toward_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_move_toward_box"></p>
+<ul>
+<li>X (m/s)：机器人在 X 方向上的速度，单位为米每秒</li>
+<li> Y (m/s)：机器人在 Y 方向上的速度，单位为米每秒</li>
+<li> Theta (rad/s)：机器人旋转的角速度，单位为弧度每秒</li>
+<li> Period of direction update (s)：方向更新周期，单位为秒</li>
+<li> Arms movement enabled：是否启用手臂运动，默认启用</li>
+</ul>
+<h2><span id="walk-toward-指令盒"> Walk Toward 指令盒</span></h2>
+<p><img src="/img/nao_walk_toward_box.png" class="lazyload" data-srcset="/img/nao_walk_toward_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_walk_toward_box"></p>
+<h2><span id="move-along-指令盒"> Move Along 指令盒</span></h2>
+<p><img src="/img/nao_move_along_box.png" class="lazyload" data-srcset="/img/nao_move_along_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_move_along_box"></p>
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
 <link rel="stylesheet" href="/css/markmap.css">
 

@@ -80,24 +80,19 @@
 
 Move To：让机器人移动到指定位置
  Move Toward：让机器人朝指定方向移动
- Walk To：让机器人走到指定位置
+ Walk Toward：让机器人走到指定位置
  Move Along：让机器人沿着指定路径移动
-
- Move To 指令盒
-
-
-Destination X (m)：目标位置的 X 坐标，单位为米
- Destina... - Mryan2005 - Mryan2005's Blog">
+ - Mryan2005 - Mryan2005's Blog">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="nao 开发 行走">
 <meta property="og:url" content="https://blog.mryan2005.top/posts/300MCKP.html">
 <meta property="og:site_name" content="Mryan2005&#39;s Blog">
-<meta property="og:description" content="相关的指令盒  Move To：让机器人移动到指定位置  Move Toward：让机器人朝指定方向移动  Walk To：让机器人走到指定位置  Move Along：让机器人沿着指定路径移动   Move To 指令盒   Destination X (m)：目标位置的 X 坐标，单位为米  Destination Y (m)：目标位置的 Y 坐标，单位为米  Theta (deg)：目标位">
+<meta property="og:description" content="相关的指令盒  Move To：让机器人移动到指定位置  Move Toward：让机器人朝指定方向移动  Walk Toward：让机器人走到指定位置  Move Along：让机器人沿着指定路径移动">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-11-09T16:15:03.000Z">
-<meta property="article:modified_time" content="2025-11-09T08:31:01.777Z">
+<meta property="article:modified_time" content="2025-11-09T09:12:07.715Z">
 <meta property="article:author" content="Mryan2005">
 <meta property="article:tag" content="Nao">
 <meta property="article:tag" content="Choregraphe">
@@ -1650,7 +1645,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1762677086505),
+    lastupdate: new Date(1762679552968),
     sidebar: {
       for_page: ["blogger","category","tagcloud"],
       for_post: ["toc"],
@@ -2498,9 +2493,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ul>
 <li>Move To：让机器人移动到指定位置</li>
 <li> Move Toward：让机器人朝指定方向移动</li>
-<li> Walk To：让机器人走到指定位置</li>
+<li> Walk Toward：让机器人走到指定位置</li>
 <li> Move Along：让机器人沿着指定路径移动</li>
 </ul>
+<span id="more"></span>
 <h2><span id="move-to-指令盒"> Move To 指令盒</span></h2>
 <p><img src="/img/nao_move_to_box.png" class="lazyload" data-srcset="/img/nao_move_to_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_move_to_box"></p>
 <ul>
@@ -2512,6 +2508,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>私以为，你想要让机器人转弯，理论上，可以使 <code>Destination X</code> 为 <code>0.900000</code>，<code>Destination Y</code> 为 <code>0.000000</code>，<code>Theta</code> 为 <code>90</code> 度（即 <code>1.5708</code> 弧度）。</p>
 </blockquote>
+<h2><span id="move-toward-指令盒"> Move Toward 指令盒</span></h2>
+<p><img src="/img/nao_move_toward_box.png" class="lazyload" data-srcset="/img/nao_move_toward_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_move_toward_box"></p>
+<ul>
+<li>X (m/s)：机器人在 X 方向上的速度，单位为米每秒</li>
+<li> Y (m/s)：机器人在 Y 方向上的速度，单位为米每秒</li>
+<li> Theta (rad/s)：机器人旋转的角速度，单位为弧度每秒</li>
+<li> Period of direction update (s)：方向更新周期，单位为秒</li>
+<li> Arms movement enabled：是否启用手臂运动，默认启用</li>
+</ul>
+<h2><span id="walk-toward-指令盒"> Walk Toward 指令盒</span></h2>
+<p><img src="/img/nao_walk_toward_box.png" class="lazyload" data-srcset="/img/nao_walk_toward_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_walk_toward_box"></p>
+<h2><span id="move-along-指令盒"> Move Along 指令盒</span></h2>
+<p><img src="/img/nao_move_along_box.png" class="lazyload" data-srcset="/img/nao_move_along_box.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="nao_move_along_box"></p>
 <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css"><script src="https://fastly.jsdelivr.net/npm/d3@7"></script><script src="https://fastly.jsdelivr.net/npm/markmap-view@0.18.10"></script><script src="https://fastly.jsdelivr.net/npm/markmap-toolbar@0.18.10"></script>
 <link rel="stylesheet" href="/css/markmap.css">
 
@@ -2567,7 +2576,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-11-09T08:31:01+00:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-11-09T09:12:07+00:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2025年11月9日</p>
@@ -2681,7 +2690,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 相关的指令盒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Move To 指令盒</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> 相关的指令盒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Move To 指令盒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Move Toward 指令盒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Walk Toward 指令盒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> Move Along 指令盒</span></a></li></ol>
     </div>
   </section>
 
@@ -3509,7 +3518,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -3738,7 +3747,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.mryan2005.top/categories/Choregraphe/","name":"Choregraphe"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.mryan2005.top/posts/300MCKP.html","name":"nao 开发 行走"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"nao 开发 行走","description":" 相关的指令盒\n\nMove To：让机器人移动到指定位置\n Move Toward：让机器人朝指定方向移动\n Walk To：让机器人走到指定位置\n Move Along：让机器人沿着指定路径移动\n\n Move To 指令盒\n\n\nDestination X (m)：目标位置的 X 坐标，单位为米\n Destination Y (m)：目标位置的 Y 坐标，单位为米\n Theta (deg)：目标位置的角度，单位为弧度\n Arms movement enabled：是否启用手臂运动，默认启用\n\n\n私以为，你想要让机器人转弯，理论上，可以使 Destination X 为 0.900000，Destination Y 为 0.000000，Theta 为 90 度（即 1.5708 弧度）。\n\n\n\n\n\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.mryan2005.top/posts/300MCKP.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.mryan2005.top/posts/300MCKP.html","wordCount":354,"datePublished":"2025-11-09T16:15:03.000Z","dateModified":"2025-11-09T08:31:01.777Z","articleSection":"Choregraphe","keywords":"Nao,Choregraphe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.mryan2005.top/","name":"Mryan2005's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.mryan2005.top/categories/Choregraphe/","name":"Choregraphe"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.mryan2005.top/posts/300MCKP.html","name":"nao 开发 行走"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","keywords":null,"description":"","author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/","description":""},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","url":"https://blog.mryan2005.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.mryan2005.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"nao 开发 行走","description":" 相关的指令盒\n\nMove To：让机器人移动到指定位置\n Move Toward：让机器人朝指定方向移动\n Walk Toward：让机器人走到指定位置\n Move Along：让机器人沿着指定路径移动\n","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.mryan2005.top/posts/300MCKP.html"},"author":{"@type":"Person","name":"Mryan2005","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.mryan2005.top/"},"publisher":{"@type":"Organization","name":"Mryan2005's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.mryan2005.top/posts/300MCKP.html","wordCount":103,"datePublished":"2025-11-09T16:15:03.000Z","dateModified":"2025-11-09T09:12:07.715Z","articleSection":"Choregraphe","keywords":"Nao,Choregraphe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
