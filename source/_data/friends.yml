@@ -70,6 +70,12 @@
       screenshot:
       keywords: X, Twitter
       description: 我的X（前Twitter）主页
+    - title: ORCID
+      avatar:
+      url: https://orcid.org/0009-0001-1431-9309
+      screenshot:
+      keywords: ORCID
+      description: 我的ORCID主页
     - title: Isaac Sim 研究手稿
       avatar: 
       url: https://isaacsimplusros2.mryan2005.top
